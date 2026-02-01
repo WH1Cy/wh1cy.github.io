@@ -1,0 +1,13 @@
+/* 自定义字体与样式（可选） */
+
+/* 若需用 CSS 覆盖全站正文字体，取消下面注释并改为你的字体名 */
+/* :root {
+  --md-text-font: "你的正文字体", sans-serif;
+} */
+
+/* 若需用 CSS 覆盖代码块字体，取消下面注释并改为你的等宽字体名 */
+/* :root {
+  --md-code-font: "你的等宽字体", monospace;
+} */
+
+/* 若使用自托管字体，在此添加 @font-face，再在上面设置 --md-text-font / --md-code-font */
