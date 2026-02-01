@@ -1,0 +1,1363 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="个人博客与笔记">
+      
+      
+        <meta name="author" content="wh1cy">
+      
+      
+        <link rel="canonical" href="https://wh1cy.github.io/courses/sys2/project/">
+      
+      
+        <link rel="prev" href="../lab6/">
+      
+      
+        <link rel="next" href="../../network/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Project - 三月の海</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-7" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="三月の海" class="md-header__button md-logo" aria-label="三月の海" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            三月の海
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Project
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/wh1cy/wh1cy.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wh1cy/wh1cy.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  课程
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  关于
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="三月の海" class="md-nav__button md-logo" aria-label="三月の海" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    三月の海
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/wh1cy/wh1cy.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wh1cy/wh1cy.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    博客
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    博客
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文章列表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/2024-hello-world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    示例文章一
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/2024-mkdocs-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    示例文章二
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机系统 II
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算机系统 II
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件安全原理与实践
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="lab-7">Lab 7：综合实验<a class="headerlink" href="#lab-7" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Course</th>
+<th>计算机系统II</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lesson Date</td>
+<td>2025年12月4日</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Complete</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Lab</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="1"><strong>1 实验目的</strong><a class="headerlink" href="#1" title="Permanent link">&para;</a></h1>
+<ul>
+<li>学习 OS 在硬件层面的抽象</li>
+<li>完善自己的 CPU Core，并运行起自己编写的 Mini Kernel</li>
+</ul>
+<h1 id="2"><strong>2 实验环境</strong><a class="headerlink" href="#2" title="Permanent link">&para;</a></h1>
+<ul>
+<li><strong>HDL</strong>：Verilog &amp; SystemVerilog</li>
+<li><strong>IDE</strong>：Vivado</li>
+<li><strong>开发板</strong>：Nexys A7</li>
+<li><strong>软件辅助环境</strong>：Ubuntu 22.04 / Ubuntu 24.04 / Debian 12</li>
+</ul>
+<h1 id="3">3 实验步骤<a class="headerlink" href="#3" title="Permanent link">&para;</a></h1>
+<h2 id="31-core">3.1 Core的改造<a class="headerlink" href="#31-core" title="Permanent link">&para;</a></h2>
+<h3 id="311-csr">3.1.1 CSR流水线<a class="headerlink" href="#311-csr" title="Permanent link">&para;</a></h3>
+<p>我们首先对于Controller模块进行改造，确保其识别特权态指令，其中由于<code>ControllerSignals</code> 结构体已经引入了对于CSR的控制变量，我们只需要加入对<code>CsrPack</code>的调用，只要对于进行相应的解码即可，对于相应指令的解码参考了两本手册，规则如下</p>
+<p><img alt="image.png" src="image.png" /></p>
+<p><img alt="image.png" src="image1.png" /></p>
+<p><img alt="image.png" src="image2.png" /></p>
+<p>我们由此补充了对于<code>csr_opcode</code> 的解码，根据FUNT3识别对应的特权态指令，其中特权级指令由于不对CSR和通用寄存器进行写操作，只要调整<code>csr_ret</code>并保持默认即可</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nl">CSR_OPCODE:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">                </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_addr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inst</span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">20</span><span class="p">];</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">                </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_alu_asel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ASEL_CSRREG</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">                </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">we_reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">rd</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">5</span><span class="mb">&#39;b0</span><span class="p">);</span><span class="w">  </span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">                </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">wb_sel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WB_SEL_ALU</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">funct3</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">                    </span><span class="nl">CSRRW_FUNCT3:</span><span class="w"> </span><span class="k">begin</span><span class="w">  </span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">we_csr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CsrPack</span><span class="o">::</span><span class="n">CSR_ALU_ADD</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_GPREG</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">                    </span><span class="k">end</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">                    </span><span class="nl">CSRRS_FUNCT3:</span><span class="w"> </span><span class="k">begin</span><span class="w">  </span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">we_csr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">rs1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">5</span><span class="mb">&#39;b0</span><span class="p">);</span><span class="w">  </span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CsrPack</span><span class="o">::</span><span class="n">CSR_ALU_OR</span><span class="p">;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_GPREG</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">                    </span><span class="k">end</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">                    </span><span class="nl">CSRRC_FUNCT3:</span><span class="w"> </span><span class="k">begin</span><span class="w"> </span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">we_csr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">rs1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">5</span><span class="mb">&#39;b0</span><span class="p">);</span><span class="w">  </span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CsrPack</span><span class="o">::</span><span class="n">CSR_ALU_ANDNOT</span><span class="p">;</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_GPREG</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">                    </span><span class="k">end</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">                    </span><span class="nl">CSRRWI_FUNCT3:</span><span class="w"> </span><span class="k">begin</span><span class="w"> </span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">we_csr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CsrPack</span><span class="o">::</span><span class="n">CSR_ALU_ADD</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_CSRIMM</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">                    </span><span class="k">end</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">                    </span><span class="nl">CSRRSI_FUNCT3:</span><span class="w"> </span><span class="k">begin</span><span class="w">  </span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">we_csr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">rs1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">5</span><span class="mb">&#39;b0</span><span class="p">);</span><span class="w">  </span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CsrPack</span><span class="o">::</span><span class="n">CSR_ALU_OR</span><span class="p">;</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_CSRIMM</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">                    </span><span class="k">end</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">                    </span><span class="nl">CSRRCI_FUNCT3:</span><span class="w"> </span><span class="k">begin</span><span class="w">  </span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">we_csr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">rs1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">5</span><span class="mb">&#39;b0</span><span class="p">);</span><span class="w">  </span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CsrPack</span><span class="o">::</span><span class="n">CSR_ALU_ANDNOT</span><span class="p">;</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_CSRIMM</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">                    </span><span class="k">end</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">                    </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="k">begin</span><span class="w">  </span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inst</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SRET</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">                            </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">2</span><span class="mb">&#39;b01</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">                        </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inst</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MRET</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">                            </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">2</span><span class="mb">&#39;b10</span><span class="p">;</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">                        </span><span class="k">end</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">we_csr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">;</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CsrPack</span><span class="o">::</span><span class="n">CSR_ALU_ADD</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">                        </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_CSR0</span><span class="p">;</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">                    </span><span class="k">end</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">                </span><span class="k">endcase</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">            </span><span class="k">end</span>
+</code></pre></div>
+<p>同时为了避免流水线冲突、简化数据通路、降低控制复杂度，并保证主 ALU 不被 CSR 指令占用，我们要为CSR流水线添加一个新的ALU，这个ALU要对CSR文件进行操作，并从CSR恢复状态，我们单独写了CSRALU模块来处理，对应添加数据通路</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="no">`include</span><span class="w"> </span><span class="s">&quot;core_struct.vh&quot;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="no">`include</span><span class="w"> </span><span class="s">&quot;csr_struct.vh&quot;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">module</span><span class="w"> </span><span class="n">CSRALU</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="n">CsrPack</span><span class="o">::</span><span class="n">csr_alu_asel_op_enum</span><span class="w"> </span><span class="n">csr_alu_asel</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="n">CsrPack</span><span class="o">::</span><span class="n">csr_alu_bsel_op_enum</span><span class="w"> </span><span class="n">csr_alu_bsel</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="n">CsrPack</span><span class="o">::</span><span class="n">csr_alu_op_enmu</span><span class="w"> </span><span class="n">csr_alu_op</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="n">CorePack</span><span class="o">::</span><span class="n">data_t</span><span class="w"> </span><span class="n">csr_val</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="n">CorePack</span><span class="o">::</span><span class="n">data_t</span><span class="w"> </span><span class="n">reg_data_1</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="n">CorePack</span><span class="o">::</span><span class="n">reg_ind_t</span><span class="w"> </span><span class="n">rs1</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="k">output</span><span class="w"> </span><span class="n">CorePack</span><span class="o">::</span><span class="n">data_t</span><span class="w"> </span><span class="n">csr_alu_res</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">);</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="n">import</span><span class="w"> </span><span class="n">CorePack</span><span class="o">::*</span><span class="p">;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="n">import</span><span class="w"> </span><span class="n">CsrPack</span><span class="o">::*</span><span class="p">;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="n">data_t</span><span class="w"> </span><span class="n">csr_alu_a</span><span class="p">,</span><span class="w"> </span><span class="n">csr_alu_b</span><span class="p">;</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">        </span><span class="n">unique</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">csr_alu_asel</span><span class="p">)</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">            </span><span class="nl">ASEL_CSR0:</span><span class="w"> </span><span class="n">csr_alu_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">64</span><span class="mb">&#39;b0</span><span class="p">;</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">            </span><span class="nl">ASEL_CSRREG:</span><span class="w"> </span><span class="n">csr_alu_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">csr_val</span><span class="p">;</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">            </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">csr_alu_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">64</span><span class="mb">&#39;b0</span><span class="p">;</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">        </span><span class="k">endcase</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="k">end</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">        </span><span class="n">unique</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">csr_alu_bsel</span><span class="p">)</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">            </span><span class="nl">BSEL_CSR0:</span><span class="w"> </span><span class="n">csr_alu_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">64</span><span class="mb">&#39;b0</span><span class="p">;</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">            </span><span class="nl">BSEL_GPREG:</span><span class="w"> </span><span class="n">csr_alu_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reg_data_1</span><span class="p">;</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">            </span><span class="nl">BSEL_CSRIMM:</span><span class="w"> </span><span class="n">csr_alu_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">59</span><span class="mb">&#39;b0</span><span class="p">,</span><span class="w"> </span><span class="n">rs1</span><span class="p">};</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">            </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">csr_alu_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">64</span><span class="mb">&#39;b0</span><span class="p">;</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">        </span><span class="k">endcase</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">    </span><span class="k">end</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">        </span><span class="n">unique</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">csr_alu_op</span><span class="p">)</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">            </span><span class="nl">CSR_ALU_ADD:</span><span class="w"> </span><span class="n">csr_alu_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">csr_alu_a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">csr_alu_b</span><span class="p">;</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">            </span><span class="nl">CSR_ALU_OR:</span><span class="w"> </span><span class="n">csr_alu_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">csr_alu_a</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">csr_alu_b</span><span class="p">;</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">            </span><span class="nl">CSR_ALU_ANDNOT:</span><span class="w"> </span><span class="n">csr_alu_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">csr_alu_a</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">~</span><span class="n">csr_alu_b</span><span class="p">;</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">            </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">csr_alu_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">csr_alu_a</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">        </span><span class="k">endcase</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">    </span><span class="k">end</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="k">endmodule</span>
+</code></pre></div>
+<p>随后我们将<code>CSRModule</code> 接入流水线，定义相关的信号并进行对应的接线</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="n">CSRModule</span><span class="w"> </span><span class="n">u_csr</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">        </span><span class="p">.</span><span class="n">clk</span><span class="p">(</span><span class="n">clk</span><span class="p">),</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="p">.</span><span class="n">rst</span><span class="p">(</span><span class="n">rst</span><span class="p">),</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="p">.</span><span class="n">csr_we_wb</span><span class="p">(</span><span class="n">csr_we_wb</span><span class="p">),</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="p">.</span><span class="n">csr_addr_wb</span><span class="p">(</span><span class="n">csr_addr_wb</span><span class="p">),</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="p">.</span><span class="n">csr_val_wb</span><span class="p">(</span><span class="n">csr_val_wb</span><span class="p">),</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="p">.</span><span class="n">csr_addr_id</span><span class="p">(</span><span class="n">csr_addr_id</span><span class="p">),</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="p">.</span><span class="n">csr_val_id</span><span class="p">(</span><span class="n">csr_val_id</span><span class="p">),</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="p">.</span><span class="n">pc_ret</span><span class="p">(</span><span class="n">pc_ret</span><span class="p">),</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="p">.</span><span class="n">valid_wb</span><span class="p">(</span><span class="n">memwb_r</span><span class="p">.</span><span class="n">valid</span><span class="p">),</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="p">.</span><span class="n">time_int</span><span class="p">(</span><span class="n">time_int</span><span class="p">),</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="p">.</span><span class="n">csr_ret</span><span class="p">(</span><span class="n">csr_ret_wb</span><span class="p">),</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="p">.</span><span class="n">except_commit</span><span class="p">(</span><span class="n">except_wb</span><span class="p">),</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="p">.</span><span class="n">priv</span><span class="p">(</span><span class="n">priv</span><span class="p">),</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="p">.</span><span class="n">switch_mode</span><span class="p">(</span><span class="n">switch_mode</span><span class="p">),</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="p">.</span><span class="n">pc_csr</span><span class="p">(</span><span class="n">pc_csr</span><span class="p">),</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="p">.</span><span class="n">cosim_interrupt</span><span class="p">(</span><span class="n">csr_interrupt</span><span class="p">),</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="p">.</span><span class="n">cosim_cause</span><span class="p">(</span><span class="n">csr_cause</span><span class="p">),</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">        </span><span class="p">.</span><span class="n">cosim_csr_info</span><span class="p">(</span><span class="n">csr_info</span><span class="p">)</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="p">);</span>
+</code></pre></div>
+<h3 id="312">3.1.2 陷入检测与处理<a class="headerlink" href="#312" title="Permanent link">&para;</a></h3>
+<p>对于异常检测，我们将异常处理模块接入流水线中的<code>ID</code>段后，对于异常信息，我们定义了四个结构体对应EX1-4进行相应存储，传出的的<code>except_exe</code> 作为EX2逐级往下传递，并最后接回<code>CSRModule</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="n">ExceptPack</span><span class="w"> </span><span class="n">except_id</span><span class="p">,</span><span class="w"> </span><span class="n">except_exe</span><span class="p">,</span><span class="w"> </span><span class="n">except_mem</span><span class="p">,</span><span class="w"> </span><span class="n">except_wb</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">except_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">&#39;{</span><span class="nl">except:</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">,</span><span class="w"> </span><span class="nl">epc:</span><span class="w"> </span><span class="mh">64</span><span class="mb">&#39;b0</span><span class="p">,</span><span class="w"> </span><span class="nl">ecause:</span><span class="w"> </span><span class="mh">64</span><span class="mb">&#39;b0</span><span class="p">,</span><span class="w"> </span><span class="nl">etval:</span><span class="w"> </span><span class="mh">64</span><span class="mb">&#39;b0</span><span class="p">};</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kt">logic</span><span class="w"> </span><span class="n">except_happen_id</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">IDExceptExamine</span><span class="w"> </span><span class="n">u_except_examine</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="p">.</span><span class="n">clk</span><span class="p">(</span><span class="n">clk</span><span class="p">),</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="p">.</span><span class="n">rst</span><span class="p">(</span><span class="n">rst</span><span class="p">),</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="p">.</span><span class="n">stall</span><span class="p">(</span><span class="n">mem_stall</span><span class="p">),</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="p">.</span><span class="n">flush</span><span class="p">(</span><span class="n">switch_mode</span><span class="o">||</span><span class="n">br_taken_ex</span><span class="p">),</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="p">.</span><span class="n">pc_id</span><span class="p">(</span><span class="n">ifid_r</span><span class="p">.</span><span class="n">pc</span><span class="p">),</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="p">.</span><span class="n">priv</span><span class="p">(</span><span class="n">priv</span><span class="p">),</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="p">.</span><span class="n">inst_id</span><span class="p">(</span><span class="n">inst_id</span><span class="p">),</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="p">.</span><span class="n">valid_id</span><span class="p">(</span><span class="n">ifid_r</span><span class="p">.</span><span class="n">valid</span><span class="p">),</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="p">.</span><span class="n">except_id</span><span class="p">(</span><span class="n">except_id</span><span class="p">),</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="p">.</span><span class="n">except_exe</span><span class="p">(</span><span class="n">except_exe</span><span class="p">),</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="p">.</span><span class="n">except_happen_id</span><span class="p">(</span><span class="n">except_happen_id</span><span class="p">)</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="p">);</span>
+</code></pre></div>
+<p>我们补充对于<code>CSRModule</code>的接线，主要是从<code>CSRModule</code>导出接回到<code>WB</code>段的线，这儿要重点说明的是对于<code>pc_ret</code>，从逻辑上来看我们应该采用的是<code>WB</code>阶段执行完成指令的下一条指令，在实际过程中我们加入了一个对于跳转逻辑的判断来决定使用<code>pc_4</code> 还是<code>npc</code> ；另一个值得说明的是<code>csr_val_wb</code> ，要注意区分于<code>csr_alu_res</code> 是用于写回<code>rd</code> 的旧值，此时应该是写入<code>csr</code>寄存器的新值</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">csr_we_wb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">memwb_r</span><span class="p">.</span><span class="n">we_csr</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">memwb_r</span><span class="p">.</span><span class="n">valid</span><span class="p">;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">csr_addr_wb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">memwb_r</span><span class="p">.</span><span class="n">csr_addr</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">memwb_r</span><span class="p">.</span><span class="n">we_csr</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">memwb_r</span><span class="p">.</span><span class="n">valid</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">memwb_r</span><span class="p">.</span><span class="n">inst</span><span class="p">[</span><span class="mh">14</span><span class="o">:</span><span class="mh">12</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">CSRRW_FUNCT3</span><span class="p">)</span><span class="w">  </span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">                </span><span class="n">csr_val_wb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">memwb_r</span><span class="p">.</span><span class="n">read_data_1</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">memwb_r</span><span class="p">.</span><span class="n">inst</span><span class="p">[</span><span class="mh">14</span><span class="o">:</span><span class="mh">12</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">CSRRWI_FUNCT3</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">                </span><span class="n">csr_val_wb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">59</span><span class="mb">&#39;b0</span><span class="p">,</span><span class="w"> </span><span class="n">memwb_r</span><span class="p">.</span><span class="n">rs1</span><span class="p">};</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">            </span><span class="k">else</span><span class="w">              </span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">                </span><span class="n">csr_val_wb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">memwb_r</span><span class="p">.</span><span class="n">read_data_2</span><span class="p">;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">            </span><span class="n">csr_val_wb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">64</span><span class="mb">&#39;b0</span><span class="p">;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="k">end</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">csr_addr_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ctrl_signals</span><span class="p">.</span><span class="n">csr_addr</span><span class="p">;</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="kt">logic</span><span class="w"> </span><span class="n">npc_sel</span><span class="p">;</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">npc_sel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">memwb_r</span><span class="p">.</span><span class="n">inst</span><span class="p">[</span><span class="mh">6</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">JAL_OPCODE</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">                     </span><span class="p">(</span><span class="n">memwb_r</span><span class="p">.</span><span class="n">inst</span><span class="p">[</span><span class="mh">6</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">JALR_OPCODE</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">                     </span><span class="p">(</span><span class="n">memwb_r</span><span class="p">.</span><span class="n">inst</span><span class="p">[</span><span class="mh">6</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">BRANCH_OPCODE</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">memwb_r</span><span class="p">.</span><span class="n">br_taken</span><span class="p">);</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">pc_ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">npc_sel</span><span class="o">?</span><span class="n">memwb_r</span><span class="p">.</span><span class="nl">npc:</span><span class="n">memwb_r</span><span class="p">.</span><span class="n">pc_4</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">csr_ret_wb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">memwb_r</span><span class="p">.</span><span class="n">csr_ret</span><span class="p">;</span>
+</code></pre></div>
+<p>最后添加的是<code>swtich_mode</code>对于流水线的控制，首先是IF段，我们在lab2引入取指访存状态机时，我们希望它是独立于控制模块外的，即不停的进行取指访存操作，通过控制模块中的<code>if_stall</code> 和<code>mem_stall</code>来决定取指访存是否有效（也就是flush操作），那么当时我们讲到分支跳转时提到，若仅仅延一拍，需要保证延的当拍没有指令被取出，否则会导致错误指令进入流水线；这儿我们添加<code>switch_mode</code>时发现这个问题仍会出现，因此对于<code>IF</code>阶段的寄存器相应进行多延了一拍，同时<code>pc</code> 在<code>switch_mode</code>被拉起的当拍完成跳转后下一拍保持不变</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">            </span><span class="n">switch_mode_delay</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">switch_mode</span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">switch_mode</span><span class="o">||</span><span class="n">br_taken_ex</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">                </span><span class="n">pc</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">next_pc</span><span class="p">;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">if_stall</span><span class="w"> </span><span class="o">||</span><span class="n">mem_stall</span><span class="o">||</span><span class="n">switch_mode_delay</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">                </span><span class="n">pc</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">pc</span><span class="p">;</span><span class="w">      </span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">            </span><span class="k">else</span><span class="w"> </span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">                </span><span class="n">pc</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">next_pc</span><span class="p">;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">switch_mode</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">switch_mode_delay</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">if_stall</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">br_taken_ex</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">                </span><span class="n">ifid_r</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="p">&#39;{</span><span class="k">default</span><span class="o">:</span><span class="m">&#39;0</span><span class="p">};</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">            </span><span class="k">else</span><span class="w"> </span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">                </span><span class="n">ifid_r</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">ifid_n</span><span class="p">;</span>
+</code></pre></div>
+<p>对于其他段，<code>switch_mode</code>的控制是相对简单的，直接flush段间寄存器即可，这儿不进行赘述，需要注意的是，我们处理异常的寄存器也需要对应进行flush，给出示例</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span><span class="k">always_ff</span><span class="w"> </span><span class="p">@(</span><span class="k">posedge</span><span class="w"> </span><span class="n">clk</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rst</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">switch_mode</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">            </span><span class="n">except_mem</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="p">&#39;{</span><span class="nl">except:</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">,</span><span class="w"> </span><span class="nl">epc:</span><span class="w"> </span><span class="mh">64</span><span class="mb">&#39;b0</span><span class="p">,</span><span class="w"> </span><span class="nl">ecause:</span><span class="w"> </span><span class="mh">64</span><span class="mb">&#39;b0</span><span class="p">,</span><span class="w"> </span><span class="nl">etval:</span><span class="w"> </span><span class="mh">64</span><span class="mb">&#39;b0</span><span class="p">};</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">        </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">~</span><span class="n">mem_stall</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">            </span><span class="n">except_mem</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">except_exe</span><span class="p">;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="k">end</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="k">end</span>
+</code></pre></div>
+<h1 id="4">4 仿真<a class="headerlink" href="#4" title="Permanent link">&para;</a></h1>
+<p>我们在目录下执行<code>make kernel 2&gt;log</code> ，将<code>printk</code>函数的输出进行打印，得到结果如下（为了较完整的展示延长了仿真时间）可以看到与预期的结果是一致的，且没有出现不匹配报错</p>
+<p><img alt="image.png" src="image3.png" /></p>
+<p>同样的，对于<code>make kernel_board_sim 2&gt;log</code> 测试下板仿真，结果也是正确的，完成实验   </p>
+<h1 id="5">5 思考题<a class="headerlink" href="#5" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>使用 <code>printk</code> 函数输出一个字符 <code>a</code> 的过程中需要发生几次特权态切换？请将切换前后的特权态和切换的原因一一列举出来。</p>
+<p>在最简情况下，使用 <code>printk</code> 输出一个字符 <code>a</code> 的过程中会发生 2 次特权态切换；在某些实现中，如果第一次 SBI 控制台写调用未能一次性完成输出，则可能发生 4 次特权态切换。</p>
+<p>首先，<code>printk</code> 在 S 态 下运行。当内核调用 <code>printk</code> 进行字符输出时，会进一步调用基于 SBI 的控制台输出接口。该接口通过执行 <code>ecall</code> 指令向下请求更高特权级的服务。由于 <code>ecall</code> 在 S 态执行会触发 supervisor ecall 异常，处理器陷入 M 态，这是第一次特权态切换。进入 M 态后，SBI 处理程序负责完成实际的字符输出。</p>
+<p>当 M 态下的 SBI 处理程序完成输出操作后，会执行 <code>mret</code> 指令返回。<code>mret</code> 会根据 将处理器恢复到S 态，从而完成第二次特权态切换。至此，在最简路径下，一个字符的 <code>printk</code> 输出已经完成，共发生两次特权态切换。</p>
+<p>在某些情况下，如果第一次 SBI 控制台写操作返回值为 0（表示需要退化为逐字节输出），内核会再次在 S 态执行新的 <code>ecall</code> 请求进行单字节写入。这会再次触发从 S 态到 M 态 的陷入，构成第三次特权态切换；随后，SBI 处理完成后再通过 <code>mret</code> 返回到 S 态，形成第四次特权态切换。</p>
+</li>
+<li>
+<p>如果流水线的 IF、ID、MEM 阶段都检测到了异常发生，应该选择哪个流水级的异常作为 trap_handler 处理的异常 ? 请说说为什么这么选择。
+当多个流水级同时检测到异常时，应选择程序顺序上最早发生的异常作为最终处理的异常。在我们采用的流水线中对应 MEM 阶段的异常，因为它代表最早执行的指令，能够保证精确异常语义，确保异常之前的指令全部完成、之后的指令全部不生效，从而维持CPU状态的一致性与可恢复性。</p>
+</li>
+<li>
+<p>现在你能够在你自己设计的 CPU 上运行你自己编写的操作系统内核了，这给你带来了很大的自由度，你可以做到很多你直接在自己的电脑上编程可能做不到的事情。你想挑战在你的最小系统上实现什么？无需真的实现，给出大致思路即可。</p>
+<p>我希望实现一套软件可见的软件性能计数器系统。在自制 CPU 上实现 PMC 可以从硬件微结构层面完整观察指令执行与流水线行为。整体思路是在 CPU 硬件层对关键运行事件进行实时统计，并通过内存映射接口向操作系统内核暴露这些计数器。硬件层在流水线各阶段对指令提交、周期推进、流水线停顿、分支行为、内存访问、数据前递以及异常中断等事件进行计数；软件层则在内核中提供统一的访问与分析接口，读取并解析这些计数结果，计算 CPI、流水线效率、分支预测准确率等关键性能指标。</p>
+<p>通过这套机制，操作系统可以在运行时直接感知底层 CPU 的真实行为，从而用于性能分析、瓶颈定位与设计验证。例如，可以判断性能受限于取指、访存还是控制相关；分析不同工作负载的指令与内存访问特征；以及在修改硬件结构（如分支预测或缓存策略）后，对比优化前后的效果。</p>
+</li>
+</ol>
+<h1 id="6">6 写在最后<a class="headerlink" href="#6" title="Permanent link">&para;</a></h1>
+<p>自己在大二本该修读时由于个人原因弃修了这门课，虽然时间尺度来讲只有短短一年，但再修这门课的时候却也感受到了很多的变化，也见证了这门课第一次得到这么大范围的曝光。对于个人而言，还是能以一个相对完整一些的视角来看待这门课；应该说，写这些可有可无的内容才是一学期以来真正想说的话。</p>
+<p>从最浅显的变化来讲，选这门课的人更多了，板子变成了两人共享，助教数量也在逐年增长，学院有意地想推动这场教改去涵盖更多的计院人 ，但对我来说最显著的变化，其实是学生之间的信息差变大了。从课程实验的角度，很明显的比对是好的ai对于构思一个完整系统的代码能力提升太多了，自己也可以毫不避讳地说这是自己这学期在实验部分走的很顺利的重要原因，我相信这也是这门课实验通过率逐年提高的重要原因。除了对于硬件来说大部分机械性重复的代码，ai对于模块间的接线以及流程设计已经精进很多了，写一个简单的硬件系统（比如单周期cpu）包括逻辑和调试更简单的软件代码已经是易如反掌的事情，这对于一年前的我是不敢想象的。</p>
+<p>回顾这一学期，自己在更好的的ai帮助下获得了什么呢？我花了很多时间的地方是硬件调试、阅读代码，并想办法优化出风格更好的代码上，而不是再堆叠史山。我觉得这个经验是弥足珍贵的，并暂时还不会被ai所取代（同样我不认同硬件无用论），也让我看到这门课在现在的环境下得到保留的价值。同时一年里计院其他鱼龙混杂课程的经历，也让自己意识到系统课改，至少想探索的方向是正向的。因此我对系统课保留了原始的信心，也看到其他课程在向这个方向靠近、并做的更好。</p>
+<p>但是自己也不希望抱着ai高高在上，一年前也曾经历过对于系统实验毫无头绪的至暗时刻，也因此无比理解系统课冲上风口浪尖时那些对于系统课的吐槽。对于无法因为ai或者其他途径获得有效信息、帮助的同学，这门课的难度注定他们要付出比其他人更多的努力，一旦缺少了一点动力和一点运气，就更容易发出质疑这条路的声音；只是在这个学期，声音的基数变大，让更多的人听见了而已。我由衷希望这种争议能带来更好的结果，让课改听到更多不一样的声音；试想一门课（这里没有影射任何计院课）如果秉持着一套圣遗物系统代代相传，考试也是八股之风，那么关于课程合理性的讨论必然在论坛掀不起什么浪花，只会在垂垂老矣中走向衰落。</p>
+<p>我记得上系统I时，助教为实验指导加入了verilog语言的示范教学，初衷是不希望我们因为对于硬件语言理解不够从而丧失对于硬件的热情。对于硬件的理解其实贯穿了系统实验的始终，那么这也是一种信息差。如果外部环境（助教、老师、同学的交流）对于抹平这种信息差没有做足够多的努力，就只能靠学生自身的努力。从经历过灰暗的自己的角度来说，谴责这些同学都不够努力是不公正的（无法苟同一些同专业人的观点），要想让这门课常青，还是应该从外部去下更多努力减小这种信息差，在信息尽可能公平的基础下，让这门课去筛选考核真正有意义、有价值的东西。</p>
+<p>应该说自己因为这门课接触的老师助教们都在干这样一件事，对于实验架构、实验指导的优化一直在做（今年重写了综合实验，对于很多不合适的思考题也不再继承了）也花费了很多时间精力帮助我们少踩前人留下的坑。自己很感激这些看得见的努力，也始终觉得，如果一门课在浙大都成了高高在上，只有能力高者准入的精英课程，那么这种固步自封必将导致它的积尘落灰和淘汰。但是还是有更多可以做的更好的事，课程内，实验课和理论课一直以来的割裂感需要更多设计；课程外，学院开设的课程能在教ai使用这些方面下更多功夫，而不是开一堆文科特供人基课。</p>
+<p>现在的实验指导虽然从学生视角来看还是有颇多瑕疵（可以列举一些：cpu相关lab对于仿真测试的架构始终缺少一个完善完整的说明，基本只能靠助教努力和实验指导东写一点西写一点自己参悟；lab2的任务流程写的很差，加入forwarding机制和axi总线的引入其实还是存在很多差异的，即便出于任务量的考虑也还是划分成一大一小两个part更好而不是吃大锅饭），但改变总归是正向的（最初版的系统实验没有差分是在可怕）应该说这门课在现在的技术水平下的难度是合适的，给的分数也是对得起大家的付出的，那么当前要做的是思考如何让大家对这门课难度的认知回到合理的水平。作为一个“为数不多”上过这门课的人，还是希望自己能为这门年龄并不大、正在经历风雨的课尽一些谏言的责任，而不只是混一个好看的分数。</p>
+<p>再次感谢这学期陪伴自己学习这门课的助教们和老师们，希望系统课越来越好！</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

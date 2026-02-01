@@ -1,0 +1,79 @@
+site_name: 三月の海
+site_description: 个人博客与笔记
+site_author: wh1cy
+site_url: https://wh1cy.github.io
+
+repo_url: https://github.com/wh1cy/wh1cy.github.io
+repo_name: wh1cy/wh1cy.github.io
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - scheme: default
+      primary: grey
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: 切换到深色模式
+    - scheme: slate
+      primary: grey
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: 切换到浅色模式
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - 首页: index.md
+  - 博客:
+    - 文章列表: blog/index.md
+    - 示例文章一: blog/2024-hello-world.md
+    - 示例文章二: blog/2024-mkdocs-blog.md
+  - 课程:
+    - 计算机系统 II:
+        - 课程主页: courses/sys2/index.md
+        - Lab 0: courses/sys2/lab0/index.md
+        - Lab 1: courses/sys2/lab1/index.md
+        - Lab 2: courses/sys2/lab2/index.md
+        - Lab 3: courses/sys2/lab3/index.md
+        - Lab 4: courses/sys2/lab4/index.md
+        - Lab 5: courses/sys2/lab5/index.md
+        - Lab 6: courses/sys2/lab6/index.md
+        - Project: courses/sys2/project/index.md
+    - 计算机网络: courses/network/index.md
+    - 软件安全原理与实践: courses/software-security/index.md
+  - 关于: about.md

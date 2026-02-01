@@ -1,0 +1,1664 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="个人博客与笔记">
+      
+      
+        <meta name="author" content="wh1cy">
+      
+      
+        <link rel="canonical" href="https://wh1cy.github.io/courses/sys2/lab0/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../lab1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Lab 0 - 三月の海</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab0cpu" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="三月の海" class="md-header__button md-logo" aria-label="三月の海" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            三月の海
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab 0
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/wh1cy/wh1cy.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wh1cy/wh1cy.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  课程
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  关于
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="三月の海" class="md-nav__button md-logo" aria-label="三月の海" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    三月の海
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/wh1cy/wh1cy.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wh1cy/wh1cy.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    博客
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    博客
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文章列表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/2024-hello-world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    示例文章一
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/2024-mkdocs-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    示例文章二
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机系统 II
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算机系统 II
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件安全原理与实践
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="lab0cpu">Lab0：单周期CPU设计<a class="headerlink" href="#lab0cpu" title="Permanent link">&para;</a></h1>
+<h1 id="1"><strong>1 实验目的</strong><a class="headerlink" href="#1" title="Permanent link">&para;</a></h1>
+<ul>
+<li>了解 CPU 设计的基本原理</li>
+<li>设计 CPU 数据通路和控制单元模块</li>
+<li>搭建单周期CPU</li>
+</ul>
+<h1 id="2"><strong>2 实验环境</strong><a class="headerlink" href="#2" title="Permanent link">&para;</a></h1>
+<ul>
+<li>操作系统：Windows 10+ 22H2，Ubuntu 22.04+</li>
+<li>VHDL：Verilog，SystemVerilog</li>
+</ul>
+<h1 id="3"><strong>3 背景知识</strong><a class="headerlink" href="#3" title="Permanent link">&para;</a></h1>
+<h2 id="31-cpu"><strong>3.1 单周期 CPU</strong><a class="headerlink" href="#31-cpu" title="Permanent link">&para;</a></h2>
+<p>单周期 CPU 主要特征是在一个周期内完成一条指令，也就意味着其 CPI (cycle per instruction) 是 1。 考虑到不同的指令都需要在一个周期内完成，因而单周期 CPU 时钟频率是以执行最慢的那条指令作为基准，这也是单周期 CPU 最大的缺陷之一。 我们可以把单周期 CPU 分成数据通路和控制单元两个模块，本次实验将完成数据通路模块。</p>
+<h2 id="32"><strong>3.2 数据通路设计</strong><a class="headerlink" href="#32" title="Permanent link">&para;</a></h2>
+<p>为了之后能和流水线 CPU 进行衔接，我们把单周期 CPU 数据通路划分成 5 个阶段（stage）:</p>
+<ul>
+<li>Instruction Fetch (IF)</li>
+<li>Instruction Decode (ID)</li>
+<li>EXecution (EX)</li>
+<li>MEMory access (MEM)</li>
+<li>register Write Back (WB)</li>
+</ul>
+<h2 id="33"><strong>3.3 数据通路图</strong><a class="headerlink" href="#33" title="Permanent link">&para;</a></h2>
+<p><img alt="image.png" src="image.png" /></p>
+<p>我们会按照 CPU 的五个运行阶段来介绍我们设计的 CPU 数据通路中的各个功能部件。</p>
+<h2 id="34-rv64i">3.4 <strong>RV64I指令集架构</strong><a class="headerlink" href="#34-rv64i" title="Permanent link">&para;</a></h2>
+<p>RV64I 指令集包括 R、I、S、B、U、J 6 个类型的指令格式，如下图所示。 指令的类型基本是由 Opcode，Funct7(如果存在的话)和 Funct3(如果存在的话)决定的。 通过这 3 个字段判断得到了指令的类型之后，就可以为控制信号赋值，控制 Datapath 中的数据流。</p>
+<p><img alt="image.png" src="image1.png" /></p>
+<p>对于需要生成立即数的架构，可以参照下图：</p>
+<p><img alt="image.png" src="image2.png" /></p>
+<h1 id="4"><strong>4 实验步骤</strong><a class="headerlink" href="#4" title="Permanent link">&para;</a></h1>
+<h2 id="41-if"><strong>4.1 IF 阶段</strong><a class="headerlink" href="#41-if" title="Permanent link">&para;</a></h2>
+<h3 id="411-instruction-selection"><strong>4.1.1 Instruction Selection</strong><a class="headerlink" href="#411-instruction-selection" title="Permanent link">&para;</a></h3>
+<p>由于我们设计的是 64 位 CPU，因此 imem 读回的数据为是 64 位，但 RISC-V 规定的指令长度只有 32 位，因此需要根据 PC 来进一步判断需要执行的是高 32 位指令还是低 32 位指令，后续再通过控制单元进行指令译码。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">CorePack</span><span class="o">::</span><span class="n">inst_t</span><span class="w"> </span><span class="n">inst</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">assign</span><span class="w"> </span><span class="n">inst</span><span class="o">=</span><span class="n">pc</span><span class="p">[</span><span class="mh">2</span><span class="p">]</span><span class="o">?</span><span class="n">imem_ift</span><span class="p">.</span><span class="n">r_reply_bits</span><span class="p">.</span><span class="n">rdata</span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">32</span><span class="p">]</span><span class="o">:</span><span class="n">imem_ift</span><span class="p">.</span><span class="n">r_reply_bits</span><span class="p">.</span><span class="n">rdata</span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">];</span>
+</code></pre></div>
+<h3 id="412-pc"><strong>4.1.2 PC</strong><a class="headerlink" href="#412-pc" title="Permanent link">&para;</a></h3>
+<p>我们使用 PC 来从 imem 中取指令，而 PC 也需要随着指令流动进行更新。在正常情况下 PC 只需要不断 +4（但是在 B 型指令跳转条件满足以及 J 型指令来临时，PC 需要根据后续阶段的计算结果进行更新，我们放在最后部分说明）</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">      </span><span class="n">CorePack</span><span class="o">::</span><span class="n">addr_t</span><span class="w"> </span><span class="n">pc</span><span class="p">,</span><span class="w"> </span><span class="n">next_pc</span><span class="p">,</span><span class="w"> </span><span class="n">pc_4</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">        </span><span class="k">assign</span><span class="w"> </span><span class="n">pc_4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pc</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mh">64</span><span class="mi">&#39;d4</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="42-id"><strong>4.2 ID 阶段</strong><a class="headerlink" href="#42-id" title="Permanent link">&para;</a></h2>
+<h3 id="421-controller"><strong>4.2.1 控制单元 Controller</strong><a class="headerlink" href="#421-controller" title="Permanent link">&para;</a></h3>
+<p>控制单元负责解码指令中的各字段，首先对于各状态寄存器进行默认赋值，随后根据<code>opcode</code> 进行相应解码，我们大致参照测试指令的类型顺序对于各类指令进行说明：</p>
+<ol>
+<li>REG_OPCODE —— R 型 64 位算术/逻辑</li>
+</ol>
+<p>覆盖的指令包括：ADD / SUB / SLL / SLT / SLTU / XOR / SRL / SRA / OR / AND，</p>
+<p>调节以下控制信号<code>we_reg=1</code>（计算结果写回寄存器堆）   <code>wb_sel=ALU</code>  （写回数据为ALU结果） A、B 默认均为寄存器（开头已设），随后按 <code>funct3</code>/<code>funct7[5]</code> 选 <code>alu_op</code> ，具体实现如下:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">            </span><span class="nl">REG_OPCODE:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">                </span><span class="n">we_reg</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">                </span><span class="n">wb_sel</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">WB_SEL_ALU</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">funct3</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">                    </span><span class="nl">ADD_FUNCT3:</span><span class="w">  </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">funct7</span><span class="p">[</span><span class="mh">5</span><span class="p">])</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">ALU_SUB</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ALU_ADD</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">                    </span><span class="nl">SLL_FUNCT3:</span><span class="w">  </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_SLL</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">                    </span><span class="nl">SLT_FUNCT3:</span><span class="w">  </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_SLT</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">                    </span><span class="nl">SLTU_FUNCT3:</span><span class="w"> </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_SLTU</span><span class="p">;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">                    </span><span class="nl">XOR_FUNCT3:</span><span class="w">  </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_XOR</span><span class="p">;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">                    </span><span class="nl">SRL_FUNCT3:</span><span class="w">  </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">funct7</span><span class="p">[</span><span class="mh">5</span><span class="p">])</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">ALU_SRA</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ALU_SRL</span><span class="p">;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">                    </span><span class="nl">OR_FUNCT3:</span><span class="w">   </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_OR</span><span class="p">;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">                    </span><span class="nl">AND_FUNCT3:</span><span class="w">  </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_AND</span><span class="p">;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">                    </span><span class="k">default</span><span class="o">:</span><span class="w">     </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_DEFAULT</span><span class="p">;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">                </span><span class="k">endcase</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">            </span><span class="k">end</span>
+</code></pre></div>
+<ol>
+<li>IMM_OPCODE —— I 型 64 位立即数算术/逻辑</li>
+</ol>
+<p>覆盖的指令包括：ADDI / SLLI / SLTI / SLTIU / XORI / SRLI / SRAI / ORI / ANDI</p>
+<p>调节以下控制信号 <code>we_reg=1</code>（计算结果写回寄存器堆），<code>immgen_op=I_IMM</code>（生成I型立即数），<code>alu_bsel=IMM</code>（A端为rs1，B端为生成的立即数），随后按 <code>funct3</code>/<code>funct7[5]</code> 选 <code>alu_op</code> 具体实现如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">            </span><span class="nl">IMM_OPCODE:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">                </span><span class="n">we_reg</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">                </span><span class="n">immgen_op</span><span class="o">=</span><span class="w"> </span><span class="n">I_IMM</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">                </span><span class="n">alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_IMM</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">funct3</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">                    </span><span class="nl">ADD_FUNCT3:</span><span class="w">  </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_ADD</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">                    </span><span class="nl">SLL_FUNCT3:</span><span class="w">  </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_SLL</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">                    </span><span class="nl">SLT_FUNCT3:</span><span class="w">  </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_SLT</span><span class="p">;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">                    </span><span class="nl">SLTU_FUNCT3:</span><span class="w"> </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_SLTU</span><span class="p">;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">                    </span><span class="nl">XOR_FUNCT3:</span><span class="w">  </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_XOR</span><span class="p">;</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">                    </span><span class="nl">SRL_FUNCT3:</span><span class="w">  </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">funct7</span><span class="p">[</span><span class="mh">5</span><span class="p">])</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">ALU_SRA</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ALU_SRL</span><span class="p">;</span><span class="w"> </span><span class="c1">// SRLI/SRAI use imm[11:5]</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">                    </span><span class="nl">OR_FUNCT3:</span><span class="w">   </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_OR</span><span class="p">;</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">                    </span><span class="nl">AND_FUNCT3:</span><span class="w">  </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_AND</span><span class="p">;</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">                    </span><span class="k">default</span><span class="o">:</span><span class="w">     </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_DEFAULT</span><span class="p">;</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">                </span><span class="k">endcase</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">            </span><span class="k">end</span>
+</code></pre></div>
+<ol>
+<li>STORE_OPCODE —— 各类存储</li>
+</ol>
+<p>覆盖的指令包括：SB / SH / SW / SD</p>
+<p>调节以下控制信号，<code>we_mem=1</code>（写内存），<code>immgen_op=S_IMM</code>（生成S型立即数）ALU 做ADD <code>rs1 + imm</code> 形成有效地址（<code>alu_asel=REG, alu_bsel=IMM, alu_op=ADD</code>），<code>mem_op</code> 决定写宽度，具体实现如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">            </span><span class="nl">STORE_OPCODE:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">                </span><span class="n">we_mem</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">                </span><span class="n">immgen_op</span><span class="o">=</span><span class="w"> </span><span class="n">S_IMM</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">                </span><span class="n">alu_op</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_ADD</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">                </span><span class="n">alu_asel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ASEL_REG</span><span class="p">;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">                </span><span class="n">alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_IMM</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">funct3</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">                    </span><span class="nl">SB_FUNCT3:</span><span class="w"> </span><span class="n">mem_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEM_B</span><span class="p">;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">                    </span><span class="nl">SH_FUNCT3:</span><span class="w"> </span><span class="n">mem_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEM_H</span><span class="p">;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">                    </span><span class="nl">SW_FUNCT3:</span><span class="w"> </span><span class="n">mem_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEM_W</span><span class="p">;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">                    </span><span class="nl">SD_FUNCT3:</span><span class="w"> </span><span class="n">mem_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEM_D</span><span class="p">;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">                    </span><span class="k">default</span><span class="o">:</span><span class="w">   </span><span class="n">mem_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEM_NO</span><span class="p">;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">                </span><span class="k">endcase</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">            </span><span class="k">end</span>
+</code></pre></div>
+<ol>
+<li>BRANCH_OPCODE —— 条件分支</li>
+</ol>
+<p>覆盖的指令包括：BEQ / BNE / BLT / BGE / BLTU / BGEU</p>
+<p>根据 <code>funct3</code> 仅设置 <code>cmp_op</code>（EQ/NE/LT/GE/LTU/GEU），<code>immgen_op=B_IMM</code>（生成B型立即数）；同时 <code>alu_asel=PC</code>，<code>alu_bsel=IMM</code>，<code>alu_op=ADD</code> 计算候选分支目标 <code>pc + imm_b</code> ，具体实现如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">            </span><span class="nl">BRANCH_OPCODE:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">                </span><span class="n">cmp_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CMP_NO</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">funct3</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">                    </span><span class="nl">BEQ_FUNCT3:</span><span class="w">  </span><span class="n">cmp_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CMP_EQ</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">                    </span><span class="nl">BNE_FUNCT3:</span><span class="w">  </span><span class="n">cmp_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CMP_NE</span><span class="p">;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">                    </span><span class="nl">BLT_FUNCT3:</span><span class="w">  </span><span class="n">cmp_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CMP_LT</span><span class="p">;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">                    </span><span class="nl">BGE_FUNCT3:</span><span class="w">  </span><span class="n">cmp_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CMP_GE</span><span class="p">;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">                    </span><span class="nl">BLTU_FUNCT3:</span><span class="w"> </span><span class="n">cmp_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CMP_LTU</span><span class="p">;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">                    </span><span class="nl">BGEU_FUNCT3:</span><span class="w"> </span><span class="n">cmp_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CMP_GEU</span><span class="p">;</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">                    </span><span class="k">default</span><span class="o">:</span><span class="w">     </span><span class="n">cmp_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CMP_NO</span><span class="p">;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">                </span><span class="k">endcase</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">                </span><span class="n">immgen_op</span><span class="o">=</span><span class="w"> </span><span class="n">B_IMM</span><span class="p">;</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">                </span><span class="n">alu_asel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ASEL_PC</span><span class="p">;</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">                </span><span class="n">alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_IMM</span><span class="p">;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">                </span><span class="n">alu_op</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_ADD</span><span class="p">;</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">            </span><span class="k">end</span>
+</code></pre></div>
+<ol>
+<li>LUI_OPCODE —— 取高立即数</li>
+</ol>
+<p>对于LUI指令，控制<code>we_reg=1</code>（打开写使能信号，将结果写回），<code>immgen_op=U_IMM</code>（生成U类型立即数，这儿U类型立即数的原理是将立即数左移12位，低12位清零）<code>alu_asel=ASEL0</code>，<code>alu_bsel=IMM</code>，<code>alu_op=ADD</code> 最后的实现效果 <code>rd = imm_u</code>（因为 A 端为 0，加上 U-imm），具体实现如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">            </span><span class="nl">LUI_OPCODE:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">                </span><span class="n">we_reg</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">                </span><span class="n">immgen_op</span><span class="o">=</span><span class="w"> </span><span class="n">U_IMM</span><span class="p">;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">                </span><span class="n">alu_asel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ASEL0</span><span class="p">;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">                </span><span class="n">alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_IMM</span><span class="p">;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">                </span><span class="n">alu_op</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_ADD</span><span class="p">;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">            </span><span class="k">end</span>
+</code></pre></div>
+<ol>
+<li>AUIPC_OPCODE —— PC 相对取高立即数</li>
+</ol>
+<p>对于AUIPC指令,控制<code>we_reg=1</code>（打开写使能信号，将结果写回），<code>immgen_op=U_IMM</code>（生成U类型立即数）<code>alu_asel=ASEL_PC</code>，</p>
+<p><code>alu_bsel=IMM</code>，<code>alu_op=ADD</code>，<code>wb_sel=ALU</code></p>
+<p>最后的实现效果 <code>rd = pc + imm_u</code> ，具体的实现如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">            </span><span class="nl">AUIPC_OPCODE:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">                </span><span class="n">we_reg</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">                </span><span class="n">immgen_op</span><span class="o">=</span><span class="w"> </span><span class="n">U_IMM</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">                </span><span class="n">alu_asel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ASEL_PC</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">                </span><span class="n">alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_IMM</span><span class="p">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">                </span><span class="n">alu_op</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_ADD</span><span class="p">;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">                </span><span class="n">wb_sel</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">WB_SEL_ALU</span><span class="p">;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">            </span><span class="k">end</span>
+</code></pre></div>
+<ol>
+<li>JAL_OPCODE —— 非寄存器间接跳转</li>
+</ol>
+<p>对于JAL指令，控制：<code>we_reg=1</code>（写回返回地址），<code>npc_sel=1</code>（走跳转），<code>immgen_op=UJ_IMM</code>（生成UJ型立即数），</p>
+<p><code>alu_asel=PC</code>，<code>alu_bsel=IMM</code>，<code>alu_op=ADD</code>（ALU 执行 <code>pc + imm_uj</code>，得到跳转目标地址），<code>wb_sel=PC</code>（写回 <code>pc+4</code>，作为返回地址）</p>
+<p>具体实现如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">            </span><span class="nl">JAL_OPCODE:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">                </span><span class="n">we_reg</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">                </span><span class="n">npc_sel</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">                </span><span class="n">immgen_op</span><span class="o">=</span><span class="w"> </span><span class="n">UJ_IMM</span><span class="p">;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">                </span><span class="n">alu_asel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ASEL_PC</span><span class="p">;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">                </span><span class="n">alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_IMM</span><span class="p">;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">                </span><span class="n">alu_op</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_ADD</span><span class="p">;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">                </span><span class="n">wb_sel</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">WB_SEL_PC</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">            </span><span class="k">end</span>
+</code></pre></div>
+<ol>
+<li>JALR_OPCODE —— 寄存器间接跳转</li>
+</ol>
+<p>对于JALR指令控制：<code>we_reg=1</code>，<code>npc_sel=1</code>（走跳转），<code>immgen_op=I_IMM</code>（生成I型立即数），<code>alu_asel=REG</code>，<code>alu_bsel=IMM</code>，<code>alu_op=ADD</code>（ALU 执行 <code>rs1 + imm</code>，并强制清零最低位
+），<code>wb_sel=PC</code>（写回 <code>pc+4</code>，作为返回地址）</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">            </span><span class="nl">JALR_OPCODE:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">                </span><span class="n">we_reg</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">                </span><span class="n">npc_sel</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">                </span><span class="n">immgen_op</span><span class="o">=</span><span class="w"> </span><span class="n">I_IMM</span><span class="p">;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">                </span><span class="n">alu_asel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ASEL_REG</span><span class="p">;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">                </span><span class="n">alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_IMM</span><span class="p">;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">                </span><span class="n">alu_op</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_ADD</span><span class="p">;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">                </span><span class="n">wb_sel</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">WB_SEL_PC</span><span class="p">;</span><span class="w"> </span><span class="c1">// write pc+4</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">            </span><span class="k">end</span>
+</code></pre></div>
+<ol>
+<li>LOAD_OPCODE —— 各类加载</li>
+</ol>
+<p>覆盖的指令包括：LB / LH / LW / LD / LBU / LHU / LWU</p>
+<p>调节以下控制信号：<code>we_reg=1</code>（写 rd），<code>re_mem=1</code>（读内存），<code>immgen_op=I_IMM</code>（生成I型立即数），ALU 做 <code>rs1 + imm</code> 形成有效地址（<code>alu_asel=REG, alu_bsel=IMM, alu_op=ADD</code>），写回选 <code>WB_SEL_MEM</code> ，表示写回的结果来自于数据存储器，并由<code>funct3</code> → <code>mem_op</code>（决定宽度/符号扩展），具体实现如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">            </span><span class="nl">LOAD_OPCODE:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">                </span><span class="n">we_reg</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">                </span><span class="n">re_mem</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">                </span><span class="n">immgen_op</span><span class="o">=</span><span class="w"> </span><span class="n">I_IMM</span><span class="p">;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">                </span><span class="n">alu_op</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_ADD</span><span class="p">;</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">                </span><span class="n">alu_asel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ASEL_REG</span><span class="p">;</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">                </span><span class="n">alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_IMM</span><span class="p">;</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">                </span><span class="n">wb_sel</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">WB_SEL_MEM</span><span class="p">;</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">funct3</span><span class="p">)</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">                    </span><span class="nl">LB_FUNCT3:</span><span class="w">  </span><span class="n">mem_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEM_B</span><span class="p">;</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">                    </span><span class="nl">LH_FUNCT3:</span><span class="w">  </span><span class="n">mem_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEM_H</span><span class="p">;</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">                    </span><span class="nl">LW_FUNCT3:</span><span class="w">  </span><span class="n">mem_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEM_W</span><span class="p">;</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">                    </span><span class="nl">LD_FUNCT3:</span><span class="w">  </span><span class="n">mem_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEM_D</span><span class="p">;</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">                    </span><span class="nl">LBU_FUNCT3:</span><span class="w"> </span><span class="n">mem_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEM_UB</span><span class="p">;</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">                    </span><span class="nl">LHU_FUNCT3:</span><span class="w"> </span><span class="n">mem_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEM_UH</span><span class="p">;</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">                    </span><span class="nl">LWU_FUNCT3:</span><span class="w"> </span><span class="n">mem_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEM_UW</span><span class="p">;</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">                    </span><span class="k">default</span><span class="o">:</span><span class="w">    </span><span class="n">mem_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEM_NO</span><span class="p">;</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">                </span><span class="k">endcase</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">            </span><span class="k">end</span>
+</code></pre></div>
+<ol>
+<li>REGW_OPCODE —— R 型 *W（32 位结果，RV64）</li>
+</ol>
+<p>覆盖的指令包括：ADDW / SUBW / SLLW / SRLW / SRAW（结果需下游按 RV64 规则对 32 位结果做符号扩展），由于这儿的实现和上文REG_OPCODE是相似的，不做赘述，仅给出实现：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">            </span><span class="nl">REGW_OPCODE:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">                </span><span class="n">we_reg</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">                </span><span class="n">wb_sel</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">WB_SEL_ALU</span><span class="p">;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">funct3</span><span class="p">)</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">                    </span><span class="nl">ADDW_FUNCT3:</span><span class="w"> </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">funct7</span><span class="p">[</span><span class="mh">5</span><span class="p">])</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">ALU_SUBW</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ALU_ADDW</span><span class="p">;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">                    </span><span class="nl">SLLW_FUNCT3:</span><span class="w"> </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_SLLW</span><span class="p">;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">                    </span><span class="nl">SRLW_FUNCT3:</span><span class="w"> </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">funct7</span><span class="p">[</span><span class="mh">5</span><span class="p">])</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">ALU_SRAW</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ALU_SRLW</span><span class="p">;</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">                    </span><span class="k">default</span><span class="o">:</span><span class="w">     </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_DEFAULT</span><span class="p">;</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">                </span><span class="k">endcase</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">            </span><span class="k">end</span>
+</code></pre></div>
+<ol>
+<li>IMMW_OPCODE —— I 型 *IW（RV64 的 32 位立即数算术/移位）</li>
+</ol>
+<p>覆盖的指令包括：ADDIW / SLLIW / SRLIW / SRAIW（同样 32 位结果再符号扩展）由于这儿的实现和上文IMM_OPCODE是相似的，不做赘述，仅给出实现：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">            </span><span class="nl">IMMW_OPCODE:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">                </span><span class="n">we_reg</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">                </span><span class="n">immgen_op</span><span class="o">=</span><span class="w"> </span><span class="n">I_IMM</span><span class="p">;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">                </span><span class="n">alu_bsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BSEL_IMM</span><span class="p">;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">funct3</span><span class="p">)</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">                    </span><span class="nl">ADDW_FUNCT3:</span><span class="w"> </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_ADDW</span><span class="p">;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">                    </span><span class="nl">SLLW_FUNCT3:</span><span class="w"> </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_SLLW</span><span class="p">;</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">                    </span><span class="nl">SRLW_FUNCT3:</span><span class="w"> </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_SRLW</span><span class="p">;</span><span class="w"> </span><span class="c1">// SRAW via funct7</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">                    </span><span class="k">default</span><span class="o">:</span><span class="w">     </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_DEFAULT</span><span class="p">;</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">                </span><span class="k">endcase</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">funct3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SRLW_FUNCT3</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">funct7</span><span class="p">[</span><span class="mh">5</span><span class="p">])</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">                    </span><span class="n">alu_op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_SRAW</span><span class="p">;</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">                </span><span class="k">end</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">            </span><span class="k">end</span>
+</code></pre></div>
+<h3 id="422-register-file"><strong>4.2.2 寄存器堆 Register File</strong><a class="headerlink" href="#422-register-file" title="Permanent link">&para;</a></h3>
+<p>在寄存器堆 Register File 中我们会维护 32 个 64 位寄存器来供 CPU 使用，在 ID 阶段中我们会使用解码得到的 rs1, rs2 寄存器号来从寄存器堆中获取寄存器值，电路图如下：</p>
+<p><img alt="image.png" src="image3.png" /></p>
+<p>参考DRAM实现，核心代码如下</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">  </span><span class="k">integer</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="n">data_t</span><span class="w"> </span><span class="n">register</span><span class="w"> </span><span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">31</span><span class="p">];</span><span class="w"> </span><span class="c1">// x1 - x31, x0 keeps zero</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="k">posedge</span><span class="w"> </span><span class="n">clk</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">posedge</span><span class="w"> </span><span class="n">rst</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rst</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mh">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mh">32</span><span class="p">;</span><span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mh">1</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">        </span><span class="n">register</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">&#39;0</span><span class="p">;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">we</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">write_addr</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">5</span><span class="mi">&#39;d0</span><span class="p">))</span><span class="w"> </span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">      </span><span class="n">register</span><span class="p">[</span><span class="n">write_addr</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">write_data</span><span class="p">;</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">  </span><span class="k">end</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">read_data_1</span><span class="o">=</span><span class="p">(</span><span class="n">read_addr_1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">5</span><span class="mi">&#39;d0</span><span class="p">)</span><span class="o">?</span><span class="m">&#39;0</span><span class="o">:</span><span class="n">register</span><span class="p">[</span><span class="n">read_addr_1</span><span class="p">];</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">read_data_2</span><span class="o">=</span><span class="p">(</span><span class="n">read_addr_2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">5</span><span class="mi">&#39;d0</span><span class="p">)</span><span class="o">?</span><span class="m">&#39;0</span><span class="o">:</span><span class="n">register</span><span class="p">[</span><span class="n">read_addr_2</span><span class="p">];</span>
+</code></pre></div>
+<h2 id="43-exe"><strong>4.3 EXE 阶段</strong><a class="headerlink" href="#43-exe" title="Permanent link">&para;</a></h2>
+<p>在 EXE 阶段我们需要根据指令译码结果进行计算，最主要的部件是算术逻辑单元ALU和比较器CMP。</p>
+<h3 id="431-alu"><strong>4.3.1 ALU</strong><a class="headerlink" href="#431-alu" title="Permanent link">&para;</a></h3>
+<p>ALU 会根据运算类型对数据进行算术和逻辑运算，具体实现如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">b_neg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mh">64</span><span class="mi">&#39;d1</span><span class="p">;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">add64</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">sub64</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b_neg</span><span class="p">;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">add_sub</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">alu_op</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ALU_SUB</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">alu_op</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ALU_SUBW</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">sub64</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">add64</span><span class="p">;</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">sll_res</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mh">5</span><span class="o">:</span><span class="mh">0</span><span class="p">];</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">srl_res</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mh">5</span><span class="o">:</span><span class="mh">0</span><span class="p">];</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">sra_res</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">$signed</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mh">5</span><span class="o">:</span><span class="mh">0</span><span class="p">];</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">slt_res</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">$signed</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">$signed</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mh">64</span><span class="mi">&#39;d1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mh">64</span><span class="mi">&#39;d0</span><span class="p">;</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">sltu_res</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mh">64</span><span class="mi">&#39;d1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mh">64</span><span class="mi">&#39;d0</span><span class="p">;</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">logic_and</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">logic_or</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">logic_xor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">a_w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">];</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">b_w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">];</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">add32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_w</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b_w</span><span class="p">;</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">sub32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_w</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b_w</span><span class="p">;</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">sll32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_w</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b_w</span><span class="p">[</span><span class="mh">4</span><span class="o">:</span><span class="mh">0</span><span class="p">];</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">srl32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_w</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">b_w</span><span class="p">[</span><span class="mh">4</span><span class="o">:</span><span class="mh">0</span><span class="p">];</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">sra32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">$signed</span><span class="p">(</span><span class="n">a_w</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">b_w</span><span class="p">[</span><span class="mh">4</span><span class="o">:</span><span class="mh">0</span><span class="p">];</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">w_add_sub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mh">32</span><span class="p">{</span><span class="n">add32</span><span class="p">[</span><span class="mh">31</span><span class="p">]}},</span><span class="w"> </span><span class="n">add32</span><span class="p">};</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">subw_ext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mh">32</span><span class="p">{</span><span class="n">sub32</span><span class="p">[</span><span class="mh">31</span><span class="p">]}},</span><span class="w"> </span><span class="n">sub32</span><span class="p">};</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">w_sll</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mh">32</span><span class="p">{</span><span class="n">sll32</span><span class="p">[</span><span class="mh">31</span><span class="p">]}},</span><span class="w"> </span><span class="n">sll32</span><span class="p">};</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a><span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">w_srl</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mh">32</span><span class="p">{</span><span class="n">srl32</span><span class="p">[</span><span class="mh">31</span><span class="p">]}},</span><span class="w"> </span><span class="n">srl32</span><span class="p">};</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a><span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">w_sra</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mh">32</span><span class="p">{</span><span class="n">sra32</span><span class="p">[</span><span class="mh">31</span><span class="p">]}},</span><span class="w"> </span><span class="n">sra32</span><span class="p">};</span>
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="w">  </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a><span class="w">    </span><span class="n">unique</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">alu_op</span><span class="p">)</span>
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a><span class="w">      </span><span class="nl">ALU_ADD:</span><span class="w">   </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">add_sub</span><span class="p">;</span>
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a><span class="w">      </span><span class="nl">ALU_SUB:</span><span class="w">   </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">add_sub</span><span class="p">;</span>
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a><span class="w">      </span><span class="nl">ALU_AND:</span><span class="w">   </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">logic_and</span><span class="p">;</span>
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a><span class="w">      </span><span class="nl">ALU_OR:</span><span class="w">    </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">logic_or</span><span class="p">;</span>
+<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a><span class="w">      </span><span class="nl">ALU_XOR:</span><span class="w">   </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">logic_xor</span><span class="p">;</span>
+<a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a><span class="w">      </span><span class="nl">ALU_SLT:</span><span class="w">   </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slt_res</span><span class="p">;</span>
+<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a><span class="w">      </span><span class="nl">ALU_SLTU:</span><span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sltu_res</span><span class="p">;</span>
+<a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a><span class="w">      </span><span class="nl">ALU_SLL:</span><span class="w">   </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sll_res</span><span class="p">;</span>
+<a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a><span class="w">      </span><span class="nl">ALU_SRL:</span><span class="w">   </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">srl_res</span><span class="p">;</span>
+<a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a><span class="w">      </span><span class="nl">ALU_SRA:</span><span class="w">   </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sra_res</span><span class="p">;</span>
+<a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a><span class="w">      </span><span class="nl">ALU_ADDW:</span><span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w_add_sub</span><span class="p">;</span>
+<a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a><span class="w">      </span><span class="nl">ALU_SUBW:</span><span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subw_ext</span><span class="p">;</span>
+<a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a><span class="w">      </span><span class="nl">ALU_SLLW:</span><span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w_sll</span><span class="p">;</span>
+<a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a><span class="w">      </span><span class="nl">ALU_SRLW:</span><span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w_srl</span><span class="p">;</span>
+<a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a><span class="w">      </span><span class="nl">ALU_SRAW:</span><span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w_sra</span><span class="p">;</span>
+<a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a><span class="w">      </span><span class="k">default</span><span class="o">:</span><span class="w">   </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">&#39;0</span><span class="p">;</span>
+<a id="__codelineno-14-47" name="__codelineno-14-47" href="#__codelineno-14-47"></a><span class="w">    </span><span class="k">endcase</span>
+<a id="__codelineno-14-48" name="__codelineno-14-48" href="#__codelineno-14-48"></a><span class="w">  </span><span class="k">end</span>
+</code></pre></div>
+<h3 id="432-cmp"><strong>4.3.2 Cmp</strong><a class="headerlink" href="#432-cmp" title="Permanent link">&para;</a></h3>
+<p>Cmp 会通过逻辑和算术运算来判断 B 型指令是否满足跳转条件，与 ALU 不同，Cmp 的操作数总是来自寄存器堆（参考 B 型指令的指令结构），具体实现如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">eq</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">lt</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">$signed</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">$signed</span><span class="p">(</span><span class="n">b</span><span class="p">));</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">ltu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">        </span><span class="n">unique</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">cmp_op</span><span class="p">)</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">            </span><span class="nl">CMP_EQ:</span><span class="w">  </span><span class="n">cmp_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eq</span><span class="p">;</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">            </span><span class="nl">CMP_NE:</span><span class="w">  </span><span class="n">cmp_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="n">eq</span><span class="p">;</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">            </span><span class="nl">CMP_LT:</span><span class="w">  </span><span class="n">cmp_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lt</span><span class="p">;</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">            </span><span class="nl">CMP_GE:</span><span class="w">  </span><span class="n">cmp_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="n">lt</span><span class="p">;</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">            </span><span class="nl">CMP_LTU:</span><span class="w"> </span><span class="n">cmp_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ltu</span><span class="p">;</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w">            </span><span class="nl">CMP_GEU:</span><span class="w"> </span><span class="n">cmp_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="n">ltu</span><span class="p">;</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="w">            </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">cmp_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">;</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="w">        </span><span class="k">endcase</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="w">    </span><span class="k">end</span>
+</code></pre></div>
+<h2 id="44-mem"><strong>4.4 MEM 阶段</strong><a class="headerlink" href="#44-mem" title="Permanent link">&para;</a></h2>
+<p>MEM 阶段我们需要对计算得到的数据进行加工，并与 dmem 交互完成内存数据的读写工作。</p>
+<h3 id="441-data-package"><strong>4.4.1 Data Package</strong><a class="headerlink" href="#441-data-package" title="Permanent link">&para;</a></h3>
+<p>在我们实现的 CPU 中，所有写回内存的数据都是 64 位的，但是 RISC-V 中 S 型指令有多种数据类型，本次实验中我们需要支持的类型包括<code>sb</code> (8-bit),<code>sh</code> (16-bit),<code>sw</code> (32-bit),<code>sd</code> (64-bit)，显然我们需要写回的数据并不一定能完全占据 64 位空间，因此我们需要根据数据位宽和写回地址来进行移位准备写回的数据，具体实现如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">  </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">unique</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">mem_op</span><span class="p">)</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">      </span><span class="n">MEM_B</span><span class="p">,</span><span class="w"> </span><span class="nl">MEM_UB:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">dmem_waddr</span><span class="p">[</span><span class="mh">2</span><span class="o">:</span><span class="mh">0</span><span class="p">])</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">          </span><span class="mh">3</span><span class="mi">&#39;d0</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">reg_data</span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">8</span><span class="p">],</span><span class="w">  </span><span class="n">reg_data</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]};</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">          </span><span class="mh">3</span><span class="mi">&#39;d1</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">reg_data</span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">16</span><span class="p">],</span><span class="w"> </span><span class="n">reg_data</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">],</span><span class="w"> </span><span class="mh">8&#39;h00</span><span class="p">};</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">          </span><span class="mh">3</span><span class="mi">&#39;d2</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">reg_data</span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">24</span><span class="p">],</span><span class="w"> </span><span class="n">reg_data</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">],</span><span class="w"> </span><span class="mh">16&#39;h0000</span><span class="p">};</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">          </span><span class="mh">3</span><span class="mi">&#39;d3</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">reg_data</span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">32</span><span class="p">],</span><span class="w"> </span><span class="n">reg_data</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">],</span><span class="w"> </span><span class="mh">24&#39;h0</span><span class="p">};</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">          </span><span class="mh">3</span><span class="mi">&#39;d4</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">reg_data</span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">40</span><span class="p">],</span><span class="w"> </span><span class="n">reg_data</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">],</span><span class="w"> </span><span class="mh">32&#39;h0</span><span class="p">};</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">          </span><span class="mh">3</span><span class="mi">&#39;d5</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">reg_data</span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">48</span><span class="p">],</span><span class="w"> </span><span class="n">reg_data</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">],</span><span class="w"> </span><span class="mh">40&#39;h0</span><span class="p">};</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">          </span><span class="mh">3</span><span class="mi">&#39;d6</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">reg_data</span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">56</span><span class="p">],</span><span class="w"> </span><span class="n">reg_data</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">],</span><span class="w"> </span><span class="mh">48&#39;h0</span><span class="p">};</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">          </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">reg_data</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">],</span><span class="w"> </span><span class="mh">56&#39;h0</span><span class="p">};</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">        </span><span class="k">endcase</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">      </span><span class="k">end</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">      </span><span class="n">MEM_H</span><span class="p">,</span><span class="w"> </span><span class="nl">MEM_UH:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">dmem_waddr</span><span class="p">[</span><span class="mh">2</span><span class="o">:</span><span class="mh">1</span><span class="p">])</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">          </span><span class="mh">2</span><span class="mi">&#39;d0</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">reg_data</span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">16</span><span class="p">],</span><span class="w"> </span><span class="n">reg_data</span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">]};</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="w">          </span><span class="mh">2</span><span class="mi">&#39;d1</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">reg_data</span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">32</span><span class="p">],</span><span class="w"> </span><span class="n">reg_data</span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">],</span><span class="w"> </span><span class="mh">16&#39;h0</span><span class="p">};</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">          </span><span class="mh">2</span><span class="mi">&#39;d2</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">reg_data</span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">48</span><span class="p">],</span><span class="w"> </span><span class="n">reg_data</span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">],</span><span class="w"> </span><span class="mh">32&#39;h0</span><span class="p">};</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="w">          </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">reg_data</span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">],</span><span class="w"> </span><span class="mh">48&#39;h0</span><span class="p">};</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="w">        </span><span class="k">endcase</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="w">      </span><span class="k">end</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a><span class="w">      </span><span class="n">MEM_W</span><span class="p">,</span><span class="w"> </span><span class="nl">MEM_UW:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">dmem_waddr</span><span class="p">[</span><span class="mh">2</span><span class="p">])</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a><span class="w">          </span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">reg_data</span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">32</span><span class="p">],</span><span class="w"> </span><span class="n">reg_data</span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]};</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a><span class="w">          </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">reg_data</span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">],</span><span class="w"> </span><span class="mh">32&#39;h0</span><span class="p">};</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="w">        </span><span class="k">endcase</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a><span class="w">      </span><span class="k">end</span>
+<a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a><span class="w">      </span><span class="nl">MEM_D:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a><span class="w">        </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reg_data</span><span class="p">;</span>
+<a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a><span class="w">      </span><span class="k">end</span>
+<a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a><span class="w">      </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a><span class="w">        </span><span class="n">dmem_wdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">&#39;0</span><span class="p">;</span>
+<a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a><span class="w">      </span><span class="k">end</span>
+<a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a><span class="w">    </span><span class="k">endcase</span>
+<a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a><span class="w">  </span><span class="k">end</span>
+</code></pre></div>
+<h3 id="442-data-mask-generation"><strong>4.4.2 Data Mask Generation</strong><a class="headerlink" href="#442-data-mask-generation" title="Permanent link">&para;</a></h3>
+<p>在进行 Data Package 后，我们传回的数据中可能包含大量无意义仅用于占位的 0 ，而我们不希望这些数据被内存错误地写入，因此我们需要使用掩码 (Mask) 来告知内存哪些位是有意义的，只有掩码中为 1 的<strong>字节</strong>才会被载入内存。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">  </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">unique</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">mem_op</span><span class="p">)</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">      </span><span class="n">MEM_B</span><span class="p">,</span><span class="w"> </span><span class="nl">MEM_UB:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">dmem_waddr</span><span class="p">[</span><span class="mh">2</span><span class="o">:</span><span class="mh">0</span><span class="p">])</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">          </span><span class="mh">3</span><span class="mi">&#39;d0</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="mb">&#39;b0000</span><span class="n">_0001</span><span class="p">;</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">          </span><span class="mh">3</span><span class="mi">&#39;d1</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="mb">&#39;b0000</span><span class="n">_0010</span><span class="p">;</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">          </span><span class="mh">3</span><span class="mi">&#39;d2</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="mb">&#39;b0000</span><span class="n">_0100</span><span class="p">;</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">          </span><span class="mh">3</span><span class="mi">&#39;d3</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="mb">&#39;b0000</span><span class="n">_1000</span><span class="p">;</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">          </span><span class="mh">3</span><span class="mi">&#39;d4</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="mb">&#39;b0001</span><span class="n">_0000</span><span class="p">;</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="w">          </span><span class="mh">3</span><span class="mi">&#39;d5</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="mb">&#39;b0010</span><span class="n">_0000</span><span class="p">;</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="w">          </span><span class="mh">3</span><span class="mi">&#39;d6</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="mb">&#39;b0100</span><span class="n">_0000</span><span class="p">;</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="w">          </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="mb">&#39;b1000</span><span class="n">_0000</span><span class="p">;</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="w">        </span><span class="k">endcase</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="w">      </span><span class="k">end</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="w">      </span><span class="n">MEM_H</span><span class="p">,</span><span class="w"> </span><span class="nl">MEM_UH:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">dmem_waddr</span><span class="p">[</span><span class="mh">2</span><span class="o">:</span><span class="mh">1</span><span class="p">])</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="w">          </span><span class="mh">2</span><span class="mi">&#39;d0</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="mb">&#39;b0000</span><span class="n">_0011</span><span class="p">;</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a><span class="w">          </span><span class="mh">2</span><span class="mi">&#39;d1</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="mb">&#39;b0000</span><span class="n">_1100</span><span class="p">;</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="w">          </span><span class="mh">2</span><span class="mi">&#39;d2</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="mb">&#39;b0011</span><span class="n">_0000</span><span class="p">;</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a><span class="w">          </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="mb">&#39;b1100</span><span class="n">_0000</span><span class="p">;</span>
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="w">        </span><span class="k">endcase</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="w">      </span><span class="k">end</span>
+<a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a><span class="w">      </span><span class="n">MEM_W</span><span class="p">,</span><span class="w"> </span><span class="nl">MEM_UW:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">dmem_waddr</span><span class="p">[</span><span class="mh">2</span><span class="p">])</span>
+<a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a><span class="w">          </span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="mb">&#39;b0000</span><span class="n">_1111</span><span class="p">;</span>
+<a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a><span class="w">          </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="mb">&#39;b1111</span><span class="n">_0000</span><span class="p">;</span>
+<a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a><span class="w">        </span><span class="k">endcase</span>
+<a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a><span class="w">      </span><span class="k">end</span>
+<a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a><span class="w">      </span><span class="nl">MEM_D:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-17-30" name="__codelineno-17-30" href="#__codelineno-17-30"></a><span class="w">        </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8&#39;hFF</span><span class="p">;</span>
+<a id="__codelineno-17-31" name="__codelineno-17-31" href="#__codelineno-17-31"></a><span class="w">      </span><span class="k">end</span>
+<a id="__codelineno-17-32" name="__codelineno-17-32" href="#__codelineno-17-32"></a><span class="w">      </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-17-33" name="__codelineno-17-33" href="#__codelineno-17-33"></a><span class="w">        </span><span class="n">dmem_wmask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8&#39;h00</span><span class="p">;</span>
+<a id="__codelineno-17-34" name="__codelineno-17-34" href="#__codelineno-17-34"></a><span class="w">      </span><span class="k">end</span>
+<a id="__codelineno-17-35" name="__codelineno-17-35" href="#__codelineno-17-35"></a><span class="w">    </span><span class="k">endcase</span>
+<a id="__codelineno-17-36" name="__codelineno-17-36" href="#__codelineno-17-36"></a><span class="w">  </span><span class="k">end</span>
+</code></pre></div>
+<h3 id="443-data-truncation"><strong>4.4.3 Data Truncation</strong><a class="headerlink" href="#443-data-truncation" title="Permanent link">&para;</a></h3>
+<p>与写内存类似，在 Load 指令读内存时，我们也只需要读到的 64 位数据中的一部分，因此需要根据读内存的地址来从中进行截取。此外需要注意由于我们的寄存器是 64 位的，因此仍然需要对截取的数据进行一定加工，你需要注意有无符号数符号扩展和零扩展的差异。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="w">  </span><span class="kt">logic</span><span class="w"> </span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">shifted</span><span class="p">;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="n">shifted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">&#39;0</span><span class="p">;</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="n">read_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">&#39;0</span><span class="p">;</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">mem_op</span><span class="p">)</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">      </span><span class="n">MEM_B</span><span class="p">,</span><span class="w"> </span><span class="nl">MEM_UB:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">        </span><span class="n">shifted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dmem_rdata</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">dmem_raddr</span><span class="p">[</span><span class="mh">2</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mh">8</span><span class="p">);</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mem_op</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MEM_B</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w">          </span><span class="n">read_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mh">56</span><span class="p">{</span><span class="n">shifted</span><span class="p">[</span><span class="mh">7</span><span class="p">]}},</span><span class="w"> </span><span class="n">shifted</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]};</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="w">        </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="w">          </span><span class="n">read_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">56&#39;h0</span><span class="p">,</span><span class="w"> </span><span class="n">shifted</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]};</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="w">        </span><span class="k">end</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="w">      </span><span class="k">end</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="w">      </span><span class="n">MEM_H</span><span class="p">,</span><span class="w"> </span><span class="nl">MEM_UH:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="w">        </span><span class="n">shifted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dmem_rdata</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">dmem_raddr</span><span class="p">[</span><span class="mh">2</span><span class="o">:</span><span class="mh">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mh">16</span><span class="p">);</span>
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mem_op</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MEM_H</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="w">          </span><span class="n">read_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mh">48</span><span class="p">{</span><span class="n">shifted</span><span class="p">[</span><span class="mh">15</span><span class="p">]}},</span><span class="w"> </span><span class="n">shifted</span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">]};</span>
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="w">        </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a><span class="w">          </span><span class="n">read_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">48&#39;h0</span><span class="p">,</span><span class="w"> </span><span class="n">shifted</span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">]};</span>
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="w">        </span><span class="k">end</span>
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="w">      </span><span class="k">end</span>
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a><span class="w">      </span><span class="n">MEM_W</span><span class="p">,</span><span class="w"> </span><span class="nl">MEM_UW:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="w">        </span><span class="n">shifted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dmem_rdata</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">dmem_raddr</span><span class="p">[</span><span class="mh">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mh">32</span><span class="p">);</span>
+<a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mem_op</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MEM_W</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a><span class="w">          </span><span class="n">read_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mh">32</span><span class="p">{</span><span class="n">shifted</span><span class="p">[</span><span class="mh">31</span><span class="p">]}},</span><span class="w"> </span><span class="n">shifted</span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]};</span>
+<a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a><span class="w">        </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a><span class="w">          </span><span class="n">read_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">32&#39;h0</span><span class="p">,</span><span class="w"> </span><span class="n">shifted</span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]};</span>
+<a id="__codelineno-18-28" name="__codelineno-18-28" href="#__codelineno-18-28"></a><span class="w">        </span><span class="k">end</span>
+<a id="__codelineno-18-29" name="__codelineno-18-29" href="#__codelineno-18-29"></a><span class="w">      </span><span class="k">end</span>
+<a id="__codelineno-18-30" name="__codelineno-18-30" href="#__codelineno-18-30"></a><span class="w">      </span><span class="nl">MEM_D:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-18-31" name="__codelineno-18-31" href="#__codelineno-18-31"></a><span class="w">        </span><span class="n">read_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dmem_rdata</span><span class="p">;</span>
+<a id="__codelineno-18-32" name="__codelineno-18-32" href="#__codelineno-18-32"></a><span class="w">      </span><span class="k">end</span>
+<a id="__codelineno-18-33" name="__codelineno-18-33" href="#__codelineno-18-33"></a><span class="w">      </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-18-34" name="__codelineno-18-34" href="#__codelineno-18-34"></a><span class="w">        </span><span class="n">read_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">&#39;0</span><span class="p">;</span>
+<a id="__codelineno-18-35" name="__codelineno-18-35" href="#__codelineno-18-35"></a><span class="w">      </span><span class="k">end</span>
+<a id="__codelineno-18-36" name="__codelineno-18-36" href="#__codelineno-18-36"></a><span class="w">    </span><span class="k">endcase</span>
+<a id="__codelineno-18-37" name="__codelineno-18-37" href="#__codelineno-18-37"></a><span class="w">  </span><span class="k">end</span>
+</code></pre></div>
+<h2 id="45-wb"><strong>4.5 WB 阶段</strong><a class="headerlink" href="#45-wb" title="Permanent link">&para;</a></h2>
+<p>在该阶段需要将根据指令选择数据写回寄存器堆，我们根据<code>wb_sel</code> 的状态来决定写回的内容，是否写回根据写使能信号和目的寄存器<code>rd</code> 不为零来决定，这里给出判断代码，具体的写回在寄存器堆已经实现：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="w">    </span><span class="n">CorePack</span><span class="o">::</span><span class="n">data_t</span><span class="w"> </span><span class="n">wb_val</span><span class="p">;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">        </span><span class="n">unique</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">wb_sel</span><span class="p">)</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">            </span><span class="nl">WB_SEL_ALU:</span><span class="w"> </span><span class="n">wb_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alu_res</span><span class="p">;</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">            </span><span class="nl">WB_SEL_MEM:</span><span class="w"> </span><span class="n">wb_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data_trunc</span><span class="p">;</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">            </span><span class="nl">WB_SEL_PC:</span><span class="w">  </span><span class="n">wb_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pc_4</span><span class="p">;</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">            </span><span class="k">default</span><span class="o">:</span><span class="w">    </span><span class="n">wb_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">&#39;0</span><span class="p">;</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">        </span><span class="k">endcase</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">    </span><span class="k">end</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="w">    </span><span class="kt">wire</span><span class="w"> </span><span class="n">do_write</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">we_reg</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">rd</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">5</span><span class="mi">&#39;d0</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="46-core"><strong>4.6 数据通路 Core</strong><a class="headerlink" href="#46-core" title="Permanent link">&para;</a></h2>
+<p>在控制通路中集成上面实现的这些功能模块，声明为 Core 模块。Core 模块有两个 mem_ift 的内存接口和 DRAM 连接，其中 imem_ift 仅使用读请求和读响应通道，向 DRAM 请求指令；dmem_ift 使用四个通道分别进行 DRAM 的读写操作。其中在具体实现上，对于上述没有涉及但必要的模块进行说明：</p>
+<h3 id="461-imm">4.6.1 IMM<a class="headerlink" href="#461-imm" title="Permanent link">&para;</a></h3>
+<p>IMM模块的作用是根据指令类型提取出对应的立即数字段并进行符号扩展，以统一输出 64 位立即数供后续运算使用。</p>
+<p>对于 <strong>I 型指令</strong>，立即数取自 <code>inst[31:20]</code>，用于算术立即数、加载和 JALR 等指令；</p>
+<p>对于 <strong>S 型指令</strong>，立即数由 <code>inst[31:25]</code> 与 <code>inst[11:7]</code> 拼接而成，主要用于存储指令的偏移；</p>
+<p>对于 <strong>B 型指令</strong>，立即数来自 <code>inst[31]、inst[7]、inst[30:25]、inst[11:8]</code> 并在低位补零，用于条件分支的跳转目标；</p>
+<p>对于 <strong>U 型指令</strong>，立即数取自 <code>inst[31:12]</code> 并左移 12 位，用于 LUI 和 AUIPC 指令；</p>
+<p>对于 <strong>UJ 型指令</strong>，立即数由 <code>inst[31]、inst[19:12]、inst[20]、inst[30:21]</code> 拼接并低位补零，用于 JAL 跳转指令。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="w">    </span><span class="n">CorePack</span><span class="o">::</span><span class="n">data_t</span><span class="w"> </span><span class="n">imm</span><span class="p">;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">        </span><span class="n">unique</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">immgen_op</span><span class="p">)</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">            </span><span class="nl">I_IMM:</span><span class="w">   </span><span class="n">imm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mh">52</span><span class="p">{</span><span class="n">inst</span><span class="p">[</span><span class="mh">31</span><span class="p">]}},</span><span class="w"> </span><span class="n">inst</span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">20</span><span class="p">]};</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">            </span><span class="nl">S_IMM:</span><span class="w">   </span><span class="n">imm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mh">52</span><span class="p">{</span><span class="n">inst</span><span class="p">[</span><span class="mh">31</span><span class="p">]}},</span><span class="w"> </span><span class="n">inst</span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">25</span><span class="p">],</span><span class="w"> </span><span class="n">inst</span><span class="p">[</span><span class="mh">11</span><span class="o">:</span><span class="mh">7</span><span class="p">]};</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">            </span><span class="nl">B_IMM:</span><span class="w">   </span><span class="n">imm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mh">52</span><span class="p">{</span><span class="n">inst</span><span class="p">[</span><span class="mh">31</span><span class="p">]}},</span><span class="w"> </span><span class="n">inst</span><span class="p">[</span><span class="mh">7</span><span class="p">],</span><span class="w"> </span><span class="n">inst</span><span class="p">[</span><span class="mh">30</span><span class="o">:</span><span class="mh">25</span><span class="p">],</span><span class="w"> </span><span class="n">inst</span><span class="p">[</span><span class="mh">11</span><span class="o">:</span><span class="mh">8</span><span class="p">],</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">};</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">            </span><span class="nl">U_IMM:</span><span class="w">   </span><span class="n">imm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">{</span><span class="mh">32</span><span class="p">{</span><span class="n">inst</span><span class="p">[</span><span class="mh">31</span><span class="p">]}},</span><span class="w"> </span><span class="n">inst</span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">12</span><span class="p">],</span><span class="w"> </span><span class="mh">12</span><span class="mb">&#39;b0</span><span class="w"> </span><span class="p">};</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">            </span><span class="nl">UJ_IMM:</span><span class="w">  </span><span class="n">imm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mh">44</span><span class="p">{</span><span class="n">inst</span><span class="p">[</span><span class="mh">31</span><span class="p">]}},</span><span class="w"> </span><span class="n">inst</span><span class="p">[</span><span class="mh">19</span><span class="o">:</span><span class="mh">12</span><span class="p">],</span><span class="w"> </span><span class="n">inst</span><span class="p">[</span><span class="mh">20</span><span class="p">],</span><span class="w"> </span><span class="n">inst</span><span class="p">[</span><span class="mh">30</span><span class="o">:</span><span class="mh">21</span><span class="p">],</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">};</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">            </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">imm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">&#39;0</span><span class="p">;</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">        </span><span class="k">endcase</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="w">    </span><span class="k">end</span>
+</code></pre></div>
+<h3 id="462-alu-operand-select">4.6.2 ALU Operand Select<a class="headerlink" href="#462-alu-operand-select" title="Permanent link">&para;</a></h3>
+<p>ALU 输入选择模块通过 <code>alu_asel</code> 和<code>alu_bsel</code>控制 <code>src_a</code> 和<code>src_b</code>的来源，具体实现如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="w">    </span><span class="n">CorePack</span><span class="o">::</span><span class="n">data_t</span><span class="w"> </span><span class="n">src_a</span><span class="p">,</span><span class="w"> </span><span class="n">src_b</span><span class="p">;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">        </span><span class="n">unique</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">alu_asel</span><span class="p">)</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">            </span><span class="nl">ASEL_REG:</span><span class="w"> </span><span class="n">src_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_data_1</span><span class="p">;</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">            </span><span class="nl">ASEL_PC:</span><span class="w">  </span><span class="n">src_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pc</span><span class="p">;</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">            </span><span class="k">default</span><span class="o">:</span><span class="w">  </span><span class="n">src_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">&#39;0</span><span class="p">;</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">        </span><span class="k">endcase</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">        </span><span class="n">unique</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">alu_bsel</span><span class="p">)</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">            </span><span class="nl">BSEL_REG:</span><span class="w"> </span><span class="n">src_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_data_2</span><span class="p">;</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">            </span><span class="nl">BSEL_IMM:</span><span class="w"> </span><span class="n">src_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">imm</span><span class="p">;</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="w">            </span><span class="k">default</span><span class="o">:</span><span class="w">  </span><span class="n">src_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">&#39;0</span><span class="p">;</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="w">        </span><span class="k">endcase</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="w">    </span><span class="k">end</span>
+</code></pre></div>
+<h3 id="463-jalr-lsb-clear">4.6.3 JALR LSB Clear<a class="headerlink" href="#463-jalr-lsb-clear" title="Permanent link">&para;</a></h3>
+<p>在 RISC-V 中，JAL指令的目标地址 为 <code>pc + imm</code>，天然对齐，不需要额外处理。而JALR指令目标地址 =为<code>rs1 + imm</code>，可能不是偶数地址，注意规范要求跳转地址的 <code>bit[0]</code>必须为 0（因为指令至少 2 字节对齐），所以需要手动清零，实现如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="w">    </span><span class="kt">logic</span><span class="w"> </span><span class="n">is_jalr</span><span class="p">;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">is_jalr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">inst</span><span class="p">[</span><span class="mh">6</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">JALR_OPCODE</span><span class="p">);</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="n">CorePack</span><span class="o">::</span><span class="n">data_t</span><span class="w"> </span><span class="n">alu_res</span><span class="p">;</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">alu_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">is_jalr</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">{</span><span class="n">alu_res_raw</span><span class="p">[</span><span class="mh">63</span><span class="o">:</span><span class="mh">1</span><span class="p">],</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">}</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">alu_res_raw</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="464-branchjump-decison">4.6.4 Branch/Jump Decison<a class="headerlink" href="#464-branchjump-decison" title="Permanent link">&para;</a></h3>
+<p>分支决策模块，用于判断当前指令是否会改变 PC 的正常顺序流。在该模块中，首先判断指令是否是分支类（<code>BRANCH_OPCODE</code>）：如果是，则根据比较器输出 <code>cmp_res</code> 决定是否跳转，只有当条件成立时 <code>br_taken=1</code>，表示分支被采纳；如果指令是无条件跳转类（<code>JAL_OPCODE</code> 或 <code>JALR_OPCODE</code>），则无条件跳转，直接令 <code>br_taken=1</code>；其他指令则保持顺序执行，<code>br_taken=0</code> </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="w">    </span><span class="kt">logic</span><span class="w"> </span><span class="n">br_taken</span><span class="p">;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inst</span><span class="p">[</span><span class="mh">6</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">BRANCH_OPCODE</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">            </span><span class="n">br_taken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cmp_res</span><span class="p">;</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">        </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inst</span><span class="p">[</span><span class="mh">6</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">JAL_OPCODE</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">inst</span><span class="p">[</span><span class="mh">6</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">JALR_OPCODE</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">            </span><span class="n">br_taken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">        </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">            </span><span class="n">br_taken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">;</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">        </span><span class="k">end</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">    </span><span class="k">end</span>
+</code></pre></div>
+<h3 id="465-npc">4.6.5 NPC<a class="headerlink" href="#465-npc" title="Permanent link">&para;</a></h3>
+<p>NPC模块和上一个模块是息息相关的，它的功能是根据当前指令的类型和分支判断结果来生成下一条指令的 PC 值。在设计中，如果检测到 <code>end_of_test</code> 信号，则保持 PC 不变，用于程序运行结束后的停机状态（对于<code>end_of_test</code>信号设计作以下说明：为了使用例结束后，停止向 cosim 提交，并保持 PC 不再前进，避免参考端重启对齐时出现首条提交不一致，引入了这个信号，并根据这个信号将<code>cosim_valid</code> 拉低来停止提交，这个信号根据指令的反汇编结果是否为<code>unimp</code> 来实现）</p>
+<p>若分支/跳转被采纳（<code>br_taken=1</code>），则需要区分是 JALR 还是其他跳转：对于 JALR 指令，下一条 PC 由 ALU 计算的寄存器+立即数结果（并清零最低位）提供；而对于 JAL 或分支类指令，下一条 PC 则是 <code>pc + imm</code>，即当前 PC 加上分支偏移量。</p>
+<p>如果既不是分支也不是跳转，则说明指令顺序执行，下一条 PC 等于 <code>pc+4</code>。在时钟上升沿（或复位有效时），PC 会被更新为 <code>next_pc</code>，从而驱动取指单元进入下一个执行周期。通过这种设计，NPC 模块与分支决策模块配合，实现了单周期 CPU 的完整控制流。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">end_of_test</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">            </span><span class="n">next_pc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pc</span><span class="p">;</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">        </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">br_taken</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">            </span><span class="n">next_pc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">inst</span><span class="p">[</span><span class="mh">6</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">JALR_OPCODE</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">alu_res</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="n">pc</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">imm</span><span class="p">);</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="w">        </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="w">            </span><span class="n">next_pc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pc_4</span><span class="p">;</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="w">        </span><span class="k">end</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="w">    </span><span class="k">end</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="k">posedge</span><span class="w"> </span><span class="n">clk</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">posedge</span><span class="w"> </span><span class="n">rst</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rst</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a><span class="w">            </span><span class="n">pc</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">&#39;0</span><span class="p">;</span>
+<a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a><span class="w">        </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">begin</span>
+<a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a><span class="w">            </span><span class="n">pc</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">next_pc</span><span class="p">;</span>
+<a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a><span class="w">        </span><span class="k">end</span>
+<a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a><span class="w">    </span><span class="k">end</span>
+</code></pre></div>
+<h1 id="5">5 验证阶段<a class="headerlink" href="#5" title="Permanent link">&para;</a></h1>
+<h2 id="51-80">5.1 仿真测试（80’）<a class="headerlink" href="#51-80" title="Permanent link">&para;</a></h2>
+<p>执行代码<code>make verilate TESTCASE=full</code> 来运行全部样例，得到结果如下：</p>
+<p><img alt="image.png" src="image4.png" /></p>
+<p>可以看到日志已到“&gt;&gt;&gt;&gt; pass”，各项校验都完成且正确，说明程序在功能上已完整通过80个测试。（后续的unimp/对齐问题没有出现在上面<code>end_of_res</code> 信号引入时已经做了说明，同时由于结束后拉低了cosim_valid也不会出现0 Commit Failed的报错）</p>
+<h2 id="52-20">5.2 上板验证（20’）<a class="headerlink" href="#52-20" title="Permanent link">&para;</a></h2>
+<p>在vivado中进行了综合，构建，验证，下板得到结果，示例如下（具体细节在验收展示）：</p>
+<p><img alt="1.jpg" src="1.jpg" /></p>
+<p>单步运行，通过观察 pc、inst、寄存器值等信号确定上板得到的结果与仿真测试一致，实现了单周期CPU的完整搭建。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
