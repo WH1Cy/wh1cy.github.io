@@ -1,21 +1,53 @@
 # 计算机系统 II
 
-本课程笔记与资料索引。
+本课程笔记与资料索引，包含所有实验报告的完整记录。
 
 ## 课程概要
 
-- 深入理解计算机系统：程序如何在硬件上运行、操作系统与体系结构等。
-- 常见主题：进程与线程、内存管理、I/O、并发与同步、系统编程等。
+计算机系统 II 是一门深入理解计算机系统底层原理的课程，涵盖：
+
+- **CPU 设计与实现**：从单周期 CPU 到五级流水线，理解指令执行流程
+- **硬件系统设计**：数据竞争处理、AXI 总线协议、外设控制与加速器设计
+- **操作系统内核**：RISC-V 内核引导、中断处理、线程调度等核心机制
+- **综合实践**：将 CPU Core 与 Mini Kernel 结合，完成完整的系统实现
+
+通过本课程的学习，你将深入理解程序如何在硬件上运行，操作系统如何管理资源，以及如何从底层构建一个可运行的计算系统。
+
+---
 
 ## 实验报告
 
-| 报告 | 链接 |
-|------|------|
-| Lab 0 | [Lab 0 实验报告](lab0/index.md) |
-| Lab 1 | [Lab 1 实验报告](lab1/index.md) |
-| Lab 2 | [Lab 2 实验报告](lab2/index.md) |
-| Lab 3 | [Lab 3 实验报告](lab3/index.md) |
-| Lab 4 | [Lab 4 实验报告](lab4/index.md) |
-| Lab 5 | [Lab 5 实验报告](lab5/index.md) |
-| Lab 6 | [Lab 6 实验报告](lab6/index.md) |
-| Project | [Project 实验报告](project/index.md) |
+所有实验报告按实验顺序排列，点击标题可查看详细内容。
+
+| 实验编号 | 实验名称 | 主要内容 | 链接 |
+|---------|---------|---------|------|
+| Lab 0 | 单周期CPU设计 | CPU 数据通路与控制单元设计，RV64I 指令集架构 | [查看报告](lab0/index.md) |
+| Lab 1 | 基础五级流水线 | 基于单周期 CPU 实现五级流水线框架，提升 CPU 吞吐率 | [查看报告](lab1/index.md) |
+| Lab 2 | 竞争处理及 AXI4-lite 总线内存模型 | 数据/控制/结构竞争处理，Forwarding 机制，AXI 总线协议 | [查看报告](lab2/index.md) |
+| Lab 3 | 卷积加速器 | MMIO 外设控制，硬件加速器设计与实现 | [查看报告](lab3/index.md) |
+| Lab 4 | RV64内核引导 | RISC-V 汇编编程，OpenSBI 接口调用，Makefile 与 Docker 使用 | [查看报告](lab4/index.md) |
+| Lab 5 | RV64时钟中断处理 | RISC-V trap 处理机制，CPU 上下文切换，时钟中断设置 | [查看报告](lab5/index.md) |
+| Lab 6 | RV64内核线程调度 | 线程结构体与初始化，时钟中断实现调度，线程切换与调度算法 | [查看报告](lab6/index.md) |
+| Project | 综合实验 | CPU Core 改造（CSR 流水线），Mini Kernel 实现与运行 | [查看报告](project/index.md) |
+
+---
+
+## 实验环境
+
+- **硬件开发**：Vivado IDE，Nexys A7 开发板
+- **HDL 语言**：Verilog，SystemVerilog
+- **软件环境**：Ubuntu 22.04+ / Debian 12，Docker
+- **目标架构**：RISC-V (RV64I)
+
+---
+
+## 相关资源
+
+- 课程实验指导文档
+- RISC-V 指令集手册
+- OpenSBI 文档
+- AXI4 总线协议规范
+
+---
+
+*最后更新：2026-02-04*

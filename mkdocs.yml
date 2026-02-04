@@ -11,39 +11,78 @@ theme:
   name: material
   language: zh
   font:
-    text: Lora
-    code: Sans Code
+    text: Noto Serif SC
+    code: JetBrains Mono
   palette:
+    # 浅色主题
     - scheme: default
-      primary: grey
+      primary: indigo
       accent: indigo
       toggle:
-        icon: material/toggle-switch
+        icon: material/brightness-7
         name: 切换到深色模式
+    # 深色主题
     - scheme: slate
-      primary: grey
+      primary: indigo
       accent: indigo
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/brightness-4
         name: 切换到浅色模式
   features:
     - navigation.instant
     - navigation.tabs
-    - navigation.sections
+    - navigation.path
     - navigation.expand
+    - navigation.indexes
+    - navigation.sections
+    - navigation.top
     - search.suggest
     - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
   icon:
     repo: fontawesome/brands/github
+    logo: material/book-open-variant
 
 plugins:
   - search
+  # - social:
+  #     cards_layout_options:
+  #       # 为社交卡片选择支持简体中文的字体，参考官方文档
+  #       # https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/
+  #       font_family: Noto Sans SC
+
+extra:
+  # 共享颜色主题、Cookie 同意等偏好设置的作用域（为后续多项目优化做准备）
+  # 参考：https://squidfunk.github.io/mkdocs-material/setup/building-an-optimized-site/
+  scope: /
+  analytics:
+    provider: google
+    # TODO: 将下面的示例 ID 替换为你自己的 GA4 属性 ID，例如 G-ABCDEF1234
+    property: G-XXXXXXXXXX
+    feedback:
+      title: 本页对你有帮助吗？
+      ratings:
+        - icon: material/heart
+          name: 这页对我有帮助
+          data: 1
+          note: >
+            感谢你的反馈！
+        - icon: material/heart-broken
+          name: 这页还有待改进
+          data: 0
+          note: >
+            感谢你的反馈！可以在 GitHub 仓库提交 Issue 告诉我如何改进。
 
 extra_css:
   - stylesheets/extra.css
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/homepage.js
 
 markdown_extensions:
   - abbr
@@ -61,13 +100,16 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
 
 nav:
   - 首页: index.md
   - 博客:
     - 文章列表: blog/index.md
-    - 示例文章一: blog/2024-hello-world.md
-    - 示例文章二: blog/2024-mkdocs-blog.md
+    - GitHub 使用教学：从零到协作: blog/2026-github-guide.md
+    - 用 MkDocs 搭建博客: blog/2026-mkdocs-blog.md
   - 课程:
     - 计算机系统 II:
         - 课程主页: courses/sys2/index.md
