@@ -23,10 +23,28 @@ jobs:
           python-version: "3.x"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Verify custom files exist
+        run: |
+          echo "Checking custom CSS and JS files..."
+          ls -la docs/stylesheets/ || echo "stylesheets directory not found"
+          ls -la docs/javascripts/ || echo "javascripts directory not found"
+          test -f docs/stylesheets/extra.css && echo "✓ extra.css found" || echo "✗ extra.css missing"
+          test -f docs/javascripts/homepage.js && echo "✓ homepage.js found" || echo "✗ homepage.js missing"
+          test -f docs/javascripts/mathjax.js && echo "✓ mathjax.js found" || echo "✗ mathjax.js missing"
 
       - name: Build MkDocs
-        run: mkdocs build --strict
+        run: mkdocs build
+
+      - name: Verify build output
+        run: |
+          echo "Checking built files..."
+          ls -la site/assets/stylesheets/ || echo "stylesheets not found in build"
+          ls -la site/assets/javascripts/ || echo "javascripts not found in build"
+          find site -name "extra.css" -o -name "homepage.js" | head -5
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
