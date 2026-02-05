@@ -26,25 +26,44 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
+          pip list | grep -i mkdocs
 
       - name: Verify custom files exist
         run: |
           echo "Checking custom CSS and JS files..."
           ls -la docs/stylesheets/ || echo "stylesheets directory not found"
           ls -la docs/javascripts/ || echo "javascripts directory not found"
-          test -f docs/stylesheets/extra.css && echo "✓ extra.css found" || echo "✗ extra.css missing"
-          test -f docs/javascripts/homepage.js && echo "✓ homepage.js found" || echo "✗ homepage.js missing"
-          test -f docs/javascripts/mathjax.js && echo "✓ mathjax.js found" || echo "✗ mathjax.js missing"
+          test -f docs/stylesheets/extra.css && echo "✓ extra.css found" || (echo "✗ extra.css missing" && exit 1)
+          test -f docs/javascripts/homepage.js && echo "✓ homepage.js found" || (echo "✗ homepage.js missing" && exit 1)
+          test -f docs/javascripts/mathjax.js && echo "✓ mathjax.js found" || (echo "✗ mathjax.js missing" && exit 1)
+          echo "Checking images..."
+          ls -la docs/images/ || echo "images directory not found"
+          test -f docs/images/Rain01.jpg && echo "✓ Rain01.jpg found" || echo "⚠ Rain01.jpg missing (optional)"
+
+      - name: Validate mkdocs.yml
+        run: |
+          echo "Validating mkdocs.yml..."
+          python -c "import yaml; yaml.safe_load(open('mkdocs.yml'))" && echo "✓ mkdocs.yml is valid" || (echo "✗ mkdocs.yml has syntax errors" && exit 1)
 
       - name: Build MkDocs
-        run: mkdocs build
+        run: |
+          mkdocs build --verbose 2>&1 | tee build.log || (echo "Build failed!" && cat build.log && exit 1)
 
       - name: Verify build output
         run: |
           echo "Checking built files..."
-          ls -la site/assets/stylesheets/ || echo "stylesheets not found in build"
-          ls -la site/assets/javascripts/ || echo "javascripts not found in build"
-          find site -name "extra.css" -o -name "homepage.js" | head -5
+          test -d site || (echo "✗ site directory not found" && exit 1)
+          echo "Site directory structure:"
+          find site -type f -name "*.html" | head -10
+          echo "Checking assets..."
+          ls -la site/assets/stylesheets/ || echo "⚠ stylesheets not found in build"
+          ls -la site/assets/javascripts/ || echo "⚠ javascripts not found in build"
+          echo "Checking custom files in build:"
+          find site -name "extra.css" -o -name "homepage.js" -o -name "mathjax.js" | head -10
+          echo "Checking index.html:"
+          test -f site/index.html && echo "✓ index.html exists" || (echo "✗ index.html missing" && exit 1)
+          echo "Checking if index.html contains hero-section:"
+          grep -q "hero-section" site/index.html && echo "✓ hero-section found in index.html" || echo "⚠ hero-section not found in index.html"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
