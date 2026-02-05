@@ -5,9 +5,9 @@ description: 介绍「三月の海」博客的技术栈、搭建方式以及作�
 
 # 关于
 
-<div class="about-page-section fade-in">
-
 ## 关于本站
+
+<div class="about-page-section fade-in">
 
 <div class="info-card">
   <p>本站基于 <a href="https://www.mkdocs.org/">MkDocs</a> 与 <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a> 搭建，托管于 GitHub Pages。</p>
@@ -23,7 +23,11 @@ description: 介绍「三月の海」博客的技术栈、搭建方式以及作�
   </div>
 </div>
 
+</div>
+
 ## 关于我
+
+<div class="about-page-section fade-in">
 
 <div class="info-card">
   <p>在这里简单介绍一下你自己，例如：</p>

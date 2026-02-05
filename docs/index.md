@@ -16,6 +16,28 @@ hide:
   </div>
   <div class="hero-background">
     <div class="animated-gradient"></div>
+    <!-- 海浪浪花效果 -->
+    <div class="waves-container">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <!-- 第一层波浪 - 最明显 -->
+        <path class="wave wave1" d="M0,160L60,170.7C120,181,240,203,360,208C480,213,600,203,720,186.7C840,171,960,149,1080,154.7C1200,160,1320,192,1380,208L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+        <!-- 第二层波浪 - 中间层 -->
+        <path class="wave wave2" d="M0,224L60,213.3C120,203,240,181,360,181.3C480,181,600,203,720,213.3C840,224,960,224,1080,213.3C1200,203,1320,181,1380,170.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+        <!-- 第三层波浪 - 底层 -->
+        <path class="wave wave3" d="M0,256L60,250.7C120,245,240,235,360,234.7C480,235,600,245,720,250.7C840,256,960,256,1080,250.7C1200,245,1320,235,1380,229.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+      </svg>
+      <!-- 浪花泡沫效果 -->
+      <div class="foam-container">
+        <div class="foam foam1"></div>
+        <div class="foam foam2"></div>
+        <div class="foam foam3"></div>
+        <div class="foam foam4"></div>
+        <div class="foam foam5"></div>
+        <div class="foam foam6"></div>
+        <div class="foam foam7"></div>
+        <div class="foam foam8"></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -24,8 +46,8 @@ hide:
 <div class="about-section fade-in">
   <div class="about-content">
     <div class="about-text">
-      <p>你好，我是<strong>三月海</strong>。这个名字来自高中时的英文名 Martinez（简称 Mar）。</p>
-      <p>这个博客主要记录<strong>计算机系统、网络、安全</strong>等领域的学习笔记与技术思考。欢迎通过 [GitHub]交流！！</p>
+      <p>你好，我是<strong>三月海</strong>。这个名字来自高中时的英文名 Martinez（简称 Mar），取英文中的「三月」和西语中的「海」之意，寄托着对生活的美好向往。</p>
+      <p>这个博客主要记录我在<strong>计算机系统、网络、安全</strong>等领域的学习笔记与技术思考。希望通过文字沉淀知识，欢迎通过 <a href="https://github.com/wh1cy" target="_blank" rel="noopener">GitHub</a> 与我交流！</p>
     </div>
     <div class="about-image">
       <img src="images/Rain01.jpg" alt="头像" class="avatar-image" />
@@ -47,11 +69,11 @@ hide:
     <div class="card-content">
       <h3 class="card-title">GitHub 使用教学：从零到协作</h3>
       <p class="card-description">从零基础安装 Git，到在 GitHub 上托管代码、协作开发，结合实战项目举例。</p>
-      <a href="blog/2026-github-guide.md" class="card-link">
-        <span>阅读全文</span>
-        <span class="card-arrow">→</span>
-      </a>
     </div>
+    <a href="blog/2026-github-guide/" class="card-link">
+      <span>阅读全文</span>
+      <span class="card-arrow">→</span>
+    </a>
   </div>
 
   <div class="full-width-card fade-in-up delay-1">
@@ -63,11 +85,11 @@ hide:
     <div class="card-content">
       <h3 class="card-title">用 MkDocs 搭建个人博客</h3>
       <p class="card-description">从安装、配置到部署，完整流程带你从零搭建并部署一个 MkDocs 博客。</p>
-      <a href="blog/2026-mkdocs-blog.md" class="card-link">
-        <span>阅读全文</span>
-        <span class="card-arrow">→</span>
-      </a>
     </div>
+    <a href="blog/2026-mkdocs-blog/" class="card-link">
+      <span>阅读全文</span>
+      <span class="card-arrow">→</span>
+    </a>
   </div>
 </div>
 
@@ -85,11 +107,11 @@ hide:
     <div class="card-content">
       <h3 class="card-title">博客</h3>
       <p class="card-description">查看所有技术笔记与生活随想</p>
-      <a href="blog/index.md" class="card-link">
-        <span>进入博客</span>
-        <span class="card-arrow">→</span>
-      </a>
     </div>
+    <a href="blog/" class="card-link">
+      <span>进入博客</span>
+      <span class="card-arrow">→</span>
+    </a>
   </div>
 
   <div class="full-width-card fade-in-up delay-1">
@@ -101,11 +123,11 @@ hide:
     <div class="card-content">
       <h3 class="card-title">课程</h3>
       <p class="card-description">计算机系统、网络、安全等课程笔记与实验报告</p>
-      <a href="courses/sys2/index.md" class="card-link">
-        <span>查看课程</span>
-        <span class="card-arrow">→</span>
-      </a>
     </div>
+    <a href="courses/" class="card-link">
+      <span>查看课程</span>
+      <span class="card-arrow">→</span>
+    </a>
   </div>
 
   <div class="full-width-card fade-in-up delay-2">
@@ -117,11 +139,11 @@ hide:
     <div class="card-content">
       <h3 class="card-title">关于</h3>
       <p class="card-description">了解本站与作者信息</p>
-      <a href="about.md" class="card-link">
-        <span>关于本站</span>
-        <span class="card-arrow">→</span>
-      </a>
     </div>
+    <a href="about/" class="card-link">
+      <span>关于本站</span>
+      <span class="card-arrow">→</span>
+    </a>
   </div>
 </div>
 
@@ -138,5 +160,5 @@ hide:
 ---
 
 <div class="footer-note fade-in">
-  <p>*使用 [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) 构建*</p>
+  <p><em>使用 <a href="https://squidfunk.github.io/mkdocs-material/">MkDocs Material</a> 构建</em></p>
 </div>

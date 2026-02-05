@@ -19,14 +19,14 @@ theme:
       primary: indigo
       accent: indigo
       toggle:
-        icon: material/brightness-7
+        icon: material/toggle-switch
         name: 切换到深色模式
     # 深色主题
     - scheme: slate
       primary: indigo
       accent: indigo
       toggle:
-        icon: material/brightness-4
+        icon: material/toggle-switch-off-outline
         name: 切换到浅色模式
   features:
     - navigation.instant
@@ -34,18 +34,18 @@ theme:
     - navigation.path
     - navigation.expand
     - navigation.indexes
-    - navigation.sections
+    #- navigation.sections
     - navigation.top
     - search.suggest
     - search.highlight
     - search.share
     - content.code.copy
-    - content.code.annotate
+    - content.code.annotateclover
     - content.tabs.link
     - content.tooltips
   icon:
     repo: fontawesome/brands/github
-    logo: material/book-open-variant
+    logo: material/clover
 
 plugins:
   - search
@@ -111,16 +111,17 @@ nav:
     - GitHub 使用教学：从零到协作: blog/2026-github-guide.md
     - 用 MkDocs 搭建博客: blog/2026-mkdocs-blog.md
   - 课程:
-    - 计算机系统 II:
-        - 课程主页: courses/sys2/index.md
-        - Lab 0: courses/sys2/lab0/index.md
-        - Lab 1: courses/sys2/lab1/index.md
-        - Lab 2: courses/sys2/lab2/index.md
-        - Lab 3: courses/sys2/lab3/index.md
-        - Lab 4: courses/sys2/lab4/index.md
-        - Lab 5: courses/sys2/lab5/index.md
-        - Lab 6: courses/sys2/lab6/index.md
-        - Project: courses/sys2/project/index.md
-    - 计算机网络: courses/network/index.md
-    - 软件安全原理与实践: courses/software-security/index.md
+      - 课程主页: courses/index.md
+      - 计算机系统 II:
+          - 课程主页: courses/sys2/index.md
+          - Lab 0: courses/sys2/lab0/index.md
+          - Lab 1: courses/sys2/lab1/index.md
+          - Lab 2: courses/sys2/lab2/index.md
+          - Lab 3: courses/sys2/lab3/index.md
+          - Lab 4: courses/sys2/lab4/index.md
+          - Lab 5: courses/sys2/lab5/index.md
+          - Lab 6: courses/sys2/lab6/index.md
+          - Project: courses/sys2/project/index.md
+      - 计算机网络: courses/network/index.md
+      - 软件安全原理与实践: courses/software-security/index.md
   - 关于: about.md

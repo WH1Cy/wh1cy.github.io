@@ -102,6 +102,231 @@
   }
 }
 
+/* ============================================
+   海浪浪花效果
+   ============================================ */
+
+.waves-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  min-height: 120px;
+  opacity: 0.6;
+  overflow: hidden;
+}
+
+.wave {
+  fill: rgba(255, 255, 255, 0.3);
+  animation: wave-animation 8s ease-in-out infinite;
+}
+
+.wave1 {
+  animation-duration: 8s;
+  animation-delay: 0s;
+  fill: rgba(255, 255, 255, 0.25);
+  animation-name: wave-move1;
+}
+
+.wave2 {
+  animation-duration: 10s;
+  animation-delay: -2s;
+  fill: rgba(255, 255, 255, 0.2);
+  animation-name: wave-move2;
+}
+
+.wave3 {
+  animation-duration: 12s;
+  animation-delay: -4s;
+  fill: rgba(255, 255, 255, 0.15);
+  animation-name: wave-move3;
+}
+
+/* 第一层波浪：水平移动 */
+@keyframes wave-move1 {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+}
+
+/* 第二层波浪：反向移动，速度稍慢 */
+@keyframes wave-move2 {
+  0%, 100% {
+    transform: translateX(0) translateY(5px);
+  }
+  50% {
+    transform: translateX(30px) translateY(8px);
+  }
+}
+
+/* 第三层波浪：更慢的移动 */
+@keyframes wave-move3 {
+  0%, 100% {
+    transform: translateX(0) translateY(10px);
+  }
+  50% {
+    transform: translateX(-40px) translateY(12px);
+  }
+}
+
+/* 浪花泡沫效果 */
+.foam-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.foam {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  filter: blur(3px);
+  animation: foam-float 6s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.foam1 {
+  width: 20px;
+  height: 20px;
+  bottom: 15%;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.foam2 {
+  width: 15px;
+  height: 15px;
+  bottom: 20%;
+  left: 25%;
+  animation-delay: 1s;
+  animation-duration: 6s;
+}
+
+.foam3 {
+  width: 25px;
+  height: 25px;
+  bottom: 18%;
+  left: 45%;
+  animation-delay: 2s;
+  animation-duration: 7s;
+}
+
+.foam4 {
+  width: 18px;
+  height: 18px;
+  bottom: 22%;
+  left: 65%;
+  animation-delay: 1.5s;
+  animation-duration: 5.5s;
+}
+
+.foam5 {
+  width: 22px;
+  height: 22px;
+  bottom: 16%;
+  left: 80%;
+  animation-delay: 0.5s;
+  animation-duration: 6.5s;
+}
+
+.foam6 {
+  width: 16px;
+  height: 16px;
+  bottom: 19%;
+  left: 90%;
+  animation-delay: 2.5s;
+  animation-duration: 5.8s;
+}
+
+.foam7 {
+  width: 14px;
+  height: 14px;
+  bottom: 17%;
+  left: 35%;
+  animation-delay: 3s;
+  animation-duration: 6.2s;
+}
+
+.foam8 {
+  width: 20px;
+  height: 20px;
+  bottom: 21%;
+  left: 55%;
+  animation-delay: 1.2s;
+  animation-duration: 5.3s;
+}
+
+@keyframes foam-float {
+  0% {
+    transform: translateY(0) translateX(0) scale(1) rotate(0deg);
+    opacity: 0.5;
+  }
+  25% {
+    transform: translateY(-20px) translateX(15px) scale(1.15) rotate(5deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-35px) translateX(-10px) scale(0.85) rotate(-5deg);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translateY(-20px) translateX(8px) scale(1.05) rotate(3deg);
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateY(0) translateX(0) scale(1) rotate(0deg);
+    opacity: 0.5;
+  }
+}
+
+/* 深色模式下的海浪效果 */
+[data-md-color-scheme="slate"] .wave1 {
+  fill: rgba(255, 255, 255, 0.15);
+}
+
+[data-md-color-scheme="slate"] .wave2 {
+  fill: rgba(255, 255, 255, 0.1);
+}
+
+[data-md-color-scheme="slate"] .wave3 {
+  fill: rgba(255, 255, 255, 0.08);
+}
+
+[data-md-color-scheme="slate"] .foam {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* 响应式：移动端调整 */
+@media (max-width: 768px) {
+  .waves {
+    height: 30%;
+    min-height: 80px;
+  }
+  
+  .foam {
+    transform: scale(0.8);
+  }
+}
+
 .hero-content {
   position: relative;
   z-index: 1;
@@ -386,9 +611,13 @@
 }
 
 .full-width-card {
-  display: flex;
-  align-items: stretch;
-  gap: var(--spacing-md);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: 
+    "icon title button"
+    "icon description button";
+  align-items: start;
+  gap: var(--spacing-md) var(--spacing-lg);
   padding: var(--spacing-md);
   background: var(--md-default-bg-color);
   border-radius: var(--radius-lg);
@@ -425,19 +654,20 @@
 }
 
 .card-icon {
-  flex-shrink: 0;
-  width: 56px;
-  height: 56px;
+  grid-area: icon;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--md-primary-fg-color) 0%, var(--md-primary-fg-color--dark) 100%);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   color: white;
   box-shadow: var(--elevation-2);
   transition: all var(--transition-base);
   position: relative;
   overflow: hidden;
+  align-self: center; /* 垂直居中 */
 }
 
 .card-icon::before {
@@ -476,22 +706,22 @@
 }
 
 .card-content {
-  flex: 1;
+  grid-column: 2;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   min-width: 0;
-  justify-content: space-between;
-  min-height: 56px;
 }
 
 .card-title {
+  grid-area: title;
   margin: 0;
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--md-default-fg-color);
   line-height: 1.4;
   transition: color var(--transition-base);
+  align-self: start;
 }
 
 .full-width-card:hover .card-title {
@@ -499,18 +729,20 @@
 }
 
 .card-description {
+  grid-area: description;
   margin: 0;
   font-size: 0.95rem;
   color: var(--md-default-fg-color--light);
   line-height: 1.5;
-  flex: 1;
+  align-self: start;
+  padding-left: 0; /* 与图标左边缘对齐，通过 grid gap 控制间距 */
 }
 
 .card-link {
+  grid-area: button;
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
-  margin-top: auto;
   padding: 0.5rem var(--spacing-md);
   color: var(--md-primary-fg-color);
   text-decoration: none;
@@ -523,9 +755,11 @@
   background-color: transparent;
   box-shadow: var(--elevation-1);
   line-height: 1.2;
-  align-self: flex-start;
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
+  align-self: center;
+  justify-self: end;
 }
 
 .card-link::before {
@@ -591,28 +825,40 @@
 /* 响应式设计 */
 @media (max-width: 768px) {
   .full-width-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+      "icon title"
+      "icon description"
+      "button button";
+    gap: var(--spacing-sm) var(--spacing-md);
   }
 
   .card-icon {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
   }
 
   .card-icon svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
 
   .card-content {
-    align-items: center;
-    text-align: center;
+    grid-column: 2;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
   }
 
   .card-link {
-    align-self: center;
+    grid-column: 1 / -1;
+    justify-self: start;
+    margin-top: var(--spacing-xs);
   }
   
   .full-width-card:hover .card-icon {
@@ -1158,5 +1404,93 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================
+   首页全屏样式：隐藏侧边栏，卡片全屏覆盖
+   注意：这些样式只在 body.is-homepage 时生效
+   ============================================ */
+
+/* 首页隐藏左侧导航栏（主导航侧边栏）
+   使用更严格的选择器，确保只在首页生效 */
+body.is-homepage .md-sidebar--primary {
+  display: none !important;
+  width: 0 !important;
+  visibility: hidden !important;
+}
+
+/* 首页主容器全屏 */
+body.is-homepage .md-main__inner.md-grid {
+  max-width: 100% !important;
+  grid-template-columns: 1fr !important;
+}
+
+/* 首页内容区域全屏显示，移除侧边栏占用的空间 */
+body.is-homepage .md-content {
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  width: 100% !important;
+}
+
+/* 首页文章内容区域全屏 */
+body.is-homepage .md-content__inner {
+  max-width: 100% !important;
+  padding-left: var(--spacing-xl) !important;
+  padding-right: var(--spacing-xl) !important;
+}
+
+/* 首页卡片容器全屏 */
+body.is-homepage .full-width-cards {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* 首页卡片全屏覆盖 */
+body.is-homepage .full-width-card {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* 首页 hero 区域全屏，突破内容区域限制 */
+body.is-homepage .hero-section {
+  margin-left: calc(-1 * var(--spacing-xl)) !important;
+  margin-right: calc(-1 * var(--spacing-xl)) !important;
+  width: calc(100% + 2 * var(--spacing-xl)) !important;
+  max-width: none !important;
+}
+
+/* 首页其他全宽元素也突破限制 */
+body.is-homepage .about-section,
+body.is-homepage .friend-links,
+body.is-homepage .footer-note {
+  margin-left: calc(-1 * var(--spacing-xl)) !important;
+  margin-right: calc(-1 * var(--spacing-xl)) !important;
+  width: calc(100% + 2 * var(--spacing-xl)) !important;
+  padding-left: var(--spacing-xl) !important;
+  padding-right: var(--spacing-xl) !important;
+}
+
+/* 响应式：移动端调整 */
+@media (max-width: 76.25em) {
+  body.is-homepage .md-content__inner {
+    padding-left: var(--spacing-md) !important;
+    padding-right: var(--spacing-md) !important;
+  }
+  
+  body.is-homepage .hero-section {
+    margin-left: calc(-1 * var(--spacing-md)) !important;
+    margin-right: calc(-1 * var(--spacing-md)) !important;
+    width: calc(100% + 2 * var(--spacing-md)) !important;
+  }
+  
+  body.is-homepage .about-section,
+  body.is-homepage .friend-links,
+  body.is-homepage .footer-note {
+    margin-left: calc(-1 * var(--spacing-md)) !important;
+    margin-right: calc(-1 * var(--spacing-md)) !important;
+    width: calc(100% + 2 * var(--spacing-md)) !important;
+    padding-left: var(--spacing-md) !important;
+    padding-right: var(--spacing-md) !important;
   }
 }
