@@ -61,10 +61,16 @@ jobs:
           ls -la site/assets/javascripts/ || echo "⚠ javascripts not found in build"
           echo "Checking custom files in build:"
           find site -name "extra.css" -o -name "homepage.js" -o -name "mathjax.js" | head -10
+          echo "Checking if CSS/JS files are referenced in HTML:"
+          grep -r "extra.css" site/*.html | head -3 || echo "⚠ extra.css not found in HTML"
+          grep -r "homepage.js" site/*.html | head -3 || echo "⚠ homepage.js not found in HTML"
           echo "Checking index.html:"
           test -f site/index.html && echo "✓ index.html exists" || (echo "✗ index.html missing" && exit 1)
           echo "Checking if index.html contains hero-section:"
           grep -q "hero-section" site/index.html && echo "✓ hero-section found in index.html" || echo "⚠ hero-section not found in index.html"
+          echo "Checking if index.html references CSS/JS:"
+          grep -q "extra.css" site/index.html && echo "✓ extra.css referenced" || echo "✗ extra.css NOT referenced"
+          grep -q "homepage.js" site/index.html && echo "✓ homepage.js referenced" || echo "✗ homepage.js NOT referenced"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
