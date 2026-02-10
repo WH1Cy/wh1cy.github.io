@@ -11,7 +11,7 @@ hide:
     <p class="hero-subtitle fade-in-up delay-1">记录技术笔记与生活随想</p>
     <div class="hero-buttons fade-in-up delay-2">
       <a href="#recent-posts" class="hero-button primary">查看最新文章</a>
-      <a href="about.md" class="hero-button secondary">了解更多</a>
+      <a href="about/" class="hero-button secondary">了解更多</a>
     </div>
   </div>
   <div class="hero-background">
