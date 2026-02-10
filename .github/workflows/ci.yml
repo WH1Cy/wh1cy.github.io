@@ -43,11 +43,15 @@ jobs:
       - name: Validate mkdocs.yml
         run: |
           echo "Validating mkdocs.yml..."
-          mkdocs build --config-file mkdocs.yml --dirty --verbose 2>&1 | head -20 || echo "⚠ Build validation check (will continue)"
+          mkdocs build --config-file mkdocs.yml --verbose 2>&1 | head -20 || echo "⚠ Build validation check (will continue)"
           echo "✓ mkdocs.yml validation passed"
+          # 清理验证构建，确保正式构建是干净的
+          rm -rf site
 
       - name: Build MkDocs
         run: |
+          # 确保构建目录是干净的
+          rm -rf site
           mkdocs build --verbose 2>&1 | tee build.log || (echo "Build failed!" && cat build.log && exit 1)
 
       - name: Verify build output

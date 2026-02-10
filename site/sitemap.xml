@@ -2,66 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://wh1cy.github.io/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
          <loc>https://wh1cy.github.io/about/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
          <loc>https://wh1cy.github.io/blog/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://wh1cy.github.io/blog/2024-hello-world/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <loc>https://wh1cy.github.io/blog/2026-github-guide/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://wh1cy.github.io/blog/2024-mkdocs-blog/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <loc>https://wh1cy.github.io/blog/2026-mkdocs-blog/</loc>
+         <lastmod>2026-02-10</lastmod>
+    </url>
+    <url>
+         <loc>https://wh1cy.github.io/courses/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
          <loc>https://wh1cy.github.io/courses/network/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
          <loc>https://wh1cy.github.io/courses/software-security/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
          <loc>https://wh1cy.github.io/courses/sys2/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
          <loc>https://wh1cy.github.io/courses/sys2/lab0/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
          <loc>https://wh1cy.github.io/courses/sys2/lab1/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
          <loc>https://wh1cy.github.io/courses/sys2/lab2/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
          <loc>https://wh1cy.github.io/courses/sys2/lab3/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
          <loc>https://wh1cy.github.io/courses/sys2/lab4/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
          <loc>https://wh1cy.github.io/courses/sys2/lab5/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
          <loc>https://wh1cy.github.io/courses/sys2/lab6/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
          <loc>https://wh1cy.github.io/courses/sys2/project/</loc>
-         <lastmod>2026-02-01</lastmod>
+         <lastmod>2026-02-10</lastmod>
+    </url>
+    <url>
+         <loc>https://wh1cy.github.io/images/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
 </urlset>
