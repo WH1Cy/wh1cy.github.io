@@ -1413,11 +1413,13 @@
    ============================================ */
 
 /* 首页隐藏左侧导航栏（主导航侧边栏）
-   使用更严格的选择器，确保只在首页生效 */
-body.is-homepage .md-sidebar--primary {
-  display: none !important;
-  width: 0 !important;
-  visibility: hidden !important;
+   仅在桌面端（宽屏 > 76.25em）隐藏，确保半屏/移动端 drawer 可正常展开 */
+@media (min-width: 76.25em) {
+  body.is-homepage .md-sidebar--primary {
+    display: none !important;
+    width: 0 !important;
+    visibility: hidden !important;
+  }
 }
 
 /* 首页主容器全屏 */

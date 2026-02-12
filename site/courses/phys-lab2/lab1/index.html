@@ -1,0 +1,2513 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="个人博客与笔记">
+      
+      
+        <meta name="author" content="wh1cy">
+      
+      
+        <link rel="canonical" href="https://wh1cy.github.io/courses/phys-lab2/lab1/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../lab2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Lab 1 托卡马克等离子体物理虚拟仿真实验 - 三月の海</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif SC";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="三月の海" class="md-header__button md-logo" aria-label="三月の海" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 11.18c3.3-3 5-4.54 5-6.49C17 3.19 15.75 2 14.25 2c-.86 0-1.68.36-2.25 1-.57-.64-1.39-1-2.31-1C8.19 2 7 3.25 7 4.75c0 1.89 1.7 3.43 5 6.43m-.82.82c-3-3.3-4.54-5-6.49-5C3.19 7 2 8.25 2 9.75c0 .86.36 1.68 1 2.25-.64.57-1 1.39-1 2.31C2 15.81 3.25 17 4.75 17c1.89 0 3.43-1.7 6.43-5m1.65 0c2.99 3.3 4.53 5 6.48 5 1.5 0 2.69-1.25 2.69-2.75 0-.86-.36-1.68-1-2.25.64-.57 1-1.39 1-2.31C22 8.19 20.75 7 19.25 7c-1.89 0-3.43 1.7-6.42 5m-.83.82c-3.3 3-5 4.54-5 6.49C7 20.81 8.25 22 9.75 22c.86 0 1.68-.36 2.25-1 .57.64 1.39 1 2.31 1 1.5 0 2.69-1.25 2.69-2.75 0-1.89-1.7-3.43-5-6.43"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            三月の海
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab 1 托卡马克等离子体物理虚拟仿真实验
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/wh1cy/wh1cy.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wh1cy/wh1cy.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  关于
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="三月の海" class="md-nav__button md-logo" aria-label="三月の海" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 11.18c3.3-3 5-4.54 5-6.49C17 3.19 15.75 2 14.25 2c-.86 0-1.68.36-2.25 1-.57-.64-1.39-1-2.31-1C8.19 2 7 3.25 7 4.75c0 1.89 1.7 3.43 5 6.43m-.82.82c-3-3.3-4.54-5-6.49-5C3.19 7 2 8.25 2 9.75c0 .86.36 1.68 1 2.25-.64.57-1 1.39-1 2.31C2 15.81 3.25 17 4.75 17c1.89 0 3.43-1.7 6.43-5m1.65 0c2.99 3.3 4.53 5 6.48 5 1.5 0 2.69-1.25 2.69-2.75 0-.86-.36-1.68-1-2.25.64-.57 1-1.39 1-2.31C22 8.19 20.75 7 19.25 7c-1.89 0-3.43 1.7-6.42 5m-.83.82c-3.3 3-5 4.54-5 6.49C7 20.81 8.25 22 9.75 22c.86 0 1.68-.36 2.25-1 .57.64 1.39 1 2.31 1 1.5 0 2.69-1.25 2.69-2.75 0-1.89-1.7-3.43-5-6.43"/></svg>
+
+    </a>
+    三月の海
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/wh1cy/wh1cy.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wh1cy/wh1cy.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    博客
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    博客
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/2026-github-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub 使用教学：从零到协作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/2026-mkdocs-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    用 MkDocs 搭建博客
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../sys2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机系统 II
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算机系统 II
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件安全原理与实践
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    普通物理学实验 II
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    普通物理学实验 II
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1 托卡马克等离子体物理虚拟仿真实验
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2 PN结的物理特性及玻尔兹曼常数测定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3 椭偏仪测薄膜厚度和折射率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4 RLC串联电路暂态稳态过程的研究
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5 交流电桥
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6 液体粘滞系数的测定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 7 修正后的范德堡法测薄膜电阻
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../privacy-computing/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    隐私计算与数据合规
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    隐私计算与数据合规
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1 金融风险预测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2 黑名单求交
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3 专利域名申请
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4 诈骗电话识别
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程项目 学校心理健康风险
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../info-security-practice/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信息安全课程综合实践
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    信息安全课程综合实践
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/lab0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0 基础知识及技能
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/crypto-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto Lab 1 消息加密和数字签名
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/crypto-lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto Lab 2 公钥密码学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/crypto-lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto Lab 3 格密码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/misc-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc Lab 1 编解码及 OSINT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/misc-lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc Lab 2 隐写与其他misc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/misc-lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc Lab 3 OSINT & AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/pwn-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pwn Lab 1 Pwn基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/rev-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rev Lab 1 Rev基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/web-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Lab 1 计算机网络基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    首页
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    课程
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    普通物理学实验 II
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">托卡马克等离子体物理虚拟仿真实验<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>2024/9/18</p>
+<h1 id="_2">一、实验综述<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h2 id="1">1、实验目的<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>辨识托卡马克等离子体装置主要构成部分与功能；</li>
+<li>认知并阐明磁约束超高温等离子体脉冲放电稳定运行和能量增益条件；</li>
+<li>从带电粒子在复杂磁场位形的运动轨迹规律中理解等离子体“约束”的条件与调控方案。</li>
+</ol>
+<h2 id="2">2、实验背景<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>核聚变能在大规模商业应用之前需要解决两大关键问题：一个是<strong><u>实现核聚变反应的持续进行，并获得聚变能量增益</u></strong>；另一个是<strong><u>聚变反应产生的能量转化为可实际应用的热能，并能产生出足够的氚保证聚变反应自持</u></strong>。本实验主要关注第一个问题托卡马克等离子体物理过程。</p>
+<p>托卡马克主要是<strong><u>由外部线圈产生的环形磁场约束等离子体的一种磁约束核聚变研究装置</u></strong>。在等离子体实验中，首先通过中心螺线管的电磁线圈在装置中产生环向电场击穿并加热等离子体，同时利用外部的高功率射频波、中性束等加热手段产生高温高压等离子体。托卡马克等离子体的约束不仅仅只靠环形磁场，还必须同时使用<strong><u>极向磁场来实现等离子体的压力和磁力的平衡</u></strong>。托卡马克中的极向磁场主要是由环形等离子体电流自身产生。环向磁场和极向磁场共同形成了一个沿着装置环形的螺旋型磁场。</p>
+<p>托卡马克高温等离子体真空室中，面向等离子体的部件通畅称为第一壁部件。第一壁部件会受到来自等离子体的高能粒子轰击和热负荷冲击，早期托卡马克采用圆形截面，并使用限制器来确定等离子体边界，限制器的表面位置决定了等离子体的<strong>最外闭合磁面（last closed flux surface，LCFS）</strong> ,限制器的主要作用是避免来自等离子体的高能粒子对其他第一壁材料的损伤。但是由于限制器与等离子体直接接触，其表面产生的杂质和气体会污染等离子体，且热负荷会导致限制器表面材料腐蚀乃至熔化而产生杂质污染等离子体。20 世纪 50 年代开始发展 D 形截面托卡马克，通过磁场控制改变等离子体拉长比与三角形变，并采用“偏滤器”。等离子体电流与外部同向的极向场线圈电流共同产生了极向磁场为零的点，磁力线通过该点的面称为分界面，即 LCFS。在 LCFS 内部的磁面是闭合的，而位于其外侧的侧面是开口的，称为<strong>刮削层(scrape-off layer, SOL)</strong> 。从芯部等离子体跨越磁力线的高能粒子通过 LCFS 进入刮削层，沿着磁力线流向偏滤器靶板，偏滤器材料表面释放的杂质会被电离并受等离子体流冲刷回到偏滤器材料表面，从而实现过滤杂质、排出粒子的功能。</p>
+<h2 id="3">3、实验原理<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>核聚变反应</strong></li>
+</ol>
+<p><strong><u>核聚变反应是指两个较轻的原子核在一定条件下结合成一个较重的原子核，并伴随着大量能量释放的过程。</u></strong></p>
+<p>最容易发生的核聚变反应是氢元素的同位素氘和氚，在一亿度的高温下聚变生成一个氦核和一个中子的反应，同时放出 17.6 <span class="arithmatex">\(MeV\)</span> 的能量</p>
+<p><span class="arithmatex">\(\ce{^2_1H +^3_1H-&gt; ^4_2 He(3.52MeV) + ^1_0n(14.06MeV)}\)</span></p>
+<p>原料中的氘在海水中大量存在；而氚的半衰期为 12 年，无法在自然界存在，但可以通过中子与锂元素的核反应制备</p>
+<p><span class="arithmatex">\(\ce{^6_3Li +^1_0n-&gt;^3_1H +^4_2He}\)</span></p>
+<p>以上反应的原料丰富，聚变产物清洁无辐射。因此，聚变能源被认为是人类社会发展能源需求的最终解决方案。
+2. <strong>磁约束原理</strong></p>
+<p><strong><u>磁约束核聚变的原理是根据带电粒子无法横越磁场运动的性质，利用磁场来约束高温的等离子体，维持其高温</u></strong></p>
+<div class="highlight"><pre><span></span><code>**&lt;u&gt;（~10&lt;/u&gt;** **&lt;u&gt;$KeV$**&lt;/u&gt;​ **&lt;u&gt;，约一亿度）、高密度（&lt;/u&gt;**​**&lt;u&gt;$-10^{20}m^{-3}$**&lt;/u&gt;​ **&lt;u&gt;）的状态&lt;/u&gt;**，从而达到核聚变反应以及能量增益的条件——劳逊判据（“聚变三乘积”）
+</code></pre></div>
+<p><span class="arithmatex">\(n\tau_ET&gt;3\times10^{21}m^{-3}\cdot s \cdot KeV\)</span></p>
+<p>其中，<span class="arithmatex">\(n\)</span> 是<strong>等离子体密度</strong>，密度越大，燃料离子发生聚变反应的概率越大；<span class="arithmatex">\(\tau_E\)</span> 是<strong>能量约束时间</strong>，表征装置的约束性能；<span class="arithmatex">\(T\)</span> 是<strong>等离子体温度</strong>，温度越高，原子核穿越库仑势垒发生聚变反应的概率越大。劳逊判据表征了由聚变反应产生的阿尔法粒子对等离子体自加热，维持等离子体自持燃烧的条件。</p>
+<p>目前领先的磁约束聚变装置是托卡马克，其中约束磁场的拓扑结构类似于轮胎的形状，其平衡磁场由环向场线圈产生的环向磁场和环向等离子体电流产生的极向磁场共同构成，形成了嵌套的磁面，并将等离子体约束于其中。装置的磁面即对应了等离子体的等压面。<strong><u>等离子体的力学平衡由磁压力与等离子体热压力相平衡</u></strong>得到，</p>
+<p><span class="arithmatex">\(\bigtriangledown P=J\times B/C\)</span></p>
+<p>其中，<span class="arithmatex">\(P,J,B\)</span> 分别为<strong>等离子体压强</strong>，<strong>电流</strong>和<strong>磁场</strong>。在环形装置中以上磁流体力学平衡并可由 <em>Grad-Shafranov</em> 方程（GSE）描述。<strong><u>GSE 是磁约束聚变装置设计的基础；改变等离子体的电流、磁场分布，其约束等离子体的径向压强分布也会相应的改变，共同构成了磁约束等离子体的平衡分布。</u></strong></p>
+<p><img alt="image" src="assets/image-20240920172719-5a0aa7s.png" /></p>
+<ol>
+<li>磁约束中的带电粒子轨道</li>
+</ol>
+<p>在磁约束装置中具有复杂的磁场位型，相应的带电粒子的运动轨迹也非常复杂，可以分解为沿着磁力线的自由运动、绕磁力线的快速拉莫回旋运动以及横越磁场的缓慢 “漂移“运动。带电粒子沿着磁力线方向不受力，而在垂直于磁场方向由于受到洛伦兹力的作用而围绕磁力线做快速的回旋运动。当在非均匀磁场中以及存在电磁扰动时，粒子回旋运动的“导心”会有一些集体的漂移运动；如当磁场具有曲率时，带电粒子沿着弯曲的磁力线运动时会受到离心力的影响，从而会产生额外的“曲率漂移”，其方向垂直于磁场和曲率方向；而当磁场非均匀时，带电粒子的拉莫回旋半径在各点不同，使得带电粒子的导心产生磁场梯度漂移，其方向垂直于磁场和其梯度方向。粒子的磁场曲率漂移和梯度漂移（合称<strong>磁漂移</strong>）表示为</p>
+<p><span class="arithmatex">\(v_B=\frac{m(v^2_{\perp}+2v^2_\parallel)}{2q}\frac{B\times \triangledown B}{B^3}\)</span></p>
+<p>可以看到，其速度与其能量呈正相关，垂直于磁场及其曲率方向，并与电荷符号有关。因此，<strong><u>不同的粒子成分，其运动特征具有很大的差别。</u></strong> 例如，电子和热离子由于其电荷符号相反，磁漂移方向相反，会引起电荷分离，此过程产生的电场会导致电子和离子共同向外的电漂移（<span class="arithmatex">\(v_E=cE\times B/B^2\)</span>,其中 <span class="arithmatex">\(E\)</span> 是电荷分离产生的电场）损失，并引起放电失败。这也是<strong><u>托卡马克装置中必须引入等离子体电流来产生极向磁场的原因</u></strong>。由于极向场引起的磁场螺旋，使得粒子沿着磁力线的快速自由运动抵消缓慢的磁漂移引起的电荷分离。又例如，聚变产生的阿尔法粒子，具有​ <span class="arithmatex">\(3.52MeV\)</span> 的高能量，其轨道半径要显著大于离子的轨道。</p>
+<p><img alt="图片" src="assets/%E5%9B%BE%E7%89%87-20240920181439-mhbmu2c.png" /></p>
+<p>此外，当带电粒子沿着磁力线运动时，由于磁矩(<span class="arithmatex">\(v\equiv v^2_{\perp}\)</span>)守恒，粒子沿着磁力线运动到磁场较强区域时，其垂直磁场方向能量增加，相应地，平行于磁场的速度减小，这叫做 <strong>“磁镜”效应</strong>。该效应会导致初始时垂直速度较大的粒子的平行速度可能会变为零从而被沿着磁力线“反弹”，并被“捕获”在弱场侧，这类粒子叫做<strong>磁“捕获粒子”或者“香蕉粒子”</strong> ；而初始时垂直速度较小的粒子的平行速度受影响较小，可以沿着磁力线运动，覆盖整个磁面，这些粒子叫做 <strong>“通行粒子”</strong> 。单个带电粒子的轨道由其磁漂移运动和沿着磁力线的运动共同决定，形成“香蕉轨道”或“通行轨道”，其偏离磁面的距离与粒子速度成正比。<strong><u>对于同样的能量和质量，捕获粒子偏离磁面的距离更大。</u></strong></p>
+<p><img alt="image" src="assets/image-20240920181458-38ksczh.png" /></p>
+<p>（真空室内环向截面上的磁场分布三维示意图，颜色表示磁场数值大小，红色表示磁场强，绿色表示磁场弱，磁场方向由箭头所示）</p>
+<p>燃烧等离子体一般可以分为高能粒子和背景等离子体两种成分。“捕获粒子”与“通行”高能粒子对应的特征频率不一样，因此与背景等离子体的相互作用就很不一样，从而可以激发不同的等离子体不稳定模式，比如高频的阿尔芬本证模和低频的鱼骨模不稳定性等。因此，<u><strong>在托卡马克装置的复杂磁场几何位型下，理解单个带电粒子的轨道特征，是理解等离子体的复杂动理学行为的基础。</strong></u>
+4. <strong>等离子体微观湍流与输运</strong></p>
+<p>约束等离子体具有<strong><u>芯部压强高、边缘压强低</u></strong>的特点。这个等离子体不均匀性所携带的自由能，会激发等离子体的<strong><u>集体振荡</u></strong>（即不稳定性），如起静电的“漂移波”湍流，其在等离子体的不同参数区间具有不同的自由能来源，如离子温度梯度模、捕获电子模等，因而具有不同的偏振特性。这些漂移波不稳定性，会<strong><u>引起等离子体横越磁场的反常输运</u></strong>，从而导致约束性能下降。</p>
+<p>等离子体中发生的非线性自组织行为，如带状流激发等，会导致漂移波湍流的饱和；其过程是通过<strong><u>漂移波湍流非线性激发带状流</u></strong>而达到的，在此过程中湍流被带状流散射到稳定的短波长区域，从而被抑制。这个非线性过程，决定了磁约束聚变装置中的湍流的强度，从而决定了磁约束聚变装置的约束水平和经济效益。</p>
+<h1 id="_3">二、实验内容<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<h2 id="1_1">1、托卡马克装置认识与重要诊断测量装置组装<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<h4 id="_4">托卡马克装置认识<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+</li>
+</ol>
+<p><img alt="image" src="assets/image-20240920183154-qq3mmp1.png" /></p>
+<p>1：中性束系统；离子回旋装置</p>
+<p>2，3：弯晶谱仪</p>
+<p>4，5：低杂波系统</p>
+<p>6：中性束系统</p>
+<p>7：飞行质谱仪</p>
+<p>8：离子回旋装置</p>
+<p>9：汤姆逊诊断装置</p>
+<p>10：EAST 主机</p>
+<ol>
+<li>
+<h4 id="_5">等离子体诊断装置与电磁装置模块组装<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+</li>
+<li>
+<p>快动探针组装</p>
+</li>
+</ol>
+<p><img alt="image" src="assets/image-20240920190246-fpzcwc8.png" /></p>
+<p><img alt="image" src="assets/image-20240920190303-jjt1gks.png" /></p>
+<ol>
+<li>电磁测量装置安装</li>
+</ol>
+<p><img alt="image" src="assets/image-20240920190416-p0jefg4.png" /></p>
+<p><img alt="image" src="assets/image-20240920190523-rozq6kb.png" /></p>
+<h2 id="2_1">2、等离子体磁流体力学仿真实验<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<h4 id="_6">实验启动准备：装置检查、启动冷却和抽真空装置<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+</li>
+</ol>
+<p>启动实验冷却设备，开启抽真空系统等，准备点火运行。</p>
+<p>打开控制系统，开启纵场线圈电流和极向场线圈电流开关。</p>
+<ol>
+<li>
+<h4 id="_7">启动等离子体磁流体力学平衡仿真实验<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+</li>
+</ol>
+<p>该实验中选择最外磁面位形（三角形变、椭圆形、或圆形）；设定实验条件：输入极向场线圈励磁电流，设置注入等离子体温度、密度的分布函数参数，参数含义及取值范围可参考界面上的文字说明。点击“运行”，进行等离子体放电。点击“磁面位形”查看真空室环向截面上的磁面分布。待运行结束，查看参数分布图并进行取点测量。
+3. #### 测量等离子体温度分布轮廓</p>
+<p>点击“温度分布”显示真空室内环向截面上的温度分布，并进行测量。在真空室环向截面上，红色表示温度高，蓝色表示温度低。选择“探针”或“汤姆逊散射诊断方式”，进行温度测量。将鼠标沿 x 轴（R 方向）移动，测量温度值 T，并记录对应的 R 值，绘制径向温度分布轮廓 T-R 曲线。
+4. #### 测量等离子体密度分布轮廓</p>
+<p>点击“密度分布”显示真空室内环向截面上的密度分布，测量电子密度。将鼠标沿 x 轴（R 方向）移动，测量密度值 <span class="arithmatex">\(n_e\)</span>，并记录对应的 R 值，绘制径向密度分布轮廓 <span class="arithmatex">\(n_e-R\)</span> 曲线。
+5. #### 不同实验条件下得等离子体磁流体力学平衡</p>
+<p>更改最外磁面位形，重复步骤 2-4，针对不同实验条件，进行探究实验。例如，选择圆形最外磁面位形，改变极向场励磁电流大小，分别查看磁面分布、磁场分布，并测量径向温度分布轮廓与密度分布轮廓。</p>
+<h2 id="3_1">3、单粒子在复杂磁场中的运动轨迹仿真实验<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<h4 id="_8">单粒子运动轨迹仿真实验<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+</li>
+</ol>
+<p>基于 EAST 装置实际位型。设定粒子类型（D 离子、alpha 粒子 He、电子），设置粒子入射初始速度与入射位置半径。点击开始运行，显示粒子运动轨迹。
+2. #### 不同粒子类型与初始条件下的粒子运动轨迹仿真</p>
+<p>改变粒子类型、粒子入射速度与初始位置，记录不同粒子的运动轨道参数随不同入射速度大小或方向的变化规律，采用控制变量法，每次改变一个参量，归纳总结“捕获粒子”与“通行粒子”实现的实验条件。</p>
+<h2 id="4">4、等离子体中的湍流演示性实验<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<h4 id="_9">观察聚变等离子体中的湍流<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+</li>
+</ol>
+<p>观察湍流的产生过程，湍流中的温度演化、密度演化。
+2. #### 结束实验</p>
+<p>结束实验前，进入控制系统关闭纵场与极向场励磁电流。</p>
+<h1 id="_10">三、实验数据记录与处理<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h1>
+<h2 id="1_2">（1）磁流体力学平衡仿真实验数据记录表格<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>相关参数及磁面位形</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>磁面位形</td>
+<td>三角形</td>
+</tr>
+<tr>
+<td>极向场电流</td>
+<td>1.2</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(a_0\)</span><br /></td>
+<td>1e7</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(b_0\)</span><br /></td>
+<td>1e18</td>
+</tr>
+<tr>
+<td>$a_1 $<br /></td>
+<td>0.05</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(b_1\)</span><br /></td>
+<td>0.05</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image" src="assets/image-20240920200509-cd5kgq7.png" />
+2. 磁场分布</p>
+<p><img alt="image" src="assets/image-20240920200557-94omcl9.png" />
+3. 温度分布</p>
+<p><img alt="image" src="assets/image-20240920200634-jq9zksu.png" /></p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(R(m)\)</span><br /></th>
+<th>1.46</th>
+<th>1.51</th>
+<th>1.57</th>
+<th>1.61</th>
+<th>1.65</th>
+<th>1.68</th>
+<th>1.73</th>
+<th>1.83</th>
+<th>1.92</th>
+<th>2.02</th>
+<th>2.13</th>
+<th>2.21</th>
+<th>2.31</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(T(K)\)</span><br /></td>
+<td>163027</td>
+<td>430802.3</td>
+<td>1279172</td>
+<td>1932743</td>
+<td>3270632</td>
+<td>4354958</td>
+<td>6092672</td>
+<td>9411942</td>
+<td>9914730</td>
+<td>7794359</td>
+<td>3693068</td>
+<td>1082953</td>
+<td>154271.7</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Graph1" src="assets/Graph1-20240921123244-r2062s8.png" />
+4. 密度分布</p>
+<p><img alt="image" src="assets/image-20240920200654-d63jqlr.png" /></p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(R(m)\)</span>​</th>
+<th>1.46</th>
+<th>1.49</th>
+<th>1.52</th>
+<th>1.56</th>
+<th>1.60</th>
+<th>1.64</th>
+<th>1.72</th>
+<th>1.81</th>
+<th>1.88</th>
+<th>1.93</th>
+<th>2.02</th>
+<th>2.12</th>
+<th>2.22</th>
+<th>2.32</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(ne(10^{17}cm^{-3})\)</span><br /></td>
+<td>0.1630</td>
+<td>0.2873</td>
+<td>0.5582</td>
+<td>1.023</td>
+<td>1.751</td>
+<td>2.780</td>
+<td>5.804</td>
+<td>8.989</td>
+<td>9.960</td>
+<td>9.860</td>
+<td>7.828</td>
+<td>3.718</td>
+<td>0.9528</td>
+<td>0.1312</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Graph2" src="assets/Graph2-20240921130506-peewzun.png" /></p>
+<h2 id="2_2">（2）粒子轨迹仿真数据记录表格<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>粒子类型</th>
+<th>入射初始位置 <span class="arithmatex">\(/m\)</span></th>
+<th>初始速度 <span class="arithmatex">\(v_{01}/m\cdot s^{-1}\)</span></th>
+<th>初始速度 <span class="arithmatex">\(v_{02}/m\cdot s^{-1}\)</span></th>
+<th>初始速度 <span class="arithmatex">\(v_{03}/m\cdot s^{-1}\)</span></th>
+<th>轨道参数 <span class="arithmatex">\(\Delta R/m\)</span></th>
+<th>粒子分类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>He</td>
+<td>0.25</td>
+<td>3e6</td>
+<td>1e6</td>
+<td>7e5</td>
+<td>0.08</td>
+<td>捕获粒子</td>
+</tr>
+<tr>
+<td>2</td>
+<td>He</td>
+<td>0.25</td>
+<td>1e4</td>
+<td>1e6</td>
+<td>7e5</td>
+<td>0.54</td>
+<td>通行粒子</td>
+</tr>
+<tr>
+<td>3</td>
+<td>He</td>
+<td>0.25</td>
+<td>9e6</td>
+<td>1e6</td>
+<td>7e5</td>
+<td>0.04</td>
+<td>捕获粒子</td>
+</tr>
+<tr>
+<td>4</td>
+<td>He</td>
+<td>0.25</td>
+<td>3e6</td>
+<td>1e4</td>
+<td>7e5</td>
+<td>0.08</td>
+<td>捕获粒子</td>
+</tr>
+<tr>
+<td>5</td>
+<td>He</td>
+<td>0.25</td>
+<td>3e6</td>
+<td>9e6</td>
+<td>7e5</td>
+<td>0.04</td>
+<td>捕获粒子</td>
+</tr>
+<tr>
+<td>6</td>
+<td>He</td>
+<td>0.25</td>
+<td>3e6</td>
+<td>1e6</td>
+<td>1e4</td>
+<td>0.01</td>
+<td>捕获粒子</td>
+</tr>
+<tr>
+<td>7</td>
+<td>He</td>
+<td>0.25</td>
+<td>3e6</td>
+<td>1e6</td>
+<td>9e6</td>
+<td>0.40</td>
+<td>通行粒子</td>
+</tr>
+<tr>
+<td>8</td>
+<td>He</td>
+<td>-0.25</td>
+<td>3e6</td>
+<td>1e6</td>
+<td>7e5</td>
+<td>0.56</td>
+<td>通行粒子</td>
+</tr>
+<tr>
+<td>9</td>
+<td>D</td>
+<td>0.25</td>
+<td>3e6</td>
+<td>1e6</td>
+<td>7e5</td>
+<td>0.13</td>
+<td>捕获粒子</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Electron</td>
+<td>0.25</td>
+<td>3e6</td>
+<td>1e6</td>
+<td>7e5</td>
+<td>0</td>
+<td>捕获粒子</td>
+</tr>
+</tbody>
+</table>
+<h1 id="_11">四、实验拓展<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h1>
+<h2 id="1_3">1、请简述核聚变反应发生以及产生能量增益的条件，并写出最易发生的核聚变反应表达式。<a class="headerlink" href="#1_3" title="Permanent link">&para;</a></h2>
+<p>发生条件：高温高密度；</p>
+<p>能量增益条件：等离子体密度越大，能量越高，能量约束时间越长；</p>
+<p><span class="arithmatex">\(\ce{^2_1H +^3_1H-&gt; ^4_2 He + ^1_0n}\)</span></p>
+<h2 id="2_3">2、磁约束环形装置中，如果仅有环向磁场，等离子体中不同电性的粒子将做怎样的运动？<a class="headerlink" href="#2_3" title="Permanent link">&para;</a></h2>
+<p>沿着磁力线的自由运动和绕磁力线受洛伦兹力作用的的快速拉莫回旋运动，同时还会发生横越磁场的缓慢 “漂移“运动。</p>
+<h2 id="3_2">3、环形装置中磁流体力学平衡是指什么？ 在环形装置的环向截面上，磁场分布规律和等离子体压强分布规律分别是怎样的？<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h2>
+<p>磁流体力学平衡是指等离子体在磁场的约束下，达到了力的平衡状态，这种平衡要求磁压力与等离子体热压力相平衡；</p>
+<p>环向磁场沿着环形装置的环向分布，由外部线圈产生，其强度在半径方向上通常递减，即离环形装置中心越远，磁场越弱。极向磁场沿着装置横截面平面（即垂直于环向方向）分布，通常由等离子体内部流动的电流产生；</p>
+<p>等离子体的压力分布会随着半径变化，表现为中心高，边缘低，同时在磁场强的区域，压力较低，与压力梯度相互平衡。</p>
+<p>‍</p>
+<p>‍</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        本页对你有帮助吗？
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="这页对我有帮助" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="这页还有待改进" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5zM16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              感谢你的反馈！
+
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              感谢你的反馈！可以在 GitHub 仓库提交 Issue 告诉我如何改进。
+
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/homepage.js"></script>
+      
+    
+  </body>
+</html>

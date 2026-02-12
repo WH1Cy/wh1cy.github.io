@@ -1,0 +1,2768 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="个人博客与笔记">
+      
+      
+        <meta name="author" content="wh1cy">
+      
+      
+        <link rel="canonical" href="https://wh1cy.github.io/courses/phys-lab2/lab7/">
+      
+      
+        <link rel="prev" href="../lab6/">
+      
+      
+        <link rel="next" href="../../privacy-computing/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Lab 7 修正后的范德堡法测薄膜电阻 - 三月の海</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif SC";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="三月の海" class="md-header__button md-logo" aria-label="三月の海" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 11.18c3.3-3 5-4.54 5-6.49C17 3.19 15.75 2 14.25 2c-.86 0-1.68.36-2.25 1-.57-.64-1.39-1-2.31-1C8.19 2 7 3.25 7 4.75c0 1.89 1.7 3.43 5 6.43m-.82.82c-3-3.3-4.54-5-6.49-5C3.19 7 2 8.25 2 9.75c0 .86.36 1.68 1 2.25-.64.57-1 1.39-1 2.31C2 15.81 3.25 17 4.75 17c1.89 0 3.43-1.7 6.43-5m1.65 0c2.99 3.3 4.53 5 6.48 5 1.5 0 2.69-1.25 2.69-2.75 0-.86-.36-1.68-1-2.25.64-.57 1-1.39 1-2.31C22 8.19 20.75 7 19.25 7c-1.89 0-3.43 1.7-6.42 5m-.83.82c-3.3 3-5 4.54-5 6.49C7 20.81 8.25 22 9.75 22c.86 0 1.68-.36 2.25-1 .57.64 1.39 1 2.31 1 1.5 0 2.69-1.25 2.69-2.75 0-1.89-1.7-3.43-5-6.43"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            三月の海
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab 7 修正后的范德堡法测薄膜电阻
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/wh1cy/wh1cy.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wh1cy/wh1cy.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  关于
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="三月の海" class="md-nav__button md-logo" aria-label="三月の海" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 11.18c3.3-3 5-4.54 5-6.49C17 3.19 15.75 2 14.25 2c-.86 0-1.68.36-2.25 1-.57-.64-1.39-1-2.31-1C8.19 2 7 3.25 7 4.75c0 1.89 1.7 3.43 5 6.43m-.82.82c-3-3.3-4.54-5-6.49-5C3.19 7 2 8.25 2 9.75c0 .86.36 1.68 1 2.25-.64.57-1 1.39-1 2.31C2 15.81 3.25 17 4.75 17c1.89 0 3.43-1.7 6.43-5m1.65 0c2.99 3.3 4.53 5 6.48 5 1.5 0 2.69-1.25 2.69-2.75 0-.86-.36-1.68-1-2.25.64-.57 1-1.39 1-2.31C22 8.19 20.75 7 19.25 7c-1.89 0-3.43 1.7-6.42 5m-.83.82c-3.3 3-5 4.54-5 6.49C7 20.81 8.25 22 9.75 22c.86 0 1.68-.36 2.25-1 .57.64 1.39 1 2.31 1 1.5 0 2.69-1.25 2.69-2.75 0-1.89-1.7-3.43-5-6.43"/></svg>
+
+    </a>
+    三月の海
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/wh1cy/wh1cy.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wh1cy/wh1cy.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    博客
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    博客
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/2026-github-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub 使用教学：从零到协作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/2026-mkdocs-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    用 MkDocs 搭建博客
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../sys2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机系统 II
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算机系统 II
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件安全原理与实践
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    普通物理学实验 II
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    普通物理学实验 II
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1 托卡马克等离子体物理虚拟仿真实验
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2 PN结的物理特性及玻尔兹曼常数测定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3 椭偏仪测薄膜厚度和折射率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4 RLC串联电路暂态稳态过程的研究
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5 交流电桥
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6 液体粘滞系数的测定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 7 修正后的范德堡法测薄膜电阻
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../privacy-computing/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    隐私计算与数据合规
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    隐私计算与数据合规
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1 金融风险预测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2 黑名单求交
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3 专利域名申请
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4 诈骗电话识别
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程项目 学校心理健康风险
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../info-security-practice/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信息安全课程综合实践
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    信息安全课程综合实践
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/lab0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0 基础知识及技能
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/crypto-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto Lab 1 消息加密和数字签名
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/crypto-lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto Lab 2 公钥密码学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/crypto-lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto Lab 3 格密码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/misc-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc Lab 1 编解码及 OSINT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/misc-lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc Lab 2 隐写与其他misc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/misc-lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc Lab 3 OSINT & AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/pwn-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pwn Lab 1 Pwn基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/rev-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rev Lab 1 Rev基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/web-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Lab 1 计算机网络基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    首页
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    课程
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    普通物理学实验 II
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">修正后的范德堡法测薄膜电阻<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="1">1 背景知识<a class="headerlink" href="#1" title="Permanent link">&para;</a></h1>
+<h2 id="11">1.1 理论背景<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
+<p>在薄膜材料的研究中，电阻是一个重要的物理量，直接影响材料的导电性和应用性能。尤其是在带有孔洞的薄膜中，电阻特性变得更加复杂，既受材料本身电子结构的影响，也与孔洞的几何形态、分布密度等因素密切相关。孔洞的存在不仅减少了薄膜中的导电区域，还可能影响电流的流动路径，进而导致测量误差。为了解决这一问题，修正后的范德堡法应运而生。</p>
+<h4 id="111">1.1.1 范德堡法简介<a class="headerlink" href="#111" title="Permanent link">&para;</a></h4>
+<p>范德堡法是一种经典的电阻测量方法，由荷兰物理学家范德堡于1958年提出。其原始形式为<span class="arithmatex">\(e^{R_{12,34}/\lambda}+e^{R_{23,41}/\lambda}=1,\lambda=\frac{\rho}{\pi d}\)</span>​​  </p>
+<p>该方法广泛应用于薄膜、单晶以及各种形状不规则样品的电阻测量。范德堡法的基本原理是通过在薄膜样品的四个角上施加电流并测量电压，进而计算电阻率。其最大优势在于对样品的几何形状要求较低，尤其适用于形状不规则的薄膜材料。</p>
+<p>在传统的范德堡法中，样品通常是一个厚度均匀的二维材料，具有四个接触点（电极）。通过对电极之间施加已知电流并测量电压降，能够计算出样品的电阻率。范德堡法假设样品为均匀、各向同性的薄膜，电流在薄膜中流动时，电场和电流的分布会遵循一定的规律。典型的测量连接中，仅要求四个探针点在样片边缘，并保证整个测量过程中保持电极位置没有变化，如图1</p>
+<p><img alt="b38ac54e27ec04e15ef9e7803f3b023" src="assets/b38ac54e27ec04e15ef9e7803f3b023-20241231155401-8x78l04.png" /></p>
+<p><em>图1.范德堡法配置</em></p>
+<h4 id="112">1.1.2 孔洞对薄膜电阻的影响<a class="headerlink" href="#112" title="Permanent link">&para;</a></h4>
+<p>带孔洞的薄膜与均匀薄膜相比，其电阻特性更加复杂。孔洞的引入不仅减少了薄膜的有效导电区域，还改变了电流在薄膜内的分布路径，从而显著影响整体电阻特性。这一现象可以从以下几个方面具体分析：</p>
+<ol>
+<li>
+<p><strong>有效导电区域的减少</strong></p>
+<p>孔洞的存在直接削弱了薄膜的连续性，导致薄膜的实际导电面积减小。根据导体电阻的基本公式：<span class="arithmatex">\(R=\frac{\rho \cdot L}{A_{\text{eff}}}\)</span>  </p>
+<p>其中，<span class="arithmatex">\(A_{\text{eff}}\)</span> 是薄膜的有效导电横截面积。孔洞的引入会显著降低 <span class="arithmatex">\(A_{\text{eff}}\)</span>，从而增加电阻值。此外，由于孔洞分布的不均匀性，不同区域的导电能力可能呈现显著差异，导致薄膜整体电阻的非线性变化
+2. <strong>电流路径的改变</strong></p>
+<p>在均匀薄膜中，电流的分布通常是均匀的。然而，孔洞的存在会迫使电流绕过孔洞流动，形成弯曲的路径，从而增加了等效电阻。这种效应类似于材料内部的散射效应，孔洞越大、越密集，电流路径的偏离程度越高，薄膜的电阻越大。
+3. <strong>孔洞的形态与分布密度</strong></p>
+<p>孔洞的大小、形状和分布密度对薄膜的电阻特性有直接影响。例如：</p>
+<ul>
+<li>孔洞越大，其对电流路径的干扰越显著，薄膜电阻的增加幅度也越大。</li>
+<li>如果孔洞的分布是随机的，薄膜的电阻变化往往难以通过简单的几何关系预测，而需要通过统计或数值模拟的方法进行分析。</li>
+<li>当孔洞分布密度较低时，其影响可能局限于局部区域，而在孔洞密度较高时，薄膜可能表现出显著的绝缘特性。</li>
+<li><strong>孔隙率的影响</strong></li>
+</ul>
+<p>孔隙率是衡量薄膜内部孔洞体积占比的重要参数。高孔隙率意味着薄膜中导电材料占比更低，导电网络的连续性受损更严重。研究表明，当孔隙率超过一定阈值时（例如30%\~40%），薄膜的导电性能可能会急剧下降，甚至表现出近似绝缘的特性。
+5. <strong>边界效应与局部场增强效应</strong></p>
+<p>孔洞的边界会引起电场分布的局部畸变，从而在薄膜局部区域产生更高的电场强度。这种效应可能导致电阻测量中出现误差，特别是在孔洞分布不规则的情况下。局部电场增强效应还可能引发非线性导电现象，进一步增加薄膜电阻的不确定性。</p>
+</li>
+</ol>
+<h4 id="113">1.1.3 修正传统范德堡法的必要性<a class="headerlink" href="#113" title="Permanent link">&para;</a></h4>
+<p>由于孔洞的存在，传统范德堡法中假设的均匀电流分布被破坏，这会导致电阻测量结果与实际值产生偏差。具体来说，传统范德堡法基于以下重要假设：样品为均匀、各向同性的导电薄膜；且电流在薄膜中的分布是均匀且连续的。然而，孔洞的存在使上述假设不再成立，具体表现为测得的电压降不再直接反映真实的电流路径；电流绕过孔洞的行为会引入额外的几何因子，导致电阻的测量值偏离真实值。</p>
+<p>因此，为了准确测量带孔洞薄膜的电阻率，需要在传统范德堡法的基础上进行修正。修正方法通常包括：通过几何因子补偿、数值模拟校正，以及实验标定修正因子等。这些方法的核心在于重新建立带孔洞薄膜的电流分布模型，以便更好地拟合实验数据。</p>
+<h2 id="12">1.2 课题概述<a class="headerlink" href="#12" title="Permanent link">&para;</a></h2>
+<p>本课题旨在采用修正后的范德堡法对带孔洞薄膜的电阻进行精确测量。由于孔洞的存在会显著改变薄膜的电流分布，传统范德堡法在此类薄膜中的应用可能无法获得准确的电阻数据。因此，修正后的范德堡法通过引入孔洞分布和形态的修正因子，提供了一种更加准确的电阻测量方法。</p>
+<p>对于修正后的范德堡法，我们通过实验数据拟合修正因子并与理论方程进行比较，验证理论方程的可行性，由此，可以更精确地反映带孔洞薄膜的电阻特性，从而为薄膜材料的导电性分析和实际应用提供更加可靠的数据支持。</p>
+<p>本课题的研究将集中在以下几个方面：</p>
+<ol>
+<li><strong>修正范德堡法的理论构建</strong>：通过引入孔洞特性修正因子，改进传统范德堡法，使其能够更准确地反映带孔洞薄膜的电阻特性。</li>
+<li><strong>实验设计与数据拟合</strong>：在带孔洞薄膜的实验基础上，测量电阻并利用修正后的范德堡法进行数据拟合，分析孔洞率对薄膜电阻的影响。</li>
+<li><strong>数值模拟与误差分析</strong>：通过数值模拟进一步验证修正范德堡法的有效性，并分析可能的误差来源和修正精度。</li>
+</ol>
+<p>通过本课题的研究，我们希望能够为带孔洞薄膜材料的电阻测量提供更为精确的理论方法和实验依据，推动薄膜导电性研究的发展。</p>
+<h1 id="2">2 原理阐述<a class="headerlink" href="#2" title="Permanent link">&para;</a></h1>
+<h2 id="21">2.1 基本原理阐述<a class="headerlink" href="#21" title="Permanent link">&para;</a></h2>
+<p>根据改进后的范德堡法，我们考虑在测量过程中，在扁平的、任意形状的样品上放置四个隔离的接触点，依次在相邻电极施加电流，测量另一对电极的电压，然后反转电流，再次测量电压，两次电压测量值取平均值以消除热电动势，围绕样品进行八次测量，如图2所示</p>
+<p><img alt="image" src="assets/image-20241231221625-g2lw3h1.png" /></p>
+<p><em>图2 范德堡法测量过程</em></p>
+<p>其中1,2电极通电流<span class="arithmatex">\(I\)</span>，34电极测电压<span class="arithmatex">\(V_{3,4}\)</span>，则<span class="arithmatex">\(R_{12,34}=\frac{V_{3,4}}{I}\)</span>2,3电极通电流<span class="arithmatex">\(I\)</span>，41电极测电压<span class="arithmatex">\(V_{4,1}\)</span>，则<span class="arithmatex">\(R_{23,41}=\frac{V_{4,1}}{I}\)</span>  </p>
+<p>则由范德堡公式<span class="arithmatex">\(e^{R_{12,34}/\lambda}+e^{R_{23,41}/\lambda}=1,\lambda=\frac{\rho}{\pi d}\)</span>  </p>
+<p>由上述测量过程中的12,34组得到<span class="arithmatex">\(\rho_A=\frac{\pi}{ln2}f_At_s(\frac{V_2-V_1}{2I}+\frac{V_4-V_3}{2I})\)</span></p>
+<p>56，78组得到<span class="arithmatex">\(\rho_B=\frac{\pi}{ln2}f_Bt_s(\frac{V_6-V_5}{2I}+\frac{V_8-V_7}{2I})\)</span></p>
+<p>薄膜电阻率<span class="arithmatex">\(\rho=\frac{\rho_A+\rho_B}{2}\)</span>可以通过将任意形状向圆形进行保形映射来证明。</p>
+<h2 id="22">2.2 实验具体原理<a class="headerlink" href="#22" title="Permanent link">&para;</a></h2>
+<h4 id="221">2.2.1 静电场中的重要定律和方程<a class="headerlink" href="#221" title="Permanent link">&para;</a></h4>
+<p>静电场数值计算有限元方法的基础是静电场中的有关定律、定理和重要方程。两者之间存在因果关系。</p>
+<h5 id="2211">2.2.1.1 欧姆定律<a class="headerlink" href="#2211" title="Permanent link">&para;</a></h5>
+<p>导体中流过电流时，假若导体是各向同性的，也就是说电导率<span class="arithmatex">\(σ\)</span>是一常量，这时欧姆定律可以表达为三维中的微分形式<span class="arithmatex">\(\bold J=\sigma \bold E\)</span>；而当导体是各向异性时<span class="arithmatex">\(\bold J=\bold \Sigma \bold E\)</span>  </p>
+<p>电导率<span class="arithmatex">\(Σ\)</span>为一张量，有限元方法中通常是讨论<span class="arithmatex">\(σ\)</span>为常量的各向同性的情况，这就大大地简化了计算过程。</p>
+<h5 id="2212-">2.2.1.2 奥-高定律<a class="headerlink" href="#2212-" title="Permanent link">&para;</a></h5>
+<p>电场<span class="arithmatex">\(E\)</span>沿封闭面<span class="arithmatex">\(S\)</span>积分等于封闭面内的正电荷<span class="arithmatex">\(q_A=\oiint \bold Eds\)</span>  </p>
+<p>由欧姆定律和奥-高定律可以将电流场问题转化为静电场问题</p>
+<p><span class="arithmatex">\(\begin{cases} q_A=\oiint \bold Eds \\ \bold J=\sigma \bold E \end{cases} \Rightarrow q_A=\frac{1}{\sigma}\oiint \bold Jds=\frac{I}{\sigma}\)</span>  </p>
+<h5 id="2213">2.2.1.3 静电场中的泊松方程<a class="headerlink" href="#2213" title="Permanent link">&para;</a></h5>
+<p><span class="arithmatex">\(\nabla^2\phi=-\frac{\rho}{\epsilon}\)</span></p>
+<p><img alt="image" src="assets/image-20241231162105-7u3zwrg.png" /></p>
+<p>n为边界的法向单位矢量。泊松方程意味着等电位线到边界附近时必须与边界相互垂直，如图3-2所示。通常称这一边界条件为第二类边界条件。</p>
+<h5 id="2214">2.2.1.4 高斯定理<a class="headerlink" href="#2214" title="Permanent link">&para;</a></h5>
+<p>三维中向量场通过闭合曲面的通量与散度之间的关系<span class="arithmatex">\(\iiint_v\nabla\cdot \bold Fdv=\iint_s\bold F\cdot \bold n ds\)</span></p>
+<p><span class="arithmatex">\(s\)</span>为空间区域，<span class="arithmatex">\(v\)</span>为边界曲面，<span class="arithmatex">\(n=(cosα,cosβ,cosγ)\)</span>为空间上一点法线单位矢量，<span class="arithmatex">\(F\)</span>为空间域中某一物理量矢量。</p>
+<h5 id="2215">2.2.1.5 格林定理<a class="headerlink" href="#2215" title="Permanent link">&para;</a></h5>
+<p><span class="arithmatex">\(\iiint_v(\psi\nabla^2\phi+\nabla \psi\nabla \phi)dv=\iint_s\psi\frac{\partial \phi}{\partial n}ds\)</span>  </p>
+<h5 id="2216">2.2.1.6 静电场能量<a class="headerlink" href="#2216" title="Permanent link">&para;</a></h5>
+<p>电荷密度ρ在其周围产生电位分布中。取少量电荷δρ由电位为零的无穷远点移动过来便须做微小功：</p>
+<p><span class="arithmatex">\(\delta U=\iiint \phi \delta \rho dv\)</span></p>
+<p><span class="arithmatex">\(\nabla \cdot \bold{D}=\rho, \bold{E}=-\nabla \bold{\phi}\)</span></p>
+<p><span class="arithmatex">\(\delta U=\iint \phi \delta D_nds+\iiint \bold{E}\cdot \bold{D}dv\ =\frac{1}{2}\epsilon \iiint|E|2 dv=\frac{1}{2}\epsilon \iiint |\nabla \phi|\)</span>​​<span class="arithmatex">\(2dv\)</span>  </p>
+<h4 id="223">2.2.3 图形变换理论<a class="headerlink" href="#223" title="Permanent link">&para;</a></h4>
+<p>Vaughan采用镜像源法，是将电流探针流入和流出分别看作一点，分别称“源”和“汇”。为满足边界条件，找到源和汇的像，例如图2-17中对圆形边界，源M1和汇N1的镜像分别是M1′和N1′，像在圆外且和源在一直线上。</p>
+<p><img alt="image" src="assets/image-20241231162641-eoknw98.png" /></p>
+<p>这样就将圆形边界变成一个无穷大平面的问题，源在无穷大平面上任何一点产生的电势为<span class="arithmatex">\(\phi-\phi_0=-\frac{IR_s}{2\pi}lnr\)</span>  </p>
+<p>式中，<span class="arithmatex">\(\phi\)</span>中是任何一点相对于参考点的电势，<span class="arithmatex">\(ϕ_0\)</span>是参考点的电势；<span class="arithmatex">\(I\)</span>是源的电流；<span class="arithmatex">\(R_s\)</span>是样品的薄层电阻；<span class="arithmatex">\(r\)</span>是所求点到源的距离。这样可求出电压探针P和Q在任意位置的电势差。</p>
+<h4 id="224">2.2.4 保形变换法推导范德堡方程<a class="headerlink" href="#224" title="Permanent link">&para;</a></h4>
+<h5 id="2241-van-der-pauw">2.2.4.1 半无穷大薄样品的Van der Pauw方程推导<a class="headerlink" href="#2241-van-der-pauw" title="Permanent link">&para;</a></h5>
+<p><img alt="image" src="assets/image-20241231170331-el7rhua.png" /></p>
+<p>设图4-1所示样品是半无穷大、厚度为d的平面，样品的电阻率为ρ,薄层电阻为R,即有<span class="arithmatex">\(R_s=ρ/d\)</span>。沿样品无穷长直线边界逆时针有P、Q、R、S 4个触点，触点间的距离为<span class="arithmatex">\(a、b、c\)</span>。当电流I从P点引入，流经样品后，又从Q点流出。由拉普拉斯方程在平面电流场中的解可得S点和R点间的电压差</p>
+<p><span class="arithmatex">\(\begin{cases} V_S-V_R=\frac{IR_s}{\pi}ln\frac{(a+b)(b+c)}{b(a+b+c)}  \\ V_S-V_P=\frac{IR_s}{\pi}ln\frac{(a+b)(b+c)}{ca} \end{cases}\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow \begin{cases} exp(-\frac{\pi(V_S-V_R)}{IR_s})=\frac{b(a+b+c)}{(a+b)(b+c)}  \\ exp(-\frac{\pi(V_S-V_P)}{IR_s})=\frac{ca}{(a+b)(b+c)} \end{cases}\)</span>  </p>
+<p>将两式相加则得到半无穷大薄样品的Van der Pauw方程</p>
+<p><span class="arithmatex">\(exp(-\frac{\pi(V_S-V_R)}{IR_s})+exp(-\frac{\pi(V_S-V_P)}{IR_s})=1\)</span></p>
+<p>同时可以得到样品的薄层电阻</p>
+<p><span class="arithmatex">\(R_s=\frac{\pi}{2ln2}[(V_S-V_P)+(V_S-V_R)]f[\frac{(V_S-V_P)}{(V_S-V_R)}]\)</span></p>
+<p>其中<span class="arithmatex">\(f[\frac{(VS−VP)}{(VS−VR)}]\)</span>称为Van der Pauw函数。</p>
+<h5 id="2242-van-der-pauw">2.2.4.2 任意形状薄样品的Van der Pauw方程推导<a class="headerlink" href="#2242-van-der-pauw" title="Permanent link">&para;</a></h5>
+<p>图4-1所示样品平面与复平面<span class="arithmatex">\(z=x+iy\)</span>相重合，即该样品躺在复平面z上。样品的边缘上有4个触点P、Q、R、S,设其间距离为a、b、c。</p>
+<p>引入函数<span class="arithmatex">\(w=f(z)=u(x,y)+iv(x,y)\)</span>。函数f(z)满足：u代表样品中势场。</p>
+<p>函数u和v满足柯西-黎曼(Cauchy-Riemann)关系，</p>
+<p><span class="arithmatex">\(\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}\)</span>  </p>
+<p>研究样品上半平面沿任意路径s的法向净电流</p>
+<p><span class="arithmatex">\(I_{T_2T_1}=\frac{1}{R_s}\int_{T_1}^{T_2}E_nds\\= \frac{1}{R_s}\int_{T_1}^{T_2}(-\frac{\partial u}{\partial y}dx+\frac{\partial u}{\partial x}dx)=\frac{1}{R_s}(v_{T_2}-v_{T_1})\)</span>​​  </p>
+<p>沿路径s从任意点<span class="arithmatex">\(T_1\)</span>,走到点<span class="arithmatex">\(T_2\)</span>时，从路径s法向流出的电流只与该两点虚轴v上的坐标差及薄层电阻R,有关。如果沿路径s从法向无电流流出，则v值不变。当沿路径s从法向有电流I流出时，则v值增加，其增加量为<span class="arithmatex">\(Δv=R_sI\)</span>。如果沿样品边界实轴u从-α到+α,无电流垂直流入或流出实轴u,即就无电流流入或流出样品边界，则v=0。</p>
+<p><img alt="image" src="assets/image-20241231170325-islo5ks.png" /></p>
+<p>现在考虑图4-2所示一躺在复平面t上任意形状的样品：<span class="arithmatex">\(t=r+is\)</span>。</p>
+<p>由图形变换理论，总可以找到一个分析函数t(z)使z平面的上半平面复制并映射到t平面上的样品上，而且可让<span class="arithmatex">\(k(t)=l+im\)</span>与<span class="arithmatex">\(f(z)=f[z(t)]=k(t)\)</span>完全一致，一一对应。此时，t平面上位于样品边缘任意位置的A、B、C、D点成为z平面位于实轴u上的P、Q、R、S点的镜像(如图4-2所示)。由图形变换理论可知，此时<span class="arithmatex">\(t\)</span>平面上的<span class="arithmatex">\(m\)</span>对应于<span class="arithmatex">\(z\)</span>平面上的<span class="arithmatex">\(v\)</span>。如果u代表z平面上的势场的话，则l代表t平面上的势场。</p>
+<p>当沿z平面上的样品边缘逆时针走时，此时无电流从边缘流出，边缘的法向电场强度处处为零，因而v值不变。</p>
+<p>但到达z平面的边缘的P点，若此时有电流I从P点流入，则在P点处边缘的法向电场强度不为零。设想在P点又沿里面一小的半圆走，因为在P点处边缘的法向电场强度应与边缘的电流密度矢量相平行一致，因此小半圆的法向电场强度不为零。沿此小半圆法向电场强度的积分等于从P点流入的电流I。于是在P点处<span class="arithmatex">\(v\)</span>值增加，增加量为<span class="arithmatex">\(Δv=R_sI\)</span>。过P点后，继续沿样品边缘走时，因为边缘无电流流入，v值保持不变。但是到达Q点时，Q点有电流I流出，在Q点处存在负的法向电场强度，又沿一小的半圆走，沿此小半圆法向电场强度的积分等于从Q点流入的电流I。因此v值又减小至零，其减小量为<span class="arithmatex">\(Δv=−R_sI\)</span>。</p>
+<p>现在再来研究躺在t平面上的样品，样品的薄层电阻为<span class="arithmatex">\(Rs′\)</span>。当电流<span class="arithmatex">\(I'\)</span>仅从样品边缘的触点A进入时，则<span class="arithmatex">\(Δm=R_s'I'\)</span>。当仅从样品的触点B流出时，<span class="arithmatex">\(Δm=−R_s'I'\)</span>。选择电流<span class="arithmatex">\(I'=IR_s/R_s′\)</span>,则<span class="arithmatex">\(I'R_s'=IR_s\)</span>，当电流I'由样品边缘A点流入并由B点流出时，<span class="arithmatex">\(V_d−V_c=V_S−V_R\)</span>。当电流I'由样品边缘B点流入并由C点流出时，<span class="arithmatex">\(V_d−V_a=V_S−V_p\)</span>，便有下式：</p>
+<p><span class="arithmatex">\(V_d-V_c=\frac{I'R_s'}{\pi}ln\frac{(a+b)(b+c)}{b(a+b+c)}=\frac{IR_s}{\pi}ln\frac{(a+b)(b+c)}{b(a+b+c)}=Vs-V_R\)</span></p>
+<p><span class="arithmatex">\(V_d-V_a=\frac{I'R_s'}{\pi}ln\frac{(a+b)(b+c)}{ca}\ =\frac{IR_s}{\pi}ln\frac{(a+b)(b+c)}{ca)}=Vs-V_P\)</span>  </p>
+<p>于是任意形状薄样品边缘上的A、B、C、D满足同样的Van der Pauw 方程<span class="arithmatex">\(exp(-\frac{\pi(V_d-V_a)}{I'R_s'})+exp(-\frac{\pi(V_d-V_c)}{I'R_s'})=1\)</span>  </p>
+<p>样品的薄层电阻<span class="arithmatex">\(R_s'=\frac{\pi }{2ln2}\frac{V_{ad}+V_{dc}}{I'}f(\frac{V_{dc}}{V_{dc}})\)</span></p>
+<h4 id="225">2.2.5 单孔材料范德堡公式修正<a class="headerlink" href="#225" title="Permanent link">&para;</a></h4>
+<p>类似的，考虑将有孔洞的样品向有限长度圆柱/圆筒作映射，则对于映射后得到的圆柱/圆筒</p>
+<p><span class="arithmatex">\(R_{PQ,RS} = \lambda \ln \left| \frac{G(\alpha + \beta, h) G(\alpha + \gamma, h)}{G(\beta, h) G(\gamma, h)} \right|\)</span></p>
+<p><span class="arithmatex">\(R_{QR,SP} = \lambda \ln \left| \frac{G(\alpha + \beta, h) G(\alpha + \gamma, h)}{G(\alpha, h) G(\delta, h)} \right|\)</span></p>
+<p><span class="arithmatex">\(R_{PR,QS} = \lambda \ln \left| \frac{G(\alpha, h) G(\delta, h)}{G(\beta, h) G(\gamma, h)} \right|\)</span></p>
+<p><span class="arithmatex">\(G(\theta, h) = \sin \frac{\theta}{2} \prod_{n=1}^\infty \left( 1 - \frac{\cos \theta}{\cosh nh} \right)\)</span></p>
+<p><span class="arithmatex">\(\nu = \frac{G(\alpha, h) G(\delta, h) + G(\beta, h) G(\gamma, h)}{G(\alpha + \beta, h) G(\alpha + \gamma, h)} \leq 1\)</span></p>
+<p>虽然已知任何带孔的样品都可以保形映射到圆柱体上，但提供映射的精确数值关系仅适用于某些几何形状，例如具有相同中心的矩形样品中的矩形孔，或椭圆形状的样品和孔。因此，在一般几何中，探针之间的角度在被映射后和样品的黎曼模量<em>h</em>是未知的，导致太多的未知因素，传统的范德堡方法无法适用。</p>
+<p>保留范德堡公式形式，修正等式右侧的常数1为<span class="arithmatex">\(ν\)</span></p>
+<ul>
+<li>作出简单假设，认为<span class="arithmatex">\(ν\)</span>仅仅是面积比的线性函数</li>
+<li>用已知电阻率和厚度的相同样品，测量<span class="arithmatex">\(ν\)</span>，验证它只是面积比的函数，而与样品使用的材料无关</li>
+</ul>
+<p>本实验利用了<em><span class="arithmatex">\(ν\)</span></em>的值对<em><span class="arithmatex">\(α\)</span></em>​<span class="arithmatex">\(、\)</span>​<em><span class="arithmatex">\(β\)</span></em>​<span class="arithmatex">\(、γ 、δ\)</span>值的微小变化不太敏感这一事实，在使用带有小孔的样品进行实验时，将探针彼此远离，这样<em><span class="arithmatex">\(α\)</span></em>​<span class="arithmatex">\(、\)</span>​<em><span class="arithmatex">\(β\)</span></em>​<span class="arithmatex">\(、γ 、δ\)</span>将趋向于<span class="arithmatex">\(\frac \pi 2\)</span>,由此可以近似给出<span class="arithmatex">\(\nu\)</span>仅作为孔面积比的线性函数的关系。</p>
+<p><span class="arithmatex">\(\nu=\prod \limits ^{\infin}_{n=1}(1+\frac{1}{cosh( nh)})^{-2}\)</span>（<span class="arithmatex">\(h=-ln\frac{A_{hole}}{A}\)</span>）</p>
+<p>对于这个包含无穷乘积的式子，我们尝试进行一阶估算近似</p>
+<p><span class="arithmatex">\(\nu=\prod \limits ^{\infin}_{n=1}(1+\frac{1}{cosh( nh)})^{-2}\approx\prod \limits ^{\infin}_{n=1}(1+\frac{1}{e^{nh}})^{-2}\approx \prod \limits ^{\infin}_{n=1}(1-\frac{4}{e^{nh}})\approx e^{\sum^\infin_{n=1}-\frac4{e^{nh}}}\approx e^{{{-\frac{4}{e^h}}}}\)</span></p>
+<p>很容易做出它的一阶近似估算<span class="arithmatex">\(\nu=1-\frac4{e^h}\)</span>,在图像上表现为一条直线</p>
+<p>此外，本实验假定给定样本的<em>ν</em>值仅取决于几何形状，而不取决于制作样本的材料类型。因此实验使用不同材料的样品进行实验获得v，来验证孔洞面积较小时ν仅取决于几何性质。</p>
+<h4 id="226">2.2.6 实验原理<a class="headerlink" href="#226" title="Permanent link">&para;</a></h4>
+<p>为研究在样本有孔的情况下，范德堡法的应用情况，本实验用范德堡法对同种材料无孔条件，有不同孔径的孔洞条件下电阻率分别进行了测量． 实验中使用厚度为 0．000 1 m 的单孔圆环状铜材料样本和银材料样本。</p>
+<p>取规则位置放置探针，将 4 个电极1，2，3，4如图 2 所示焊接在样本表面，所用电源为单路稳压电源，1,2电极通电流<span class="arithmatex">\(I_{1,2}\)</span>，34电极测电压<span class="arithmatex">\(V_{3,4}\)</span>，则<span class="arithmatex">\(R_{12,34}=\frac{V_{3,4}}{I_{1,2}}\)</span>；2,3电极通电流<span class="arithmatex">\(I_{2,3}\)</span>，41电极测电压<span class="arithmatex">\(V_{4,1}\)</span>，则<span class="arithmatex">\(R_{23,41}=\frac{V_{41}}{I_{23}}\)</span>。探针取不同位置时，测得多组<span class="arithmatex">\(R_{12,34}\)</span>,<span class="arithmatex">\(R_{23,41}\)</span>的值。基于此分别做出有孔条件下和无孔条件下样本<span class="arithmatex">\(R_{12,34}-R_{23,41}\)</span>图像</p>
+<p>本实验首先通过制作不同孔洞面积比的样品并进行多次测量，来对范德堡公式进行孔洞修正，并对孔洞形状、位置对于修正因子的影响作定性分析。此外，本实验假设修正后的<span class="arithmatex">\(\nu\)</span>与样品的材质无关，通过采用不同材质（铜和银）进行实验研究，来对猜想进行验证。</p>
+<h1 id="3">3 实验装置<a class="headerlink" href="#3" title="Permanent link">&para;</a></h1>
+<h2 id="31">3.1 硬件架构<a class="headerlink" href="#31" title="Permanent link">&para;</a></h2>
+<p>实验硬件主要包括薄膜制备仪器、测量设备以及数据采集与传输模块，具体如下：</p>
+<ol>
+<li>
+<p><strong>薄膜制备仪器</strong></p>
+<ul>
+<li><strong>真空镀膜机</strong>：用于薄膜样品的制备，能够控制沉积材料（铜、铝）的厚度和均匀性。</li>
+<li><strong>胶带和载玻片</strong>：用于在载玻片表面形成孔洞模板。将胶带按照设计的形状贴在载玻片上，完成镀膜后撕去胶带，得到带孔洞的薄膜。</li>
+<li>
+<p><strong>电极焊接设备</strong></p>
+</li>
+<li>
+<p><strong>纳米银胶</strong>：用于将金线焊接到薄膜样品的四个电极点上，确保接触良好，减小接触电阻。</p>
+</li>
+<li><strong>金线</strong>：作为电极连接薄膜和测量设备。</li>
+<li><strong>真空脂</strong> ：用于简单固定载玻片。</li>
+<li><strong>乙酸丁酯</strong>：溶解纳米银颗粒。</li>
+<li>
+<p><strong>电学测量设备</strong></p>
+</li>
+<li>
+<p><strong>数字万用表</strong>：用于简单验证电极之间导通性。</p>
+</li>
+<li><strong>6221 型交流/直流电流源</strong>：提供稳定的电流输入，用于激励薄膜样品。</li>
+<li><strong>双通道2182型纳伏表</strong>：作为测量系统的核心，提供多通道电极切换和控制功能，支持范德堡法的测量。</li>
+<li>
+<p><strong>其他辅助设备</strong></p>
+</li>
+<li>
+<p><strong>光学显微镜</strong>：用于观察薄膜表面的孔洞形态，拍摄图像并为后续图像分析提供数据。</p>
+</li>
+<li><strong>计算机</strong>：用于测量系统控制、数据采集、图像处理与分析。</li>
+</ul>
+</li>
+</ol>
+<p>通过以上硬件设备的协同工作，能够完成薄膜制备、电极连接、数据采集及电阻率的精确测量。</p>
+<h2 id="32">3.2 软件架构<a class="headerlink" href="#32" title="Permanent link">&para;</a></h2>
+<p>实验的软件架构分为测量控制软件和数据分析软件两部分，具体如下：</p>
+<ol>
+<li>
+<p><strong>测量控制软件</strong></p>
+<ul>
+<li>
+<p>Keithley 测量系统软件<br />
+  实验使用 Keithley 提供的测量系统软件与 ：</p>
+</li>
+<li>
+<p><strong>设备控制</strong>：设置电流源的输出参数、切换开关系统中的电极通道。</p>
+</li>
+<li><strong>数据采集</strong>：实时记录电压和电流测量值，并将数据以标准格式保存至计算机。</li>
+<li><strong>误差校准</strong>：支持对测量误差进行校准，确保测量结果准确。</li>
+<li>
+<p><strong>数据分析软件</strong></p>
+</li>
+<li>
+<p><strong>ImageView 图像处理模块</strong>ImageView 软件主要用于对孔洞形态的图像处理与特征提取，具体功能包括：</p>
+</li>
+<li>
+<p>图像预处理：对光学显微镜拍摄的孔洞图像进行去噪和增强。</p>
+</li>
+<li>特征提取：提取孔洞的几何尺寸、分布密度和孔隙率等特性。</li>
+<li>修正因子计算：根据提取的孔洞参数，计算修正因子<span class="arithmatex">\(\nu\)</span>，为后续电阻率的计算提供输入参数。</li>
+<li>
+<p><strong>数据分析与可视化模块</strong>使用Origin处理实验采集的数据，完成以下功能：</p>
+</li>
+<li>
+<p>计算修正因子<span class="arithmatex">\(\nu\)</span>：代入修正后的范德堡公式，计算不同空洞率下孔洞修正因子<span class="arithmatex">\(\nu\)</span>，计算带孔洞薄膜的电阻率。</p>
+</li>
+<li>理论曲线拟合：将实验结果与理论曲线进行对比分析，验证实验的准确性和修正因子的合理性。</li>
+</ul>
+</li>
+</ol>
+<h1 id="4">4 实验操作<a class="headerlink" href="#4" title="Permanent link">&para;</a></h1>
+<h3 id="41"><strong>4.1 实验方法</strong><a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<p>本实验采用修正后的范德堡法测量带孔洞薄膜的电阻率，主要包括薄膜制备、电极焊接、测量与数据修正四个环节。</p>
+<ol>
+<li>
+<p><strong>薄膜制备</strong></p>
+<ul>
+<li>在清洁的载玻片表面粘贴设计好的胶带模板，以形成不同形状和大小的孔洞；</li>
+<li>使用真空镀膜法制备薄膜，分别以铜和铝为材料，控制镀膜厚度达到设计值；</li>
+<li>镀膜完成后撕去胶带，得到带孔洞的薄膜样品。</li>
+<li>
+<p><strong>电极焊接</strong></p>
+</li>
+<li>
+<p>在显微镜下使用纳米银胶将金线焊接至薄膜的四个电极点，确保电极与薄膜表面接触良好，减小接触电阻。</p>
+</li>
+<li>
+<p><strong>测量与修正</strong></p>
+</li>
+<li>
+<p>利用范德堡法进行测量，通过注入高精度电流并记录多个电极间的电压值，结合薄膜厚度和实验修正因子计算电阻率；</p>
+</li>
+<li>修正因子 <span class="arithmatex">\(\nu\)</span>根据薄膜孔洞的几何特性（孔隙率、分布密度等）计算，具体参数由光学显微镜采集的图像经过 ImageView 图像分析模块提取。</li>
+<li>
+<p><strong>数据分析</strong></p>
+</li>
+<li>
+<p>将实验测量结果与理论曲线进行对比，评估修正因子的有效性，分析孔洞对薄膜电阻率的影响并验证实验的准确性。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="42">4.2 实验步骤<a class="headerlink" href="#42" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>薄膜制备</strong></p>
+<ol>
+<li>清洁载玻片，并使用粘性良好的胶带在载玻片表面贴出设计好的孔洞形状（包括不同大小和分布）。</li>
+<li>在真空镀膜机中放置载玻片，分别采用铜和铝材料进行镀膜，控制镀膜厚度达到设计要求。</li>
+<li>镀膜完成后撕去胶带，形成带有孔洞的薄膜样品。</li>
+<li>
+<p><strong>电极焊接</strong></p>
+</li>
+<li>
+<p>在显微镜下使用纳米银胶将金线焊接到样品薄膜的四个角上，形成良好的电极接触点。</p>
+</li>
+<li>
+<p>确保焊接位置与测量设备接线端子匹配，避免接触电阻过大或电极脱落。</p>
+</li>
+<li>
+<p><strong>测量装置搭建</strong></p>
+</li>
+<li>
+<p>将样品固定在绝缘基底上，连接至 7065 型霍尔效应卡的测量接口。</p>
+</li>
+<li>
+<p>依次连接测量系统中的 2000 型数字万用表、6220 型电流源、6485 型皮安计和 7001 型开关系统。(3) 启动系统，检查硬件连接状态，确保设备正常运行。</p>
+</li>
+<li>
+<p><strong>实验测量</strong></p>
+</li>
+<li>
+<p>通过开关系统切换电极连接，注入高精度电流<span class="arithmatex">\(I_{AB}\)</span>和<span class="arithmatex">\(I_{BC}\)</span>。</p>
+</li>
+<li>
+<p>使用数字万用表分别测量电压<span class="arithmatex">\(U_{CD}\)</span>和 <span class="arithmatex">\(U_{DA}\)</span>，记录数据。</p>
+</li>
+<li>
+<p>重复测量三次，计算平均值以减少随机误差。</p>
+</li>
+<li>
+<p><strong>图像采集与修正因子计算</strong></p>
+</li>
+<li>
+<p>使用光学显微镜拍摄样品的孔洞图像，导入 ImageView 模块进行处理。</p>
+</li>
+<li>提取孔洞的几何形状、分布密度和孔隙率等参数。</li>
+<li>根据提取数据计算修正因子<span class="arithmatex">\(\nu\)</span>，将其导入电阻率计算公式。</li>
+<li>
+<p><strong>数据处理与分析</strong></p>
+</li>
+<li>
+<p>将实验得到的修正因子<span class="arithmatex">\(\nu\)</span>与理论曲线进行比较</p>
+</li>
+<li>通过对比分析验证实验结果的准确性，并评估修正因子的有效性。</li>
+</ol>
+</li>
+</ol>
+<h2 id="43">4.3 实验数据<a class="headerlink" href="#43" title="Permanent link">&para;</a></h2>
+<p>原始数据如下，在同等比例尺下定标<span class="arithmatex">\(1cm=1519.49px\)</span></p>
+<table>
+<thead>
+<tr>
+<th>样品编号</th>
+<th>样品材质</th>
+<th>薄膜像素面积/<span class="arithmatex">\(px^2\)</span></th>
+<th>孔洞像素面积/<span class="arithmatex">\(px^2\)</span></th>
+<th>孔洞面积占比<span class="arithmatex">\(\frac{S_{hole}}{S}\)</span></th>
+<th><span class="arithmatex">\(R_{12,34}/m\Omega\)</span><br /></th>
+<th><span class="arithmatex">\(R_{23,41}/m\Omega\)</span></th>
+<th>孔洞形状</th>
+<th>薄膜图像</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>铜</td>
+<td>2238100</td>
+<td>229824</td>
+<td>0.102687101<br /></td>
+<td>35.12</td>
+<td>44.23</td>
+<td>平行四边形</td>
+<td><img alt="image" src="assets/image-20241224222211-r8vox1y.png" />​</td>
+</tr>
+<tr>
+<td>2</td>
+<td>铜</td>
+<td>2070316.5</td>
+<td>134410.5</td>
+<td>0.064922682</td>
+<td>24.67</td>
+<td>36.24</td>
+<td>三角形</td>
+<td><img alt="image" src="assets/image-20241224222351-v6oug5q.png" />​</td>
+</tr>
+<tr>
+<td>3</td>
+<td>铜</td>
+<td>2208470</td>
+<td>233450</td>
+<td>0.105706666</td>
+<td>38.45</td>
+<td>45.67</td>
+<td>正方形</td>
+<td><img alt="image" src="assets/image-20241224222413-ytjjos3.png" />​</td>
+</tr>
+<tr>
+<td>4</td>
+<td>铜</td>
+<td>1876286</td>
+<td>239248</td>
+<td>0.127511477</td>
+<td>42.34</td>
+<td>47.89</td>
+<td>矩形</td>
+<td><img alt="image" src="assets/image-20241224222528-3g3expg.png" />​</td>
+</tr>
+<tr>
+<td>5</td>
+<td>铜</td>
+<td>2202103.5</td>
+<td>149517.5</td>
+<td>0.067897581</td>
+<td>26.45</td>
+<td>37.89</td>
+<td>矩形</td>
+<td><img alt="image" src="assets/image-20241224222835-4qbw9x4.png" />​</td>
+</tr>
+<tr>
+<td>6</td>
+<td>银</td>
+<td>2844448</td>
+<td>224535.5</td>
+<td>0.078938163</td>
+<td>28.55</td>
+<td>39.45</td>
+<td>三角形</td>
+<td><img alt="image" src="assets/image-20241224214338-cypwoim.png" />​</td>
+</tr>
+<tr>
+<td>7</td>
+<td>银</td>
+<td>1860474</td>
+<td>160936</td>
+<td>0.086502687</td>
+<td>31.23</td>
+<td>41.12</td>
+<td>三角形</td>
+<td><img alt="image" src="assets/image-20241224222723-besl2l1.png" />​</td>
+</tr>
+<tr>
+<td>8</td>
+<td>银</td>
+<td>2443601.5</td>
+<td>383621</td>
+<td>0.15699<br /></td>
+<td>48.12</td>
+<td>50.00</td>
+<td>正方形</td>
+<td><img alt="image" src="assets/image-20241224222804-83eo8vg.png" />​</td>
+</tr>
+<tr>
+<td>9</td>
+<td>银</td>
+<td>1974287.5</td>
+<td>93440.5</td>
+<td>0.04732872</td>
+<td>22.34</td>
+<td>34.12</td>
+<td>平行四边形</td>
+<td><img alt="image" src="assets/image-20241224223041-b9773vo.png" />​</td>
+</tr>
+<tr>
+<td>10</td>
+<td>银</td>
+<td>2357142</td>
+<td>0</td>
+<td>0</td>
+<td>20.12</td>
+<td>32.78</td>
+<td>/</td>
+<td>/</td>
+</tr>
+</tbody>
+</table>
+<h2 id="44">4.4 实验结果<a class="headerlink" href="#44" title="Permanent link">&para;</a></h2>
+<p>我们采用修正后的范德堡方程计算修正因子<span class="arithmatex">\(\nu\)</span>，即<span class="arithmatex">\(\nu=e^{-\frac{R_{12,34}}{\lambda}}+e^{-\frac{R_{23,41}}{\lambda}}\)</span>，其中<span class="arithmatex">\(\lambda=\frac{\rho}{\pi d}\)</span></p>
+<p>其中银的电阻率为<span class="arithmatex">\(1.59\cdot 10^{-8}\Omega\cdot m\)</span>，铜的电阻率为<span class="arithmatex">\(1.69\cdot 10^{-8}\Omega\cdot m\)</span></p>
+<p>得到的相应修正因子数据表格如下</p>
+<table>
+<thead>
+<tr>
+<th>样品编号</th>
+<th>样品材质</th>
+<th>孔洞面积占比<span class="arithmatex">\(\frac{S_{hole}}{S}\)</span></th>
+<th>修正因子v</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>铜</td>
+<td>0.102687101<br /></td>
+<td>0.832</td>
+</tr>
+<tr>
+<td>2</td>
+<td>铜</td>
+<td>0.064922682</td>
+<td>0.943</td>
+</tr>
+<tr>
+<td>3</td>
+<td>铜</td>
+<td>0.105706666</td>
+<td>0.802</td>
+</tr>
+<tr>
+<td>4</td>
+<td>铜</td>
+<td>0.127511477</td>
+<td>0.751</td>
+</tr>
+<tr>
+<td>5</td>
+<td>铜</td>
+<td>0.067897581</td>
+<td>0.924</td>
+</tr>
+<tr>
+<td>6</td>
+<td>银</td>
+<td>0.078938163</td>
+<td>0.903</td>
+</tr>
+<tr>
+<td>7</td>
+<td>银</td>
+<td>0.086502687</td>
+<td>0.876</td>
+</tr>
+<tr>
+<td>8</td>
+<td>银</td>
+<td>0.15699<br /></td>
+<td>0.685</td>
+</tr>
+<tr>
+<td>9</td>
+<td>银</td>
+<td>0.04732872</td>
+<td>0.962</td>
+</tr>
+<tr>
+<td>10</td>
+<td>银</td>
+<td>0</td>
+<td>0.985</td>
+</tr>
+</tbody>
+</table>
+<p>我们对于理论中推出的修正因子<span class="arithmatex">\(\nu\)</span>的理论曲线及其一阶近似方程进行图像拟合</p>
+<p>两条理论曲线方程分别是标准理论曲线<span class="arithmatex">\(\nu=\prod \limits ^{\infin}_{n=1}(1+\frac{1}{cosh( -n\cdot ln\frac{A_{hole}}{A})})^{-2}\)</span>​</p>
+<p>一阶近似曲线方程为<span class="arithmatex">\(\nu=1-4e^{-h}\approx=1-4\frac{A_{hole}}{A}\)</span>  </p>
+<p>对于两种材质的拟合效果如下</p>
+<p><img alt="Graph1" src="assets/Graph1-20250102111322-p3pefyi.png" /></p>
+<p><img alt="Graph2" src="assets/Graph2-20250102111328-iuuu8mf.png" /></p>
+<p>可以看到拟合对于实验中制造的带孔洞薄膜样品表现出了较好的效果，我们可以认为在孔洞面积占比不大（&lt;0.2）时理论方程是可行的；而尽管采用一阶线性近似精确程度不如标准理论曲线方程，但是考虑到计算效率在孔洞面积占比不大时仍然可以考虑，并能给出相对好的计算效果；在计算量允许的前提下同样可以做更高阶的估算，得到更加精确的理论方程近似值。</p>
+<h1 id="5">5 分析与讨论<a class="headerlink" href="#5" title="Permanent link">&para;</a></h1>
+<h2 id="51">5.1 误差来源<a class="headerlink" href="#51" title="Permanent link">&para;</a></h2>
+<p>在使用修正后的范德堡法测量薄膜电阻时，误差的来源可能来自以下几个方面：</p>
+<ul>
+<li><strong>仪器精度误差</strong><br />
+  测量过程中使用的仪器（如恒流源、微伏表、电压源等）均存在一定的测量精度限制。例如，恒流源可能存在输出电流的波动或偏差，微伏表的分辨率和线性度可能不足，电压源的输出可能存在不稳定性。这些仪器的精度限制在测量非常低或非常高的电阻值时尤为显著，会对最终的电阻计算结果造成直接影响。因此，实验所用仪器的标定精度和性能稳定性是影响测量结果的重要因素。</li>
+<li><strong>接触电阻</strong><br />
+  在薄膜电阻测量中，电极与薄膜表面之间的接触质量对测量结果有显著影响。由于接触表面可能存在氧化、污染或表面粗糙度等问题，接触电阻会显著增大。接触电阻的大小与电极材料、接触压力以及薄膜表面的平整性密切相关。接触电阻的存在会导致总电阻值偏离真实值，尤其当接触电阻与薄膜电阻值相当时，其影响将更加明显。</li>
+<li><strong>环境因素</strong><br />
+  环境条件（如温度、湿度和空气质量等）会显著影响测量结果。温度变化会导致薄膜材料电阻的波动，具体表现为电阻值随温度升高而增加或减小，其变化率可通过材料的温度系数描述。此外，湿度可能改变薄膜表面的电导特性，而空气质量（如尘埃颗粒）可能在薄膜表面形成附着层，进一步影响测量结果。环境因素还可能间接影响测量仪器的稳定性，从而对数据精度产生影响。</li>
+<li><strong>薄膜不均匀性</strong><br />
+  薄膜的厚度、材料成分和结构分布可能在不同区域存在不均匀性。这种不均匀性会导致薄膜不同位置的电阻值存在差异，进而影响测量的重复性和准确性。薄膜不均匀性主要源于制备工艺的波动或局部缺陷，例如厚度梯度、成分偏析或孔洞的存在。这种误差在薄膜面积较大或测量点选择随机时尤为突出。</li>
+<li><strong>计算误差</strong><br />
+  修正后的范德堡法依赖于一系列理论模型和数学公式，这些模型通常建立在特定假设的基础上。例如，薄膜被假定为均匀连续的各向同性导体，接触电阻被认为可忽略，或边界效应对电阻的影响被简化处理。当实验条件与理论模型的假设不符时，例如薄膜的非均匀性或接触电阻不可忽略时，计算结果可能偏离真实值。此外，数值计算中的舍入误差或拟合误差也会影响最终结果。</li>
+<li><strong>电流方向与电场效应</strong><br />
+  在薄膜材料中，电流的流动方向可能会受到电场分布或材料内局部电场效应的影响。例如，薄膜可能存在非线性导电特性，或者局部的电荷积累改变了电场分布，使得实际电流路径发生偏移。这种偏移可能导致测量电阻值偏离预期值，尤其当薄膜具有复杂的电导特性时，其影响尤为明显。</li>
+</ul>
+<h2 id="52">5.2 误差分析<a class="headerlink" href="#52" title="Permanent link">&para;</a></h2>
+<p>根据实验过程中的数据，分析不同误差源对测量结果的具体影响。</p>
+<ol>
+<li><strong>仪器精度误差</strong><br />
+    仪器的精度对测量结果有直接影响，其标定误差和测量误差可以量化。例如，在测量电压时，若使用的微伏表精度为 ±0.1 mV，则每次测量可能会带来最高 0.1 mV 的电压误差。若施加的电流为 1 mA，根据 <span class="arithmatex">\(R = V/I\)</span> 的关系，这一电压误差将导致电阻值出现最高 <span class="arithmatex">\(\Delta R = \Delta V/I = 0.1 \, \Omega\)</span> 的误差。此外，若电流源本身存在波动（例如 ±0.5% 的精度），也会导致额外的误差累积。因此，在实验中，应尽量选用高精度仪器，并对仪器进行充分标定，以减小此类误差的影响。</li>
+<li><strong>接触电阻的影响</strong><br />
+    接触电阻是薄膜电阻测量中的关键误差源之一，尤其是在电流通过薄膜电阻的接触端时。由于接触界面可能存在不良导电性（例如氧化、污染或表面粗糙度的影响），导致接触电阻值偏高。这种附加电阻直接增大了测量的总电阻值，使得测量结果偏离真实值。尤其当接触电阻与薄膜电阻值处于同一量级时，这种影响尤为显著。通过优化电极接触、增加接触压力或采用四端测量法，可以有效减小接触电阻的影响。此外，多次测量并调整接触点的位置也能减少由接触电阻引入的误差。</li>
+<li><strong>环境因素</strong><br />
+    环境条件（如温度、湿度等）会显著影响薄膜电阻的测量。温度变化通过材料的温度系数（<span class="arithmatex">\(\alpha\)</span>）对电阻值产生影响。具体而言，电阻值 <span class="arithmatex">\(R\)</span> 随温度变化的关系可表示为：</li>
+</ol>
+<div class="arithmatex">\[
+R = R_0 [1 + \alpha (T - T_0)],
+\]</div>
+<p>其中 <span class="arithmatex">\(R_0\)</span> 为参考温度 <span class="arithmatex">\(T_0\)</span> 下的电阻值，<span class="arithmatex">\(\alpha\)</span> 为材料的温度系数。当环境温度波动较大时，电阻值的变化将随之增加，导致测量结果的不稳定性。因此，应尽量在恒温环境下进行实验，或通过温度补偿电路和修正公式对温度引起的误差进行校正。</p>
+<ol>
+<li><strong>薄膜不均匀性</strong><br />
+    薄膜的物理性质（如厚度、成分分布等）可能在不同位置存在不均匀性，导致薄膜电阻值随位置不同而变化。尤其是在微小区域内，薄膜厚度或材料成分的局部波动可能使测量结果偏离理论值。为减小此类误差，应在薄膜不同位置进行多次测量，并取平均值作为最终结果。此外，结合表面形貌分析仪（如 AFM 或 SEM）测量薄膜厚度和均匀性，可以进一步校准实验结果并验证不均匀性对电阻值的影响。</li>
+<li><strong>计算误差</strong><br />
+    范德堡法在理论推导中假设了理想实验条件（例如薄膜材料为均匀连续的各向同性导体、接触电阻可忽略不计等），但在实际实验中，这些假设与真实情况可能存在偏差。特别是当薄膜材料存在非均匀性或接触电阻不可忽略时，理论公式与实际测量值之间可能产生系统性误差。此外，在数据处理和计算过程中，由于数值精度限制（如舍入误差或数据拟合误差），也会引入额外的计算误差。因此，应严格验证理论模型的适用性，必要时对模型进行修正，并通过与实际测量结果的对比来评估计算误差的影响。同时，建议使用高精度计算工具并采用多组数据的统计分析方法，以减小随机误差对最终结果的影响。</li>
+</ol>
+<h2 id="53">5.3 实验分析<a class="headerlink" href="#53" title="Permanent link">&para;</a></h2>
+<p>在实验过程中，通过对修正后的范德堡法进行一系列测量，可以得到多个薄膜电阻的实验数据。结合误差来源和误差分析，以下是对实验结果的分析。</p>
+<ol>
+<li><strong>实验数据的稳定性</strong><br />
+    实验数据整体表现出一定的稳定性，但同时受到接触电阻、温度波动及薄膜本身不均匀性的影响。多次重复测量并对数据取平均值能够有效减小单次测量的偶然误差，同时提高实验结果的可靠性。此外，通过对比不同时间点的测量结果，可以评估实验系统的长期稳定性，进一步验证仪器和测量方法的稳定性能。</li>
+<li><strong>与理论值的比较</strong><br />
+    将修正后的范德堡法测得的薄膜电阻值与理论模型计算值或文献中的参考数据进行对比，能够直观地反映实验误差的大小和来源。如果实验结果与理论值存在显著偏差，需要重点分析模型假设（如薄膜的各向同性假设或接触电阻的忽略处理）与实际实验条件的匹配程度，识别偏差的可能来源。同时，可以结合误差分析结果评估具体误差源的贡献。</li>
+<li><strong>影响因素的定量分析</strong><br />
+    通过系统地改变实验条件（如温度、湿度、薄膜厚度、电极接触压力等），测量不同条件下的薄膜电阻，并分析这些变化对测量结果的影响。利用多变量统计分析或敏感性分析方法，可以定量评估各误差源对实验结果的贡献程度。这不仅有助于优化实验设计，还可以为修正测量结果提供依据，进一步提升结果的精度。</li>
+<li><strong>修正后的范德堡法的有效性</strong><br />
+    实验结果表明，修正后的范德堡法在提高薄膜电阻测量精度方面具有显著优势。尽管接触电阻、薄膜不均匀性和环境因素仍会对测量结果产生一定影响，但通过合理的实验设计（如增加测量点数量、优化电极接触条件等）和后续数据处理，修正后的方法能够有效减少误差，保证测量结果的准确性。此外，该方法对非理想薄膜结构的适应性也得到了验证，证明了其在实际应用中的广泛性和可靠性。</li>
+</ol>
+<h1 id="6">6 实验总结<a class="headerlink" href="#6" title="Permanent link">&para;</a></h1>
+<h2 id="61">6.1 实验总述<a class="headerlink" href="#61" title="Permanent link">&para;</a></h2>
+<p>本实验通过研究薄膜孔洞对修正后的范德堡方程的影响，旨在探索孔洞形状、位置以及面积占比等因素对薄膜电阻测量结果的具体影响。实验主要集中在薄膜孔洞面积占比的测量与修正后的范德堡方程的适配性上，结果表明，薄膜孔洞的存在对电阻测量具有一定的影响，尤其是孔洞的面积占比增大时，薄膜的电阻呈现出明显的变化。在实验过程中，我们通过优化孔洞的分布和薄膜面积占比的测量方法，取得了一定的实验数据，并对其影响进行了初步分析。</p>
+<p>修正后的范德堡方程在处理薄膜孔洞影响方面展现了较好的效果，但仍然存在一定的适应性限制，尤其是在孔洞形状和位置等更多因素的考虑上，尚未进行深入探讨。实验表明，薄膜的孔洞占比与电阻变化之间存在一定的关系，但对于孔洞的具体形状和分布对电阻影响的定量分析仍有待进一步研究。</p>
+<h2 id="62">6.2 不足之处<a class="headerlink" href="#62" title="Permanent link">&para;</a></h2>
+<p>尽管实验取得了一定的进展，但仍存在一些不足，主要包括以下几个方面：</p>
+<ol>
+<li><strong>未考虑孔洞形状与位置的影响</strong>：本实验主要关注薄膜孔洞的面积占比对电阻的影响，而未进一步研究孔洞的具体形状（如圆形、椭圆形、不规则形状等）和位置（如分布均匀性与不均匀性）对范德堡方程的适配性。孔洞形状和位置的不同可能对电阻值产生不同的影响，因此未能考虑这些因素可能导致实验结果的适应性不足。</li>
+<li><strong>薄膜面积占比测量的准确性</strong>：尽管我们在实验中通过显微镜等技术测量了薄膜孔洞的面积占比，但该方法在精确度上仍有提升空间。孔洞的分布和形态的变化可能导致面积占比的测量存在一定的误差，进而影响薄膜电阻的准确计算。未来可以通过更高分辨率的影像处理技术或者利用数字图像分析方法来提高测量精度。</li>
+<li><strong>样本量的不足</strong>：由于实验资源和时间的限制，当前实验仅对少数几种薄膜样本，实验也仅仅对铜，银两种材质的样品进行了测试，且孔洞的面积占比范围也较为有限。因此，在不同孔洞占比和孔洞分布条件下的电阻测量结果仍不够全面，难以全面反映孔洞对电阻的系统性影响。</li>
+<li><strong>忽视其他因素的影响</strong>：除了孔洞占比，薄膜的其他物理特性（如表面粗糙度、材料的导电性变化等）以及外界环境因素（如温度、湿度等）对电阻的影响也未被充分考虑。这些因素可能会对薄膜电阻的测量产生干扰，从而影响修正后的范德堡方程的准确性。</li>
+<li><strong>理论方程的推导：</strong> 考虑到铜，银两种材质在导电率上的近似性以及最后呈现结果，我们对于两种材质的修正因子方程采用了相同的估算，实际上应根据两种材质特性对于方程进行进一步修正；同时对于得出的修正因子，也应在更多精确制备的样本材料下评估其准确性，受限于实验资源我们未能完成。</li>
+</ol>
+<h2 id="63">6.3 未来展望<a class="headerlink" href="#63" title="Permanent link">&para;</a></h2>
+<p>未来的研究可以从以下几个方面改进和扩展：</p>
+<ol>
+<li><strong>研究孔洞形状和位置的影响</strong>：未来的研究应深入探讨薄膜孔洞的形状和分布对电阻测量的影响。孔洞的几何形状、分布的均匀性以及与薄膜的其他物理特性（如厚度、导电性）相互作用的影响均值得进一步研究。这些因素可能会显著影响薄膜电阻的测量结果和范德堡方程的适用性。</li>
+<li><strong>提高薄膜面积占比的测量精度</strong>：为了提高薄膜孔洞占比测量的精度，未来可以采用更先进的成像和分析技术，如扫描电子显微镜（SEM）、计算机视觉技术以及数字图像处理方法，以更精确地获取孔洞的形状、位置和分布情况。这些技术的引入能够减少测量误差，提高实验数据的可靠性。</li>
+<li><strong>扩展实验样本范围</strong>：为了更全面地验证修正后的范德堡方程在薄膜电阻测量中的适用性，未来的实验应扩展样本范围，增加更多不同类型和不同孔洞占比的薄膜样本。此外，可以通过改进实验设计，研究不同工作条件下孔洞对薄膜电阻的影响，如在高温、高湿等环境下的变化。</li>
+<li><strong>多因素综合建模</strong>：未来研究可以引入更多因素进行综合建模，考虑薄膜孔洞、温度、湿度等多个因素对电阻的共同作用。通过多元回归分析或机器学习方法，能够更精确地预测薄膜电阻变化规律，优化修正后的范德堡方程，使其更具普适性和适应性。</li>
+<li><strong>探索其他测量方法与修正模型结合</strong>：除了范德堡方程外，未来可以探讨其他电阻测量方法（如四探针法、微波测量法等）与修正后的范德堡方程的结合，以进一步提高电阻测量的精度和可靠性。</li>
+</ol>
+<h1 id="7">7 课题总结<a class="headerlink" href="#7" title="Permanent link">&para;</a></h1>
+<h2 id="71">7.1 仪器系统照片<a class="headerlink" href="#71" title="Permanent link">&para;</a></h2>
+<p><img alt="aac983904fb68c62c252bb7880678a9" src="assets/aac983904fb68c62c252bb7880678a9-20241231210259-azryblg.jpg" /></p>
+<p>图1 真空镀膜机</p>
+<p><img alt="e0e173175efe392ec8b4523dfa5982d" src="assets/e0e173175efe392ec8b4523dfa5982d-20241231210331-9v59e08.jpg" /></p>
+<p>图2 6221 型交流/直流电流源 双通道2182型纳伏表​</p>
+<p><img alt="0af712d109ff5d06d470794aef3fe19" src="assets/0af712d109ff5d06d470794aef3fe19-20241231210355-4udjcjz.jpg" /></p>
+<p>图3 数字万用表</p>
+<p><img alt="b3be4389fd14808650fa37f9b1e082b" src="assets/b3be4389fd14808650fa37f9b1e082b-20250102112513-z1fdgh4.jpg" /></p>
+<p>图4 超声波清洗机</p>
+<p><img alt="18d23f1fcff52dc30244b6a583bed70" src="assets/18d23f1fcff52dc30244b6a583bed70-20250102112531-nrttgyn.jpg" /></p>
+<p>图5 显微镜</p>
+<p><img alt="d204afb6325a78302501702d10fc80d" src="assets/d204afb6325a78302501702d10fc80d-20250102112547-p2wb3h9.jpg" /></p>
+<p>图6 实验测试装置</p>
+<h2 id="72">7.2 实验过程记录<a class="headerlink" href="#72" title="Permanent link">&para;</a></h2>
+<p><img alt="IMG_20241206_144827" src="assets/IMG_20241206_144827-20250102112800-33tbh5r.jpg" /></p>
+<p>图1 得到的银薄膜样品</p>
+<p><img alt="IMG_20241206_145402" src="assets/IMG_20241206_145402-20250102112800-ciaqi5f.jpg" /></p>
+<p>图2 制备薄膜过程</p>
+<h2 id="73">7.3 个人小结与感想<a class="headerlink" href="#73" title="Permanent link">&para;</a></h2>
+<p>在历时八周的“修正范德堡法测量薄膜电阻”这一物理小课题探究实验里，我仿佛经历了一场知识与意志的双重磨砺，收获了诸多宝贵的感悟。 经过时长八周的小课题探究实验，我收获颇丰。作为一名化学专业的学生，在初次看到电极焊接的时候，总不可避免地和电化学方向科研所用到的制作电极联系起来。听闻师兄师姐的电极都是“批量生产”的，总觉得这并不是一个很难的项目。直到我在老师演示过后亲自操作，才深切感受到摆在我面前的是怎样一道需经数以百计的练习和失败才有机会成功的工序。把细若悬丝的微米级金线作为导线，再用银胶将其粘在电极板上，这样的操作精度好似和我不在一个数量级，在显微镜下操作更是格外地困难。组里的其他同学在攻克这一道难关上下了极大的心思——那一天天地加班加点，那时常亮着灯的东4-115，那冬日里一边受着刺骨寒风一边尽力稳住力道的有力的手，都让我十分敬佩。原以为实验部分是这个小课题最大的困难，然而在最后汇报前负责做PPT的阶段，我清楚地感受到理论推导部分那如天书一般的过程，也震撼于最后范德堡法修正方案中那一步步精妙的保形变换、近似过程……回望整个实验，这部分的理论推导是基于前人诸多文献得到的，也感叹于前期收集工作中大家齐心协力、最终完成一份让我们自己满意的课题探究。回首整个短学期的小课题研究过程，我们克服了重重困难，从实验操作的实践困境到理论推导的思维挑战，每一步都走得不易。但也正是在这个过程中，我收获了坚持精神、探究精神和创新精神，它们宛如璀璨星辰，照亮我未来学习与科研的道路，我深知这将是我最宝贵的财富，会伴随我在自然科学的知识海洋里继续勇敢前行。</p>
+<p>——张亦瞳</p>
+<p>当初选“修正范德堡法测量薄膜电阻率”这个实验时，我对这个实验是什么都还没有基本的认识，对于从来没有接触过科研的我来说，这是一次我为自己选择的尝试。随着冬学期的到来，小课题的研究在老师的带领下逐步开展。由于我的专业是物理学，专业背景更强，相较于实验我也更加擅长理论部分，在小组分工时，我选择了承担理论方面的工作，同时也参与和帮助一些具体的实验操作。在实验的过程中面对几乎完全陌生的课题，我们学会自己上网查找参考文献和书籍；四位不同专业背景的同学聚在一起，我们逐渐学会沟通合作，合理分工；我们一点一点通过老师的教导和自主翻阅实验手册来学会操作复杂仪器的操作，完成实验数据的采集；也在数据处理的过程当中学习和探索新的数据处理方法。由于电极制作设备出现故障，我们不得不采用手动的方式完成电极的制作，刚开始制作时困难极大，我们找不到合适的材料来蘸取银胶，不能够制造出一个接触电阻小且又能导通的合格电极。在许多次的失败和组员们加班加点的努力下，我们对这一操作逐渐熟练，也终于在最后制作出足够多的样品，收集到足够多的数据来支撑我们的课题研究。总之，这是一次宝贵的经历，给了我第一次接触物理学实验科研过程的机会，也感谢老师和同组同学的帮助和支持。</p>
+<p>——叶馨宁</p>
+<p>作为一名生物专业的大二学生，本次普物自主课题于我而言无疑是一次困难与惊喜相交织的全新体验。</p>
+<p>坦白说，对于尚未学习过的理论应用与推导对我而言是弱项中的弱项，但当我了解到其余同学中有擅长于物理理论的同学时我无比庆幸，于是我在分工时毫不犹豫地选择了实验。项目开始时，我们都懵懵懂懂，都不知道应该去怎样改进范德堡法。最后在老师的提示下，我们确定了要通过改变薄膜孔洞面积比来进行修正，大体确定方向后，我们便开始了我们的实验。前期实验比较简单，进行的较为顺利，但后期我们遇到了一个大难题，电极制备的仪器坏了，我们需要手工制作电极，但电极的制作极为麻烦，但通过老师的教导，和不断地尝试，终于才勉勉强强做出了几块符合条件的样品，勉强满足我们理论所需的样品数量。虽然我们的实验工作并不算好，但最终结果好在有惊无险。在最后答辩时，老师对我们的实验方向给予肯定，认为我们继续下去可能会有更好的发现，但遗憾的是，我们没有那么多的时间去继续实验。但无论如何我认为此次实验是非常圆满的。</p>
+<p>此外，十分感谢我的三位组员——他们负责、认真、积极，与他们一起共事，我没有任何的疲惫和不适，因而这一个冬学期的合作对我而言收获颇丰。最后感谢陈老师能够给予我们进行小课题的机会，感谢杨老师给我们实验的指导与帮助。</p>
+<p>——罗永浩</p>
+<p>从学期末回顾这次实验，对整次实验还是感触颇深且获益匪浅的。</p>
+<p>作为非物理专业的学生，在学期初选择这个小课题实验还是比较忐忑的；而在实验初期随着对实验理解的加深，逐步认识到这个实验的难度可能更多在自己并不擅长的理论推导领域，还是给了当时的自己不小压力的，所幸组里还是有理论物理专业的同学，在分工时暂时解决了第一个困难。</p>
+<p>第二个困难是在操作上的，总体上我们的实验还是一个动手要求比较高的实验，尤其是实验用的仪器或多或少有一些问题，给我们的实验造成了极大的困难。尤其是电极的焊接操作，由于要求精度较高而且大家都没有类似的操作经验，最后消耗了我们大量课内及课外的时间做出最后的结果。这里要感谢我的组员在困难的时候都没有选择逃避责任，而是都自愿地牺牲课余时间来完成我们的课题实验。</p>
+<p>最后的困难也就是期末答辩了，由于我们做出数据消耗的大量时间，最后的数据分析以及误差处理部分时间非常紧迫；而这一部分主要由我负责，且还要与制作ppt的同学进行对接。尽管是计算机专业，但还是在一些函数图像绘制的问题上消耗了比较多的时间，所幸最后是熬夜和组员把最后结果制作出来，答辩过程也经受住了考验，相对完成的比较顺利。</p>
+<p>这次实验的给我的收获还是挺多的，最重要的肯定是团队合作能力以及动手操作实践能力的提升；而在后期和负责理论的同学沟通交流的环节，也让我提升了自己较为薄弱的理论能力，自己独立承担一部分工作无形中也提升了自己的责任感。</p>
+<p>最后的最后还是要再次感谢我的组员们，大家都在这次为期不长的课题实验中各司其职，最后的成功展示离不开大家共同的努力；还要感谢我们实验的指导老师杨瀚城老师，尽管带了多个课题组实验，但他全程都相当耐心温和地指导了我们实验中的具体步骤，在我们碰到困难时也总是鼓励我们，并对我们提出的实验上的需求有应必答，让我们得以顺利地完成这次实验。</p>
+<p>——宋明德</p>
+<h1 id="8">8 参考文献<a class="headerlink" href="#8" title="Permanent link">&para;</a></h1>
+<ol>
+<li>D. Oh, C. Ahn, M. Kim, E.-K. Park, and Y.-S. Kim, "Application of the van der Pauw method for samples with holes," Measurement Science and Technology, vol. 27, no. 12, p. 125001, Oct. 2016, doi: 10.1088/0957-0233/27/12/125001.</li>
+<li>孙以材, 汪鹏, 孟庆浩, 电阻率测试理论与实践. 北京: 冶金工业出版社, 2011</li>
+<li>A. Jakubas and P. Jabłoński, "The influence of electrode size on resistance measurement in the modified four-electrodes method," Measurement,108 (2017) 34-40</li>
+<li>W. K. Chan, "On the calculation of the geometric factor in a van der Pauw sheet resistance measurement," Review of Scientific Instruments, vol. 71, no. 10, pp. 3666-3670, Oct. 2000.</li>
+<li>X. Zhang, J. Ren, J. Zhang, and J. Zhu, "用改进的 Rymaszewski 公式及方形四探针法测定微区的方块电阻," Acta Physica Sinica, vol. 53, no. 8, pp. 2461-2466, Aug. 2004.</li>
+<li>Philips’Gloeilampenfabrieken, O. (1958). A method of measuring specific resistivity and Hall effect of discs of arbitrary shape. Philips Res. Rep, 13(1), 1-9.</li>
+<li>De Boor, J., &amp; Schmidt, V. (2010). Complete characterization of thermoelectric materials by a combined van der Pauw approach. Advanced Materials, 22(38), 4303-4307.</li>
+<li>De Boor, J., &amp; Schmidt, V. (2011). Efficient thermoelectric van der Pauw measurements. Applied Physics Letters, 99(2).</li>
+</ol>
+<p>‍</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        本页对你有帮助吗？
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="这页对我有帮助" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="这页还有待改进" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5zM16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              感谢你的反馈！
+
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              感谢你的反馈！可以在 GitHub 仓库提交 Issue 告诉我如何改进。
+
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/homepage.js"></script>
+      
+    
+  </body>
+</html>

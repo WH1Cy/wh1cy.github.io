@@ -1,0 +1,2908 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="个人博客与笔记">
+      
+      
+        <meta name="author" content="wh1cy">
+      
+      
+        <link rel="canonical" href="https://wh1cy.github.io/courses/phys-lab2/lab2/">
+      
+      
+        <link rel="prev" href="../lab1/">
+      
+      
+        <link rel="next" href="../lab3/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Lab 2 PN结的物理特性及玻尔兹曼常数测定 - 三月の海</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif SC";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pn" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="三月の海" class="md-header__button md-logo" aria-label="三月の海" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 11.18c3.3-3 5-4.54 5-6.49C17 3.19 15.75 2 14.25 2c-.86 0-1.68.36-2.25 1-.57-.64-1.39-1-2.31-1C8.19 2 7 3.25 7 4.75c0 1.89 1.7 3.43 5 6.43m-.82.82c-3-3.3-4.54-5-6.49-5C3.19 7 2 8.25 2 9.75c0 .86.36 1.68 1 2.25-.64.57-1 1.39-1 2.31C2 15.81 3.25 17 4.75 17c1.89 0 3.43-1.7 6.43-5m1.65 0c2.99 3.3 4.53 5 6.48 5 1.5 0 2.69-1.25 2.69-2.75 0-.86-.36-1.68-1-2.25.64-.57 1-1.39 1-2.31C22 8.19 20.75 7 19.25 7c-1.89 0-3.43 1.7-6.42 5m-.83.82c-3.3 3-5 4.54-5 6.49C7 20.81 8.25 22 9.75 22c.86 0 1.68-.36 2.25-1 .57.64 1.39 1 2.31 1 1.5 0 2.69-1.25 2.69-2.75 0-1.89-1.7-3.43-5-6.43"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            三月の海
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab 2 PN结的物理特性及玻尔兹曼常数测定
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/wh1cy/wh1cy.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wh1cy/wh1cy.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  关于
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="三月の海" class="md-nav__button md-logo" aria-label="三月の海" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 11.18c3.3-3 5-4.54 5-6.49C17 3.19 15.75 2 14.25 2c-.86 0-1.68.36-2.25 1-.57-.64-1.39-1-2.31-1C8.19 2 7 3.25 7 4.75c0 1.89 1.7 3.43 5 6.43m-.82.82c-3-3.3-4.54-5-6.49-5C3.19 7 2 8.25 2 9.75c0 .86.36 1.68 1 2.25-.64.57-1 1.39-1 2.31C2 15.81 3.25 17 4.75 17c1.89 0 3.43-1.7 6.43-5m1.65 0c2.99 3.3 4.53 5 6.48 5 1.5 0 2.69-1.25 2.69-2.75 0-.86-.36-1.68-1-2.25.64-.57 1-1.39 1-2.31C22 8.19 20.75 7 19.25 7c-1.89 0-3.43 1.7-6.42 5m-.83.82c-3.3 3-5 4.54-5 6.49C7 20.81 8.25 22 9.75 22c.86 0 1.68-.36 2.25-1 .57.64 1.39 1 2.31 1 1.5 0 2.69-1.25 2.69-2.75 0-1.89-1.7-3.43-5-6.43"/></svg>
+
+    </a>
+    三月の海
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/wh1cy/wh1cy.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wh1cy/wh1cy.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    博客
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    博客
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/2026-github-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub 使用教学：从零到协作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/2026-mkdocs-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    用 MkDocs 搭建博客
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../sys2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机系统 II
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算机系统 II
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件安全原理与实践
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    普通物理学实验 II
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    普通物理学实验 II
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1 托卡马克等离子体物理虚拟仿真实验
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2 PN结的物理特性及玻尔兹曼常数测定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3 椭偏仪测薄膜厚度和折射率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4 RLC串联电路暂态稳态过程的研究
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5 交流电桥
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6 液体粘滞系数的测定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 7 修正后的范德堡法测薄膜电阻
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../privacy-computing/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    隐私计算与数据合规
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    隐私计算与数据合规
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1 金融风险预测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2 黑名单求交
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3 专利域名申请
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4 诈骗电话识别
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程项目 学校心理健康风险
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../info-security-practice/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信息安全课程综合实践
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    信息安全课程综合实践
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/lab0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0 基础知识及技能
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/crypto-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto Lab 1 消息加密和数字签名
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/crypto-lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto Lab 2 公钥密码学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/crypto-lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto Lab 3 格密码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/misc-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc Lab 1 编解码及 OSINT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/misc-lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc Lab 2 隐写与其他misc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/misc-lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc Lab 3 OSINT & AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/pwn-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pwn Lab 1 Pwn基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/rev-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rev Lab 1 Rev基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/web-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Lab 1 计算机网络基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    首页
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    课程
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    普通物理学实验 II
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="pn">PN结的物理特性及玻尔兹曼常数测定<a class="headerlink" href="#pn" title="Permanent link">&para;</a></h1>
+<p>2024/9/25</p>
+<h1 id="_1">一、实验综述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="1">1、实验目的<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>了解PN结测温基本原理和应用;</li>
+<li>验证PN结正向压降随温度升高而降低的特性;</li>
+<li>学会使用PN结温度传感器测试仪。</li>
+</ol>
+<h2 id="2">2、实验背景<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>半导体PN结的物理特性是物理学和电子学的重要基础内容之一。本仪器用物理实验方法，测量PN结扩散电流与电压关系，证明此关系遵循指数分布规律，并较精确地测出玻尔兹曼常数,同时使学生学会测量弱电流的一种新方法。</p>
+<h2 id="3">3、实验原理<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>弱电流测量</p>
+<p>过去物理实验中10<sup>-6</sup>A–10<sup>-11</sup>A量级弱电流值常采用光点反射式检流计测量，该仪器灵敏度较高约10<sup>－9</sup>A分度，但有许多不足之处。如十分怕震，挂丝易断；使用时稍有不慎，光标易偏出满度，瞬间过载引起张丝疲劳变形产生不回零点及指标变差大；使用和维修极不方便。近年来，集成电路和与数字化显示技术越来越普及。高输入阻抗运算放大器性能优良，价格低廉，用它组成电流－电压变换器测量弱电流信号，具有输入阻抗低，电流灵敏度高。温漂小、线性好、设计制作简单、结构牢靠等优点，因而被广泛应用于物理测量中。OP07是一个高输入阻抗集成运算放大器，用它组成电流－电压变换器如图所示。</p>
+<p><img alt="" src="assets/wps3-20240925110605-t8ozcnz.png" /></p>
+<p>其中虚线电阻Zr为电流－电压变换器等效输入阻抗。由图1可知，运算放大器的输出电压U<sub>0</sub>为</p>
+<p><span class="arithmatex">\(U_0=-K_0U_1\)</span>                          (1)</p>
+<p>式中<span class="arithmatex">\(U_1\)</span>为输入电压，<span class="arithmatex">\(K_0\)</span>为运算放大器的开环电压增益，即图1中电阻<span class="arithmatex">\(R_t\rightarrow\infty\)</span>时的电压增益，<span class="arithmatex">\(R_t\)</span>称为反馈电阻。因为理想运算放大器的输入阻抗<span class="arithmatex">\(r\rightarrow\infty\)</span>,所以信号源输入电流只流经反馈网络构成的通路。因而有</p>
+<p><span class="arithmatex">\(I_s=(U_i-U_0)/R_f=U_i(1+K_0)R_f\)</span>                 (2)</p>
+<p>由(2)可得电流－电压变换器等效输入阻抗<span class="arithmatex">\(Z_r\)</span> 即</p>
+<p>$Z_r=U_i/I_s=R_f/(1+K_0)\approx R_f/K_0 $               (3)</p>
+<p>根据(1)式和(2)式可得电流-电压变换器电流是与输出电压U<sub>0</sub>之间的关系式，即</p>
+<p><span class="arithmatex">\(I_s=-\frac{U_0}{K_0}(1+K_0)/R_f=-U_0(1+\frac1{K_0})/R_f\approx-\frac{U_0}{R_f}\)</span>       (4)</p>
+<p>由(4)式只要测量输出电压<span class="arithmatex">\(U\)</span>​<sub><span class="arithmatex">\(0\)</span></sub>和已知<span class="arithmatex">\(R\)</span>​<sub><span class="arithmatex">\(f\)</span></sub>的情况下，即可求得值。</p>
+<p>以高输入阻抗运算放大器LF356为例,其开环增益<span class="arithmatex">\(K_0\)</span>约2×10<sup>5</sup>,输入阻抗<span class="arithmatex">\(r=10^{12}\Omega\)</span>,若<span class="arithmatex">\(R_f\)</span>为<span class="arithmatex">\(1.00M\Omega\)</span>,则由式(3)得,</p>
+<p><span class="arithmatex">\(Z_r=1.00\times10^6\Omega/(1+2\times 10^5)\approx5\Omega\)</span>  </p>
+<p>若选用四位半量程200mV的数字电压表，它最后一位变化为<span class="arithmatex">\(0.01mV\)</span>，那么用上述 电流－电压变换器能显示最小电流值为<span class="arithmatex">\(0.01mV/1.00\times10^6\Omega= 10^{-11}A\)</span>。从这一实例说明用集成运算放大器组成的电流－电压变换器测量弱电流，具有输入阻抗小，灵敏度高的优点。
+2. PN结的物理特性测量</p>
+<p>由半导体物理学中有关PN结的研究，可以得出PN结的正向电流－电压关系满足</p>
+<p><span class="arithmatex">\(I=I_0(e^{\frac{eU}{KT}}-1)\)</span>                   (5)</p>
+<p>式中<span class="arithmatex">\(I\)</span>是通过PN结的正向电流，<span class="arithmatex">\(I_0\)</span>是不随电压变化的常数，<span class="arithmatex">\(T\)</span>是热力学温度，<span class="arithmatex">\(e\)</span>是电子的电荷量，<span class="arithmatex">\(U\)</span>为PN结的正向压降,<span class="arithmatex">\(K\)</span>为玻尔兹曼常数。由于在常温（300K）下，<span class="arithmatex">\(KT／e＝0.026V\)</span>，而PN结正向压降约为十分之几伏，则<span class="arithmatex">\(e^{\frac{eU}{KT}}&gt;&gt;1\)</span>，式(5)括号内－1项完全可以忽略，于是有</p>
+<p><span class="arithmatex">\(I=I_0e^{\frac{eU}{KT}}\)</span>                              (6)</p>
+<p>也即PN结正向电流随正向电压按指数规律变化。若测得PN结<span class="arithmatex">\(I－U\)</span>关系值，则利用(6)式可以求出<span class="arithmatex">\(e/KT\)</span>。在测得温度<span class="arithmatex">\(T\)</span>后，就可以得到<span class="arithmatex">\(e/K\)</span>常数，将电子电量作为已知值代入，即可以求得玻尔兹曼常数<span class="arithmatex">\(K\)</span>。对(6)式两边取对数，有</p>
+<p><span class="arithmatex">\(ln I=lnI_0+\frac{eU}{KT}\)</span>                    (7)</p>
+<p>同样可以根据(7)式取对数后根据<span class="arithmatex">\(ln I-U\)</span>关系值，求出<span class="arithmatex">\(e/KT\)</span>，进而得到玻尔兹曼常数<span class="arithmatex">\(K\)</span>。</p>
+<p>实验仪器如图所示。</p>
+<p><img alt="" src="assets/wps4-20240925112732-wqd8azv.png" /></p>
+</li>
+</ol>
+<h2 id="4">4、注意事项<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<ol>
+<li>±15<em>V</em>电源供运算放大器使用，请勿作其它用途。</li>
+<li>更换运算放大器必须在切断电源条件下进行，并注意引脚数字和集成电路方向。</li>
+<li>不宜使用其它型号三极管作为实验样品做实验。例TIP31三极管为NPN管，而TIP32型三极管为PNP管，所加电压极性不相同。</li>
+<li>实验结束应先关电源，再拆除接线。</li>
+<li>HTC温度控制器与HTC加热附件组成干井恒温室，供实验样品放置。实验中测温探头和加热连接线不可相碰，通电前先连接好上述线路，拆去线路前须断开电源。</li>
+</ol>
+<h1 id="_2">二、实验内容<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h2 id="1_1">1、实验仪器<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>测试仪</p>
+<p><img alt="" src="assets/wps2-20240925103559-1faemfg.jpg" /></p>
+<table>
+<thead>
+<tr>
+<th>仪器编号</th>
+<th>仪器名称</th>
+<th>仪器说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>PN结工作电源</td>
+<td>0-1.5V可调</td>
+</tr>
+<tr>
+<td>2</td>
+<td>三位半数字电压表</td>
+<td>0-2V</td>
+</tr>
+<tr>
+<td>3</td>
+<td>实验样品接口</td>
+<td>红线接B、黑线接E、黄线接C，实验样品（功率管）放于恒温室（干井）中</td>
+</tr>
+<tr>
+<td>4</td>
+<td>四位半数字电压表</td>
+<td>0-20V</td>
+</tr>
+<tr>
+<td>5</td>
+<td>电流-电压转换集成电路</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>电源插座和电源开关</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>集成电路+15V电源</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>集成电路-15V电源</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>恒温室电压输入接线柱</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>仪器编号</th>
+<th>仪器名称</th>
+<th>仪器说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>恒温室（干井）用于放置实验样品</td>
+<td>可加入导热油</td>
+</tr>
+<tr>
+<td>11</td>
+<td>恒温室温度传感器接口</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>恒温室电压输入接线柱</td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>HTC温度控制器电压输出接线柱（-）</td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>HTC温度控制器电压输出接线柱（+）</td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>温控器温度传感器信号输入</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>实测温度显示窗</td>
+<td></td>
+</tr>
+<tr>
+<td>17</td>
+<td>设定温度按钮</td>
+<td></td>
+</tr>
+<tr>
+<td>18</td>
+<td>设定目标温度显示窗</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>PN结样品架</p>
+<p><img alt="image" src="assets/image-20240925121103-c5z7dao.png" /></p>
+<table>
+<thead>
+<tr>
+<th>仪器编号</th>
+<th>仪器名称</th>
+<th>仪器说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>样品室</td>
+<td>可卸的筒状金属容器，筒盖内设橡皮圈盖与筒套具相应的螺纹，可使两者旋紧保持密封</td>
+</tr>
+<tr>
+<td>B</td>
+<td>样品座</td>
+<td></td>
+</tr>
+<tr>
+<td>D</td>
+<td>待测PN结</td>
+<td>采用3DG6晶体管</td>
+</tr>
+<tr>
+<td>T</td>
+<td>测温元件</td>
+<td></td>
+</tr>
+<tr>
+<td>H</td>
+<td>加热器</td>
+<td></td>
+</tr>
+<tr>
+<td>P1</td>
+<td>D、T引脚线</td>
+<td></td>
+</tr>
+<tr>
+<td>P2</td>
+<td>加热电源插座</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="2_1">2、实验操作<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>首先检查与连接实验系统，把TIP31型三极管浸没在盛有变压器油干井槽中，在室温情况下，改变正向电压<em>U1</em>，测量相应电压<em>U</em>​<sub>2，</sub>约测10多数据点，至<em>U</em>​<sub>2</sub>值达到饱和时(<em>U</em>​<sub>2</sub>值变化较小或基本不变)，结束测量。</li>
+<li>改变干井恒温器温度，待PN结与干井温度一致时，重复测量<em>U</em>​<sub>1</sub>和<em>U</em>​<sub>2</sub>的关系数据，由<em>U</em>​<em><sub>2</sub></em>计算得到相应的电流<em>I</em>,并与室温测得的结果进行比较。</li>
+<li>对在同一温度测得的每组<em>U</em>​<em><sub>1</sub></em>​ <em>-I</em>数据进行指数拟合，对<em>U</em>​<em><sub>1</sub></em>-ln I进行线性拟合，分别求得相应的玻尔兹曼常数进行比较。</li>
+</ol>
+<h1 id="_3">三、实验数据记录与处理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<h2 id="1_2">1、实验数据记录<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>第一组 <span class="arithmatex">\(T_1=297.55K\)</span>  </p>
+<table>
+<thead>
+<tr>
+<th>实验组数</th>
+<th>正向电压<span class="arithmatex">\(U_1/V\)</span>​</th>
+<th>电压<span class="arithmatex">\(U_2/V\)</span>​</th>
+<th>电流<span class="arithmatex">\(I/A\)</span>​</th>
+<th><span class="arithmatex">\(ln I\)</span>​</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0.302</td>
+<td>0.025</td>
+<td>0.0000025</td>
+<td>-12.89921983</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.332</td>
+<td>0.086</td>
+<td>0.0000086</td>
+<td>-11.66374835</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.354</td>
+<td>0.208</td>
+<td>0.0000208</td>
+<td>-10.78055757</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.375</td>
+<td>0.48</td>
+<td>0.000048</td>
+<td>-9.944309547</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.387</td>
+<td>0.786</td>
+<td>0.0000786</td>
+<td>-9.451138859</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0.395</td>
+<td>1.061</td>
+<td>0.0001061</td>
+<td>-9.151128512</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0.404</td>
+<td>1.494</td>
+<td>0.0001494</td>
+<td>-8.808883285</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0.414</td>
+<td>2.265</td>
+<td>0.0002265</td>
+<td>-8.392765613</td>
+</tr>
+<tr>
+<td>9</td>
+<td>0.419</td>
+<td>2.734</td>
+<td>0.0002734</td>
+<td>-8.204574634</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0.425</td>
+<td>3.430</td>
+<td>0.000343</td>
+<td>-7.977780111</td>
+</tr>
+<tr>
+<td>11</td>
+<td>0.433</td>
+<td>4.639</td>
+<td>0.0004639</td>
+<td>-7.675841546</td>
+</tr>
+<tr>
+<td>12</td>
+<td>0.445</td>
+<td>7.552</td>
+<td>0.0007552</td>
+<td>-7.188527943</td>
+</tr>
+<tr>
+<td>13</td>
+<td>0.449</td>
+<td>8.781</td>
+<td>0.0008781</td>
+<td>-7.037750076</td>
+</tr>
+<tr>
+<td>14</td>
+<td>0.454</td>
+<td>11.007</td>
+<td>0.0011007</td>
+<td>-6.811808938</td>
+</tr>
+<tr>
+<td>15</td>
+<td>0.465</td>
+<td>13.494</td>
+<td>0.0013494</td>
+<td>-6.60809523</td>
+</tr>
+<tr>
+<td>16</td>
+<td>0.470</td>
+<td>13.494<br /></td>
+<td>0.0013494</td>
+<td>-6.60809523</td>
+</tr>
+<tr>
+<td>17</td>
+<td>0.475</td>
+<td>13.494</td>
+<td>0.0013494</td>
+<td>-6.60809523<br /></td>
+</tr>
+<tr>
+<td>18</td>
+<td>0.480</td>
+<td>13.494</td>
+<td>0.0013494</td>
+<td>-6.60809523</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>第二组 $T_2=303.05K $  </p>
+<table>
+<thead>
+<tr>
+<th>实验组数</th>
+<th>正向电压<span class="arithmatex">\(U_1/V\)</span>​</th>
+<th>电压<span class="arithmatex">\(U_2/V\)</span>​</th>
+<th>电流<span class="arithmatex">\(I/A\)</span>​</th>
+<th><span class="arithmatex">\(ln I\)</span>​</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0.242</td>
+<td>0.002</td>
+<td>0.0000002</td>
+<td>-15.42494847</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.263</td>
+<td>0.008</td>
+<td>0.0000008</td>
+<td>-14.03865411<br /></td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.283</td>
+<td>0.021</td>
+<td>0.0000021</td>
+<td>-13.07357321</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.302</td>
+<td>0.046</td>
+<td>0.0000046</td>
+<td>-12.28945425</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.324</td>
+<td>0.111</td>
+<td>0.0000111</td>
+<td>-11.40856545</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0.345</td>
+<td>0.256</td>
+<td>0.0000256</td>
+<td>-10.57291821</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0.364</td>
+<td>0.543</td>
+<td>0.0000543</td>
+<td>-9.820986331</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0.383</td>
+<td>1.146</td>
+<td>0.0001146</td>
+<td>-9.074062754</td>
+</tr>
+<tr>
+<td>9</td>
+<td>0.403</td>
+<td>2.473</td>
+<td>0.0002473</td>
+<td>-8.304908383</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0.414</td>
+<td>3.792</td>
+<td>0.0003792</td>
+<td>-7.877446788</td>
+</tr>
+<tr>
+<td>11</td>
+<td>0.422</td>
+<td>5.099</td>
+<td>0.0005099</td>
+<td>-7.58129593</td>
+</tr>
+<tr>
+<td>12</td>
+<td>0.432</td>
+<td>7.684</td>
+<td>0.0007684</td>
+<td>-7.171200127</td>
+</tr>
+<tr>
+<td>13</td>
+<td>0.434</td>
+<td>8.324</td>
+<td>0.0008324</td>
+<td>-7.091197463</td>
+</tr>
+<tr>
+<td>14</td>
+<td>0.436</td>
+<td>8.944</td>
+<td>0.0008944<br /></td>
+<td>-7.019357456</td>
+</tr>
+<tr>
+<td>15</td>
+<td>0.441</td>
+<td>10.740</td>
+<td>0.001074</td>
+<td>-6.836365283</td>
+</tr>
+<tr>
+<td>16</td>
+<td>0.444</td>
+<td>11.984</td>
+<td>0.0011984</td>
+<td>-6.726767945</td>
+</tr>
+<tr>
+<td>17</td>
+<td>0.447</td>
+<td>13.378</td>
+<td>0.0013378</td>
+<td>-6.616728805</td>
+</tr>
+<tr>
+<td>18</td>
+<td>0.451</td>
+<td>13.495</td>
+<td>0.0013495</td>
+<td>-6.608021126</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>第三组$T_3=307.95K $  </p>
+<table>
+<thead>
+<tr>
+<th>实验组数</th>
+<th>正向电压<span class="arithmatex">\(U_1/V\)</span>​</th>
+<th>电压<span class="arithmatex">\(U_2/V\)</span>​</th>
+<th>电流<span class="arithmatex">\(I/A\)</span>​</th>
+<th><span class="arithmatex">\(ln I\)</span>​</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0.218</td>
+<td>0.001<br /></td>
+<td>0.0000001</td>
+<td>-16.11809565</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.238</td>
+<td>0.005</td>
+<td>0.0000005<br /></td>
+<td>-14.50865774</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.257</td>
+<td>0.012</td>
+<td>0.0000012</td>
+<td>-13.633189</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.272</td>
+<td>0.024</td>
+<td>0.0000024</td>
+<td>-12.94004182</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.291</td>
+<td>0.053</td>
+<td>0.0000053</td>
+<td>-12.14780374</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0.312</td>
+<td>0.12</td>
+<td>0.000012</td>
+<td>-11.33060391</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0.331</td>
+<td>0.244</td>
+<td>0.0000244</td>
+<td>-10.62092743</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0.348</td>
+<td>0.474</td>
+<td>0.0000474</td>
+<td>-9.956888329</td>
+</tr>
+<tr>
+<td>9</td>
+<td>0.369</td>
+<td>1.065</td>
+<td>0.0001065</td>
+<td>-9.147365573</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0.380</td>
+<td>1.594</td>
+<td>0.0001594</td>
+<td>-8.744093792</td>
+</tr>
+<tr>
+<td>11</td>
+<td>0.401</td>
+<td>3.573</td>
+<td>0.0003573</td>
+<td>-7.936934793</td>
+</tr>
+<tr>
+<td>12</td>
+<td>0.410</td>
+<td>5.156</td>
+<td>0.0005156</td>
+<td>-7.570179287</td>
+</tr>
+<tr>
+<td>13</td>
+<td>0.422</td>
+<td>7.985</td>
+<td>0.0007985</td>
+<td>-7.13277559</td>
+</tr>
+<tr>
+<td>14</td>
+<td>0.426</td>
+<td>9.262</td>
+<td>0.0009262</td>
+<td>-6.984420364</td>
+</tr>
+<tr>
+<td>15</td>
+<td>0.430</td>
+<td>11.122</td>
+<td>0.0011122</td>
+<td>-6.801415243</td>
+</tr>
+<tr>
+<td>16</td>
+<td>0.432</td>
+<td>11.968</td>
+<td>0.0011968</td>
+<td>-6.728103951</td>
+</tr>
+<tr>
+<td>17</td>
+<td>0.435</td>
+<td>13.326</td>
+<td>0.0013326</td>
+<td>-6.620623358</td>
+</tr>
+<tr>
+<td>18</td>
+<td>0.440</td>
+<td>13.497</td>
+<td>0.0013497</td>
+<td>-6.607872933</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="2_2">2、实验数据处理<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h2>
+<p>下取<span class="arithmatex">\(e=1.602 176 634×10^{-19}C\)</span>，<span class="arithmatex">\(k_{文献}=1.380649×10^{-23}J/K\)</span>  </p>
+<p>对于采用的指数拟合模型，有<span class="arithmatex">\(-\frac1{t_1}=\frac{e}{KT}\Rightarrow k=-\frac{et_1}{T}\)</span>  </p>
+<p>对于采用的线性拟合模型，有<span class="arithmatex">\(b=\frac e{KT}\Rightarrow k=\frac e{bT}\)</span>  </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(T_1=297.55K\)</span>  </p>
+<p><img alt="Graph1" src="assets/Graph1-20240925224357-s1tzjh7.png" /></p>
+<p><span class="arithmatex">\(k_{1}=-\frac{et_1}{T_1}=1.613214\times10^{-23}J/K\)</span>  </p>
+<p><span class="arithmatex">\(\varepsilon_1=\frac{|k_1-k_{文献}|}{k_{文献}}\times 100\%=16.84461\%\)</span>  </p>
+<p>‍</p>
+<p><img alt="Graph2" src="assets/Graph2-20240925225900-3acq2k2.png" /></p>
+<p><span class="arithmatex">\(k_1'=\frac e {bT_1}=1.318175\times10^{-23}J/K\)</span>  </p>
+<p><span class="arithmatex">\(\varepsilon_1'=\frac{|k_1'-k_{文献}|}{k_{文献}}\times 100\%=4.524973\%\)</span>
+2. <span class="arithmatex">\(T_2=303.05K\)</span>  </p>
+<p><img alt="Graph3" src="assets/Graph3-20240925231601-w4jndqm.png" /></p>
+<p><span class="arithmatex">\(k_{2}=-\frac{et_1}{T_2}=1.567019\times10^{-23}J/K\)</span>  </p>
+<p><span class="arithmatex">\(\varepsilon_2=\frac{|k_2-k_{文献}|}{k_{文献}}\times 100\%=13.49872\%\)</span>  </p>
+<p><img alt="Graph4" src="assets/Graph4-20240925231809-w3636ut.png" /></p>
+<p><span class="arithmatex">\(k_2'=\frac e {bT_2}=1.297492\times10^{-23}J/K\)</span>  </p>
+<p><span class="arithmatex">\(\varepsilon_2'=\frac{|k_2'-k_{文献}|}{k_{文献}}\times 100\%=6.023037\%\)</span>
+3. $T_3=307.95K $  </p>
+<p><img alt="Graph5" src="assets/Graph5-20240925232050-8g8nb3a.png" /></p>
+<p><span class="arithmatex">\(k_{3}=-\frac{et_1}{T_3}=1.567579\times10^{-23}J/K\)</span>  </p>
+<p><span class="arithmatex">\(\varepsilon_3=\frac{|k_3-k_{文献}|}{k_{文献}}\times 100\%=13.53928\%\)</span>  </p>
+<p><img alt="Graph6" src="assets/Graph6-20240925232250-q8cnuz4.png" /></p>
+<p><span class="arithmatex">\(k_3'=\frac e {bT_3}=1.283471\times10^{-23}J/K\)</span>  </p>
+<p><span class="arithmatex">\(\varepsilon_3'=\frac{|k_3'-k_{文献}|}{k_{文献}}\times 100\%=7.038574\%\)</span></p>
+</li>
+</ol>
+<h2 id="3_1">3、实验数据分析<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><span class="arithmatex">\(k_i/J\cdot K^{-1}\)</span>​</th>
+<th><span class="arithmatex">\(k_i'/J\cdot K^{-1}\)</span>​</th>
+<th><span class="arithmatex">\(\varepsilon_i\)</span>​</th>
+<th><span class="arithmatex">\(\varepsilon_i'\)</span>​</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><span class="arithmatex">\(1.613214\times10^{-23}\)</span>​</td>
+<td><span class="arithmatex">\(1.318175\times10^{-23}\)</span>​</td>
+<td><span class="arithmatex">\(16.84461\%\)</span>​</td>
+<td><span class="arithmatex">\(4.524973\%\)</span>​</td>
+</tr>
+<tr>
+<td>2</td>
+<td><span class="arithmatex">\(1.567019\times10^{-23}\)</span>​</td>
+<td><span class="arithmatex">\(1.297492\times10^{-23}\)</span>​</td>
+<td><span class="arithmatex">\(13.49872\%\)</span>​</td>
+<td><span class="arithmatex">\(6.023037\%\)</span>​</td>
+</tr>
+<tr>
+<td>3</td>
+<td><span class="arithmatex">\(1.567579\times10^{-23}\)</span>​</td>
+<td><span class="arithmatex">\(1.283471\times10^{-23}\)</span>​</td>
+<td><span class="arithmatex">\(13.53928\%\)</span>​</td>
+<td><span class="arithmatex">\(7.038574\%\)</span>​</td>
+</tr>
+</tbody>
+</table>
+<p><span class="arithmatex">\(\bar k=\frac{\sum^3 _{i=1}k_i}{3}=1.582604\times 10^{-23}J\cdot K^{-1}\)</span>  </p>
+<p><span class="arithmatex">\(\varepsilon_{相对}=\frac{|k_i-\bar k|}{3\bar k}\times100\%=1.289436\%\)</span>  </p>
+<p><span class="arithmatex">\(\varepsilon_{绝对}=\frac{|\bar k_i-k_{文献}|}{k_{文献}}\times100\%=14.62754\%\)</span>  </p>
+<p><span class="arithmatex">\(\bar k'=\frac{\sum^3 _{i=1}k_i'}{3}=1.299713\times10^{-23}J\cdot K^{-1}\)</span></p>
+<p><span class="arithmatex">\(\varepsilon_{相对}'=\frac{|k_i'-\bar k'|}{3\bar k'}\times100\%=0.9470039\%\)</span>  </p>
+<p><span class="arithmatex">\(\varepsilon_{绝对}'=\frac{|\bar k_i'-k_{文献}|}{k_{文献}}\times100\%=5.862195\%\)</span>  </p>
+<h1 id="_4">四、实验拓展<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>对于PN结，正向电流与与电压满足关系式<span class="arithmatex">\(I=I_0(e^{\frac{eU}{KT}}-1)\)</span>，而在该实验条件下，我们将式子近似为<span class="arithmatex">\(I=I_0e^{\frac{eU}{KT}}\)</span>，这样的近似为什么可以进行？</p>
+<p>在常温（<span class="arithmatex">\(\approx 300K\)</span>）下，<span class="arithmatex">\(KT／e＝0.026V\)</span>，而PN结正向压降数量级为<span class="arithmatex">\(10^{-1}V\)</span>，则<span class="arithmatex">\(e^{\frac{eU}{KT}}&gt;&gt;1\)</span>，括号内－1项相对完全可以忽略。
+2. 采用的线性拟合和指数拟合方式哪种更好？</p>
+<p>由实验数据分析环节，三组试验后，线性拟合无论是相对误差还是绝对误差均明显优于指数拟合，得到的数据更加稳定，也更接近玻尔兹曼常数的文献值，事实上，通过对数变换，可以将指数关系线性化，减少了极端值的影响，使得误差分布更接近于正态分布。这有助于提高线性回归模型的稳定性和精度，从而降低了总体的预测误差。
+3. 在测定正向电压及电流时，取点宜在初始阶段多一点还是后续阶段多一点？</p>
+<p>宜在后续阶段多一点，从数据和图像来看，初始阶段随正向电压变化电流变化不大，表现在图像上较平缓，上升趋势较慢，不需要过多数据点进行维护；而在后续阶段，电流随正向电压变化快速上升，图像表现出的上升趋势较为陡峭，需要较多数据点维护，用来反应该阶段函数较为精确的变化。</p>
+</li>
+<li>
+<p>简述PN结基本特性。</p>
+<p>PN结基本特性包括了单向导通性：PN结在正向偏置时导电，I-U特性呈现出指数关系，电流随电压的增加而急剧增加，而在反向偏置时，电流基本保持恒定，接近于零。同时在PN结中，由于P区和N区的载流子扩散形成的电场，导致了内建电势。这一电场阻止了更多的载流子扩散。而在PN结的交界面形成的区域，载流子被耗尽，形成耗尽区。该区域对电流的传输有重要影响。PN结还具有温度依赖性，当温度升高时，正向导通电压会下降，反向漏电流会增加。
+5. 设计一个完整的输出直流5V的稳压电路，要求：画出电路，解释各个器件的工作原理、特性和作用。</p>
+<p>Vin ----+-----[C1]----+---- [LM7805] ---- Vout (5V)<br />
+           |             |<br />
+           |             |<br />
+          [C2]         GND<br />
+           |<br />
+          GND</p>
+<h3 id="1-c1">1. C1（输入电容）<a class="headerlink" href="#1-c1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>工作原理：输入电容C1在电源输入端并联，能够储存电能。当输入电压Vin中存在瞬时变化（如突发负载变化）时，C1能快速提供所需电流，避免电压骤降。</li>
+<li>特性：通常选择电解电容或陶瓷电容，电容值一般在10μF到100μF之间。</li>
+<li>作用：平滑输入电压，滤除高频噪声，提高电源稳定性。</li>
+</ul>
+<h3 id="2-lm7805">2. LM7805（线性稳压器）<a class="headerlink" href="#2-lm7805" title="Permanent link">&para;</a></h3>
+<ul>
+<li>工作原理：LM7805是一个三端稳压器，内部有一个误差放大器和一个电压分压器。当输出电压Vout（5V）变化时，反馈机制会调整内部的导通状态，通过改变传导电流来保持输出电压稳定。</li>
+<li>特性：输入电压范围通常为7V到35V，最大输出电流为1A，具有过载保护、短路保护等功能。</li>
+<li>作用：将高于5V的输入电压Vin稳定转换为5V输出电压Vout，供电给低电压电路。</li>
+</ul>
+<h3 id="3-c2">3. C2（输出电容）<a class="headerlink" href="#3-c2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>工作原理：输出电容C2并联在输出端，能够滤除由负载变化引起的瞬时电流变化，进一步平滑输出电压。</li>
+<li>特性：通常选择电解电容或陶瓷电容，电容值在10μF到100μF之间，且要能承受输出电压（至少6.3V以上）。</li>
+<li>作用：降低输出纹波，提高输出电压的稳定性，确保供电给后续电路时电压的平稳。</li>
+</ul>
+</li>
+</ol>
+<p>‍</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        本页对你有帮助吗？
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="这页对我有帮助" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="这页还有待改进" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5zM16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              感谢你的反馈！
+
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              感谢你的反馈！可以在 GitHub 仓库提交 Issue 告诉我如何改进。
+
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/homepage.js"></script>
+      
+    
+  </body>
+</html>

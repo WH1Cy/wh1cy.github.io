@@ -1,0 +1,2517 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="个人博客与笔记">
+      
+      
+        <meta name="author" content="wh1cy">
+      
+      
+        <link rel="canonical" href="https://wh1cy.github.io/courses/phys-lab2/lab4/">
+      
+      
+        <link rel="prev" href="../lab3/">
+      
+      
+        <link rel="next" href="../lab5/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Lab 4 RLC串联电路暂态稳态过程的研究 - 三月の海</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif SC";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rlc" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="三月の海" class="md-header__button md-logo" aria-label="三月の海" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 11.18c3.3-3 5-4.54 5-6.49C17 3.19 15.75 2 14.25 2c-.86 0-1.68.36-2.25 1-.57-.64-1.39-1-2.31-1C8.19 2 7 3.25 7 4.75c0 1.89 1.7 3.43 5 6.43m-.82.82c-3-3.3-4.54-5-6.49-5C3.19 7 2 8.25 2 9.75c0 .86.36 1.68 1 2.25-.64.57-1 1.39-1 2.31C2 15.81 3.25 17 4.75 17c1.89 0 3.43-1.7 6.43-5m1.65 0c2.99 3.3 4.53 5 6.48 5 1.5 0 2.69-1.25 2.69-2.75 0-.86-.36-1.68-1-2.25.64-.57 1-1.39 1-2.31C22 8.19 20.75 7 19.25 7c-1.89 0-3.43 1.7-6.42 5m-.83.82c-3.3 3-5 4.54-5 6.49C7 20.81 8.25 22 9.75 22c.86 0 1.68-.36 2.25-1 .57.64 1.39 1 2.31 1 1.5 0 2.69-1.25 2.69-2.75 0-1.89-1.7-3.43-5-6.43"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            三月の海
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab 4 RLC串联电路暂态稳态过程的研究
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/wh1cy/wh1cy.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wh1cy/wh1cy.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  关于
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="三月の海" class="md-nav__button md-logo" aria-label="三月の海" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 11.18c3.3-3 5-4.54 5-6.49C17 3.19 15.75 2 14.25 2c-.86 0-1.68.36-2.25 1-.57-.64-1.39-1-2.31-1C8.19 2 7 3.25 7 4.75c0 1.89 1.7 3.43 5 6.43m-.82.82c-3-3.3-4.54-5-6.49-5C3.19 7 2 8.25 2 9.75c0 .86.36 1.68 1 2.25-.64.57-1 1.39-1 2.31C2 15.81 3.25 17 4.75 17c1.89 0 3.43-1.7 6.43-5m1.65 0c2.99 3.3 4.53 5 6.48 5 1.5 0 2.69-1.25 2.69-2.75 0-.86-.36-1.68-1-2.25.64-.57 1-1.39 1-2.31C22 8.19 20.75 7 19.25 7c-1.89 0-3.43 1.7-6.42 5m-.83.82c-3.3 3-5 4.54-5 6.49C7 20.81 8.25 22 9.75 22c.86 0 1.68-.36 2.25-1 .57.64 1.39 1 2.31 1 1.5 0 2.69-1.25 2.69-2.75 0-1.89-1.7-3.43-5-6.43"/></svg>
+
+    </a>
+    三月の海
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/wh1cy/wh1cy.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wh1cy/wh1cy.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    博客
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    博客
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/2026-github-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub 使用教学：从零到协作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/2026-mkdocs-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    用 MkDocs 搭建博客
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../sys2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机系统 II
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算机系统 II
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件安全原理与实践
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    普通物理学实验 II
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    普通物理学实验 II
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1 托卡马克等离子体物理虚拟仿真实验
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2 PN结的物理特性及玻尔兹曼常数测定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3 椭偏仪测薄膜厚度和折射率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4 RLC串联电路暂态稳态过程的研究
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5 交流电桥
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6 液体粘滞系数的测定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 7 修正后的范德堡法测薄膜电阻
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../privacy-computing/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    隐私计算与数据合规
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    隐私计算与数据合规
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1 金融风险预测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2 黑名单求交
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3 专利域名申请
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4 诈骗电话识别
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-computing/project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程项目 学校心理健康风险
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../info-security-practice/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信息安全课程综合实践
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    信息安全课程综合实践
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/lab0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0 基础知识及技能
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/crypto-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto Lab 1 消息加密和数字签名
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/crypto-lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto Lab 2 公钥密码学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/crypto-lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto Lab 3 格密码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/misc-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc Lab 1 编解码及 OSINT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/misc-lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc Lab 2 隐写与其他misc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/misc-lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc Lab 3 OSINT & AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/pwn-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pwn Lab 1 Pwn基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/rev-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rev Lab 1 Rev基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/web-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Lab 1 计算机网络基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    首页
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    课程
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    普通物理学实验 II
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="rlc">RLC串联电路暂态、稳态过程的研究<a class="headerlink" href="#rlc" title="Permanent link">&para;</a></h1>
+<p>2024/10/23</p>
+<h1 id="_1">一、实验综述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="1">1、实验目的<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>1、观察RC和RL串联电路的幅频特性和相频特性；</p>
+<p>2、了解RLC串联电路的幅频特性；</p>
+<p>3、了解RLC电路的串联谐振现象及RLC回路<span class="arithmatex">\(Q\)</span>值的物理意义;</p>
+<p>4、观察RLC电路的暂态过程。</p>
+<h2 id="2">2、实验原理<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>RC串联电路的稳态特性</p>
+<p>在图1所示电路中，电阻<span class="arithmatex">\(R\)</span>，电容<span class="arithmatex">\(C\)</span>的电压有以下关系式：</p>
+<p><span class="arithmatex">\(I=\frac{U}{\sqrt{R^2+(\frac1{\omega C})^2}}\)</span>  </p>
+<p>$U_R=IR $  </p>
+<p><span class="arithmatex">\(U_c=\frac{1}{\omega C}\)</span>  </p>
+<p><span class="arithmatex">\(\phi=-arctan\frac{1}{\omega CR}\)</span>  </p>
+<p><img alt="" src="assets/wps12-20241023114505-90f3an8.jpg" />图1 RC串联电路</p>
+<p>其中<span class="arithmatex">\(ω\)</span>为交流电源的角频率，<span class="arithmatex">\(U\)</span>为交流U电源的电压有效值，<span class="arithmatex">\(\phi\)</span>为电流和电源电压的相位差，它与角频率<span class="arithmatex">\(ω\)</span>的关系见图2可见当<span class="arithmatex">\(ω\)</span>增加时，<span class="arithmatex">\(I\)</span>和<span class="arithmatex">\(U_R\)</span>增加，而<span class="arithmatex">\(U_C\)</span>减小。当<span class="arithmatex">\(ω\)</span>很小时<span class="arithmatex">\(ϕ﻿→-π/2\)</span>，<span class="arithmatex">\(ω\)</span>很大时<span class="arithmatex">\(ϕ﻿→0\)</span>。</p>
+<p><img alt="" src="assets/wps13-20241023114541-oj72lia.jpg" />​图2 RC串联电路的相频特性
+2. RL串联电路稳态特性</p>
+<p>RL串联电路如图3所示，电路中<span class="arithmatex">\(I\)</span>、<span class="arithmatex">\(U\)</span>、<span class="arithmatex">\(U_R\)</span>、<span class="arithmatex">\(U_L\)</span>有以下关系：</p>
+<p><span class="arithmatex">\(I=\frac{U}{\sqrt{R^2}+(\omega L)^2}\)</span>  </p>
+<p><span class="arithmatex">\(U_R=IR,U_L=I\omega L\)</span>  </p>
+<p><span class="arithmatex">\(\phi=arctan \frac{\omega L}R\)</span>  </p>
+<p>可见RL电路的幅频特性与RC电路相反U_R，RC<span class="arithmatex">\(\omega\)</span>增加时，<span class="arithmatex">\(I\)</span>、<span class="arithmatex">\(U_R\)</span>减小而<span class="arithmatex">\(U_L\)</span>增大。它的相频特性见图4，由图4可知，<span class="arithmatex">\(ω\)</span>很小时<span class="arithmatex">\(ϕ﻿→0\)</span>，<span class="arithmatex">\(ω\)</span>很大时<span class="arithmatex">\(ϕ﻿→π/2\)</span>
+3. RLC串联电路的稳态特性</p>
+<p>在电路中如果同时存在电感和电容元件，那么在一定条件下会产生某种特殊状态，能量会在电容和电感元件中产生交换，我们称之为谐振现象，RLC电路如图5所示。</p>
+<p>如图5所示电路，则阻抗<span class="arithmatex">\(|Z|\)</span>，电压<span class="arithmatex">\(U\)</span>、<span class="arithmatex">\(U_R\)</span>和电流<span class="arithmatex">\(i\)</span>之间有以下关系：</p>
+<p><span class="arithmatex">\(|Z|=\sqrt{R^2+(\omega L-\frac1{\omega C})^2}\)</span>  </p>
+<p><span class="arithmatex">\(\phi =arctan\frac{\omega L-\frac1{\omega C}}{R}\)</span>  </p>
+<p><span class="arithmatex">\(i=\frac{U}{\sqrt{R^2+(\omega L-\frac 1{\omega C})^2}}\)</span>  </p>
+<p>其中<span class="arithmatex">\(\omega\)</span>为角频率，上述各物理量与频率的关系称为频响特性。</p>
+<p><img alt="" src="assets/wps9-20241025163112-ayzq5gp.jpg" />​图5 RLC串联电路</p>
+<p>图6为RLC串联电路幅频特性，由图6可知，在频率<span class="arithmatex">\(f_0\)</span>处阻抗<span class="arithmatex">\(Z\)</span>值最小，且此时整个电路呈纯电阻性，电流<span class="arithmatex">\(i\)</span>达到最大值，我们称<span class="arithmatex">\(f_0\)</span>为RLC串联电路的谐振f_2频率(<span class="arithmatex">\(ω\)</span>​<sub><span class="arithmatex">\(0\)</span></sub>为谐振角频率)，在<span class="arithmatex">\(f_1\)</span>至<span class="arithmatex">\(f_2\)</span>的频率范围内<span class="arithmatex">\(i\)</span>值较大，我们称为通频带；RLC串联电路的相频特性如图7所示。</p>
+<p>当<span class="arithmatex">\(\omega=\omega_0=\frac{1}{\sqrt{LC}}\)</span>时，<span class="arithmatex">\(f_0=\frac{1}{2\pi\sqrt{LC}}\)</span>，由上述三式可知：<span class="arithmatex">\(|Z|=R\)</span>,<span class="arithmatex">\(\phi=0\)</span>\,<span class="arithmatex">\(i_m=\frac{U}{R}\)</span>，此时电路呈纯电阻性，而在电感和电容上的电压相等，相位相反，且为电源电压的<span class="arithmatex">\(Q\)</span>倍。<span class="arithmatex">\(Q\)</span>称为电路的品质因素，简称<span class="arithmatex">\(Q\)</span>值。</p>
+<p>定义：<span class="arithmatex">\(U_C\)</span>或<span class="arithmatex">\(U_L\)</span>与<span class="arithmatex">\(U\)</span>的比值为品质因数<span class="arithmatex">\(Q\)</span>，<span class="arithmatex">\(Q=\frac{U_L}{U}=\frac{U_C}{U}=\frac{\omega_0 L}{R}=\frac1{R\omega_0C}\)</span>  </p>
+<p>可以证明<span class="arithmatex">\(\Delta f=\frac{f_0}{Q}\)</span>\,<span class="arithmatex">\(Q=\frac {f_0}{\Delta f}\)</span>  </p>
+<p><img alt="" src="assets/wps36-20241025164908-dv7gcou.jpg" />​图6   RLC串联电路幅频特性</p>
+<p><img alt="" src="assets/wps38-20241025164926-to5cleg.jpg" />​图7 RLC串联电路的相频特性
+4. RLC串联电路的暂态过程</p>
+<p>在图8示的电路中，先将K打向“1”，待稳定后再将K打向“2”，这称为RLC串联电路的放电过程，其电路方程为</p>
+<p><span class="arithmatex">\(LC\frac{d^2 U_C}{dt^2}+RC\frac{dU_C}{dt}+U_c=0\)</span></p>
+<p><img alt="" src="assets/wps50-20241025170938-zi9rp6y.png" />图8</p>
+<p>初始条件为<span class="arithmatex">\(t=0\)</span>，<span class="arithmatex">\(U_C=E\)</span>,<span class="arithmatex">\(\frac{dU_C}{dt}=0\)</span>，这样方程的解一般按<span class="arithmatex">\(R\)</span>值的大小可分为三种情况:</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(R&lt;2\sqrt{L/C}\)</span>,为欠阻尼</p>
+<p><span class="arithmatex">\(U_C=\frac{1}{\sqrt{1-\frac{C}{4L}\cdot R^2}}\cdot E\cdot e^{-\frac t \tau}\cdot cos(\omega t+\phi)\)</span>​</p>
+<p>其中<span class="arithmatex">\(\tau=\frac{2L}{R}\)</span>，<span class="arithmatex">\(\omega=\frac{1}{\sqrt{LC}}\sqrt{1-\frac{C}{4L}\cdot R^2}\)</span>
+    2. <span class="arithmatex">\(R&gt;2\sqrt{L/C}\)</span>,为过阻尼</p>
+<p><span class="arithmatex">\(U_C=\frac{1}{\sqrt{\frac{C}{4L}\cdot R^2-1}}\cdot E\cdot e^{-\frac t \tau}\cdot sh(\omega t+\phi)\)</span>
+    3. <span class="arithmatex">\(R=2\sqrt{L/C}\)</span>，为临界阻尼</p>
+<p><span class="arithmatex">\(U_C=(1+\frac{t}{\tau})E\cdot e^{-\frac{t}{\tau}}\)</span></p>
+</li>
+</ol>
+</li>
+</ol>
+<p>图9这三种情况下的<span class="arithmatex">\(U_C\)</span>变化曲线，其中1为欠阻尼，2为过阻尼，3为临界阻尼。</p>
+<p><img alt="" src="assets/wps52-20241025172206-8fzluv3.jpg" />图9  放电时的U<sub>C</sub>曲线示意图</p>
+<p>如果当<span class="arithmatex">\(R&lt;&lt;2\sqrt{L/C}\)</span>时，则曲线1的振幅衰减很慢，能量的损耗较小。能够在<span class="arithmatex">\(L\)</span>与<span class="arithmatex">\(C\)</span>之间不断交换，可近似为<span class="arithmatex">\(LC\)</span>电路的自由振荡，这时<span class="arithmatex">\(\omega\approx\frac{1}{\sqrt{LC}}=\omega_0\)</span>，<span class="arithmatex">\(\omega_0\)</span>为<span class="arithmatex">\(R=0\)</span>时LC回路的固有频率。对于充电过程，与放电过程相类似，只是初始条件和最后平衡的位置不同。</p>
+<p>图10给出了充电时不同阻尼的<span class="arithmatex">\(U_C\)</span>变化曲线图。</p>
+<p><img alt="" src="assets/wps53-20241025172225-y5h1e6i.jpg" />图10  充电时的U<sub>C</sub>曲线示意图</p>
+<h1 id="_2">二、实验内容<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h2 id="1_1">1、实验仪器<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h2>
+<p>低频信号发生器XFD-7A；标准电阻；标准电容箱；标准电感箱；晶体管毫伏表DA-16；示波器。</p>
+<h2 id="2_1">2、实验步骤<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>RC串联电路的幅频特性：按图1连接电路，交流电源是低频信号发生器的输出端，输出电压始终保持在1V，R为十进电阻箱，取<span class="arithmatex">\(R=500\Omega\)</span>，取<span class="arithmatex">\(C=0.47\mu F\)</span>，首先将低频信号发生器频率调到<span class="arithmatex">\(100Hz\)</span>，用晶体管毫伏表测量不同频率下电容、电阻两端的输出电压<span class="arithmatex">\(U_C\)</span>，取一定间隔频率，一直测到<span class="arithmatex">\(8kHz\)</span>（此过程中始终保持低频信号发生器输出电压为1V），表格自行设计。</p>
+</li>
+<li>
+<p>RL串联电路的幅频特性：按图3接电路，交流电源是低频信号发生器的输出端，输出电压始终保持在1V，自行选择合理的电阻与电感值，同样取一定间隔频率，一直测到<span class="arithmatex">\(8kHz\)</span>（此过程中始终保持低频信号发生器输出电压为1V），用晶体管毫伏表测量不同频率下电感、电阻两端的输出电压<span class="arithmatex">\(U_L\)</span>，表格自行设计。</p>
+</li>
+<li>
+<p>按图5连接电路，自行选择<span class="arithmatex">\(L\)</span>、<span class="arithmatex">\(C\)</span>、<span class="arithmatex">\(R\)</span>，信号发生器输出电压保持在1V，用晶体管毫伏表测量R两端的电压（用于计算回路电流），计算所选实验参数下的谐振频率<span class="arithmatex">\(f_0\)</span>，信号发生器频率以每次间隔<span class="arithmatex">\(100Hz\)</span>（在谐振频率<span class="arithmatex">\(f_0\)</span>附近可增加测量点），在谐振频率<span class="arithmatex">\(f_0\)</span>附近测量LRC电路的幅频特性(自行设计选择合理的频率范围)。表格自行设计。</p>
+</li>
+<li>
+<p>自行设计电路，取合适的R、L及C值，用示波器观察RLC串联电路的暂态过程。</p>
+</li>
+</ol>
+<h1 id="_3">三、实验数据<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<h2 id="1_2">1、实验数据记录<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>RC串联电路的幅频特性</p>
+<table>
+<thead>
+<tr>
+<th>频率<span class="arithmatex">\(f/Hz\)</span>​</th>
+<th>100</th>
+<th>500</th>
+<th>1000</th>
+<th>1500</th>
+<th>2000</th>
+<th>2500</th>
+<th>3000</th>
+<th>3500</th>
+<th>4000</th>
+<th>4500</th>
+<th>5000</th>
+<th>5500</th>
+<th>6000</th>
+<th>6500</th>
+<th>7000</th>
+<th>7500</th>
+<th>8000</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电压<span class="arithmatex">\(U_C/V\)</span>​</td>
+<td>0.71</td>
+<td>0.561</td>
+<td>0.38</td>
+<td>0.278</td>
+<td>0.217</td>
+<td>0.178</td>
+<td>0.15</td>
+<td>0.13</td>
+<td>0.116</td>
+<td>0.104</td>
+<td>0.094</td>
+<td>0.087</td>
+<td>0.08</td>
+<td>0.075</td>
+<td>0.07</td>
+<td>0.066</td>
+<td>0.063</td>
+</tr>
+<tr>
+<td>2. RL串联电路的幅频特性</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>频率<span class="arithmatex">\(f/Hz\)</span>​</th>
+<th>100</th>
+<th>500</th>
+<th>1000</th>
+<th>1500</th>
+<th>2000</th>
+<th>2500</th>
+<th>3000</th>
+<th>3500</th>
+<th>4000</th>
+<th>4500</th>
+<th>5000</th>
+<th>5500</th>
+<th>6000</th>
+<th>6500</th>
+<th>7000</th>
+<th>7500</th>
+<th>8000</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电压<span class="arithmatex">\(U_L/V\)</span>​</td>
+<td>0.115</td>
+<td>0.341</td>
+<td>0.521</td>
+<td>0.606</td>
+<td>0.647</td>
+<td>0.669</td>
+<td>0.683</td>
+<td>0.692</td>
+<td>0.697</td>
+<td>0.702</td>
+<td>0.705</td>
+<td>0.707</td>
+<td>0.709</td>
+<td>0.71</td>
+<td>0.711</td>
+<td>0.712</td>
+<td>0.713</td>
+</tr>
+<tr>
+<td>3. LRC电路的幅频特性</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>频率<span class="arithmatex">\(f/Hz\)</span>​</th>
+<th style="text-align: right;">100</th>
+<th style="text-align: right;">200</th>
+<th style="text-align: right;">300</th>
+<th style="text-align: right;">400</th>
+<th style="text-align: right;">500</th>
+<th style="text-align: right;">600</th>
+<th style="text-align: right;">700</th>
+<th style="text-align: right;">800</th>
+<th style="text-align: right;">900</th>
+<th style="text-align: right;">1000</th>
+<th style="text-align: right;">1100</th>
+<th style="text-align: right;">1200</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电压<span class="arithmatex">\(U_R/V\)</span>​</td>
+<td style="text-align: right;">0.106</td>
+<td style="text-align: right;">0.215</td>
+<td style="text-align: right;">0.321</td>
+<td style="text-align: right;">0.421</td>
+<td style="text-align: right;">0.504</td>
+<td style="text-align: right;">0.561</td>
+<td style="text-align: right;">0.586</td>
+<td style="text-align: right;">0.583</td>
+<td style="text-align: right;">0.561</td>
+<td style="text-align: right;">0.531</td>
+<td style="text-align: right;">0.498</td>
+<td style="text-align: right;">0.465</td>
+</tr>
+</tbody>
+</table>
+<p>取定频率<span class="arithmatex">\(600-700Hz\)</span>为频率峰值区间，以<span class="arithmatex">\(20Hz\)</span>为间隔进一步测量。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">频率<span class="arithmatex">\(f/Hz\)</span></th>
+<th>600</th>
+<th style="text-align: left;">620</th>
+<th>640</th>
+<th>660</th>
+<th>680</th>
+<th>700</th>
+<th>720</th>
+<th>730</th>
+<th>740</th>
+<th>760</th>
+<th>780</th>
+<th>800</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">电压<span class="arithmatex">\(U_R/V\)</span></td>
+<td>0.561</td>
+<td style="text-align: left;">0.568</td>
+<td>0.575</td>
+<td>0.580</td>
+<td>0.583</td>
+<td>0.586</td>
+<td>0.587</td>
+<td>0.587</td>
+<td>0.587</td>
+<td>0.586</td>
+<td>0.585</td>
+<td>0.583</td>
+</tr>
+</tbody>
+</table>
+<p>得到峰值<span class="arithmatex">\(f_0=730Hz\)</span>
+4. RLC串联电路的暂态过程</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(L/H\)</span><br /></th>
+<th><span class="arithmatex">\(C/\mu F\)</span>​</th>
+<th><span class="arithmatex">\(R/\Omega\)</span>​</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>1</td>
+<td>1000</td>
+<td>过阻尼</td>
+</tr>
+<tr>
+<td>0.1</td>
+<td>0.47</td>
+<td>100</td>
+<td>欠阻尼</td>
+</tr>
+<tr>
+<td>0.1</td>
+<td>0.47</td>
+<td>900</td>
+<td>临界阻尼</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>过阻尼状态图</p>
+<p><img alt="image" src="assets/image-20241030180928-cpronio.png" /></p>
+</li>
+<li>
+<p>欠阻尼状态图</p>
+<p><img alt="IMG_20241023_151902" src="assets/IMG_20241023_151902-20241030180856-q70j8z3.jpg" />
+    3. 临界阻尼状态图</p>
+<p><img alt="IMG_20241023_151219" src="assets/IMG_20241023_151219-20241030180847-k112dbl.jpg" /></p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="2_2">2、实验数据处理<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>RC串联电路的幅频特性</p>
+<p><img alt="Graph1" src="assets/Graph1-20241030175339-vvi71jo.png" /></p>
+<p>图像符合推导出的理论模型<span class="arithmatex">\(U_C=\frac{U_{in}}{\sqrt{1+(2\pi fRC)^2}}\cdot\frac{1}{2\pi fC}\)</span>即在频率增加时，电容两端的电压 <span class="arithmatex">\(U_C\)</span> 会逐渐减小，最终趋近于0。
+2. RL串联电路的幅频特性</p>
+<p><img alt="Graph2" src="assets/Graph2-20241030175801-o0c264m.png" /></p>
+<p>图像符合推导出的理论模型<span class="arithmatex">\(U_L=\frac{U_{in}\cdot(2\pi fL)}{\sqrt{R^2+(2\pi fL)^2}}\)</span>即在频率增加时，电容两端的电压 <span class="arithmatex">\(U_L\)</span> 会逐渐增大，最终在高频段趋近于输入电压<span class="arithmatex">\(U_{in}\)</span>。
+3. LRC串联电路的幅频特性</p>
+<p>理论谐振频率<span class="arithmatex">\(f_0'=\frac{1}{2\pi\sqrt{LC}}=734.13Hz\)</span>,相对误差<span class="arithmatex">\(\varepsilon=\frac{|f_0'-f_0|}{f_0'}=0.56216\%\)</span>,误差较小证明测量结果准确
+4. RLC串联电路的暂态特性</p>
+<p>采用的实验数据，欠阻尼状态与过阻尼状态$R,L,C <span class="arithmatex">\(关系与理论相一致，即分别满足\)</span>R&lt;2\sqrt{\frac{L}{C}}<span class="arithmatex">\(和\)</span>R&gt;2\sqrt{\frac{L}{C}}$  </p>
+<p>对于临界阻尼状态，理论电阻<span class="arithmatex">\(R_0=2\sqrt{\frac{L}{C}}=922.5\Omega\)</span>，相对误差<span class="arithmatex">\(\varepsilon =\frac{|R_0-R|}{R_0}=2.442\%\)</span>，在误差允许范围内
+5. 误差分析</p>
+<ol>
+<li>实验采用的测量仪器如电压表，可变电阻由于最小刻度存在系统误差；</li>
+<li>实验分析RLC串联电路的暂态过程中，在调节电阻<span class="arithmatex">\(R\)</span>的过程中通过肉眼判断区分三种阻尼状态存在一定误差，尤其是欠阻尼与临界阻尼状态；</li>
+<li>实验产生的正弦波与方波电压受环境影响不够稳定，同时受上升下降沿影响导致测量结果落在一定范围内波动，存在偶然误差；</li>
+<li>接线元件引入额外的阻抗会影响测量结果。</li>
+</ol>
+</li>
+</ol>
+<h1 id="_4">四、实验拓展<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>为什么串联谐振称为电压谐振而并联谐振称为电流谐振？</p>
+<p>在串联谐振电路中，电感和电容串联连接。当频率达到谐振频率时，电感的反应和电容的反应相互抵消，电路的总阻抗达到最小值。这时，电流达到最大值，整个电路的电压在谐振点上会增大（特别是在电感和电容两端）。强调电压的增大，所以称为电压谐振。而在并联谐振电路中，电感和电容并联连接。当频率达到谐振频率时，电流在电感和电容两端的相位相反，导致总电流最小化；而在谐振点，流过电容和电感的电流会相互抵消，电流特性更为显著，因此被称为电流谐振。
+2. 在RLC电路中，若方波发生器的频率很高或很低，能观察到阻尼振荡的波形吗？如何由阻尼振荡的波形来测量RLC电路的振荡周期<span class="arithmatex">\(T\)</span>？振荡周期<span class="arithmatex">\(T\)</span>与角频率<span class="arithmatex">\(\omega\)</span>的关系会因方波频率的变化而发生变化吗？</p>
+<p>不能，当方波频率很高时，RLC电路可能无法完全响应每个方波周期的变化，因此可能无法清晰地观察到阻尼振荡的波形，而当方波频率过低，电路可能会在方波的上升沿和下降沿之间出现较长的时间延迟，导致无法观察到连续的振荡效果，可能只会看到缓慢的上升和下降，没有明显的振荡特征。</p>
+<p>观察阻尼振荡的波形，测量从一个波峰（或波谷）到下一个波峰（或波谷）的时间间隔，这个时间间隔就是振荡周期 <span class="arithmatex">\(T\)</span>。</p>
+<p>振荡周期 <span class="arithmatex">\(T\)</span>与角频率 <span class="arithmatex">\(\omega\)</span>的关系由电容<span class="arithmatex">\(C\)</span>和电感<span class="arithmatex">\(L\)</span>共同决定不随方波频率变化而变化。
+3. RC串联电路中<span class="arithmatex">\(\tau\)</span>的物理意义。</p>
+<p>在RC串联电路中，时间常数<span class="arithmatex">\(\tau = R \cdot C\)</span>，是电路响应时间的一个重要参数，反映了电路对变化的响应速度。时间常数越大，电容充放电所需的时间就越长，电路对电压变化的响应就越慢；反之则越快。
+4. 举一个实际生活中的RLC电路的应用实验，叙述RLC电路的作用。</p>
+<p>以收音机为例，收音机中的调谐电路通常由电感<span class="arithmatex">\(L\)</span>和可调电容<span class="arithmatex">\(C\)</span>构成RLC电路。对于特定频率的无线电信号，电路通过调整电容的值，使电路的谐振频率（<span class="arithmatex">\(f_0 = \frac{1}{2\pi\sqrt{LC}}\)</span>）与所需接收的广播频率匹配，当共振频率与信号频率一致时，电路能够有效地增强该频率的信号。</p>
+</li>
+</ol>
+<p>‍</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        本页对你有帮助吗？
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="这页对我有帮助" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="这页还有待改进" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5zM16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              感谢你的反馈！
+
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              感谢你的反馈！可以在 GitHub 仓库提交 Issue 告诉我如何改进。
+
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/homepage.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3260 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="个人博客与笔记">
+      
+      
+        <meta name="author" content="wh1cy">
+      
+      
+        <link rel="canonical" href="https://wh1cy.github.io/courses/privacy-computing/project/">
+      
+      
+        <link rel="prev" href="../lab4/">
+      
+      
+        <link rel="next" href="../../info-security-practice/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>课程项目 学校心理健康风险 - 三月の海</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif SC";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="三月の海" class="md-header__button md-logo" aria-label="三月の海" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 11.18c3.3-3 5-4.54 5-6.49C17 3.19 15.75 2 14.25 2c-.86 0-1.68.36-2.25 1-.57-.64-1.39-1-2.31-1C8.19 2 7 3.25 7 4.75c0 1.89 1.7 3.43 5 6.43m-.82.82c-3-3.3-4.54-5-6.49-5C3.19 7 2 8.25 2 9.75c0 .86.36 1.68 1 2.25-.64.57-1 1.39-1 2.31C2 15.81 3.25 17 4.75 17c1.89 0 3.43-1.7 6.43-5m1.65 0c2.99 3.3 4.53 5 6.48 5 1.5 0 2.69-1.25 2.69-2.75 0-.86-.36-1.68-1-2.25.64-.57 1-1.39 1-2.31C22 8.19 20.75 7 19.25 7c-1.89 0-3.43 1.7-6.42 5m-.83.82c-3.3 3-5 4.54-5 6.49C7 20.81 8.25 22 9.75 22c.86 0 1.68-.36 2.25-1 .57.64 1.39 1 2.31 1 1.5 0 2.69-1.25 2.69-2.75 0-1.89-1.7-3.43-5-6.43"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            三月の海
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              课程项目 学校心理健康风险
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/wh1cy/wh1cy.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wh1cy/wh1cy.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  关于
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="三月の海" class="md-nav__button md-logo" aria-label="三月の海" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 11.18c3.3-3 5-4.54 5-6.49C17 3.19 15.75 2 14.25 2c-.86 0-1.68.36-2.25 1-.57-.64-1.39-1-2.31-1C8.19 2 7 3.25 7 4.75c0 1.89 1.7 3.43 5 6.43m-.82.82c-3-3.3-4.54-5-6.49-5C3.19 7 2 8.25 2 9.75c0 .86.36 1.68 1 2.25-.64.57-1 1.39-1 2.31C2 15.81 3.25 17 4.75 17c1.89 0 3.43-1.7 6.43-5m1.65 0c2.99 3.3 4.53 5 6.48 5 1.5 0 2.69-1.25 2.69-2.75 0-.86-.36-1.68-1-2.25.64-.57 1-1.39 1-2.31C22 8.19 20.75 7 19.25 7c-1.89 0-3.43 1.7-6.42 5m-.83.82c-3.3 3-5 4.54-5 6.49C7 20.81 8.25 22 9.75 22c.86 0 1.68-.36 2.25-1 .57.64 1.39 1 2.31 1 1.5 0 2.69-1.25 2.69-2.75 0-1.89-1.7-3.43-5-6.43"/></svg>
+
+    </a>
+    三月の海
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/wh1cy/wh1cy.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wh1cy/wh1cy.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    博客
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    博客
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/2026-github-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub 使用教学：从零到协作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/2026-mkdocs-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    用 MkDocs 搭建博客
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../sys2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机系统 II
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算机系统 II
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/lab6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys2/project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件安全原理与实践
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../phys-lab2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    普通物理学实验 II
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    普通物理学实验 II
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phys-lab2/lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1 托卡马克等离子体物理虚拟仿真实验
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phys-lab2/lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2 PN结的物理特性及玻尔兹曼常数测定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phys-lab2/lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3 椭偏仪测薄膜厚度和折射率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phys-lab2/lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4 RLC串联电路暂态稳态过程的研究
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phys-lab2/lab5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5 交流电桥
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phys-lab2/lab6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6 液体粘滞系数的测定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phys-lab2/lab7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 7 修正后的范德堡法测薄膜电阻
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    隐私计算与数据合规
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    隐私计算与数据合规
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1 金融风险预测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2 黑名单求交
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3 专利域名申请
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4 诈骗电话识别
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程项目 学校心理健康风险
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程项目 学校心理健康风险
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、实验简介
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、实验简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 案例描述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 任务描述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 案例数据集
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 特征说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、实验技术说明
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、实验技术说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 核心技术
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 核心技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-hfl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1 横向联邦学习 (HFL)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-secure-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2 安全聚合 (Secure Aggregation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 数据集说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、实验流程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、实验流程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 实验配置
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 实验配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 输入对应的集群配置信息
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-spu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 SPU配置
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 加载并划分数据集
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 加载并划分数据集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1 加载数据集
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 数据集划分
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-xgboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 水平XGBoost建模
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 水平XGBoost建模">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1 设置超参数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-sfxgboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2 实例化并训练 SFXgboost​ 模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、实验结果与分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、实验结果与分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 实验主要输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 结果分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 遇到的问题与解决方案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../info-security-practice/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信息安全课程综合实践
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    信息安全课程综合实践
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/lab0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0 基础知识及技能
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/crypto-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto Lab 1 消息加密和数字签名
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/crypto-lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto Lab 2 公钥密码学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/crypto-lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto Lab 3 格密码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/misc-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc Lab 1 编解码及 OSINT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/misc-lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc Lab 2 隐写与其他misc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/misc-lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc Lab 3 OSINT & AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/pwn-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pwn Lab 1 Pwn基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/rev-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rev Lab 1 Rev基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info-security-practice/web-lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Lab 1 计算机网络基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、实验简介
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、实验简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 案例描述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 任务描述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 案例数据集
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 特征说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、实验技术说明
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、实验技术说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 核心技术
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 核心技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-hfl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1 横向联邦学习 (HFL)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-secure-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2 安全聚合 (Secure Aggregation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 数据集说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、实验流程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、实验流程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 实验配置
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 实验配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 输入对应的集群配置信息
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-spu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 SPU配置
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 加载并划分数据集
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 加载并划分数据集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1 加载数据集
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 数据集划分
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-xgboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 水平XGBoost建模
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 水平XGBoost建模">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1 设置超参数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-sfxgboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2 实例化并训练 SFXgboost​ 模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、实验结果与分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、实验结果与分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 实验主要输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 结果分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 遇到的问题与解决方案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    首页
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    课程
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    隐私计算与数据合规
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">课程项目：学校心理健康风险<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">一、实验简介<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1 案例描述<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>当前，青少年心理健康问题日益受到社会关注。许多中学和高校开始尝试建立心理健康评估机制，以尽早发现心理风险高的学生，并提供及时干预。然而，受限于数据隐私法规与实际操作中学校之间信息孤岛的限制，不同学校之间的数据难以直接整合。</p>
+<p>为解决这一问题，学校A（alice）与学校B（bob）希望在不共享原始数据的前提下，通过横向联邦学习技术，建立一个联合心理健康风险预测模型。模型根据学生的基本信息、日常行为表现、心理问卷结果等特征，预测其心理健康风险水平，从而辅助心理干预资源的科学配置。</p>
+<h3 id="12">1.2 任务描述<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p>本项目基于隐语平台SecretFlow，利用横向联邦学习（HFL）框架，在模拟的两个学校节点（alice与bob）和一个协调服务器（server）之间建立联邦模型，完成学生心理健康风险的二分类建模。</p>
+<h3 id="13">1.3 案例数据集<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>学校A提供的数据：<code>School_Alice.csv</code>​</li>
+<li>学校B提供的数据：<code>School_Bob.csv</code>​</li>
+<li>数据特征模拟自全国高校心理健康普查常用问卷（如PHQ-9, GAD-7）及校内行为记录</li>
+<li>标签字段：<code>y</code>​，0 表示心理健康，1 表示存在心理健康风险</li>
+</ul>
+<h3 id="14">1.4 特征说明<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>特征名</th>
+<th>含义说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GENDER</td>
+<td>性别，1\=女，2\=男</td>
+</tr>
+<tr>
+<td>AGE</td>
+<td>年龄</td>
+</tr>
+<tr>
+<td>SLEEP_QUALITY</td>
+<td>睡眠质量评分（1-5）</td>
+</tr>
+<tr>
+<td>SCREEN_TIME</td>
+<td>每日使用电子设备时长（小时）</td>
+</tr>
+<tr>
+<td>SOCIAL_ACTIVITY</td>
+<td>社交频率评分（1-5）</td>
+</tr>
+<tr>
+<td>PHQ9_SCORE</td>
+<td>抑郁量表PHQ-9得分</td>
+</tr>
+<tr>
+<td>GAD7_SCORE</td>
+<td>焦虑量表GAD-7得分</td>
+</tr>
+<tr>
+<td>EXERCISE_FREQ</td>
+<td>每周运动次数</td>
+</tr>
+<tr>
+<td>FAMILY_SUPPORT</td>
+<td>家庭支持评分（1-5）</td>
+</tr>
+<tr>
+<td>PEER_RELATION</td>
+<td>同伴关系评分（1-5）</td>
+</tr>
+<tr>
+<td>y</td>
+<td>标签：0\=心理健康，1\=心理风险</td>
+</tr>
+</tbody>
+</table>
+<p>说明：所有评分字段越高表示情况越积极。</p>
+<h2 id="_3">二、实验技术说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 核心技术<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>本次实验的核心技术是<strong>横向联邦学习 (Horizontal Federated Learning, HFL)</strong> ，并利用了<strong>安全聚合 (Secure Aggregation)</strong>  和 <strong>SPU (Secure Processing Unit)</strong>  进行隐私保护。</p>
+<h4 id="211-hfl">2.1.1 横向联邦学习 (HFL)<a class="headerlink" href="#211-hfl" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>概念</strong>: 横向联邦学习（也称按样本划分的联邦学习）适用于多个参与方拥有<strong>相同或相似的特征空间，但样本ID不同</strong>的场景。例如，两家不同的医院（<code>alice</code>​ 和 <code>bob</code>​）都拥有各自的患者病历数据，这些病历的特征字段（如年龄、性别、症状、检查结果等）是相同的，但患者群体不重叠。HFL的目标是联合这些分散的数据共同训练一个全局模型，而各方的原始数据不出本地。</li>
+<li>
+<p><strong>原理</strong>:</p>
+</li>
+<li>
+<p><strong>模型初始化</strong>: 协调方（<code>server</code>​）初始化一个全局模型参数，并分发给所有参与方（<code>alice</code>​, <code>bob</code>​）。</p>
+</li>
+<li><strong>本地训练</strong>: 每个参与方使用其本地数据和当前的全局模型参数进行若干轮次的本地模型训练（例如，计算本地梯度和Hessian矩阵，或者训练本地的树结构）。</li>
+<li><strong>安全上传更新</strong>: 各参与方将其本地模型更新信息（如梯度、Hessian和、或者部分模型参数）通过加密或其他隐私保护技术（如差分隐私、同态加密、安全多方计算）发送给协调方。<strong>关键在于不发送原始数据。</strong></li>
+<li><strong>安全聚合</strong>: 协调方（<code>server</code>​）使用<strong>安全聚合协议</strong>（如 <code>SecureAggregator</code>​ 利用同态加密或MPC）将收集到的各方模型更新聚合成全局更新。在此过程中，<code>server</code>​ 无法获知任何单个参与方的具体更新值。</li>
+<li><strong>全局模型更新</strong>: 协调方根据聚合后的全局更新来更新全局模型参数。</li>
+<li><strong>模型分发与迭代</strong>: 协调方将更新后的全局模型参数再次分发给各参与方，重复步骤2-5，直到模型收敛或达到预设的训练轮数。</li>
+<li><strong>应用场景</strong>: 智能手机用户个性化模型训练（如输入法预测）、跨银行的风险评估模型、跨医院的疾病诊断模型（如本案例）等。</li>
+</ul>
+<h4 id="212-secure-aggregation">2.1.2 安全聚合 (Secure Aggregation)<a class="headerlink" href="#212-secure-aggregation" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>概念</strong>: 安全聚合是 HFL 中的核心隐私技术之一。它允许协调方（<code>server</code>​）计算多个客户端（<code>alice</code>​, <code>bob</code>​）提供的数值型更新（如梯度、模型权重）的总和、平均值或其他聚合统计量，而在此过程中，协调方无法得知任何单个客户端贡献的具体数值。</li>
+<li>
+<p><strong>原理</strong>:</p>
+</li>
+<li>
+<p><strong>基于同态加密 (HE)</strong> : 客户端用一个公共的同态加密密钥加密它们的本地更新，然后发送给服务器。服务器在密文上执行加法运算得到加密的聚合结果，然后可能由一个或多个可信方（或客户端协作）解密。</p>
+</li>
+<li><strong>基于安全多方计算 (MPC)</strong> : 客户端将它们的本地更新秘密分享给多个计算节点（在本例中，SPU可以扮演这样的角色，或者<code>server</code>​与<code>clients</code>​通过特定的MPC协议交互）。这些节点协同计算聚合结果，而任何单个节点都无法恢复原始的单个更新。隐语中的 <code>SecureAggregator</code>​ 可以利用 SPU 实现基于 MPC 的安全聚合。</li>
+<li><strong>基于差分隐私 (DP)</strong> : 在上传更新前，客户端可以在其本地更新中加入适量的噪声，以满足差分隐私的要求，从而保护个体数据不被精确推断。 本实验中的 <code>SecureAggregator(server, [alice, bob])</code>​ 表明 <code>server</code>​ 负责聚合 <code>alice</code>​ 和 <code>bob</code>​ 的信息。</li>
+<li><strong>SFXgboost 中的应用</strong>: 在横向联邦 XGBoost (<code>SFXgboost</code>​) 中，<code>alice</code>​ 和 <code>bob</code>​ 在本地计算其样本的梯度和 Hessian 矩阵。这些值需要被安全地加总以评估分裂质量和计算叶节点值。<code>server</code>​ 通过安全聚合来完成这个求和过程。</li>
+</ul>
+<h3 id="22">2.2 数据集说明<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p>Python 脚本 <code>generate_psych_data.py</code>​ 的主要功能是模拟生成与青少年心理健康相关的特征数据，并包含一个基于这些特征生成的目标变量（疑似心理问题标签）。脚本允许用户通过命令行参数控制生成数据的学校名称、样本数量以及输出目录。生成的数据旨在模仿类似 <code>School_Alice.csv</code>​ 和 <code>School_Bob.csv</code>​ 这样的数据集结构和数据分布。</p>
+<p><strong>数据生成流程详解</strong></p>
+<p>脚本的核心是 <code>generate_psych_data</code>​ 函数 ，以下是该函数中各个特征及目标变量的生成方式：</p>
+<ol>
+<li>
+<p><strong>基本信息与行为特征生成</strong> ：</p>
+<ul>
+<li>​<strong>​<code>GENDER</code>​</strong>​  <strong>(性别)</strong> : 从 <code>[1, 2]</code>​ 中随机选择，代表两种性别。</li>
+<li>​<strong>​<code>AGE</code>​</strong>​  <strong>(年龄)</strong> : 在 15 到 25 岁之间随机生成整数 。</li>
+<li>​<strong>​<code>SLEEP_QUALITY</code>​</strong>​  <strong>(睡眠质量)</strong> : 随机生成 1 到 5 之间的整数，代表不同的睡眠质量等级 。</li>
+<li>
+<p>​<strong>​<code>SCREEN_TIME</code>​</strong>​  <strong>(屏幕使用时间)</strong> :</p>
+</li>
+<li>
+<p>首先从均值为 6、标准差为 2 的正态分布中抽取样本 。</p>
+</li>
+<li>然后将数值四舍五入到小数点后一位 。</li>
+<li>最后，将结果限制在 -1 到 12 的范围内，以确保其处于一个合理区间 ，这个值通常在 0-10+ 范围，但允许负值出现（尽管在实际场景中，屏幕时间通常为非负）。</li>
+<li>​<strong>​<code>SOCIAL_ACTIVITY</code>​</strong>​  <strong>(社交活动频率)</strong> : 随机生成 1 到 5 之间的整数，代表不同的社交活动参与度 。</li>
+<li>​<strong>​<code>EXERCISE_FREQ</code>​</strong>​  <strong>(锻炼频率)</strong> : 随机生成 0 到 7 之间的整数，代表每周锻炼的天数 。</li>
+<li>​<strong>​<code>FAMILY_SUPPORT</code>​</strong>​  <strong>(家庭支持度)</strong> : 随机生成 1 到 5 之间的整数 。</li>
+<li>​<strong>​<code>PEER_RELATION</code>​</strong>​  <strong>(同伴关系质量)</strong> : 随机生成 1 到 5 之间的整数 。</li>
+<li>
+<p><strong>心理量表得分生成</strong> ：</p>
+</li>
+<li>
+<p>​<strong>​<code>PHQ9_SCORE</code>​</strong>​  <strong>(PHQ-9抑郁症状群量表得分)</strong> : 随机生成 0 到 27 之间的整数，这是PHQ-9量表的典型得分范围 。</p>
+</li>
+<li>​<strong>​<code>GAD7_SCORE</code>​</strong>​  <strong>(GAD-7广泛性焦虑障碍量表得分)</strong> : 随机生成 0 到 20 之间的整数，这是GAD-7量表的典型得分范围 。</li>
+<li>
+<p><strong>目标变量</strong> <strong>​<code>y</code>​</strong>​  <strong>(心理问题标签) 生成</strong> ：</p>
+</li>
+<li>
+<p>目标变量 <code>y</code>​ 是基于一个简化的概率模型生成的，其中 <code>1</code>​ 可能代表存在某种心理风险或问题，<code>0</code>​ 代表没有。</p>
+</li>
+<li>
+<p><strong>概率计算</strong>: 变量 <code>y</code>​ 取值为 1 的基础概率 <code>prob_y</code>​ 通过以下公式计算：<code>prob_y = (0.02 * PHQ9_SCORE + 0.02 * GAD7_SCORE - 0.05 * SLEEP_QUALITY - 0.05 * FAMILY_SUPPORT - 0.05 * PEER_RELATION + 0.5)</code>​ ^^这个公式的含义是：</p>
+</li>
+<li>
+<p>较高的 <code>PHQ9_SCORE</code>​ 和 <code>GAD7_SCORE</code>​会增加 <code>y=1</code>​ 的概率（系数为正）。</p>
+</li>
+<li>较高的 <code>SLEEP_QUALITY</code>​、<code>FAMILY_SUPPORT</code>​ 和 <code>PEER_RELATION</code>​ 会降低 <code>y=1</code>​ 的概率（系数为负。</li>
+<li>基础概率加上了 0.5 的偏移量。</li>
+<li><strong>概率修正</strong>: 计算出的 <code>prob_y</code>​ 会被限制在 0.1 到 0.9 之间，以确保概率值在一个合理的范围内 。</li>
+<li><strong>二项分布采样</strong>: 最终的 <code>y</code>​ 值是根据修正后的 <code>prob_y</code>​，通过二项分布（<code>np.random.binomial(1, prob_y)</code>​）随机生成的。这意味着每个样本的 <code>y</code>​ 值是基于其特征计算出的个体化概率来决定的 。</li>
+<li>
+<p><strong>数据整合与输出</strong> ：</p>
+</li>
+<li>
+<p>所有生成的特征和目标变量被整合到一个 Pandas DataFrame 中 。</p>
+</li>
+<li>脚本会创建指定的输出目录（如果不存在）。</li>
+<li>生成的 DataFrame 会被保存为一个 CSV 文件，文件名格式为 <code>School_{school_name}_Generated.csv</code>​，例如 <code>School_Alice_Generated.csv</code>​  或 <code>School_Bob_Generated.csv</code>​ 。</li>
+<li>脚本会打印生成样本的数量和保存文件的路径信息 。</li>
+</ul>
+</li>
+</ol>
+<p><strong>命令行参数与执行</strong></p>
+<p>脚本通过 <code>argparse</code>​ 模块支持命令行参数 ：</p>
+<ul>
+<li>​<code>school_name</code>​ (位置参数): 学校的名称，例如 "Alice", "Bob"。</li>
+<li>​<code>--num_samples</code>​ (可选参数): 指定生成的样本数量。</li>
+<li>​<code>--output_dir</code>​ (可选参数): 指定保存生成数据的目录。</li>
+</ul>
+<p>当脚本通过 <code>if __name__ == "__main__":</code>​ ^执行时，它会解析这些命令行参数，并调用 <code>generate_psych_data</code>​ 函数来生成并保存数据。例如，在命令行中运行 <code>python generate_psych_data.py Alice --num_samples 200</code>​ 将会为名为 "Alice" 的学校生成 200 个样本，并保存在默认的 "data" 目录下，脚本详细代码及注释在文件夹中给出。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">generate_psych_data</span><span class="p">(</span><span class="n">school_name</span><span class="p">,</span> <span class="n">num_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s2">&quot;data&quot;</span><span class="p">):</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="sd">    Generate psychological data similar to School_Alice.csv and School_Bob.csv</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="sd">    but with a controllable sample size.</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="sd">    Parameters:</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="sd">    -----------</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="sd">    school_name : str</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="sd">        Name of the school (e.g., &quot;Alice&quot;, &quot;Bob&quot;)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="sd">    num_samples : int</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="sd">        Number of samples to generate</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="sd">    output_dir : str</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="sd">        Directory to save the generated data</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="sd">    --------</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="sd">    pandas.DataFrame</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="sd">        Generated data</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="c1"># Create random data with similar distributions to the original datasets</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    <span class="n">gender</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="n">num_samples</span><span class="p">)</span>  <span class="c1"># 1 or 2</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    <span class="n">age</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">num_samples</span><span class="p">)</span>  <span class="c1"># 15-25</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="n">sleep_quality</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">num_samples</span><span class="p">)</span>  <span class="c1"># 1-5</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    <span class="c1"># Screen time with similar distribution (can be negative but typically 0-10+)</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    <span class="n">screen_time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">num_samples</span><span class="p">)</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    <span class="n">screen_time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">screen_time</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    <span class="n">screen_time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">screen_time</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>  <span class="c1"># Limit to reasonable range</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    <span class="n">social_activity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">num_samples</span><span class="p">)</span>  <span class="c1"># 1-5</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    <span class="c1"># PHQ9 score (typically 0-27)</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    <span class="n">phq9_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">num_samples</span><span class="p">)</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    <span class="c1"># GAD7 score (typically 0-20)</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    <span class="n">gad7_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">num_samples</span><span class="p">)</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    <span class="c1"># Exercise frequency (0-7 days per week)</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    <span class="n">exercise_freq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">num_samples</span><span class="p">)</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>    <span class="c1"># Family support and peer relation (1-5)</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>    <span class="n">family_support</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">num_samples</span><span class="p">)</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>    <span class="n">peer_relation</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">num_samples</span><span class="p">)</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    <span class="c1"># Generate target variable (y) based on a simple model</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>    <span class="c1"># Higher PHQ9 and GAD7 scores increase probability of y=1</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>    <span class="c1"># Higher sleep quality, family support, and peer relation decrease probability of y=1</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>    <span class="n">prob_y</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.02</span> <span class="o">*</span> <span class="n">phq9_score</span> <span class="o">+</span> <span class="mf">0.02</span> <span class="o">*</span> <span class="n">gad7_score</span> <span class="o">-</span> 
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>              <span class="mf">0.05</span> <span class="o">*</span> <span class="n">sleep_quality</span> <span class="o">-</span> <span class="mf">0.05</span> <span class="o">*</span> <span class="n">family_support</span> <span class="o">-</span> <span class="mf">0.05</span> <span class="o">*</span> <span class="n">peer_relation</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>    <span class="n">prob_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">prob_y</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">)</span>  <span class="c1"># Ensure reasonable probabilities</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">prob_y</span><span class="p">)</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>    <span class="c1"># Create DataFrame</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>        <span class="s1">&#39;GENDER&#39;</span><span class="p">:</span> <span class="n">gender</span><span class="p">,</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>        <span class="s1">&#39;AGE&#39;</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>        <span class="s1">&#39;SLEEP_QUALITY&#39;</span><span class="p">:</span> <span class="n">sleep_quality</span><span class="p">,</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>        <span class="s1">&#39;SCREEN_TIME&#39;</span><span class="p">:</span> <span class="n">screen_time</span><span class="p">,</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>        <span class="s1">&#39;SOCIAL_ACTIVITY&#39;</span><span class="p">:</span> <span class="n">social_activity</span><span class="p">,</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>        <span class="s1">&#39;PHQ9_SCORE&#39;</span><span class="p">:</span> <span class="n">phq9_score</span><span class="p">,</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>        <span class="s1">&#39;GAD7_SCORE&#39;</span><span class="p">:</span> <span class="n">gad7_score</span><span class="p">,</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>        <span class="s1">&#39;EXERCISE_FREQ&#39;</span><span class="p">:</span> <span class="n">exercise_freq</span><span class="p">,</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>        <span class="s1">&#39;FAMILY_SUPPORT&#39;</span><span class="p">:</span> <span class="n">family_support</span><span class="p">,</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>        <span class="s1">&#39;PEER_RELATION&#39;</span><span class="p">:</span> <span class="n">peer_relation</span><span class="p">,</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>        <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">y</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>    <span class="p">})</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>    <span class="c1"># Save to CSV</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>    <span class="n">output_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;School_</span><span class="si">{</span><span class="n">school_name</span><span class="si">}</span><span class="s2">_Generated.csv&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>    <span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Generated </span><span class="si">{</span><span class="n">num_samples</span><span class="si">}</span><span class="s2"> samples for School_</span><span class="si">{</span><span class="n">school_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Data saved to </span><span class="si">{</span><span class="n">output_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>
+<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>    <span class="k">return</span> <span class="n">data</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>
+<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Generate psychological data with controllable sample size&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;school_name&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Name of the school (e.g., &quot;Alice&quot;, &quot;Bob&quot;)&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--num_samples&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Number of samples to generate (default: 100)&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--output_dir&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Directory to save the generated data (default: &quot;data&quot;)&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>
+<a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>
+<a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>    <span class="n">generate_psych_data</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">school_name</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">num_samples</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">output_dir</span><span class="p">)</span>
+<a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>
+<a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a>    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="_4">三、实验流程<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 实验配置<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<h4 id="311">3.1.1  输入对应的集群配置信息<a class="headerlink" href="#311" title="Permanent link">&para;</a></h4>
+<p>由于是在单机上模拟多方环境，使用 <code>sf.init(parties=['alice', 'bob', 'server'], address='local')</code>​ 来初始化 SecretFlow 环境。这会在本地启动一个 Ray 集群来模拟多方。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">secretflow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sf</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">spu</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># 初始化 SecretFlow，指定参与方和本地仿真地址</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">sf</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">parties</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;alice&#39;</span><span class="p">,</span> <span class="s1">&#39;bob&#39;</span><span class="p">,</span> <span class="s1">&#39;server&#39;</span><span class="p">],</span> <span class="n">address</span><span class="o">=</span><span class="s1">&#39;local&#39;</span><span class="err">，</span><span class="n">_system_config</span><span class="o">=</span><span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="s1">&#39;max_concurrency&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1"># 减少并发数</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="s1">&#39;task_retry_delay_ms&#39;</span><span class="p">:</span> <span class="mi">5000</span>  <span class="c1"># 任务重试间隔</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="p">})</span>
+</code></pre></div>
+<h4 id="312-spu">3.1.2 SPU配置<a class="headerlink" href="#312-spu" title="Permanent link">&para;</a></h4>
+<p>虽然横向联邦学习的核心在于安全聚合，但某些高级操作或与 SPU 配合的组件可能需要 SPU 环境。此实验中，SPU 用于后续的 <code>SPUComparator</code>​。首先获取三个未使用的端口，然后配置并创建 SPU 实例。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">socket</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">contextlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">closing</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">cast</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">unused_tcp_port</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;返回一个未使用的端口&quot;&quot;&quot;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="k">with</span> <span class="n">closing</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">))</span> <span class="k">as</span> <span class="n">sock</span><span class="p">:</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="n">sock</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        <span class="n">sock</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SO_REUSEADDR</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">sock</span><span class="o">.</span><span class="n">getsockname</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">alice_port</span><span class="p">,</span> <span class="n">bob_port</span><span class="p">,</span> <span class="n">server_port</span> <span class="o">=</span> <span class="n">unused_tcp_port</span><span class="p">(),</span> <span class="n">unused_tcp_port</span><span class="p">(),</span> <span class="n">unused_tcp_port</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># 配置 SPU</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># 注意：由于是本地模拟，所有节点的 address 都指向本机 IP (示例中为 172.16.0.6，实际应为本机回环或Ray分配的IP)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># 在 SecretNote 仿真环境中，通常使用 localhost 或 Ray 节点 IP</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># 假设 ray.nodes()[0][&#39;NodeManagerAddress&#39;] 是当前节点 IP</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">spu_conf</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="s2">&quot;nodes&quot;</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="p">{</span><span class="s2">&quot;party&quot;</span><span class="p">:</span> <span class="s2">&quot;alice&quot;</span><span class="p">,</span> <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;127.16.0.251:</span><span class="si">{</span><span class="n">alice_port</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">},</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        <span class="p">{</span><span class="s2">&quot;party&quot;</span><span class="p">:</span> <span class="s2">&quot;bob&quot;</span><span class="p">,</span> <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;127.16.0.251:</span><span class="si">{</span><span class="n">bob_port</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">},</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="p">{</span><span class="s2">&quot;party&quot;</span><span class="p">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span> <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;127.16.0.251:</span><span class="si">{</span><span class="n">server_port</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">},</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="p">]</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">}</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="n">spu_obj</span> <span class="o">=</span> <span class="n">sf</span><span class="o">.</span><span class="n">SPU</span><span class="p">(</span><span class="n">spu_conf</span><span class="p">)</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="n">alice</span><span class="p">,</span> <span class="n">bob</span><span class="p">,</span> <span class="n">server</span> <span class="o">=</span> <span class="n">sf</span><span class="o">.</span><span class="n">PYU</span><span class="p">(</span><span class="s1">&#39;alice&#39;</span><span class="p">),</span> <span class="n">sf</span><span class="o">.</span><span class="n">PYU</span><span class="p">(</span><span class="s1">&#39;bob&#39;</span><span class="p">),</span> <span class="n">sf</span><span class="o">.</span><span class="n">PYU</span><span class="p">(</span><span class="s1">&#39;server&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="image" src="assets/image-20250528112011-i36gjyc.png" /></p>
+<p><img alt="image" src="assets/image-20250528112046-snh7vxy.png" /></p>
+<h3 id="32">3.2 加载并划分数据集<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<h4 id="321">3.2.1 加载数据集<a class="headerlink" href="#321" title="Permanent link">&para;</a></h4>
+<ul>
+<li>使用 <code>secretflow.data.horizontal.read_csv</code>​ 加载水平切分的数据集。在横向联邦学习中，数据加载需要 <code>SecureAggregator</code>​（用于安全地聚合来自各方的数据统计信息，如求和、计数）和 <code>SPUComparator</code>​（用于需要比较操作的场景，如排序、分割，依赖 SPU）。</li>
+<li>​<code>School_Alice.csv</code>​ 和 <code>School_Bob.csv</code>​ 分别代表两个学校的学生数据。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">secretflow.security.aggregation</span><span class="w"> </span><span class="kn">import</span> <span class="n">SecureAggregator</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">secretflow.security.compare</span><span class="w"> </span><span class="kn">import</span> <span class="n">SPUComparator</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">secretflow.data.horizontal</span><span class="w"> </span><span class="kn">import</span> <span class="n">read_csv</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># 创建 SPU 比较器</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">comp</span> <span class="o">=</span> <span class="n">SPUComparator</span><span class="p">(</span><span class="n">spu_obj</span><span class="p">)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1"># 创建安全聚合器，指定 server 为聚合方，alice 和 bob 为数据提供方</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">aggr</span> <span class="o">=</span> <span class="n">SecureAggregator</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="p">[</span><span class="n">alice</span><span class="p">,</span> <span class="n">bob</span><span class="p">])</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># 定义各方数据路径</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">path_dict</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">alice</span><span class="p">:</span> <span class="s2">&quot;School_Alice.csv&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="n">bob</span><span class="p">:</span> <span class="s2">&quot;School_Bob.csv&quot;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">}</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1"># 加载横向数据，形成 HDataFrame (hdf)</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="n">hdf</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">path_dict</span><span class="p">,</span> <span class="n">aggregator</span><span class="o">=</span><span class="n">aggr</span><span class="p">,</span> <span class="n">comparator</span><span class="o">=</span><span class="n">comp</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">hdf</span><span class="o">.</span><span class="n">shape</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">hdf</span><span class="o">.</span><span class="n">columns</span>
+</code></pre></div>
+<p><img alt="image" src="assets/image-20250528112420-dki2iyf.png" /></p>
+<p>根据案例描述，数据集包含 2000 条样本和 11 个特征（包括目标变量 <code>y</code>​）</p>
+<h4 id="322">3.2.2 数据集划分<a class="headerlink" href="#322" title="Permanent link">&para;</a></h4>
+<p>将加载的 HDF 数据集按照 8:2 的比例划分为训练集 (<code>train_hdf</code>​) 和测试集 (<code>test_hdf</code>​)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">secretflow.data.split</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">train_hdf</span><span class="p">,</span> <span class="n">test_hdf</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">hdf</span><span class="p">,</span> <span class="n">train_size</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="33-xgboost">3.3 水平XGBoost建模<a class="headerlink" href="#33-xgboost" title="Permanent link">&para;</a></h3>
+<p>利用划分好的训练集和测试集进行横向联邦 XGBoost 模型训练和验证。</p>
+<h4 id="331">3.3.1 设置超参数<a class="headerlink" href="#331" title="Permanent link">&para;</a></h4>
+<p>定义 XGBoost 模型的超参数。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>          <span class="c1"># 树的最大深度</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="s1">&#39;eta&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>              <span class="c1"># 学习率</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="s1">&#39;objective&#39;</span><span class="p">:</span> <span class="s1">&#39;binary:logistic&#39;</span><span class="p">,</span> <span class="c1"># 目标函数：二分类逻辑回归</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="s1">&#39;lambda&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>           <span class="c1"># L2 正则化系数</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>              <span class="c1"># L1 正则化系数</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="s1">&#39;max_bin&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>            <span class="c1"># 特征分桶的最大数量</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="s1">&#39;gamma&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>              <span class="c1"># 节点分裂的最小损失降低阈值</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="s1">&#39;subsample&#39;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span>        <span class="c1"># 训练样本的采样比例</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="s1">&#39;colsample_bytree&#39;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span> <span class="c1"># 每棵树的特征采样比例</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="s1">&#39;colsample_bylevel&#39;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span><span class="c1"># 每层分裂的特征采样比例</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="s1">&#39;eval_metric&#39;</span><span class="p">:</span> <span class="s1">&#39;logloss&#39;</span><span class="p">,</span><span class="c1"># 评估指标</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    <span class="s1">&#39;hess_key&#39;</span><span class="p">:</span> <span class="s1">&#39;hess&#39;</span><span class="p">,</span>      <span class="c1"># HDF 中存储 Hessian 值的键名 (SFXgboost 内部使用)</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="s1">&#39;grad_key&#39;</span><span class="p">:</span> <span class="s1">&#39;grad&#39;</span><span class="p">,</span>      <span class="c1"># HDF 中存储梯度值的键名 (SFXgboost 内部使用)</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>    <span class="s1">&#39;label_key&#39;</span><span class="p">:</span> <span class="s1">&#39;y&#39;</span>         <span class="c1"># HDF 中标签列的名称</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="332-sfxgboost">3.3.2  实例化并训练 <code>SFXgboost</code>​ 模型<a class="headerlink" href="#332-sfxgboost" title="Permanent link">&para;</a></h4>
+<ol>
+<li>从 <code>secretflow.ml.boost.homo_boost</code>​ 导入 <code>SFXgboost</code>​。</li>
+<li>实例化 <code>SFXgboost</code>​，指定 <code>server</code>​ 为协调和聚合模型更新的服务方，<code>clients</code>​ 为数据持有和本地训练的参与方 <code>alice</code>​ 和 <code>bob</code>​。</li>
+<li>调用 <code>bst.train()</code>​ 方法进行模型训练，传入训练集 <code>train_hdf</code>​、验证集 <code>test_hdf</code>​（用于在每个 boosting 轮次后评估模型）、超参数 <code>params</code>​ 和 boosting 轮数 <code>num_boost_round</code>​。</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">secretflow.ml.boost.homo_boost</span><span class="w"> </span><span class="kn">import</span> <span class="n">SFXgboost</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># 实例化 SFXgboost</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">bst</span> <span class="o">=</span> <span class="n">SFXgboost</span><span class="p">(</span><span class="n">server</span><span class="o">=</span><span class="n">server</span><span class="p">,</span> <span class="n">clients</span><span class="o">=</span><span class="p">[</span><span class="n">alice</span><span class="p">,</span> <span class="n">bob</span><span class="p">])</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;开始横向 XGBoost 模型训练...&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1"># 训练模型，并在每个轮次后在测试集上验证</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">bst</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">train_hdf</span><span class="p">,</span> <span class="n">test_hdf</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">num_boost_round</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;模型训练完成。&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="_5">四、实验结果与分析<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="41">4.1  实验主要输出<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>环境配置</strong>:</p>
+</li>
+<li>
+<p>成功初始化本地 Ray 集群模拟三方（alice, bob, server）。</p>
+</li>
+<li>为 SPU 的各节点分配了可用端口，Alice - 33733, Bob - 60523, Server - 33057</li>
+<li>显示了 Ray 集群的资源情况，如 CPU 核数、内存等。</li>
+<li>
+<p><strong>数据加载与划分</strong>:</p>
+</li>
+<li>
+<p>加载的 HDF 形状为 <code>(2000, 11)</code>​，符合预期。</p>
+</li>
+<li>列名包括 <code>USMER</code>​, <code>SEX</code>​, <code>AGE</code>​, <code>DIABETES</code>​, <code>ICU</code>​, <code>y</code>​ 等 20 个特征。</li>
+<li>训练集和测试集按 8:2 比例划分后，形状分别为 <code>(1600, 20)</code>​ 和 <code>(400, 20)</code>​。</li>
+<li><strong>横向 XGBoost 模型训练日志</strong>: 输出了每个 boosting 轮次的训练集和验证集（测试集）的 <code>logloss</code>​，这里的 <code>logloss</code>​（对数损失）是评估二分类问题（如此案例中的心理问题高风险预测）模型性能的常用指标。Logloss 的值越小，代表模型的预测结果越接近真实标签，性能越好。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>(HomoBooster pid=5642) [0]    train-logloss:0.62694    valid-logloss:0.62995
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>(HomoBooster pid=5642) [1]    train-logloss:0.57265    valid-logloss:0.57830
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>(HomoBooster pid=5642) [2]    train-logloss:0.53585    valid-logloss:0.54256
+</code></pre></div>
+<h3 id="42">4.2 结果分析<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>模型训练过程</strong>: 从训练日志可以看出，<code>SFXgboost</code>​ 模型成功地在横向联邦的设定下，跨越 <code>alice</code>​ 和 <code>bob</code>​ 两个数据源进行了 3 个轮次的 boosting 训练。每一轮迭代后，都在训练集和作为验证集的测试集上报告了 <code>logloss</code>​。</li>
+<li>
+<p><strong>学习效果</strong>:</p>
+</li>
+<li>
+<p><strong>初始状态 (第 0 轮迭代后):</strong></p>
+<ul>
+<li>​<code>train-logloss: 0.62694</code>​</li>
+<li>​<code>valid-logloss: 0.62995</code>​</li>
+<li>在第一棵树构建完成后（通常 XGBoost 的第 0 轮指第一棵树的效果），训练集和验证集上的 logloss 都相对较高。一个未经训练或随机猜测的模型，其 logloss 通常在 0.693 左右（对于类别均衡的二分类问题，<code>-ln(0.5)</code>​）。这里的初始值略低于此，表明模型已经开始捕捉到一些数据中的基本模式。训练集和验证集的损失非常接近，说明此时模型尚未出现过拟合。</li>
+<li>
+<p><strong>中期状态 (第 1 轮迭代后):</strong></p>
+</li>
+<li>
+<p>​<code>train-logloss: 0.57265</code>​</p>
+</li>
+<li>​<code>valid-logloss: 0.57830</code>​</li>
+<li>经过第二棵树的拟合（总共两棵树），训练集和验证集上的 logloss 均有显著下降。训练集 logloss 下降了约 <code>0.62694 - 0.57265 = 0.05429</code>​，验证集 logloss 下降了约 <code>0.62995 - 0.57830 = 0.05165</code>​。这表明模型通过增加新的决策树，进一步学习到了数据中的有效信息，提升了预测能力。两个损失值仍然比较接近，过拟合风险较低。</li>
+<li>
+<p><strong>最终状态 (第 2 轮迭代后，总共 3 棵树):</strong></p>
+</li>
+<li>
+<p>​<code>train-logloss: 0.53585</code>​</p>
+</li>
+<li>​<code>valid-logloss: 0.54256</code>​</li>
+<li>在完成三棵树的训练后，logloss 进一步降低。训练集 logloss 相比上一轮下降了 <code>0.57265 - 0.53585 = 0.0368</code>​，验证集 logloss 下降了 <code>0.57830 - 0.54256 = 0.03574</code>​。这显示模型仍在持续学习和改进。</li>
+<li>此时，训练集损失（0.53585）略低于验证集损失（0.54256）。这是正常的现象，模型在训练数据上的表现通常会略优于在未见过的数据（验证集）上的表现。两者差距不大（<code>0.54256 - 0.53585 = 0.00671</code>​），表明模型目前为止的泛化能力良好，没有出现明显的过拟合。</li>
+</ul>
+</li>
+</ul>
+<p>训练集和验证集的 <code>logloss</code>​ 均随迭代轮次增加而显著下降（从第0轮的约0.62-0.63下降到第2轮的约0.53-0.54）。这表明模型在学习数据中的模式，并且在未见过的数据（验证集）上表现出一定的泛化能力。
+- <strong>隐私保护</strong>: 横向联邦学习的核心在于保护各参与方的数据隐私：</p>
+<ul>
+<li>​<code>alice</code>​ 和 <code>bob</code>​ 的原始患者数据始终保留在各自本地，不会发送给对方或 <code>server</code>​。</li>
+<li>在 XGBoost 的每一轮迭代中，<code>alice</code>​ 和 <code>bob</code>​ 在本地数据上计算梯度和 Hessian 矩阵（或其安全聚合所需的部分）。</li>
+<li>这些本地计算的中间结果（例如加密的梯度和 Hessian）被发送给 <code>server</code>​。</li>
+<li>​<code>server</code>​ 利用 <code>SecureAggregator</code>​（可能结合 SPU 的 MPC 功能或同态加密）对这些来自多方的中间结果进行安全聚合，得到全局的梯度和 Hessian 统计。</li>
+<li>基于聚合后的统计信息，<code>server</code>​ 更新模型（如确定树的分裂节点、计算叶节点权重），并将更新后的模型参数或树结构安全地分发给 <code>alice</code>​ 和 <code>bob</code>​，用于下一轮的本地计算。 整个过程确保了除了最终共享的模型外，个体数据和本地模型的细节不被泄露。</li>
+<li><strong>性能</strong>: 横向联邦学习由于涉及到多轮次的安全聚合和通信，其训练时间通常长于传统的单机训练。但相对于其带来的数据隐私保护和合规性，这种开销在许多场景下是可以接受的。本实验中，3轮的训练在几秒到几十秒内完成（根据日志约5秒），表明对于此规模的数据和模型复杂度，效率尚可。</li>
+</ul>
+<h3 id="43">4.3 遇到的问题与解决方案<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<p>实验遇到的最大问题是由于采用模型的复杂性和生成数据集时没有考虑实际的拟合效果，计算规模过大导致了平台分配的4GB内存明显不够，最后的解决方案是尽可能在保证样本数量的基础上减小了数据集规模，同时更改了初始化配置来减少并发任务数，如果有更大的内存分配和更好的数据集模型会有更好的运行效果。</p>
+<h1 id="_6">五、实验总结<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
+<p>本实验以“学校心理健康风险评估”为应用背景，通过模拟两所学校在隐私保护下开展心理风险建模的过程，实践了横向联邦学习的完整流程。项目充分展示了SecretFlow平台在实际教育场景下的隐私计算能力，既保证了学生数据的保密性，又提高了预测模型的泛化能力。未来，该模型可扩展至更多学校，助力心理危机的早期预警与干预。</p>
+<p>‍</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        本页对你有帮助吗？
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="这页对我有帮助" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="这页还有待改进" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5zM16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              感谢你的反馈！
+
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              感谢你的反馈！可以在 GitHub 仓库提交 Issue 告诉我如何改进。
+
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/homepage.js"></script>
+      
+    
+  </body>
+</html>

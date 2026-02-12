@@ -59,6 +59,54 @@ description: 所有课程笔记与资料的索引页面
       <span class="card-arrow">→</span>
     </a>
   </div>
+
+  <div class="full-width-card fade-in-up delay-2">
+    <div class="card-icon">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-9c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-7-7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm14 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-7 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+      </svg>
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">普通物理学实验 II</h3>
+      <p class="card-description">经典物理实验的基本原理与操作，涵盖力学、热学、电磁学、光学等实验，培养实验技能与数据分析能力。</p>
+    </div>
+    <a href="phys-lab2/" class="card-link">
+      <span>查看课程</span>
+      <span class="card-arrow">→</span>
+    </a>
+  </div>
+
+  <div class="full-width-card fade-in-up delay-2">
+    <div class="card-icon">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+      </svg>
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">隐私计算与数据合规</h3>
+      <p class="card-description">学习隐私计算与数据合规，涵盖多方安全计算、联邦学习、差分隐私、数据安全法及个人信息保护等。</p>
+    </div>
+    <a href="privacy-computing/" class="card-link">
+      <span>查看课程</span>
+      <span class="card-arrow">→</span>
+    </a>
+  </div>
+
+  <div class="full-width-card fade-in-up delay-2">
+    <div class="card-icon">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+      </svg>
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">信息安全课程综合实践</h3>
+      <p class="card-description">信息安全综合实践项目的设计与实现，涵盖安全系统设计、渗透测试、安全加固等，提升安全实践能力。</p>
+    </div>
+    <a href="info-security-practice/" class="card-link">
+      <span>查看课程</span>
+      <span class="card-arrow">→</span>
+    </a>
+  </div>
 </div>
 
 ---

@@ -124,4 +124,32 @@ nav:
           - Project: courses/sys2/project/index.md
       - 计算机网络: courses/network/index.md
       - 软件安全原理与实践: courses/software-security/index.md
+      - 普通物理学实验 II:
+          - 课程主页: courses/phys-lab2/index.md
+          - Lab 1 托卡马克等离子体物理虚拟仿真实验: courses/phys-lab2/lab1/index.md
+          - Lab 2 PN结的物理特性及玻尔兹曼常数测定: courses/phys-lab2/lab2/index.md
+          - Lab 3 椭偏仪测薄膜厚度和折射率: courses/phys-lab2/lab3/index.md
+          - Lab 4 RLC串联电路暂态稳态过程的研究: courses/phys-lab2/lab4/index.md
+          - Lab 5 交流电桥: courses/phys-lab2/lab5/index.md
+          - Lab 6 液体粘滞系数的测定: courses/phys-lab2/lab6/index.md
+          - Lab 7 修正后的范德堡法测薄膜电阻: courses/phys-lab2/lab7/index.md
+      - 隐私计算与数据合规:
+          - 课程主页: courses/privacy-computing/index.md
+          - Lab 1 金融风险预测: courses/privacy-computing/lab1/index.md
+          - Lab 2 黑名单求交: courses/privacy-computing/lab2/index.md
+          - Lab 3 专利域名申请: courses/privacy-computing/lab3/index.md
+          - Lab 4 诈骗电话识别: courses/privacy-computing/lab4/index.md
+          - 课程项目 学校心理健康风险: courses/privacy-computing/project/index.md
+      - 信息安全课程综合实践:
+          - 课程主页: courses/info-security-practice/index.md
+          - Lab 0 基础知识及技能: courses/info-security-practice/lab0/index.md
+          - Crypto Lab 1 消息加密和数字签名: courses/info-security-practice/crypto-lab1/index.md
+          - Crypto Lab 2 公钥密码学: courses/info-security-practice/crypto-lab2/index.md
+          - Crypto Lab 3 格密码: courses/info-security-practice/crypto-lab3/index.md
+          - Misc Lab 1 编解码及 OSINT: courses/info-security-practice/misc-lab1/index.md
+          - Misc Lab 2 隐写与其他misc: courses/info-security-practice/misc-lab2/index.md
+          - Misc Lab 3 OSINT & AI: courses/info-security-practice/misc-lab3/index.md
+          - Pwn Lab 1 Pwn基础: courses/info-security-practice/pwn-lab1/index.md
+          - Rev Lab 1 Rev基础: courses/info-security-practice/rev-lab1/index.md
+          - Web Lab 1 计算机网络基础: courses/info-security-practice/web-lab1/index.md
   - 关于: about.md
