@@ -6,7 +6,7 @@
 
 ![songmingti](assets/songmingti-20250709220406-k2f5qeq.jpg)
 
-![image-20240715002752701](C:\Users\whicy\AppData\Roaming\Typora\typora-user-images\image-20240715002752701.png)
+![image-20240715002752701](../../typora-user-images/image-20240715002752701.png)
 
 得到图片及flag`AAA{the_true_fans_fans_nmb_-1s!}`​
 
@@ -14,19 +14,19 @@
 
 通过截图：
 
-![image-20240715003456206](C:\Users\whicy\AppData\Roaming\Typora\typora-user-images\image-20240715003456206.png)
+![image-20240715003456206](../../typora-user-images/image-20240715003456206.png)
 
 # 2 Challenge 2:miaomiaomiao
 
 一点点把戏，view-source看一下源码，下载到图片
 
-![image-20240715004408542](C:\Users\whicy\AppData\Roaming\Typora\typora-user-images\image-20240715004408542.png)
+![image-20240715004408542](../../typora-user-images/image-20240715004408542.png)
 
 ![miao](assets/miao-20250709220754-cprj55o.jpg)
 
 放进010Editor，exif中观察到一串密码`m1a0@888`​
 
-![image-20240715011914675](C:\Users\whicy\AppData\Roaming\Typora\typora-user-images\image-20240715011914675.png)
+![image-20240715011914675](../../typora-user-images/image-20240715011914675.png)
 
 猜测大概率为工具题，用steghide提取一下隐藏文件，得到`secret_file.txt`​
 
@@ -40,7 +40,7 @@
 
 通过截图：
 
-![image-20240715021129097](C:\Users\whicy\AppData\Roaming\Typora\typora-user-images\image-20240715021129097.png)
+![image-20240715021129097](../../typora-user-images/image-20240715021129097.png)
 
 # 3 Challenge 3:easy LSB
 
@@ -62,7 +62,7 @@
 
 反正zsteg是万能的，放进去操作一下，提出隐写前的flag`AAA{gOoD_joB_P4lEtTE_M0D3_c@N_al$0_57E9o!}`​
 
-![image-20240731191634880](C:\Users\whicy\AppData\Roaming\Typora\typora-user-images\image-20240731191634880.png)
+![image-20240731191634880](../../typora-user-images/image-20240731191634880.png)
 
 虽然要求不能直接用工具，但是为我们提供了思路，根据最终提取出flag的信息，需要遍历图像中每个像素并查出其在palette中的对应颜色，然后获取绿色分量，提取LSB即可重建flag，具体实现如下
 

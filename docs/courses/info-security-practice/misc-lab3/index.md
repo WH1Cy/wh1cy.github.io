@@ -4,15 +4,15 @@
 
 观察到图中标志性建筑物及其上字母SPARKPLUS
 
-![image-20240705203026962](C:\Users\whicy\AppData\Roaming\Typora\typora-user-images\image-20240705203026962.png)
+![image-20240705203026962](../../typora-user-images/image-20240705203026962.png)
 
 搜索一下是一家总部位于韩国的公司，我们找到这家公司的官网
 
-![image-20240705203319759](C:\Users\whicy\AppData\Roaming\Typora\typora-user-images\image-20240705203319759.png)
+![image-20240705203319759](../../typora-user-images/image-20240705203319759.png)
 
 右边分部第一张图片有点眼熟，戳进去
 
-![image-20240705203429032](C:\Users\whicy\AppData\Roaming\Typora\typora-user-images\image-20240705203429032.png)
+![image-20240705203429032](../../typora-user-images/image-20240705203429032.png)
 
 于是有了它的地址：강남구 봉은사로 524（机翻一下大概是首尔江南区永恩寺路524号）在谷歌地图上找到对应的位置。
 
@@ -26,7 +26,7 @@
 
 都查一下具体位置，锁定在这个路口，掏出万能的谷歌街景
 
-![image-20240705204435813](C:\Users\whicy\AppData\Roaming\Typora\typora-user-images\image-20240705204435813.png)
+![image-20240705204435813](../../typora-user-images/image-20240705204435813.png)
 
 锁定在大概这个位置，放张比对图（18年略有一点点区别）
 
@@ -34,7 +34,7 @@
 
 小人位置即大致为拍摄位置（Answer 1）
 
-![image-20240705205228794](C:\Users\whicy\AppData\Roaming\Typora\typora-user-images\image-20240705205228794.png)
+![image-20240705205228794](../../typora-user-images/image-20240705205228794.png)
 
 再次用万能的谷歌街景看一眼绿色路牌的正面图，得到对应英文：Olympic Expwy和Seoul Medical Center（Answer 2）
 

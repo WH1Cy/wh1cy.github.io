@@ -4,11 +4,11 @@
 
 简单看一下程序，是一个基本的进制转换
 
-![image-20240721192219376](file:///C:/Users/whicy/AppData/Roaming/Typora/typora-user-images/image-20240721192219376.png?lastModify=1751945018)
+![image-20240721192219376](../../typora-user-images/image-20240721192219376.png)
 
 考虑一些特殊输入，比如向零进制的转换，成功使程序崩溃，得到flag`AAA{pr0GraM_C4n_ea5ilY_crAsH}`​
 
-![image-20240721192123589](C:\Users\whicy\AppData\Roaming\Typora\typora-user-images\image-20240721192123589.png)
+![image-20240721192123589](../../typora-user-images/image-20240721192123589.png)
 
 题目通过截图
 
@@ -18,13 +18,13 @@
 
 简单看一下程序，大概是一个键入用户名密码得到结果的过程，尝试利用字符串的输出特性进行攻破，即使键入字符串长度等于buffer\_size额外输出其密码，得到user密码`I_am_very_very_strong_password!!`​
 
-![image-20240721193212674](file:///C:/Users/whicy/AppData/Roaming/Typora/typora-user-images/image-20240721193212674.png?lastModify=1751945109)
+![image-20240721193212674](../../typora-user-images/image-20240721193212674.png)
 
 拿到第一部分flag`AAA{Oh_D1rTy_sta`​ 对于admin同样这样操作
 
-![image-20240721193345653](file:///C:/Users/whicy/AppData/Roaming/Typora/typora-user-images/image-20240721193345653.png?lastModify=1751945109)
+![image-20240721193345653](../../typora-user-images/image-20240721193345653.png)
 
-![image-20240721194117122](file:///C:/Users/whicy/AppData/Roaming/Typora/typora-user-images/image-20240721194117122.png?lastModify=1751945109)
+![image-20240721194117122](../../typora-user-images/image-20240721194117122.png)
 
 得到admin的密码`ILovePlayCTFbtwAlsoDota2!`​再次登入，开启shell，找到flag2获取剩余部分flag`CK_Ne3d_C1a4n}`​
 

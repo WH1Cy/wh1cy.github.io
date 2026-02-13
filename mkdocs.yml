@@ -142,14 +142,18 @@ nav:
           - 课程项目 学校心理健康风险: courses/privacy-computing/project/index.md
       - 信息安全课程综合实践:
           - 课程主页: courses/info-security-practice/index.md
-          - Lab 0 基础知识及技能: courses/info-security-practice/lab0/index.md
-          - Crypto Lab 1 消息加密和数字签名: courses/info-security-practice/crypto-lab1/index.md
-          - Crypto Lab 2 公钥密码学: courses/info-security-practice/crypto-lab2/index.md
-          - Crypto Lab 3 格密码: courses/info-security-practice/crypto-lab3/index.md
-          - Misc Lab 1 编解码及 OSINT: courses/info-security-practice/misc-lab1/index.md
-          - Misc Lab 2 隐写与其他misc: courses/info-security-practice/misc-lab2/index.md
-          - Misc Lab 3 OSINT & AI: courses/info-security-practice/misc-lab3/index.md
-          - Pwn Lab 1 Pwn基础: courses/info-security-practice/pwn-lab1/index.md
-          - Rev Lab 1 Rev基础: courses/info-security-practice/rev-lab1/index.md
-          - Web Lab 1 计算机网络基础: courses/info-security-practice/web-lab1/index.md
+          - 基础周:
+              - 基础周概览: courses/info-security-practice/basic-week/index.md
+              - Lab 0 基础知识及技能: courses/info-security-practice/lab0/index.md
+              - Crypto Lab 1 消息加密和数字签名: courses/info-security-practice/crypto-lab1/index.md
+              - Misc Lab 1 编解码及 OSINT: courses/info-security-practice/misc-lab1/index.md
+              - Pwn Lab 1 Pwn基础: courses/info-security-practice/pwn-lab1/index.md
+              - Rev Lab 1 Rev基础: courses/info-security-practice/rev-lab1/index.md
+              - Web Lab 1 计算机网络基础: courses/info-security-practice/web-lab1/index.md
+          - 专题周:
+              - 专题周概览: courses/info-security-practice/topic-week/index.md
+              - Misc Lab 2 隐写与其他misc: courses/info-security-practice/misc-lab2/index.md
+              - Misc Lab 3 OSINT & AI: courses/info-security-practice/misc-lab3/index.md
+              - Crypto Lab 2 公钥密码学: courses/info-security-practice/crypto-lab2/index.md
+              - Crypto Lab 3 格密码: courses/info-security-practice/crypto-lab3/index.md
   - 关于: about.md

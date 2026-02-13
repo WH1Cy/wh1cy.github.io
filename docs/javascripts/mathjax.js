@@ -3,7 +3,13 @@ window.MathJax = {
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
     processEscapes: true,
-    processEnvironments: true
+    processEnvironments: true,
+    macros: {
+      degree: "^{\\circ}",
+      degreeCelsius: "^{\\circ}\\mathrm{C}",
+      lt: "<",
+      gt: ">"
+    }
   },
   options: {
     ignoreHtmlClass: ".*|",
