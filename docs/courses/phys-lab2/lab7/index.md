@@ -27,9 +27,11 @@
     孔洞的存在直接削弱了薄膜的连续性，导致薄膜的实际导电面积减小。根据导体电阻的基本公式：$R=\frac{\rho \cdot L}{A_{\text{eff}}}$  
 
     其中，$A_{\text{eff}}$ 是薄膜的有效导电横截面积。孔洞的引入会显著降低 $A_{\text{eff}}$，从而增加电阻值。此外，由于孔洞分布的不均匀性，不同区域的导电能力可能呈现显著差异，导致薄膜整体电阻的非线性变化
+
 2. **电流路径的改变**
 
     在均匀薄膜中，电流的分布通常是均匀的。然而，孔洞的存在会迫使电流绕过孔洞流动，形成弯曲的路径，从而增加了等效电阻。这种效应类似于材料内部的散射效应，孔洞越大、越密集，电流路径的偏离程度越高，薄膜的电阻越大。
+    
 3. **孔洞的形态与分布密度**
 
     孔洞的大小、形状和分布密度对薄膜的电阻特性有直接影响。例如：
@@ -223,11 +225,11 @@ $\nu = \frac{G(\alpha, h) G(\delta, h) + G(\beta, h) G(\gamma, h)}{G(\alpha + \b
 
 本实验利用了*$ν$*的值对*$α$*​$、$​*$β$*​$、γ 、δ$值的微小变化不太敏感这一事实，在使用带有小孔的样品进行实验时，将探针彼此远离，这样*$α$*​$、$​*$β$*​$、γ 、δ$将趋向于$\frac \pi 2$,由此可以近似给出$\nu$仅作为孔面积比的线性函数的关系。
 
-$\nu=\prod \limits ^{\infin}_{n=1}(1+\frac{1}{cosh( nh)})^{-2}$（$h=-ln\frac{A_{hole}}{A}$）
+$\nu=\prod \limits ^{\infty}_{n=1}(1+\frac{1}{cosh( nh)})^{-2}$（$h=-ln\frac{A_{hole}}{A}$）
 
 对于这个包含无穷乘积的式子，我们尝试进行一阶估算近似
 
-$\nu=\prod \limits ^{\infin}_{n=1}(1+\frac{1}{cosh( nh)})^{-2}\approx\prod \limits ^{\infin}_{n=1}(1+\frac{1}{e^{nh}})^{-2}\approx \prod \limits ^{\infin}_{n=1}(1-\frac{4}{e^{nh}})\approx e^{\sum^\infin_{n=1}-\frac4{e^{nh}}}\approx e^{{{-\frac{4}{e^h}}}}$
+$\nu=\prod \limits ^{\infty}_{n=1}(1+\frac{1}{cosh( nh)})^{-2}\approx\prod \limits ^{\infty}_{n=1}(1+\frac{1}{e^{nh}})^{-2}\approx \prod \limits ^{\infty}_{n=1}(1-\frac{4}{e^{nh}})\approx e^{\sum^\infty_{n=1}-\frac4{e^{nh}}}\approx e^{{{-\frac{4}{e^h}}}}$
 
 很容易做出它的一阶近似估算$\nu=1-\frac4{e^h}$,在图像上表现为一条直线
 
@@ -389,7 +391,7 @@ $\nu=\prod \limits ^{\infin}_{n=1}(1+\frac{1}{cosh( nh)})^{-2}\approx\prod \limi
 
 我们对于理论中推出的修正因子$\nu$的理论曲线及其一阶近似方程进行图像拟合
 
-两条理论曲线方程分别是标准理论曲线$\nu=\prod \limits ^{\infin}_{n=1}(1+\frac{1}{cosh( -n\cdot ln\frac{A_{hole}}{A})})^{-2}$​
+两条理论曲线方程分别是标准理论曲线$\nu=\prod \limits ^{\infty}_{n=1}(1+\frac{1}{cosh( -n\cdot ln\frac{A_{hole}}{A})})^{-2}$​
 
 一阶近似曲线方程为$\nu=1-4e^{-h}\approx=1-4\frac{A_{hole}}{A}$  
 

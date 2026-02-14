@@ -91,9 +91,10 @@ $f=1000Hz\Rightarrow \omega=2\pi f=2000\pi Hz$
 
     $\varepsilon_C=\frac{|C_x-C_0|}{C_0}\times 100\%=2.9\%$  
 
-    $D=\omega C_nR_n=0.002513 $​
+    $D=\omega C_n R_n=0.002513$​
 
     $\varepsilon_{D}=\frac{|D-D_0|}{D_0}\times 100\%=0.12\%$​
+
 2. 高D值电容的测量
 
     数字电桥测定值$C_0=9780.6nF$，$D_0=0.2356$  
@@ -111,6 +112,7 @@ $f=1000Hz\Rightarrow \omega=2\pi f=2000\pi Hz$
     $D=\frac{1}{\omega C_nR_n}=0.2274$  
 
     $\varepsilon_{D}=\frac{|D-D_0|}{D_0}\times100\%=3\%$​
+
 3. 高Q值电感的测量
 
     数字电桥测定值$L_0=4.9776mH$，$Q_0=7.4487$  
@@ -128,6 +130,7 @@ $f=1000Hz\Rightarrow \omega=2\pi f=2000\pi Hz$
     $Q=\frac{1}{\omega C_nR_n}=7.84$  
 
     $\varepsilon_{Q}=\frac{|Q-Q_0|}{Q_0}\times100\%=5\%$
+
 4. 低Q值电感的测量
 
     数字电桥测定值$L_0=9.9655mH$，$Q_0=1.08193$

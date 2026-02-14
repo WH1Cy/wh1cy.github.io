@@ -1,5 +1,7 @@
 window.MathJax = {
+  loader: { load: ["[tex]/unicode"] },
   tex: {
+    packages: { "[+]": ["unicode"] },
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
     processEscapes: true,
@@ -8,7 +10,9 @@ window.MathJax = {
       degree: "^{\\circ}",
       degreeCelsius: "^{\\circ}\\mathrm{C}",
       lt: "<",
-      gt: ">"
+      gt: ">",
+      bold: ["\\mathbf{#1}", 1],
+      oiint: "\\mathop{\\unicode{x222F}}\\nolimits"
     }
   },
   options: {
