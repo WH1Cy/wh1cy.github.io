@@ -2190,7 +2190,7 @@
 <p>式中<span class="arithmatex">\(U_1\)</span>为输入电压，<span class="arithmatex">\(K_0\)</span>为运算放大器的开环电压增益，即图1中电阻<span class="arithmatex">\(R_t\rightarrow\infty\)</span>时的电压增益，<span class="arithmatex">\(R_t\)</span>称为反馈电阻。因为理想运算放大器的输入阻抗<span class="arithmatex">\(r\rightarrow\infty\)</span>,所以信号源输入电流只流经反馈网络构成的通路。因而有</p>
 <p><span class="arithmatex">\(I_s=(U_i-U_0)/R_f=U_i(1+K_0)R_f\)</span>                 (2)</p>
 <p>由(2)可得电流－电压变换器等效输入阻抗<span class="arithmatex">\(Z_r\)</span> 即</p>
-<p>$Z_r=U_i/I_s=R_f/(1+K_0)\approx R_f/K_0 $               (3)</p>
+<p><span class="arithmatex">\(Z_r=U_i/I_s=R_f/(1+K_0)\approx R_f/K_0\)</span>               (3)</p>
 <p>根据(1)式和(2)式可得电流-电压变换器电流是与输出电压U<sub>0</sub>之间的关系式，即</p>
 <p><span class="arithmatex">\(I_s=-\frac{U_0}{K_0}(1+K_0)/R_f=-U_0(1+\frac1{K_0})/R_f\approx-\frac{U_0}{R_f}\)</span>       (4)</p>
 <p>由(4)式只要测量输出电压<span class="arithmatex">\(U\)</span>​<sub><span class="arithmatex">\(0\)</span></sub>和已知<span class="arithmatex">\(R\)</span>​<sub><span class="arithmatex">\(f\)</span></sub>的情况下，即可求得值。</p>
@@ -2539,7 +2539,7 @@
 </table>
 </li>
 <li>
-<p>第二组 $T_2=303.05K $  </p>
+<p>第二组 <span class="arithmatex">\(T_2=303.05K\)</span>  </p>
 <table>
 <thead>
 <tr>
@@ -2681,7 +2681,7 @@
 </table>
 </li>
 <li>
-<p>第三组$T_3=307.95K $  </p>
+<p>第三组<span class="arithmatex">\(T_3=307.95K\)</span>  </p>
 <table>
 <thead>
 <tr>
@@ -2836,15 +2836,19 @@
 <p>‍</p>
 <p><img alt="Graph2" src="assets/Graph2-20240925225900-3acq2k2.png" /></p>
 <p><span class="arithmatex">\(k_1'=\frac e {bT_1}=1.318175\times10^{-23}J/K\)</span>  </p>
-<p><span class="arithmatex">\(\varepsilon_1'=\frac{|k_1'-k_{文献}|}{k_{文献}}\times 100\%=4.524973\%\)</span>
-2. <span class="arithmatex">\(T_2=303.05K\)</span>  </p>
+<p><span class="arithmatex">\(\varepsilon_1'=\frac{|k_1'-k_{文献}|}{k_{文献}}\times 100\%=4.524973\%\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(T_2=303.05K\)</span>  </p>
 <p><img alt="Graph3" src="assets/Graph3-20240925231601-w4jndqm.png" /></p>
 <p><span class="arithmatex">\(k_{2}=-\frac{et_1}{T_2}=1.567019\times10^{-23}J/K\)</span>  </p>
 <p><span class="arithmatex">\(\varepsilon_2=\frac{|k_2-k_{文献}|}{k_{文献}}\times 100\%=13.49872\%\)</span>  </p>
 <p><img alt="Graph4" src="assets/Graph4-20240925231809-w3636ut.png" /></p>
 <p><span class="arithmatex">\(k_2'=\frac e {bT_2}=1.297492\times10^{-23}J/K\)</span>  </p>
-<p><span class="arithmatex">\(\varepsilon_2'=\frac{|k_2'-k_{文献}|}{k_{文献}}\times 100\%=6.023037\%\)</span>
-3. $T_3=307.95K $  </p>
+<p><span class="arithmatex">\(\varepsilon_2'=\frac{|k_2'-k_{文献}|}{k_{文献}}\times 100\%=6.023037\%\)</span></p>
+</li>
+<li>
+<p>$T_3=307.95K $  </p>
 <p><img alt="Graph5" src="assets/Graph5-20240925232050-8g8nb3a.png" /></p>
 <p><span class="arithmatex">\(k_{3}=-\frac{et_1}{T_3}=1.567579\times10^{-23}J/K\)</span>  </p>
 <p><span class="arithmatex">\(\varepsilon_3=\frac{|k_3-k_{文献}|}{k_{文献}}\times 100\%=13.53928\%\)</span>  </p>
@@ -2898,16 +2902,22 @@
 <ol>
 <li>
 <p>对于PN结，正向电流与与电压满足关系式<span class="arithmatex">\(I=I_0(e^{\frac{eU}{KT}}-1)\)</span>，而在该实验条件下，我们将式子近似为<span class="arithmatex">\(I=I_0e^{\frac{eU}{KT}}\)</span>，这样的近似为什么可以进行？</p>
-<p>在常温（<span class="arithmatex">\(\approx 300K\)</span>）下，<span class="arithmatex">\(KT／e＝0.026V\)</span>，而PN结正向压降数量级为<span class="arithmatex">\(10^{-1}V\)</span>，则<span class="arithmatex">\(e^{\frac{eU}{KT}}&gt;&gt;1\)</span>，括号内－1项相对完全可以忽略。
-2. 采用的线性拟合和指数拟合方式哪种更好？</p>
-<p>由实验数据分析环节，三组试验后，线性拟合无论是相对误差还是绝对误差均明显优于指数拟合，得到的数据更加稳定，也更接近玻尔兹曼常数的文献值，事实上，通过对数变换，可以将指数关系线性化，减少了极端值的影响，使得误差分布更接近于正态分布。这有助于提高线性回归模型的稳定性和精度，从而降低了总体的预测误差。
-3. 在测定正向电压及电流时，取点宜在初始阶段多一点还是后续阶段多一点？</p>
+<p>在常温（<span class="arithmatex">\(\approx 300K\)</span>）下，<span class="arithmatex">\(KT／e＝0.026V\)</span>，而PN结正向压降数量级为<span class="arithmatex">\(10^{-1}V\)</span>，则<span class="arithmatex">\(e^{\frac{eU}{KT}}&gt;&gt;1\)</span>，括号内－1项相对完全可以忽略。</p>
+</li>
+<li>
+<p>采用的线性拟合和指数拟合方式哪种更好？</p>
+<p>由实验数据分析环节，三组试验后，线性拟合无论是相对误差还是绝对误差均明显优于指数拟合，得到的数据更加稳定，也更接近玻尔兹曼常数的文献值，事实上，通过对数变换，可以将指数关系线性化，减少了极端值的影响，使得误差分布更接近于正态分布。这有助于提高线性回归模型的稳定性和精度，从而降低了总体的预测误差。</p>
+</li>
+<li>
+<p>在测定正向电压及电流时，取点宜在初始阶段多一点还是后续阶段多一点？</p>
 <p>宜在后续阶段多一点，从数据和图像来看，初始阶段随正向电压变化电流变化不大，表现在图像上较平缓，上升趋势较慢，不需要过多数据点进行维护；而在后续阶段，电流随正向电压变化快速上升，图像表现出的上升趋势较为陡峭，需要较多数据点维护，用来反应该阶段函数较为精确的变化。</p>
 </li>
 <li>
 <p>简述PN结基本特性。</p>
-<p>PN结基本特性包括了单向导通性：PN结在正向偏置时导电，I-U特性呈现出指数关系，电流随电压的增加而急剧增加，而在反向偏置时，电流基本保持恒定，接近于零。同时在PN结中，由于P区和N区的载流子扩散形成的电场，导致了内建电势。这一电场阻止了更多的载流子扩散。而在PN结的交界面形成的区域，载流子被耗尽，形成耗尽区。该区域对电流的传输有重要影响。PN结还具有温度依赖性，当温度升高时，正向导通电压会下降，反向漏电流会增加。
-5. 设计一个完整的输出直流5V的稳压电路，要求：画出电路，解释各个器件的工作原理、特性和作用。</p>
+<p>PN结基本特性包括了单向导通性：PN结在正向偏置时导电，I-U特性呈现出指数关系，电流随电压的增加而急剧增加，而在反向偏置时，电流基本保持恒定，接近于零。同时在PN结中，由于P区和N区的载流子扩散形成的电场，导致了内建电势。这一电场阻止了更多的载流子扩散。而在PN结的交界面形成的区域，载流子被耗尽，形成耗尽区。该区域对电流的传输有重要影响。PN结还具有温度依赖性，当温度升高时，正向导通电压会下降，反向漏电流会增加。</p>
+</li>
+<li>
+<p>设计一个完整的输出直流5V的稳压电路，要求：画出电路，解释各个器件的工作原理、特性和作用。</p>
 <p>Vin ----+-----[C1]----+---- [LM7805] ---- Vout (5V)<br />
            |             |<br />
            |             |<br />
