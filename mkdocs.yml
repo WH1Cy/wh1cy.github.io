@@ -32,7 +32,7 @@ theme:
     - navigation.instant
     - navigation.tabs
     - navigation.path
-    - navigation.expand
+    # - navigation.expand
     - navigation.indexes
     #- navigation.sections
     - navigation.top
