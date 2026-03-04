@@ -1234,6 +1234,37 @@
   font-size: 0.9rem;
 }
 
+/* 考研记录楼置顶样式 */
+.blog-pinned {
+  background: linear-gradient(135deg, rgba(94, 53, 177, 0.08) 0%, rgba(94, 53, 177, 0.04) 100%) !important;
+  border-left: 4px solid var(--md-primary-fg-color);
+}
+
+.blog-pinned td {
+  font-weight: 500;
+}
+
+.blog-pinned a {
+  font-weight: 600;
+  color: var(--md-primary-fg-color--dark) !important;
+}
+
+.blog-pinned-badge {
+  display: inline-block;
+  padding: 0.1rem 0.4rem;
+  margin-right: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+  background: var(--md-primary-fg-color);
+  border-radius: var(--radius-sm);
+  vertical-align: middle;
+}
+
+[data-md-color-scheme="slate"] .blog-pinned {
+  background: linear-gradient(135deg, rgba(94, 53, 177, 0.15) 0%, rgba(94, 53, 177, 0.06) 100%) !important;
+}
+
 /* 关于页面样式 */
 .about-page-section {
   margin: var(--spacing-lg) 0;
@@ -1496,3 +1527,114 @@ body.is-homepage .footer-note {
     padding-right: var(--spacing-md) !important;
   }
 }
+
+/* ============================================
+   考研记录楼 - 日历样式
+   ============================================ */
+
+.kaoyan-calendar {
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-md);
+  background: var(--md-default-bg-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elevation-2);
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.kaoyan-calendar-title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--md-default-fg-color);
+}
+
+.kaoyan-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.kaoyan-calendar-weekday {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+  padding: var(--spacing-xs) 0;
+  font-weight: 500;
+}
+
+.kaoyan-calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.kaoyan-calendar-day--has-entry {
+  background: var(--md-primary-fg-color);
+  color: white !important;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.kaoyan-calendar-day--has-entry:hover {
+  background: var(--md-primary-fg-color--dark);
+  transform: scale(1.1);
+  box-shadow: var(--elevation-2);
+}
+
+.kaoyan-calendar-day--no-entry {
+  color: var(--md-default-fg-color--lighter);
+  background: var(--md-default-bg-color--light);
+}
+
+.kaoyan-calendar-day--empty {
+  visibility: hidden;
+}
+
+.kaoyan-entry {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.kaoyan-entry:target {
+  background: var(--md-default-bg-color--light);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-left: calc(-1 * var(--spacing-md));
+  margin-right: calc(-1 * var(--spacing-md));
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+/* 课表课程色块：填满单元格 */
+.kaoyan-schedule { border-collapse: collapse; width: 100%; }
+.kaoyan-schedule th, .kaoyan-schedule td { border: 1px solid var(--md-default-fg-color--lightest); padding: 0; }
+.kaoyan-schedule th { background: var(--md-default-bg-color--light); padding: 8px; font-weight: 600; }
+.kaoyan-schedule tbody tr { min-height: 2.8em; }
+.kaoyan-schedule td { min-height: 2.8em; vertical-align: top; }
+.kaoyan-schedule td:empty { background: var(--md-default-bg-color--light); }
+.kaoyan-schedule td > .kaoyan-xt, .kaoyan-schedule td > .kaoyan-by, .kaoyan-schedule td > .kaoyan-wa,
+.kaoyan-schedule td > .kaoyan-wx, .kaoyan-schedule td > .kaoyan-xa, .kaoyan-schedule td > .kaoyan-xg,
+.kaoyan-schedule td > .kaoyan-ty {
+  display: block; padding: 10px 12px; min-height: 2.6em; box-sizing: border-box;
+  color: #fff; font-size: 0.9em; text-align: center; width: 100%;
+}
+.kaoyan-xt { background: #5c6bc0; }
+.kaoyan-by { background: #26a69a; }
+.kaoyan-wa { background: #ec407a; }
+.kaoyan-wx { background: #ab47bc; }
+.kaoyan-xa { background: #ff7043; }
+.kaoyan-xg { background: #66bb6a; }
+.kaoyan-ty { background: #42a5f5; }
+.kaoyan-cell { display: flex; gap: 2px; padding: 0; min-height: 2.6em; box-sizing: border-box; width: 100%; }
+.kaoyan-cell .kaoyan-xt, .kaoyan-cell .kaoyan-by, .kaoyan-cell .kaoyan-wa,
+.kaoyan-cell .kaoyan-wx, .kaoyan-cell .kaoyan-xa, .kaoyan-cell .kaoyan-xg,
+.kaoyan-cell .kaoyan-ty { flex: 1; min-width: 0; display: flex; align-items: center; justify-content: center; padding: 10px 4px; }

@@ -103,11 +103,14 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.tilde
 
 nav:
   - 首页: index.md
   - 博客:
     - 文章列表: blog/index.md
+    - 考研记录楼: blog/2026-kaoyan-log.md
+    - Markdown 基础语法教学: blog/2026-markdown-guide.md
     - GitHub 使用教学：从零到协作: blog/2026-github-guide.md
     - 用 MkDocs 搭建博客: blog/2026-mkdocs-blog.md
   - 课程:
@@ -123,6 +126,7 @@ nav:
           - Lab 6: courses/sys2/lab6/index.md
           - Project: courses/sys2/project/index.md
       - 计算机网络: courses/network/index.md
+      - 编译原理: courses/compilation-principles/index.md
       - 软件安全原理与实践: courses/software-security/index.md
       - 普通物理学实验 II:
           - 课程主页: courses/phys-lab2/index.md

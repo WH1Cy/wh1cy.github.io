@@ -8,7 +8,7 @@ description: 所有课程笔记与资料的索引页面
 欢迎来到课程页面！这里汇集了部分课程的学习笔记、实验报告和相关资料,更新顺序会参考课程资料的完整程度以及笔者本人的课程学习水平。
 
 !!! warning "注意"
-    要说明的是,对于课程的实验报告(这是目前绝大部分的更新内容),笔者的初衷一是记录,二是能点拨一些关键性思路,但并未进行严格的正确性审核以及修正;病急乱投医式的抄袭做法容易造成失分以及诚信问题,希望大家批判性参考,借鉴,交流✊
+    要说明的是,对于课程的实验报告(这是目前绝大部分的更新内容),笔者的初衷一是记录,二是点拨一些关键性思路,但并未进行严格的正确性审核以及修正;病急乱投医式的抄袭做法容易造成失分以及诚信问题,希望大家批判性参考借鉴✊
 
 ---
 
@@ -90,6 +90,22 @@ description: 所有课程笔记与资料的索引页面
       <p class="card-description">学习隐私计算与数据合规，涵盖多方安全计算、联邦学习、差分隐私、数据安全法及个人信息保护等。</p>
     </div>
     <a href="privacy-computing/" class="card-link">
+      <span>查看课程</span>
+      <span class="card-arrow">→</span>
+    </a>
+  </div>
+
+  <div class="full-width-card fade-in-up delay-2">
+    <div class="card-icon">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+      </svg>
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">编译原理</h3>
+      <p class="card-description">学习编译器设计与实现，涵盖词法分析、语法分析、语义分析、中间代码生成与优化、目标代码生成等核心内容。</p>
+    </div>
+    <a href="compilation-principles/" class="card-link">
       <span>查看课程</span>
       <span class="card-arrow">→</span>
     </a>
