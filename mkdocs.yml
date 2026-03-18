@@ -11,8 +11,9 @@ theme:
   name: materialx
   topbar_style: glass  # Liquid Glass 毛玻璃风格
   language: zh
-  # 禁用主题默认字体加载（Google Fonts 在国内可能无法访问），改由 extra.css 从 fonts.loli.net 加载
-  font: false
+  font:
+    text: Noto Serif SC
+    code: JetBrains Mono
   palette:
     # 浅色主题
     - scheme: default
