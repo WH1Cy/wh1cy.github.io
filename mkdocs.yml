@@ -8,7 +8,8 @@ repo_name: wh1cy/wh1cy.github.io
 edit_uri: edit/main/docs/
 
 theme:
-  name: material
+  name: materialx
+  topbar_style: glass  # Liquid Glass 毛玻璃风格
   language: zh
   font:
     text: Noto Serif SC
@@ -16,15 +17,15 @@ theme:
   palette:
     # 浅色主题
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: black
+      accent: black
       toggle:
         icon: material/toggle-switch
         name: 切换到深色模式
     # 深色主题
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: black
+      accent: black
       toggle:
         icon: material/toggle-switch-off-outline
         name: 切换到浅色模式
@@ -104,6 +105,7 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.tilde
+  - neoteroi.cards
 
 nav:
   - 首页: index.md
@@ -125,6 +127,7 @@ nav:
           - Lab 5: courses/sys2/lab5/index.md
           - Lab 6: courses/sys2/lab6/index.md
           - Project: courses/sys2/project/index.md
+      - 计算机系统 III: courses/sys3/index.md
       - 计算机网络: courses/network/index.md
       - 编译原理: courses/compilation-principles/index.md
       - 软件安全原理与实践: courses/software-security/index.md
@@ -160,4 +163,5 @@ nav:
               - Misc Lab 3 OSINT & AI: courses/info-security-practice/misc-lab3/index.md
               - Crypto Lab 2 公钥密码学: courses/info-security-practice/crypto-lab2/index.md
               - Crypto Lab 3 格密码: courses/info-security-practice/crypto-lab3/index.md
+  - 友链: friends/index.md
   - 关于: about.md
