@@ -3,8 +3,15 @@
    基于 Material Design 设计规范
    ============================================ */
 
+/* 字体加载：使用 fonts.loli.net（国内可访问），替代 Google Fonts */
+@import url('https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
 /* Material Design 颜色变量扩展 - 黑色主题 */
 :root {
+  /* 字体变量（theme.font: false 时由本文件提供） */
+  --md-text-font: "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+  --md-code-font: "JetBrains Mono", "Fira Code", monospace;
+
   --md-primary-fg-color: #1a1a1a;
   --md-primary-fg-color--light: #333333;
   --md-primary-fg-color--dark: #000000;
@@ -161,7 +168,7 @@ body.is-homepage {
 
 /* 问候语区块 */
 .greeting-container {
-  font-family: var(--md-text-font-family, "Noto Serif SC", "Noto Serif CJK SC", serif);
+  font-family: var(--md-text-font);
   text-align: center;
   margin-bottom: var(--spacing-lg);
   padding: var(--spacing-lg) var(--spacing-xl);
@@ -471,6 +478,14 @@ body.is-homepage {
 /* ============================================
    Grid Cards 优化（参考 Wcowin 紧凑多列布局）
    ============================================ */
+/* 友链/卡片等统一使用站点中文字体，避免 neoteroi-mkdocs 的 Roboto 导致汉字显示不一致 */
+.grid.cards > ul > li,
+.grid.cards .md-typeset,
+.friend-links .friend-link,
+.friend-links .md-typeset {
+  font-family: var(--md-text-font) !important;
+}
+
 .grid.cards {
   margin: var(--spacing-lg) 0 !important;
 }

@@ -3,8 +3,15 @@
    基于 Material Design 设计规范
    ============================================ */
 
+/* 字体加载：使用 fonts.loli.net（国内可访问），替代 Google Fonts */
+@import url('https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
 /* Material Design 颜色变量扩展 - 黑色主题 */
 :root {
+  /* 字体变量（theme.font: false 时由本文件提供） */
+  --md-text-font: "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+  --md-code-font: "JetBrains Mono", "Fira Code", monospace;
+
   --md-primary-fg-color: #1a1a1a;
   --md-primary-fg-color--light: #333333;
   --md-primary-fg-color--dark: #000000;
@@ -85,11 +92,11 @@ body.is-homepage {
   top: 0;
   left: 0;
   width: 100%;
-  height: 500px;
+  height: 750px;
   pointer-events: none;
   z-index: -1;
-  mask: linear-gradient(to bottom, black 0%, transparent 100%);
-  -webkit-mask: linear-gradient(to bottom, black 0%, transparent 100%);
+  mask: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
+  -webkit-mask: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
 }
 
 @media (max-width: 768px) {
@@ -161,7 +168,7 @@ body.is-homepage {
 
 /* 问候语区块 */
 .greeting-container {
-  font-family: var(--md-text-font-family, "Noto Serif SC", "Noto Serif CJK SC", serif);
+  font-family: var(--md-text-font);
   text-align: center;
   margin-bottom: var(--spacing-lg);
   padding: var(--spacing-lg) var(--spacing-xl);
@@ -471,6 +478,14 @@ body.is-homepage {
 /* ============================================
    Grid Cards 优化（参考 Wcowin 紧凑多列布局）
    ============================================ */
+/* 友链/卡片等统一使用站点中文字体，避免 neoteroi-mkdocs 的 Roboto 导致汉字显示不一致 */
+.grid.cards > ul > li,
+.grid.cards .md-typeset,
+.friend-links .friend-link,
+.friend-links .md-typeset {
+  font-family: var(--md-text-font) !important;
+}
+
 .grid.cards {
   margin: var(--spacing-lg) 0 !important;
 }
@@ -1459,16 +1474,16 @@ body.is-homepage .md-content {
   max-width: 100% !important;
   margin-left: 0 !important;
   width: 100% !important;
-  background-color: var(--md-default-bg-color) !important;
+  background: linear-gradient(to bottom, transparent 0, transparent 600px, var(--md-default-bg-color) 700px) !important;
 }
 
-/* 首页文章内容区域全屏 */
+/* 首页文章内容区域全屏，顶部透明以透出网格 */
 body.is-homepage .md-content__inner {
   max-width: 100% !important;
   padding-top: var(--spacing-sm) !important;
   padding-left: var(--spacing-xl) !important;
   padding-right: var(--spacing-xl) !important;
-  background-color: var(--md-default-bg-color) !important;
+  background: linear-gradient(to bottom, transparent 0, transparent 600px, var(--md-default-bg-color) 700px) !important;
 }
 
 /* 首页 grid cards 与 full-width-cards 全屏 */
@@ -1496,14 +1511,86 @@ body.is-homepage .footer-note {
 
 /* 响应式：半屏/移动端调整 */
 @media (max-width: 76.25em) {
-  body.is-homepage .md-content {
+  /* 浅色模式下，左侧抽屉（三月の海、GitHub 等）强制浅色背景和深色文字
+     根因：主题 palette 在 primary:black 时对 .md-nav__title[for=__drawer] 和 .md-nav__source
+     应用深色背景，且不区分 data-md-color-scheme，需显式覆盖 */
+  body:not([data-md-color-scheme="slate"]) .md-sidebar--primary,
+  body:not([data-md-color-scheme="slate"]) .md-sidebar--primary .md-sidebar__scrollwrap,
+  body:not([data-md-color-scheme="slate"]) .md-sidebar--primary .md-sidebar__inner,
+  body:not([data-md-color-scheme="slate"]) .md-sidebar--primary .md-nav__title,
+  body:not([data-md-color-scheme="slate"]) .md-sidebar--primary .md-nav__source {
     background-color: #ffffff !important;
+  }
+  body:not([data-md-color-scheme="slate"]) .md-sidebar--primary .md-nav__title,
+  body:not([data-md-color-scheme="slate"]) .md-sidebar--primary .md-nav__link,
+  body:not([data-md-color-scheme="slate"]) .md-sidebar--primary .md-nav__link *,
+  body:not([data-md-color-scheme="slate"]) .md-sidebar--primary .md-nav__source,
+  body:not([data-md-color-scheme="slate"]) .md-sidebar--primary .md-source,
+  body:not([data-md-color-scheme="slate"]) .md-sidebar--primary .md-source__repository {
+    color: #1a1a1a !important;
+  }
+  body:not([data-md-color-scheme="slate"]) .md-sidebar--primary .md-source .md-icon,
+  body:not([data-md-color-scheme="slate"]) .md-sidebar--primary .md-source svg {
+    color: #1a1a1a !important;
+    fill: #1a1a1a !important;
+  }
+  /* 浅色模式下，顶部 header（含 GitHub）强制浅色 */
+  body:not([data-md-color-scheme="slate"]) .md-header,
+  body:not([data-md-color-scheme="slate"]) .md-header__inner {
+    background-color: #ffffff !important;
+  }
+  body:not([data-md-color-scheme="slate"]) .md-header__topic,
+  body:not([data-md-color-scheme="slate"]) .md-header__source,
+  body:not([data-md-color-scheme="slate"]) .md-header__source .md-source__repository,
+  body:not([data-md-color-scheme="slate"]) .md-header__source .md-icon {
+    color: #1a1a1a !important;
+  }
+
+  /* 夜间模式：半屏时左侧抽屉和 header 使用深色背景和浅色文字 */
+  body[data-md-color-scheme="slate"] .md-sidebar--primary,
+  body[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap,
+  body[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__inner {
+    background-color: var(--md-default-bg-color) !important;
+  }
+  body[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__title,
+  body[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__link,
+  body[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__link *,
+  body[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__source,
+  body[data-md-color-scheme="slate"] .md-sidebar--primary .md-source,
+  body[data-md-color-scheme="slate"] .md-sidebar--primary .md-source__repository {
+    color: var(--md-default-fg-color) !important;
+  }
+  body[data-md-color-scheme="slate"] .md-sidebar--primary .md-source .md-icon,
+  body[data-md-color-scheme="slate"] .md-sidebar--primary .md-source svg {
+    color: var(--md-default-fg-color) !important;
+    fill: var(--md-default-fg-color) !important;
+  }
+  body[data-md-color-scheme="slate"] .md-header,
+  body[data-md-color-scheme="slate"] .md-header__inner {
+    background-color: var(--md-default-bg-color) !important;
+  }
+  body[data-md-color-scheme="slate"] .md-header__topic,
+  body[data-md-color-scheme="slate"] .md-header__source,
+  body[data-md-color-scheme="slate"] .md-header__source .md-source__repository,
+  body[data-md-color-scheme="slate"] .md-header__source .md-icon,
+  body[data-md-color-scheme="slate"] .md-header__button,
+  body[data-md-color-scheme="slate"] .md-header .md-icon {
+    color: var(--md-default-fg-color) !important;
+  }
+  body[data-md-color-scheme="slate"] .md-header__source svg,
+  body[data-md-color-scheme="slate"] .md-header__button svg,
+  body[data-md-color-scheme="slate"] .md-header .md-icon svg {
+    fill: var(--md-default-fg-color) !important;
+  }
+
+  body.is-homepage .md-content {
+    background: linear-gradient(to bottom, transparent 0, transparent 600px, #ffffff 700px) !important;
   }
 
   body.is-homepage .md-content__inner {
     padding-left: var(--spacing-md) !important;
     padding-right: var(--spacing-md) !important;
-    background-color: #ffffff !important;
+    background: linear-gradient(to bottom, transparent 0, transparent 600px, #ffffff 700px) !important;
   }
   
   body.is-homepage .home-intro,
@@ -1517,18 +1604,22 @@ body.is-homepage .footer-note {
   }
 
   body.is-homepage .home-intro {
-    background-color: #ffffff !important;
+    background-color: transparent !important;
   }
 
   body.is-homepage .grid.cards > ul > li {
     background-color: #ffffff !important;
   }
 
-  /* 夜间模式：半屏时使用深色背景 */
-  [data-md-color-scheme="slate"] body.is-homepage .md-content,
-  [data-md-color-scheme="slate"] body.is-homepage .md-content__inner,
-  [data-md-color-scheme="slate"] body.is-homepage .home-intro,
-  [data-md-color-scheme="slate"] body.is-homepage .grid.cards > ul > li {
+  /* 夜间模式：半屏时首页使用深色背景渐变 */
+  body[data-md-color-scheme="slate"].is-homepage .md-content,
+  body[data-md-color-scheme="slate"].is-homepage .md-content__inner {
+    background: linear-gradient(to bottom, transparent 0, transparent 600px, var(--md-default-bg-color) 700px) !important;
+  }
+  body[data-md-color-scheme="slate"].is-homepage .home-intro {
+    background-color: transparent !important;
+  }
+  body[data-md-color-scheme="slate"].is-homepage .grid.cards > ul > li {
     background-color: var(--md-default-bg-color) !important;
   }
 }

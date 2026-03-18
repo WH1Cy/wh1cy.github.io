@@ -374,7 +374,7 @@
 
     function resize() {
       canvas.width = window.innerWidth;
-      canvas.height = 500;
+      canvas.height = 750;
     }
 
     resize();
