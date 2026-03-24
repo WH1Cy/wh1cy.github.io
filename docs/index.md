@@ -5,8 +5,11 @@ hide:
   - toc
 ---
 
-<!-- 渐变网格背景 Canvas（仅首页显示） -->
-<canvas id="gridCanvas"></canvas>
+<!-- 渐变网格 + 天气粒子 Canvas（仅首页显示；地区在下方 #greeting 的 data-weather-city） -->
+<div class="home-hero-canvas-stack" aria-hidden="true">
+  <canvas id="gridCanvas"></canvas>
+  <canvas id="weatherCanvas"></canvas>
+</div>
 
 <div class="home-intro fade-in">
   <h1 class="home-title">三月の海</h1>
@@ -16,16 +19,27 @@ hide:
   </p>
 </div>
 
-<div id="greeting" class="greeting-container fade-in">
+<!-- 实时天气：修改 data-weather-city 为你的城市（中/英均可）；或改用 data-weather-lat / data-weather-lon 指定坐标（此时可不写 city） -->
+<div id="greeting" class="greeting-container fade-in" data-weather-city="杭州">
   <div class="greeting-time-line">
     <span id="greeting-time" class="greeting-time"></span>
+  </div>
+  <div class="greeting-weather-line">
+    <span id="greeting-weather" class="greeting-weather"></span>
   </div>
   <div class="greeting-status-line">
     <span id="greeting-status" class="greeting-status"></span>
   </div>
 </div>
 
-## 关于我
+<div class="home-scroll-arrow-wrap">
+  <!-- 使用 button 避免 Material instant 把带 href 的 a 当成整页导航，首次点击被拉到顶并重绘 -->
+  <button type="button" class="home-scroll-arrow" data-scroll-target="#about-me" aria-label="向下滑动，查看下方内容">
+    <span class="home-scroll-arrow__chevron" aria-hidden="true"></span>
+  </button>
+</div>
+
+## 关于我 {#about-me}
 
 <div class="grid cards" markdown>
 
@@ -35,9 +49,7 @@ hide:
 
     ![头像](images/Rain01.jpg){ .avatar-in-card loading="lazy" align=right width="120" height="120" }
 
-    你好，我是**三月海**。这个名字来自高中时的英文名 Martinez（简称 Mar），取英文中的「三月」和西语中的「海」之意，寄托着对未来的一点向往。
-
-    这个博客主要记录自己的学习笔记与技术思考，希望通过文字沉淀知识，欢迎通过 [GitHub](https://github.com/wh1cy){ target="_blank" rel="noopener" } 与我交流！
+    你好，我是**三月海**，2023级ZJU信息安全在读，这个博客主要记录自己的学习笔记与技术思考，希望通过文字沉淀知识，欢迎通过 [GitHub](https://github.com/wh1cy){ target="_blank" rel="noopener" } 与我交流！
 
 </div>
 

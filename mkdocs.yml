@@ -57,8 +57,8 @@ plugins:
   #       font_family: Noto Sans SC
 
 extra:
-  # 共享颜色主题、Cookie 同意等偏好设置的作用域（为后续多项目优化做准备）
-  # 参考：https://squidfunk.github.io/mkdocs-material/setup/building-an-optimized-site/
+  # 首页实时天气地区：在 docs/index.md 中编辑 #greeting 的 data-weather-city（或 data-weather-lat / data-weather-lon）
+  # 数据来自 Open-Meteo（无需 API Key，浏览器直连）
   scope: /
   analytics:
     provider: google

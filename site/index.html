@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#about-me" class="md-skip">
           跳转至
         </a>
       
@@ -455,7 +455,7 @@
     <ul class="md-nav__list" data-md-component="toc">
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#about-me" class="md-nav__link">
     <span class="md-ellipsis">
       
         关于我
@@ -466,7 +466,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         浏览本站
@@ -488,7 +488,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         推荐文章
@@ -499,7 +499,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         快速导航
@@ -2407,7 +2407,7 @@
     <ul class="md-nav__list" data-md-component="toc">
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#about-me" class="md-nav__link">
     <span class="md-ellipsis">
       
         关于我
@@ -2418,7 +2418,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         浏览本站
@@ -2440,7 +2440,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         推荐文章
@@ -2451,7 +2451,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         快速导航
@@ -2493,8 +2493,11 @@
   
 
 
-<!-- 渐变网格背景 Canvas（仅首页显示） -->
-<canvas id="gridCanvas"></canvas>
+<!-- 渐变网格 + 天气粒子 Canvas（仅首页显示；地区在下方 #greeting 的 data-weather-city） -->
+<div class="home-hero-canvas-stack" aria-hidden="true">
+  <canvas id="gridCanvas"></canvas>
+  <canvas id="weatherCanvas"></canvas>
+</div>
 
 <div class="home-intro fade-in">
   <h1 class="home-title">三月の海</h1>
@@ -2504,29 +2507,39 @@
   </p>
 </div>
 
-<div id="greeting" class="greeting-container fade-in">
+<!-- 实时天气：修改 data-weather-city 为你的城市（中/英均可）；或改用 data-weather-lat / data-weather-lon 指定坐标（此时可不写 city） -->
+<div id="greeting" class="greeting-container fade-in" data-weather-city="杭州">
   <div class="greeting-time-line">
     <span id="greeting-time" class="greeting-time"></span>
+  </div>
+  <div class="greeting-weather-line">
+    <span id="greeting-weather" class="greeting-weather"></span>
   </div>
   <div class="greeting-status-line">
     <span id="greeting-status" class="greeting-status"></span>
   </div>
 </div>
 
-<h2 id="_1">关于我<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="home-scroll-arrow-wrap">
+  <!-- 使用 button 避免 Material instant 把带 href 的 a 当成整页导航，首次点击被拉到顶并重绘 -->
+  <button type="button" class="home-scroll-arrow" data-scroll-target="#about-me" aria-label="向下滑动，查看下方内容">
+    <span class="home-scroll-arrow__chevron" aria-hidden="true"></span>
+  </button>
+</div>
+
+<h2 id="about-me">关于我<a class="headerlink" href="#about-me" title="Permanent link">&para;</a></h2>
 <div class="grid cards">
 <ul>
 <li>
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2M7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.5.88 4.93 1.78A7.9 7.9 0 0 1 12 20c-1.86 0-3.57-.64-4.93-1.72m11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33A7.93 7.93 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.5-1.64 4.83M12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6m0 5a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 12 8a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 12 11"/></svg></span> <strong>关于我</strong></p>
 <hr />
 <p><img align="right" alt="头像" class="avatar-in-card" height="120" loading="lazy" src="images/Rain01.jpg" width="120" /></p>
-<p>你好，我是<strong>三月海</strong>。这个名字来自高中时的英文名 Martinez（简称 Mar），取英文中的「三月」和西语中的「海」之意，寄托着对未来的一点向往。</p>
-<p>这个博客主要记录自己的学习笔记与技术思考，希望通过文字沉淀知识，欢迎通过 <a href="https://github.com/wh1cy" rel="noopener" target="_blank">GitHub</a> 与我交流！</p>
+<p>你好，我是<strong>三月海</strong>，2023级ZJU信息安全在读，这个博客主要记录自己的学习笔记与技术思考，希望通过文字沉淀知识，欢迎通过 <a href="https://github.com/wh1cy" rel="noopener" target="_blank">GitHub</a> 与我交流！</p>
 </li>
 </ul>
 </div>
 <hr />
-<h2 id="_2">浏览本站<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_1">浏览本站<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <div class="grid cards">
 <ul>
 <li>
@@ -2559,7 +2572,7 @@
 </ul>
 </div>
 <hr />
-<h2 id="_3">推荐文章<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_2">推荐文章<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <div class="grid cards">
 <ul>
 <li>
@@ -2575,7 +2588,7 @@
 </ul>
 </div>
 <hr />
-<h2 id="_4">快速导航<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_3">快速导航<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="grid cards">
 <ul>
 <li>
