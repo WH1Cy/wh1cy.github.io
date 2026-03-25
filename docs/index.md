@@ -20,7 +20,7 @@ hide:
 </div>
 
 <!-- 实时天气：修改 data-weather-city 为你的城市（中/英均可）；或改用 data-weather-lat / data-weather-lon 指定坐标（此时可不写 city） -->
-<div id="greeting" class="greeting-container fade-in" data-weather-city="杭州">
+<div id="greeting" class="greeting-container fade-in" data-weather-city="杭州市">
   <div class="greeting-time-line">
     <span id="greeting-time" class="greeting-time"></span>
   </div>
