@@ -245,6 +245,28 @@
     ]
   };
 
+  /**
+   * 夜间与凌晨（无日照语境）：避免「晒、阳光、紫外线、防晒」等与时段矛盾的说法
+   */
+  var weatherStatusPrefixesNight = {
+    clear: [
+      '夜里挺清爽的，',
+      '夜空很干净，',
+      '晚风透着凉意，',
+      '没什么高云遮着，',
+      '户外挺通透的，',
+      '星月应该都清楚，'
+    ],
+    cloudy: [
+      '云层厚厚的，',
+      '夜里天色沉沉的，',
+      '像要变天的样子，',
+      '夜空灰蒙蒙的，',
+      '气压闷闷的，',
+      '没什么星光，'
+    ]
+  };
+
   var weatherStatusSuffixes = {
     clear: [
       ' 出门记得防晒～',
@@ -278,16 +300,49 @@
     ]
   };
 
+  var weatherStatusSuffixesNight = {
+    clear: [
+      ' 夜里出门注意保暖。',
+      ' 静夜容易静下心来。',
+      ' 早点休息也不错。'
+    ],
+    cloudy: [
+      ' 适合泡杯热饮慢慢干活。',
+      ' 窝在室内最舒服了。',
+      ' 夜读记得开够灯。'
+    ]
+  };
+
   function pickFrom(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
   }
 
+  /** 7:00–19:59 使用与阳光相关的旁白；其余时段用夜间/凌晨表述，避免与「晚上、凌晨」矛盾 */
+  function isSunlitContextHour(hour) {
+    return hour >= 7 && hour < 20;
+  }
+
+  function prefixesForEffect(effect, sunlit) {
+    var dayList = weatherStatusPrefixes[effect] || weatherStatusPrefixes.cloudy;
+    if (sunlit) return dayList;
+    var nightList = weatherStatusPrefixesNight[effect];
+    return nightList || dayList;
+  }
+
+  function suffixesForEffect(effect, sunlit) {
+    if (sunlit) return weatherStatusSuffixes[effect];
+    var nightSuf = weatherStatusSuffixesNight[effect];
+    return nightSuf || weatherStatusSuffixes[effect];
+  }
+
   /**
-   * 把天气旁白与时段随机状态拼成一句（旁白在前，「三月海…」在后）
+   * 先写天气（气温补充 + 旁白 + 可选一句氛围收尾），句号收束后再写三月海状态，避免夹在中间的跳跃感。
+   * @param {number} hour 当前小时 0–23，用于区分日照与夜间旁白
    */
-  function buildGreetingWithWeather(base, snap) {
+  function buildGreetingWithWeather(base, snap, hour) {
     var effect = snap.effect || 'cloudy';
-    var prefixes = weatherStatusPrefixes[effect] || weatherStatusPrefixes.cloudy;
+    var sunlit = isSunlitContextHour(hour);
+    var prefixes = prefixesForEffect(effect, sunlit);
     var prefix = pickFrom(prefixes).replace(/\{label\}/g, snap.labelZh || '');
     var temp = snap.temp;
     if (temp >= 33 && Math.random() < 0.5) {
@@ -299,12 +354,16 @@
     } else if (temp > 0 && temp <= 6 && Math.random() < 0.4) {
       prefix = '凉飕飕的，' + prefix;
     }
-    var out = prefix + base;
-    var sufList = weatherStatusSuffixes[effect];
+    var weatherBlock = prefix;
+    var sufList = suffixesForEffect(effect, sunlit);
     if (sufList && sufList.length && Math.random() < 0.4) {
-      out += pickFrom(sufList);
+      weatherBlock += pickFrom(sufList).replace(/^\s+/, '');
     }
-    return out;
+    weatherBlock = weatherBlock.replace(/，\s*$/, '。');
+    if (!/[。！？]$/.test(weatherBlock)) {
+      weatherBlock += '。';
+    }
+    return weatherBlock + base;
   }
 
   function weatherCodeToZh(code) {
@@ -764,10 +823,11 @@
       greetingWeatherStatusCache.text = null;
       statusEl.textContent = status;
     } else {
-      var combinedKey = String(periodKey) + '|' + snap.effect + '|' + snap.code + '|' + Math.round(snap.temp);
+      var sunBucket = isSunlitContextHour(hour) ? '1' : '0';
+      var combinedKey = String(periodKey) + '|' + sunBucket + '|' + snap.effect + '|' + snap.code + '|' + Math.round(snap.temp);
       if (greetingWeatherStatusCache.key !== combinedKey) {
         greetingWeatherStatusCache.key = combinedKey;
-        greetingWeatherStatusCache.text = buildGreetingWithWeather(status, snap);
+        greetingWeatherStatusCache.text = buildGreetingWithWeather(status, snap, hour);
       }
       statusEl.textContent = greetingWeatherStatusCache.text;
     }

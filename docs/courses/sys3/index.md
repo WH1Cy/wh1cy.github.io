@@ -2,20 +2,35 @@
 
 本课程笔记与资料索引。
 
-## 课程概要
+## 成绩构成 / Scoring
 
-计算机系统 III 是计算机系统系列课程的进阶内容，在计算机系统 II 的基础上进一步深入，可能涵盖：
+- **期末考试（Final examination）**：30%
+- **作业与出勤（Homework and Class Attendance）**：10%
+- **项目（Projects）**：60%（分项见下表）
 
-- 并行与分布式系统
-- 高级操作系统机制
-- 系统性能优化与调优
-- 其他进阶主题
+## Projects（60%）
 
-*具体内容以实际课程安排为准。*
+| 实验 / 项目 | 主题 | 占比 | 笔记 / 报告 |
+|-------------|------|------|-------------|
+| Lab 1 | BHT & BTB | 10% | [查看](lab1/index.md) |
+| Lab 2 | Cache design | 10% | — |
+| Lab 3 | Virtual Memory | 8% | — |
+| Lab 4 | User mode | 8% | — |
+| Lab 5 | Page fault and fork system call | 10% | — |
+| Project | 课程项目 | 14 分 | — |
 
-## 目录 / 笔记
+## 理论课安排（Project lectures）
 
-- [Lab 1：动态分支预测](lab1/index.md) - 实现以 BHT 和 BTB 为基础的动态分支预测
+*Project lectures 依次为：*
+
+| # | 主题 | 学时 |
+|---|------|------|
+| 1 | Fundamentals of computer design | 1 week |
+| 2 | Instruction-Level Parallelism (ILP) | 2.5 weeks |
+| 3 | Memory Hierarchy (Cache) | 2.5 weeks |
+| 4 | Memory Hierarchy (Main Memory) | 4 weeks |
+| 5 | File System | 4 weeks |
+| 6 | DLP, TLP and Summary | 2 weeks |
 
 ---
 
