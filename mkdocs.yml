@@ -56,6 +56,9 @@ plugins:
   #       # https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/
   #       font_family: Noto Sans SC
 
+hooks:
+  - hooks/recent_updates.py
+
 extra:
   # 首页实时天气地区：在 docs/index.md 中编辑 #greeting 的 data-weather-city（或 data-weather-lat / data-weather-lon）
   # 数据来自 Open-Meteo（无需 API Key，浏览器直连）
@@ -133,6 +136,9 @@ nav:
       - 计算机网络: courses/network/index.md
       - 编译原理: courses/compilation-principles/index.md
       - 软件安全原理与实践: courses/software-security/index.md
+      - 系统安全原理与实践:
+          - 课程主页: courses/system-security/index.md
+          - Lab 1 Linux内核漏洞攻防-ROP攻击与防护: courses/system-security/lab1/index.md
       - 普通物理学实验 II:
           - 课程主页: courses/phys-lab2/index.md
           - Lab 1 托卡马克等离子体物理虚拟仿真实验: courses/phys-lab2/lab1/index.md

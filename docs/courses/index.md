@@ -48,6 +48,14 @@ description: 所有课程笔记与资料的索引页面
 
     [:octicons-arrow-right-24: 查看课程](software-security/index.md)
 
+-   :material-security:{ .lg .middle } __系统安全原理与实践__
+
+    ---
+
+    学习系统安全的基本原理与实践方法，涵盖系统漏洞分析、操作系统防护、系统加固与安全运维等内容。
+
+    [:octicons-arrow-right-24: 查看课程](system-security/index.md)
+
 -   :material-flask:{ .lg .middle } __普通物理学实验 II__
 
     ---

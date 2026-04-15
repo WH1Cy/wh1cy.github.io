@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>三月の海</title>
+    <link>https://wh1cy.github.io</link>
+    <description>个人博客与笔记</description>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 09 Apr 2026 14:17:53 -0000</lastBuildDate>
+    <atom:link href="https://wh1cy.github.io/rss.xml" rel="self" type="application/rss+xml" xmlns:atom="http://www.w3.org/2005/Atom"/>
+    <item>
+      <title>Markdown 基础语法教学</title>
+      <link>https://wh1cy.github.io/blog/2026-markdown-guide/</link>
+      <guid>https://wh1cy.github.io/blog/2026-markdown-guide/</guid>
+      <pubDate>Wed, 04 Mar 2026 00:00:00 -0000</pubDate>
+      <description>博客文章更新</description>
+    </item>
+    <item>
+      <title>考研记录楼</title>
+      <link>https://wh1cy.github.io/blog/2026-kaoyan-log/</link>
+      <guid>https://wh1cy.github.io/blog/2026-kaoyan-log/</guid>
+      <pubDate>Wed, 04 Mar 2026 00:00:00 -0000</pubDate>
+      <description>博客文章更新</description>
+    </item>
+    <item>
+      <title>用 MkDocs 搭建个人博客</title>
+      <link>https://wh1cy.github.io/blog/2026-mkdocs-blog/</link>
+      <guid>https://wh1cy.github.io/blog/2026-mkdocs-blog/</guid>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 -0000</pubDate>
+      <description>博客文章更新</description>
+    </item>
+    <item>
+      <title>GitHub 使用教学：从零到协作</title>
+      <link>https://wh1cy.github.io/blog/2026-github-guide/</link>
+      <guid>https://wh1cy.github.io/blog/2026-github-guide/</guid>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 -0000</pubDate>
+      <description>博客文章更新</description>
+    </item>
+  </channel>
+</rss>
