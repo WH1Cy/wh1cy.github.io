@@ -48,6 +48,14 @@ description: 所有课程笔记与资料的索引页面
 
     [:octicons-arrow-right-24: 查看课程](software-security/index.md)
 
+-   :material-shield-lock-outline:{ .lg .middle } __网络安全原理与实践__
+
+    ---
+
+    学习网络安全原理与实践方法，涵盖网络攻击与防御、协议安全、流量分析、入侵检测与网络安全运维等内容。
+
+    [:octicons-arrow-right-24: 查看课程](network-security/index.md)
+
 -   :material-security:{ .lg .middle } __系统安全原理与实践__
 
     ---

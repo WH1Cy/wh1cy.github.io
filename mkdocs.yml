@@ -134,6 +134,18 @@ nav:
           - 课程主页: courses/sys3/index.md
           - Lab 1: courses/sys3/lab1/index.md
       - 计算机网络: courses/network/index.md
+      - 网络安全原理与实践:
+          - 课程主页: courses/network-security/index.md
+          - Lab 1 数据包嗅探和伪造实验: courses/network-security/lab1/index.md
+          - Quiz 1: courses/network-security/quiz1/index.md
+          - Lab 2 ARP缓存中毒攻击实验: courses/network-security/lab2/index.md
+          - Quiz 2: courses/network-security/quiz2/index.md
+          - Lab 3 TCP攻击实验: courses/network-security/lab3/index.md
+          - Quiz 3: courses/network-security/quiz3/index.md
+          - Lab 4 DNS攻击实验: courses/network-security/lab4/index.md
+          - Quiz 4: courses/network-security/quiz4/index.md
+          - Lab 5 VPN隧道实验: courses/network-security/lab5/index.md
+          - Quiz 5: courses/network-security/quiz5/index.md
       - 编译原理: courses/compilation-principles/index.md
       - 软件安全原理与实践: courses/software-security/index.md
       - 系统安全原理与实践:
